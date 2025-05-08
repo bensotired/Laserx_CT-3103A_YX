@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionOffset_Provider_CT40410A xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_MotionOffsetSettings>
+    <Motion_1_Offset>0</Motion_1_Offset>
+    <Motion_2_Offset>0</Motion_2_Offset>
+    <Motion_3_Offset>0</Motion_3_Offset>
+  </_MotionOffsetSettings>
+</MotionOffset_Provider_CT40410A>

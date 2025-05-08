@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21EC4962-48DE-44E6-8008-2127AC167168}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SolveWare_TestPackage</RootNamespace>
+    <AssemblyName>SolveWare_TestPackage</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LaserX_TesterLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LX_2DChartControl, Version=2023.8.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\LX_2DChartControl.dll</HintPath>
+    </Reference>
+    <Reference Include="LX_BurnInSolution.Utilities">
+      <HintPath>..\LaserX_TesterLibrary\LX_BurnInSolution.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NationalInstruments.ModularInstruments.NIDCPower.Fx45, Version=21.3.0.49504, Culture=neutral, PublicKeyToken=4febd62461bf11a4" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInAppInterface, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInAppInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInCommon">
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInMessage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_LX_9078Driver_Pack, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_LX_9078Driver_Pack.dll</HintPath>
+    </Reference>
+    <Reference Include="SolveWare_TestComponents">
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_TestComponents.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_ThorlabsApt, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_ThorlabsApt.dll</HintPath>
+    </Reference>
+    <Reference Include="SolveWare_Vision, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_Vision.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TestPlugin_Demo, Version=2.2.5.17, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\TestPluginBin\TestPlugin_Demo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AA\CalculatorAndRecipe_AA\CalcRecipe_AA.cs" />
+    <Compile Include="AA\CalculatorAndRecipe_AA\TestCalculator_AA.cs" />
+    <Compile Include="AA\ModuleAndRecipe_AA\TestModule_AA.cs" />
+    <Compile Include="AA\ModuleAndRecipe_AA\TestRecipe_AA.cs" />
+    <Compile Include="AA\RawData\RawData_AA.cs" />
+    <Compile Include="AA\RawData\RawDatumItem_AA.cs" />
+    <Compile Include="AlterQWLT\RawDataMenu_AlternativeQWLT.cs" />
+    <Compile Include="AlterQWLT\RawData_AlternativeQWLT.cs" />
+    <Compile Include="AlterQWLT\RawDatumItem_AlternativeQWLT.cs" />
+    <Compile Include="AlterQWLT\TestModule_AlternativeQWLT.cs" />
+    <Compile Include="AlterQWLT\TestRecipe_AlternativeQWLT.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_Tap_PD_MultiRawData\ITH1_MultiRawData_Tap_PD\CalcRecipe_LIV_Tap_PD_Ith1_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_Tap_PD_MultiRawData\ITH1_MultiRawData_Tap_PD\TestCalculator_LIV_Tap_PD_Ith1_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_Tap_PD_MultiRawData\ITH2_MultiRawData_Tap_PD\CalcRecipe_LIV_Tap_PD_Ith2_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_Tap_PD_MultiRawData\ITH2_MultiRawData_Tap_PD\TestCalculator_LIV_Tap_PD_Ith2_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_Tap_PD_MultiRawData\ITH3_MultiRawData_Tap_PD\CalcRecipe_LIV_Tap_PD_Ith3.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_Tap_PD_MultiRawData\ITH3_MultiRawData_Tap_PD\TestCalculator_LIV_Tap_PD_Ith3_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH1_MultiRawData_SOA\CalcRecipe_LIV_SOA_Ith1_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH1_MultiRawData_SOA\TestCalculator_LIV_SOA_Ith1_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH2_MultiRawData_SOA\CalcRecipe_LIV_SOA_Ith2_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH2_MultiRawData_SOA\TestCalculator_LIV_SOA_Ith2_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH3_MultiRawData_SOA\CalcRecipe_LIV_SOA_Ith3.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH3_MultiRawData_SOA\TestCalculator_LIV_SOA_Ith3_MultiRawData.cs" />
+    <Compile Include="QWLT2_TestDta.cs" />
+    <Compile Include="CalculatorProgram_Nodelet.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\DSEOP\CalcRecipe_LIV_Dseop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\DSEOP\TestCalculator_LIV_Dseop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\DSEX\CalcRecipe_LIV_Dsex.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\DSEX\TestCalculator_LIV_Dsex.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\DSE\CalcRecipe_LIV_SE_DSE.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\DSE\TestCalculator_LIV_SE_DSE.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Duty Cycle\CalcRecipe_DutyCycle.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Duty Cycle\TestCalculator_DutyCycle.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Frequency_Hz\CalcRecipe_Frequency_Hz.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Frequency_Hz\TestCalculator_Frequency_Hz.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\IMAX\CalcRecipe_LIV_IMAX.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\IMAX\TestCalculator_LIV_IMAX.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Iop\CalcRecipe_LIV_Iop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Iop\TestCalculator_LIV_Iop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ISAT\CalcRecipe_LIV_ISAT.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ISAT\TestCalculator_LIV_ISAT.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_MultiRawData\ITH1_MultiRawData\CalcRecipe_LIV_Ith1_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_MultiRawData\ITH1_MultiRawData\TestCalculator_LIV_Ith1_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ITH1\CalcRecipe_LIV_Ith1.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ITH1\TestCalculator_LIV_Ith1.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_MultiRawData\ITH2_MultiRawData\CalcRecipe_LIV_Ith2_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_MultiRawData\ITH2_MultiRawData\TestCalculator_LIV_Ith2_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ITH2\CalcRecipe_LIV_Ith2.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ITH2\TestCalculator_LIV_Ith2.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_MultiRawData\ITH3_MultiRawData\CalcRecipe_LIV_Ith3.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV_MultiRawData\ITH3_MultiRawData\TestCalculator_LIV_Ith3_MultiRawData.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ITH3\CalcRecipe_LIV_Ith3.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ITH3\TestCalculator_LIV_Ith3.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK1\CalcRecipe_LIV_Kink1.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK1\TestCalculator_LIV_Kink1.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK1_zh\CalcRecipe_LIV_Kink1_zh.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK1_zh\TestCalculator_LIV_Kink1_zh.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK2_zh\CalcRecipe_LIV_Kink2_zh.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK2_zh\TestCalculator_LIV_Kink2_zh.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK_CURRENT\CalcRecipe_LIV_Kink_Current.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK_CURRENT\TestCalculator_LIV_KINK_CURRENT.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK_OUTRANGE\CalcRecipe_LIV_Kink_OutRange.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK_OUTRANGE\TestCalculator_LIV_Kink_OutRange.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK_PERCENTAGE\CalcRecipe_LIV_Kink_Percentage.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK_PERCENTAGE\TestCalculator_LIV_Kink_Percentage.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK_POWER\CalcRecipe_LIV_Kink_Power.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\KINK_POWER\TestCalculator_LIV_Kink_Power.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\LIERR\CalcRecipe_LIV_Lierr.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\LIERR\TestCalculator_LIV_LiERR.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\LIPO1\CalcRecipe_LIV_Lipo1.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\LIPO1\TestCalculator_LIV_Lipo1.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\LIPO2\CalcRecipe_LIV_Lipo2.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\LIPO2\TestCalculator_LIV_Lipo2.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\MaxPCE\CalcRecipe_LIV_MaxPCE.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\MaxPCE\TestCalculator_LIV_MaxPCE.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\PCE_Ref_IOP\CalcRecipe_LIV_PCE_Ref_IOP.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\PCE_Ref_IOP\TestCalculator_LIV_PCE_Ref_IOP.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\POP\CalcRecipe_LIV_Pop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\POP\TestCalculator_LIV_Pop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Pout\CalcRecipe_LIV_Pout.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Pout\TestCalculator_LIV_Pout.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\PowerCalibration\CalcRecipe_LIV_PowerCalibration.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\PowerCalibration\TestCalculator_LIV_PowerCalibration.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\POWERMAX\CalcRecipe_LIV_PowerMax.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\POWERMAX\TestCalculator_LIV_PowerMax.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\PTH2\TestCalculator_LIV_Pth2.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RD\CalcRecipe_LIV_Rd.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RD\TestCalculator_LIV_Rd.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ResDiff_Ref_IOP\CalcRecipe_LIV_ResDiff_Ref_IOP.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\ResDiff_Ref_IOP\TestCalculator_LIV_ResDiff_Ref_IOP.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RS\CalcRecipe_LIV_Rs.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RS\TestCalculator_LIV_Rs.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RS_2Point\CalcRecipe_LIV_Rs_2Point.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RS_2Point\TestCalculator_LIV_Rs_2Point.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RS_I\CalcRecipe_LIV_Rs_I.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RS_I\TestCalculator_LIV_Rs_I.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RS_V\CalcRecipe_LIV_Rs_V.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\RS_V\TestCalculator_LIV_Rs_V.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SEF\CalcRecipe_LIV_SEf.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SEF\TestCalculator_LIV_SEf.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SEMAX\CalcRecipe_LIV_SEmax.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SEMAX\TestCalculator_LIV_SEmax.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SEOP\CalcRecipe_LIV_SEop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SEOP\TestCalculator_LIV_SEop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SE_mWpermA\CalcRecipe_LIV_SE_mWpermA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SE_mWpermA\TestCalculator_LIV_SE_mWpermA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SE_mWpermW\CalcRecipe_LIV_SE_mWpermW.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SE_mWpermW\TestCalculator_LIV_SE_mWpermW.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SE_Ref_IOP\CalcRecipe_LIV_SE_Ref_IOP_mWpermA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SE_Ref_IOP\TestCalculator_LIV_SE_Ref_IOP_mWpermA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SE_SEL\CalcRecipe_LIV_SE_SEL.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\SE_SEL\TestCalculator_LIV_SE_SEL.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Temperature\CalcRecipe_Temperature.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Temperature\TestCalculator_Temperature.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\CalcRecipe_PrintLIVTestParams.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\Factor_B\CalcRecipe_Factor_B.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\Factor_B\TestCalculator_Factor_B.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\Factor_K\CalcRecipe_Factor_K.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\Factor_K\TestCalculator_Factor_K.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\I_Start_mA\CalcRecipe_I_Start_mA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\I_Start_mA\TestCalculator_I_Start_mA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\I_Step_mA\CalcRecipe_I_Step_mA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\I_Step_mA\TestCalculator_I_Step_mA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\I_Stop_mA\CalcRecipe_I_Stop_mA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\I_Stop_mA\TestCalculator_I_Stop_mA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\NPLC_ms\CalcRecipe_NPLC_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\NPLC_ms\TestCalculator_NPLC_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\PDComplianceCurrent_mA\CalcRecipe_PDComplianceCurrent_mA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\PDComplianceCurrent_mA\TestCalculator_PDComplianceCurrent_mA.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\Period_ms\CalcRecipe_Period_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\Period_ms\TestCalculator_Period_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\PulsedMode\CalcRecipe_PulsedMode.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\PulsedMode\TestCalculator_PulsedMode.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\pulseWidth_ms\CalcRecipe_pulseWidth_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\pulseWidth_ms\TestCalculator_pulseWidth_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\SenseDelay_ms\CalcRecipe_SenseDelay_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\SenseDelay_ms\TestCalculator_SenseDelay_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\SourceDelay_ms\CalcRecipe_SourceDelay_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\SourceDelay_ms\TestCalculator_SourceDelay_ms.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Testparameter\TestCalculator_PrintLIVTestParams.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\VF\CalcRecipe_LIV_VF.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\VF\TestCalculator_LIV_VF.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Vop\CalcRecipe_LIV_Vop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\Vop\TestCalculator_LIV_Vop.cs" />
+    <Compile Include="LIV\CalculatorAndRecipe_LIV\VTH2\TestCalculator_LIV_VTH2.cs" />
+    <Compile Include="LIV\ModuleAndRecipe_LIV\LIV_Normal\TestModule_LIV_Normal.cs" />
+    <Compile Include="LIV\ModuleAndRecipe_LIV\LIV_Normal\TestRecipe_LIV_Normal.cs" />
+    <Compile Include="LIV\ModuleAndRecipe_LIV\LIV_SOA\TestModule_LIV_SOA.cs" />
+    <Compile Include="LIV\ModuleAndRecipe_LIV\LIV_SOA\TestRecipe_LIV_SOA.cs" />
+    <Compile Include="LIV\ModuleAndRecipe_LIV\LIV_Tap_PD\TestModule_LIV_Tap_PD.cs" />
+    <Compile Include="LIV\ModuleAndRecipe_LIV\LIV_Tap_PD\TestRecipe_LIV_Tap_PD.cs" />
+    <Compile Include="LIV\RawData\RawData_LIV.cs" />
+    <Compile Include="LIV\RawData\RawData_Normal\RawDataMenu_Normal.cs" />
+    <Compile Include="LIV\RawData\RawData_Normal\RawData_LIV_Normal.cs" />
+    <Compile Include="LIV\RawData\RawData_Normal\RawDatumItem_LIV_Normal.cs" />
+    <Compile Include="LIV\RawData\RawData_SOA\RawData_SOA.cs" />
+    <Compile Include="LIV\RawData\RawData_SOA\RawDatumItem_SOA.cs" />
+    <Compile Include="LIV\RawData\RawData_Tap_PD\RawDataMenu_Tap_PD.cs" />
+    <Compile Include="LIV\RawData\RawData_Tap_PD\RawData_LIV_Tap_PD.cs" />
+    <Compile Include="LIV\RawData\RawData_Tap_PD\RawDatumItem_LIV_Tap_PD.cs" />
+    <Compile Include="LIV\RawData\RawDatumItem_LIV.cs" />
+    <Compile Include="Mirror Tuning\CalculatorAndRecipe_MTuning\CalcRecipe_MTuning.cs" />
+    <Compile Include="Mirror Tuning\CalculatorAndRecipe_MTuning\TestCalculator_MTuning.cs" />
+    <Compile Include="Mirror Tuning\ModuleAndRecipe_MTuning\TestModule_MTuning.cs" />
+    <Compile Include="Mirror Tuning\ModuleAndRecipe_MTuning\TestRecipe_MTuning.cs" />
+    <Compile Include="Mirror Tuning\ModuleAndRecipe_MTuning\WavelengthAndPower_SinglePoint.cs" />
+    <Compile Include="Mirror Tuning\RawData_MTuning\RawData_MTuning.cs" />
+    <Compile Include="Mirror Tuning\RawData_MTuning\RawDatumItem_MTuning.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QWLT\CalculatorAndRecipe\CalcRecipe_QWLT2.cs" />
+    <Compile Include="QWLT\CalculatorAndRecipe\TestCalculator_QWLT2.cs" />
+    <Compile Include="QWLT\ModuleAndRecipe\QWLT_InternalMath.cs" />
+    <Compile Include="QWLT\ModuleAndRecipe\TestModule_QWLT2.cs" />
+    <Compile Include="QWLT\ModuleAndRecipe\TestRecipe_QWLT2.cs" />
+    <Compile Include="QWLT\RawData\RawDataMenu_QWLT2.cs" />
+    <Compile Include="QWLT\RawData\RawData_QWLT2.cs" />
+    <Compile Include="QWLT\RawData\RawDatumItem_QWLT2.cs" />
+    <Compile Include="SaveCharts\ChartsSaver.cs" />
+    <Compile Include="Sweep_IV\Current\CalculatorAndRecipe_I_Check\CalcRecipe_I_Check.cs" />
+    <Compile Include="Sweep_IV\Current\CalculatorAndRecipe_I_Check\TestCalculator_I_Check.cs" />
+    <Compile Include="Sweep_IV\Current\ModuleAndRecipe_Curr\TestModule_Curr.cs" />
+    <Compile Include="Sweep_IV\Current\ModuleAndRecipe_Curr\TestRecipe_Curr.cs" />
+    <Compile Include="Sweep_IV\Current\ModuleAndRecipe_I_Check\TestModule_I_Check.cs" />
+    <Compile Include="Sweep_IV\Current\ModuleAndRecipe_I_Check\TestRecipe_I_Check.cs" />
+    <Compile Include="Sweep_IV\Current\RawData\RawDataMenu_Curr.cs" />
+    <Compile Include="Sweep_IV\Current\RawData\RawData_Curr.cs" />
+    <Compile Include="Sweep_IV\Current\RawData\RawDatumItem_Curr.cs" />
+    <Compile Include="Sweep_IV\Voltage\CalculatorAndRecipe_V_Check\TestCalculator_MZMRdiff\CalcRecipe_MZMRdiff.cs" />
+    <Compile Include="Sweep_IV\Voltage\CalculatorAndRecipe_V_Check\TestCalculator_MZMRdiff\TestCalculator_MZMRdiff.cs" />
+    <Compile Include="Sweep_IV\Voltage\CalculatorAndRecipe_V_Check\TestCalculator_V_Check\CalcRecipe_V_Check.cs" />
+    <Compile Include="Sweep_IV\Voltage\CalculatorAndRecipe_V_Check\TestCalculator_V_Check\TestCalculator_V_Check.cs" />
+    <Compile Include="Sweep_IV\Voltage\ModuleAndRecipe_Volt\TestModule_Volt.cs" />
+    <Compile Include="Sweep_IV\Voltage\ModuleAndRecipe_Volt\TestRecipe_Volt.cs" />
+    <Compile Include="Sweep_IV\Voltage\ModuleAndRecipe_V_Check\TestModule_V_Check.cs" />
+    <Compile Include="Sweep_IV\Voltage\ModuleAndRecipe_V_Check\TestRecipe_V_Check.cs" />
+    <Compile Include="Sweep_IV\Voltage\RawData\RawDataMenu_Volt.cs" />
+    <Compile Include="Sweep_IV\Voltage\RawData\RawData_Volt.cs" />
+    <Compile Include="Sweep_IV\Voltage\RawData\RawDatumItem_Volt.cs" />
+    <Compile Include="TED4015\CalculatorAndRecipe_TED\CalcRecipe_TED.cs" />
+    <Compile Include="TED4015\CalculatorAndRecipe_TED\TestCalculator_TED.cs" />
+    <Compile Include="TED4015\ModuleAndRecipe_TED\TestModule_TED.cs" />
+    <Compile Include="TED4015\ModuleAndRecipe_TED\TestRecipe_TED.cs" />
+    <Compile Include="TED4015\RawData\RawDataMenu_TED.cs" />
+    <Compile Include="TED4015\RawData\RawData_TED.cs" />
+    <Compile Include="TED4015\RawData\RawDatumItem_TED.cs" />
+    <Compile Include="TestEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SolveWare_BurnInInstruments\SolveWare_BurnInInstruments.csproj">
+      <Project>{a94fc1b6-2aa6-4929-9939-33b22669ce92}</Project>
+      <Name>SolveWare_BurnInInstruments</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SolveWare_IO\SolveWare_IO.csproj">
+      <Project>{767DF974-3553-4376-B71C-E45A694B2CD8}</Project>
+      <Name>SolveWare_IO</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SolveWare_Motion\SolveWare_Motion.csproj">
+      <Project>{E2A16232-C8E3-4298-AF9D-D72400BD9424}</Project>
+      <Name>SolveWare_Motion</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

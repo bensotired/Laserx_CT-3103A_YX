@@ -1,0 +1,13 @@
+
+##===================================================================##
+[2025/04/22 13:46:35][-4005][[Chassis_TED4015] Initialize error. Chassis resource = [USB0::0x1313::0x8048::M00307990::INSTR].[调用的目标发生了异常。]-[   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 NationalInstruments.VisaNS.ResourceManager.Open(String resourceName, AccessModes accessMode, Int32 openTimeout)
+   在 SolveWare_BurnInInstruments.NiVisaChassis.Initialize(Int32 timeout) 位置 D:\code\123\CT-3103A_YX\SolveWare_BurnInInstruments\BaseModel\NiVisaChassis.cs:行号 144]]
+
+##===================================================================##
+
+##===================================================================##

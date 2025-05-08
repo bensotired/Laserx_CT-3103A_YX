@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by abc (123) -->
+<SMUConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DeviceID>1</DeviceID>
+	<!--LD Curr Source:  0.2A = 5V, K=0.04, B=0-->
+	<LD_Current_Drive_Channel>0</LD_Current_Drive_Channel>
+	<LD_Current_Source_Range>0.2</LD_Current_Source_Range>
+	<LD_Current_Source_K>0.04</LD_Current_Source_K>
+	<LD_Current_Source_B>0</LD_Current_Source_B>
+	<!--LD Curr Sense: Differential, 0.2A, K=1,(0.2V=0.2A) B=0-->
+	<LD_Current_Sense_Channel_Type>Differential</LD_Current_Sense_Channel_Type>
+	<LD_Current_Sense_Channel>0</LD_Current_Sense_Channel>
+	<LD_Current_Sense_Range>0.2</LD_Current_Sense_Range>
+	<LD_Current_Sense_K>1</LD_Current_Sense_K>
+	<LD_Current_Sense_B>0</LD_Current_Sense_B>
+	<!--LD Volt Sense: Differential, 10V, K=1, B=0-->
+	<LD_Voltage_Sense_Channel_Type>Differential</LD_Voltage_Sense_Channel_Type>
+	<LD_Voltage_Sense_Channel>1</LD_Voltage_Sense_Channel>
+	<LD_Voltage_Sense_Range>10</LD_Voltage_Sense_Range>
+	<LD_Voltage_Sense_K>1</LD_Voltage_Sense_K>
+	<LD_Voltage_Sense_B>0</LD_Voltage_Sense_B>
+	<!--PD Curr Sense: Differential, 5mA, K=0.001, B=0-->
+	<PD_Current_Sense_Channel_Type>Differential</PD_Current_Sense_Channel_Type>
+	<PD_Current_Sense_Channel>2</PD_Current_Sense_Channel>
+	<PD_Current_Sense_Range>0.005</PD_Current_Sense_Range>
+	<PD_Current_Sense_K>0.001</PD_Current_Sense_K>
+	<PD_Current_Sense_B>0</PD_Current_Sense_B>
+	<!--MPD Curr Sense: Differential, 5mA, K=0.001, B=0-->
+	<MPD_Current_Sense_Channel_Type>Differential</MPD_Current_Sense_Channel_Type>
+	<MPD_Current_Sense_Channel>3</MPD_Current_Sense_Channel>
+	<MPD_Current_Sense_Range>0.005</MPD_Current_Sense_Range>
+	<MPD_Current_Sense_K>0.001</MPD_Current_Sense_K>
+	<MPD_Current_Sense_B>0</MPD_Current_Sense_B>
+	<AOSampleClockRate>100000</AOSampleClockRate>
+	<AISampleClockRate>100000</AISampleClockRate>
+	<Enable_Output_IOChannel>0</Enable_Output_IOChannel>
+	<Discharge_IOChannel>1</Discharge_IOChannel>
+	<ExternalSourceSwitch_IOChannel>2</ExternalSourceSwitch_IOChannel>
+	<ExternalTrigger_PFIChannel>1</ExternalTrigger_PFIChannel>
+</SMUConfiguration>

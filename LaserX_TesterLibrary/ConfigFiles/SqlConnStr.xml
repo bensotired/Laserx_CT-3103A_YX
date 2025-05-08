@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by 1234 (1234) -->
+<SqlConnStr xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EnableSql>false</EnableSql>
+	<DBConnStr>Server=localhost;DataBase=LX_DB;user=root;password=LaserX</DBConnStr>
+	<DBTableName_GS>GoldenSample</DBTableName_GS>
+	<DBTableName_Pre>PreBI</DBTableName_Pre>
+	<DBTableName_Post>PostBI</DBTableName_Post>
+	<Post_ColumnNameList>
+		<string>PostBI1</string>
+		<string>PostBI2</string>
+		<string>PostBI3</string>
+	</Post_ColumnNameList>
+</SqlConnStr>

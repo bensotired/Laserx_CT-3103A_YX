@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC18A0F0-8133-4616-819E-5B3CA39D7C3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SolveWare_LX_9078Driver_Pack</RootNamespace>
+    <AssemblyName>SolveWare_LX_9078Driver_Pack</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LaserX_TesterLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LX_BurnInSolution.Utilities, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\LX_BurnInSolution.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInAppInterface, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInAppInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInInstruments, Version=1.1.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInInstruments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInMessage, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInMessage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_IO, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_Motion, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_Motion.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_TestComponents, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_TestComponents.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalogDriver\LaserX_9078\AnalogC_LaserX_9078.cs" />
+    <Compile Include="AnalogDriver\AnalogSetting\AnalogSetting.cs" />
+    <Compile Include="AnalogDriver\AnalogSetting\AnalogType.cs" />
+    <Compile Include="AnalogDriver\LaserX_9078\Analog_LaserX_9078.cs" />
+    <Compile Include="AnalogDriver\Base\AnalogBase.cs" />
+    <Compile Include="AnalogDriver\Base\AnalogControllerBase.cs" />
+    <Compile Include="AnalogDriver\Base\IAnalogController.cs" />
+    <Compile Include="AnalogDriver\Manager\AnalogManager.cs" />
+    <Compile Include="AnalogDriver\Manager\AnalogManagerConfig.cs" />
+    <Compile Include="AnalogDriver\Manager\AnalogRuntimeInteration.cs" />
+    <Compile Include="AnalogDriver\Manager\AnalogSettingCollection.cs" />
+    <Compile Include="AnalogDriver\UI\Form_AnalogManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalogDriver\UI\Form_AnalogManager.Designer.cs">
+      <DependentUpon>Form_AnalogManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalogDriver\UI\Form_New_IP_AnalogStarter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalogDriver\UI\Form_New_IP_AnalogStarter.Designer.cs">
+      <DependentUpon>Form_New_IP_AnalogStarter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalogDriver\UI\Form_New_OP_AnalogStarter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalogDriver\UI\Form_New_OP_AnalogStarter.Designer.cs">
+      <DependentUpon>Form_New_OP_AnalogStarter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalogDriver\UI\panelIO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnalogDriver\UI\panelIO.Designer.cs">
+      <DependentUpon>panelIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IODriver\LaserX_9078\IOC_LaserX_9078.cs" />
+    <Compile Include="IODriver\LaserX_9078\IO_LaserX_9078.cs" />
+    <Compile Include="IOPoints\IOP_LeftFront.cs" />
+    <Compile Include="MotionController\LaserX\LaserX_9078_Utilities.cs" />
+    <Compile Include="MotionController\LaserX\LaserX_9078_Utilities_Ex1.cs" />
+    <Compile Include="MotionController\LaserX\LaserX_9078_Utilities_Ex2.cs" />
+    <Compile Include="MotionController\LaserX\MOC_Chassis_LaserX_9078.cs" />
+    <Compile Include="MotionController\CmpFunction%28interpolating%29\LaserX_9078_Cmp_Function.cs" />
+    <Compile Include="MotorDriver\LaserX_9078\MOC_LaserX_9078.cs" />
+    <Compile Include="MotorDriver\LaserX_9078\Motor_LaserX_9078.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MotionController\TrajFunction%28interpolating%29\LaserX_9078_Traj_Function.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnalogDriver\UI\Form_AnalogManager.resx">
+      <DependentUpon>Form_AnalogManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalogDriver\UI\Form_New_IP_AnalogStarter.resx">
+      <DependentUpon>Form_New_IP_AnalogStarter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalogDriver\UI\Form_New_OP_AnalogStarter.resx">
+      <DependentUpon>Form_New_OP_AnalogStarter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalogDriver\UI\panelIO.resx">
+      <DependentUpon>panelIO.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PPM_Provider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PpmDict>
+    <Book>
+      <DataPairOfStringPixPerMM>
+        <Key>相机1_PPM</Key>
+        <Value>
+          <X_ppm>0.003</X_ppm>
+          <Y_ppm>-0.00299</Y_ppm>
+        </Value>
+      </DataPairOfStringPixPerMM>
+      <DataPairOfStringPixPerMM>
+        <Key>相机2_PPM</Key>
+        <Value>
+          <X_ppm>0.00299</X_ppm>
+          <Y_ppm>-0.00305</Y_ppm>
+        </Value>
+      </DataPairOfStringPixPerMM>
+    </Book>
+  </PpmDict>
+</PPM_Provider>

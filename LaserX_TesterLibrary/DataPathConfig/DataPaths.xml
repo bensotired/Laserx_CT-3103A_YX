@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by 1234 (1234) -->
+<DataPaths xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Path_Graph>C:\Users\Administrator\Desktop\纵慧\20230425</Path_Graph>
+	<Path_TestRawDataCsv>D:\TestResult\Auto\</Path_TestRawDataCsv>
+	<Path_SimpleMode>D:\CT-3103\LaserX_TesterLibrary\Data</Path_SimpleMode>
+	<Path_WaferFile>C:\Users\Administrator\Desktop\纵慧\WAFER</Path_WaferFile>
+	<Path_BinFile>C:\Users\Administrator\Desktop\纵慧\BIN</Path_BinFile>
+	<Path_InternalData>C:\Users\Administrator\Desktop\纵慧\分档调试\内部</Path_InternalData>
+</DataPaths>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE80B689-B063-4809-8C64-23174FDF912F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SolveWare_SlaveStation</RootNamespace>
+    <AssemblyName>SolveWare_SlaveStation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LaserX_TesterLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SlaveStation_ProviderBase.cs" />
+    <Compile Include="SlaveStation_Config.cs" />
+    <Compile Include="AxisDirection.cs" />
+    <Compile Include="SlaveStation_Initializer.cs" />
+    <Compile Include="UI\Effective_IO.cs" />
+    <Compile Include="UI\SingleAxisBindingUIControl.cs" />
+    <Compile Include="UI\Form_SlaveStationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form_SlaveStationUI.designer.cs">
+      <DependentUpon>Form_SlaveStationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\Form_SlaveStationUI.resx">
+      <DependentUpon>Form_SlaveStationUI.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LX_BI_Utilities\LX_BI_Utilities.csproj">
+      <Project>{BA16291D-189F-4AB3-A341-2CD5D7B8F0C5}</Project>
+      <Name>LX_BI_Utilities</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SolveWare_BurnInAppInterface\SolveWare_BurnInAppInterface.csproj">
+      <Project>{d2392c77-4a8d-4963-a0f7-3284a2eb23f5}</Project>
+      <Name>SolveWare_BurnInAppInterface</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SolveWare_BurnInCommon\SolveWare_BurnInCommon.csproj">
+      <Project>{79bc6666-40ca-46ea-b248-dbca4ca15cc1}</Project>
+      <Name>SolveWare_BurnInCommon</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SolveWare_IO\SolveWare_IO.csproj">
+      <Project>{767df974-3553-4376-b71c-e45a694b2cd8}</Project>
+      <Name>SolveWare_IO</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SolveWare_Motion\SolveWare_Motion.csproj">
+      <Project>{e2a16232-c8e3-4298-af9d-d72400bd9424}</Project>
+      <Name>SolveWare_Motion</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

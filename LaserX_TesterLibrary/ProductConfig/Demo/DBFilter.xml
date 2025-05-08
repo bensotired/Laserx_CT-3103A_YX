@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <string>OperatorID</string>
+  <string>SerialNumber</string>
+  <string>AtritionRate</string>
+  <string>BIN</string>
+  <string>BinNumber</string>
+  <string>OutPutScann</string>
+  <string>CreateStartTime</string>
+</ArrayOfString>

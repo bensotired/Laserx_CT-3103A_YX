@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by 123 (123) -->
+<VisionComboCommand_Provider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CmdDict>
+		<Book>
+			<DataPairOfStringListOfString>
+				<Key>Camera1_Products_Search</Key>
+				<Value>
+					<string>Camera1_Products_Search</string>
+				</Value>
+			</DataPairOfStringListOfString>
+			<DataPairOfStringListOfString>
+				<Key>Camera1_PPM</Key>
+				<Value>
+					<string>Camera1_PPM</string>
+				</Value>
+			</DataPairOfStringListOfString>
+			<DataPairOfStringListOfString>
+				<Key>Camera2_Products_Search</Key>
+				<Value>
+					<string>Camera2_Products_Search</string>
+				</Value>
+			</DataPairOfStringListOfString>
+			<DataPairOfStringListOfString>
+				<Key>Camera2_Nozzle</Key>
+				<Value>
+					<string>Camera2_PPM</string>
+					<string>Camera2_Left_Nozzle</string>
+					<string>Camera2_Middle_Nozzle</string>
+					<string>Camera2_Right_Nozzle</string>
+				</Value>
+			</DataPairOfStringListOfString>
+		</Book>
+	</CmdDict>
+</VisionComboCommand_Provider>

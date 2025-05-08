@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DelayTimeSettings_Provider_CT40410A xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_DelayTimeSettings>
+    <DelayTime_1>200</DelayTime_1>
+    <DelayTime_2>200</DelayTime_2>
+    <DelayTime_3>200</DelayTime_3>
+    <DelayTime_4>200</DelayTime_4>
+    <DelayTime_5>200</DelayTime_5>
+    <DelayTime_6>200</DelayTime_6>
+    <DelayTime_7>200</DelayTime_7>
+    <DelayTime_8>200</DelayTime_8>
+  </_DelayTimeSettings>
+</DelayTimeSettings_Provider_CT40410A>

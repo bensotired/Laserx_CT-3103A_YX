@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAFB1A6C-1C81-474B-8766-11F19B7363D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SolveWare_TestComponents</RootNamespace>
+    <AssemblyName>SolveWare_TestComponents</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LaserX_TesterLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LX_BurnInSolution.Utilities">
+      <HintPath>..\LaserX_TesterLibrary\LX_BurnInSolution.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netchartdir, Version=7.0.0.0, Culture=neutral, PublicKeyToken=2db5fc05de12e204, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SolveWare_BurnInAppInterface, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInAppInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInInstruments, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInInstruments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInMessage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInMessage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\CustomizeRawDataUIAttribute.cs" />
+    <Compile Include="Attribute\ConfigurablePositionAttribute.cs" />
+    <Compile Include="Attribute\ConfigurableAxisAttribute.cs" />
+    <Compile Include="Attribute\StaticResourceAttribute.cs" />
+    <Compile Include="Attribute\ConfigurableInstrumentAttribute.cs" />
+    <Compile Include="Attribute\SupportedCalculatorAttribute.cs" />
+    <Compile Include="Attribute\TestRecipeAttribute.cs" />
+    <Compile Include="Attribute\RawDataCollectionAttribute.cs" />
+    <Compile Include="DeviceStreamDataBaseInfo\DeviceInfoBase.cs" />
+    <Compile Include="DeviceStreamDataBaseInfo\IDeviceInfoBase.cs" />
+    <Compile Include="Enums\ITestModule.cs" />
+    <Compile Include="Model\ExecutorConfigItem_TestParamsConfig\ExecutorConfigItem_TestParamsConfigCombo.cs" />
+    <Compile Include="Model\TestCalculator\CalcRecipe\CalcRecipeBase.cs" />
+    <Compile Include="Model\TestCalculator\CalcRecipe\ICalcRecipe.cs" />
+    <Compile Include="Model\ITestExecutiveMember.cs" />
+    <Compile Include="Model\TestCalculator\TestCalculatorComboItem.cs" />
+    <Compile Include="Model\TestCalculator\ITestCalculator.cs" />
+    <Compile Include="Model\TestCalculator\TestCalculatorBase.cs" />
+    <Compile Include="Model\TestExecutorUnit\ITestExecutorUnitInteration.cs" />
+    <Compile Include="Model\TestExecutor\Form_ExecutorWrapper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\TestExecutor\Form_ExecutorWrapper.Designer.cs">
+      <DependentUpon>Form_ExecutorWrapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TestExecutor\ITestExecutorInteration.cs" />
+    <Compile Include="Model\TestExecutor\TestExecutorBase.cs" />
+    <Compile Include="Model\TestExecutorUnit\TestExecutorUnitInteration.cs" />
+    <Compile Include="Model\TestExecutor\ITestExecutorRuntime.cs" />
+    <Compile Include="Model\TestExecutorUnit\TestExecutorUnitStatus.cs" />
+    <Compile Include="Model\TestExecutorUnit\TestExecutorUnit.cs" />
+    <Compile Include="Model\TestModule\Form_ModuleChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\TestModule\Form_ModuleChart.Designer.cs">
+      <DependentUpon>Form_ModuleChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TestModule\Form_ModuleFFChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\TestModule\Form_ModuleFFChart.Designer.cs">
+      <DependentUpon>Form_ModuleFFChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TestModule\Form_ModuleManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\TestModule\Form_ModuleManual.Designer.cs">
+      <DependentUpon>Form_ModuleManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TestModule\IForm_ModuleChart.cs" />
+    <Compile Include="Model\TestModule\ITestModule.cs" />
+    <Compile Include="Model\TestModule\TestModuleBase.cs" />
+    <Compile Include="Model\ExecutorConfigItem_TestParamsConfig\ExecutorConfigItem_TestParamsConfig.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RawData\RawDataMenuCollection\IRawDataMenuCollection.cs" />
+    <Compile Include="RawData\RawDataMenuCollection\RawDataMenuCollection.cs" />
+    <Compile Include="StreamData\DeviceStreamDataLite.cs" />
+    <Compile Include="StreamData\IMinorStreamData.cs" />
+    <Compile Include="StreamData\IMajorStreamData.cs" />
+    <Compile Include="StreamData\IDeviceStreamDataBase.cs" />
+    <Compile Include="RawData\RawDataBase\IRawDataBaseLite.cs" />
+    <Compile Include="RawData\RawDatumCollection\IRawDataCollectionBase.cs" />
+    <Compile Include="RawData\RawDatumItem\IRawDatumItemBase.cs" />
+    <Compile Include="RawData\RawDataBase\RawDataBaseLite.cs" />
+    <Compile Include="RawData\RawDatumItem\RawDatumItemBase.cs" />
+    <Compile Include="StreamData\IStreamInfoBase.cs" />
+    <Compile Include="StreamData\StreamInfoBase.cs" />
+    <Compile Include="StreamData\MinorStreamDataBase.cs" />
+    <Compile Include="StreamData\MajorStreamDataBase.cs" />
+    <Compile Include="StreamData\DeviceStreamDataBase.cs" />
+    <Compile Include="RawData\RawDatumCollection\RawDataCollectionBase.cs" />
+    <Compile Include="Specification\SpecDataType.cs" />
+    <Compile Include="Specification\TestSpecification.cs" />
+    <Compile Include="Specification\ISpecification.cs" />
+    <Compile Include="Specification\TestSpecificationItem.cs" />
+    <Compile Include="DeviceStreamDataBaseInfo\DeviceBaseInfo.cs" />
+    <Compile Include="SummaryData\ISummaryDatumItemBase.cs" />
+    <Compile Include="SummaryData\SummaryDataCollection.cs" />
+    <Compile Include="SummaryData\SummaryDatumItemBase.cs" />
+    <Compile Include="SummaryData\SummaryDatumJudegment.cs" />
+    <Compile Include="TestImportData\ExecutorConfigItem.cs" />
+    <Compile Include="Model\TestRecipe\TestRecipeBase.cs" />
+    <Compile Include="Model\TestRecipe\ITestRecipe.cs" />
+    <Compile Include="TestImportData\ITestPluginImportProfileBase.cs" />
+    <Compile Include="TestImportData\TestPluginImportProfileBase.cs" />
+    <Compile Include="TestImportData\TestPluginImportProfile_MultiComboMultiSpec.cs" />
+    <Compile Include="TestImportData\TestPluginImportProfile_MultiComboWithTestParams.cs" />
+    <Compile Include="TestImportData\TestPluginImportProfile_MultiComboOneSpec.cs" />
+    <Compile Include="TestImportData\TestPluginImportProfile_OneComboMultiSpec.cs" />
+    <Compile Include="TestResourceProvider\ITestPluginResourceProvider.cs" />
+    <Compile Include="TestResourceProvider\TestPluginResourceProvider.cs" />
+    <Compile Include="TestWorkerImport\Combo\TestExecutorComboWithParams.cs" />
+    <Compile Include="TestWorkerImport\Combo\TestStepCombo.cs" />
+    <Compile Include="UIComponents\Form_Flow_layer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\Form_Flow_layer.designer.cs">
+      <DependentUpon>Form_Flow_layer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\Form_RawDataViewer_FF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\Form_RawDataViewer_FF.Designer.cs">
+      <DependentUpon>Form_RawDataViewer_FF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\Form_RawDataViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\Form_RawDataViewer.Designer.cs">
+      <DependentUpon>Form_RawDataViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\Form_TestAndCalcParamEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\Form_TestAndCalcParamEditor.Designer.cs">
+      <DependentUpon>Form_TestAndCalcParamEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\Form_TLP_layer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponents\Form_TLP_layer.Designer.cs">
+      <DependentUpon>Form_TLP_layer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\IForm_RawDataViewer.cs" />
+    <Compile Include="UIComponents\PropertyDataGirdView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model\TestExecutor\Form_ExecutorWrapper.resx">
+      <DependentUpon>Form_ExecutorWrapper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\TestModule\Form_ModuleChart.resx">
+      <DependentUpon>Form_ModuleChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\TestModule\Form_ModuleFFChart.resx">
+      <DependentUpon>Form_ModuleFFChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\TestModule\Form_ModuleManual.resx">
+      <DependentUpon>Form_ModuleManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\Form_Flow_layer.resx">
+      <DependentUpon>Form_Flow_layer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\Form_RawDataViewer_FF.resx">
+      <DependentUpon>Form_RawDataViewer_FF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\Form_RawDataViewer.resx">
+      <DependentUpon>Form_RawDataViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\Form_TestAndCalcParamEditor.resx">
+      <DependentUpon>Form_TestAndCalcParamEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\Form_TLP_layer.resx">
+      <DependentUpon>Form_TLP_layer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIComponents\PropertyDataGirdView.resx">
+      <DependentUpon>PropertyDataGirdView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SolveWare_LX_ControlPackage\SolveWare_LX_ControlPackage.csproj">
+      <Project>{c2281215-2b05-4291-9446-f11f94aed6fc}</Project>
+      <Name>SolveWare_LX_ControlPackage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

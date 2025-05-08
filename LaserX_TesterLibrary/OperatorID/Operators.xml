@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by 123 (123) -->
+<ArrayOfPermissionItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PermissionItem>
+		<ID>oper</ID>
+		<Password>123</Password>
+		<APL>Operator</APL>
+	</PermissionItem>
+	<PermissionItem>
+		<ID>eng</ID>
+		<Password>123</Password>
+		<APL>Engineer</APL>
+	</PermissionItem>
+	<PermissionItem>
+		<ID>ben</ID>
+		<Password>123</Password>
+		<APL>Engineer</APL>
+	</PermissionItem>
+	<PermissionItem>
+		<ID>QA</ID>
+		<Password>123</Password>
+		<APL>Engineer</APL>
+	</PermissionItem>
+</ArrayOfPermissionItem>

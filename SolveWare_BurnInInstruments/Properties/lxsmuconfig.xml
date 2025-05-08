@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by 123 (123) -->
+<SMU3133Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance>">
+	<CardNo>1</CardNo>
+	<PD1_aiCh>0</PD1_aiCh>
+	<PD2_aiCh>1</PD2_aiCh>
+	<MPD1_aiCh>2</MPD1_aiCh>
+	<MPD2_aiCh>3</MPD2_aiCh>
+	<TEC1_aiCh>4</TEC1_aiCh>
+	<TEC2_aiCh>5</TEC2_aiCh>
+	<NTC1_aiCh>6</NTC1_aiCh>
+	<NTC2_aiCh>7</NTC2_aiCh>
+	<PD1_Range_doCh_1>6</PD1_Range_doCh_1>
+	<PD1_Range_doCh_2>7</PD1_Range_doCh_2>
+	<PD2_Range_doCh_1>4</PD2_Range_doCh_1>
+	<PD2_Range_doCh_2>5</PD2_Range_doCh_2>
+	<MPD1_Range_doCh_1>2</MPD1_Range_doCh_1>
+	<MPD1_Range_doCh_2>3</MPD1_Range_doCh_2>
+	<MPD2_Range_doCh_1>0</MPD2_Range_doCh_1>
+	<MPD2_Range_doCh_2>1</MPD2_Range_doCh_2>
+	<ArtPFICh>0</ArtPFICh>
+	<AITerminal>Differential</AITerminal>
+	<SampleClockRate>10000</SampleClockRate>
+	<Timeout_s>10</Timeout_s>
+	<Range>5</Range>
+	<Range_Tec>10</Range_Tec>
+</SMU3133Config>

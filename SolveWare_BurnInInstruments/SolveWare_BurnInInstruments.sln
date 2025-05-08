@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolveWare_BurnInInstruments", "SolveWare_BurnInInstruments.csproj", "{A94FC1B6-2AA6-4929-9939-33B22669CE92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolveWare_TestPackage", "..\TestPackage\SolveWare_TestPackage.csproj", "{21EC4962-48DE-44E6-8008-2127AC167168}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A94FC1B6-2AA6-4929-9939-33B22669CE92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A94FC1B6-2AA6-4929-9939-33B22669CE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A94FC1B6-2AA6-4929-9939-33B22669CE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A94FC1B6-2AA6-4929-9939-33B22669CE92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EC4962-48DE-44E6-8008-2127AC167168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EC4962-48DE-44E6-8008-2127AC167168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EC4962-48DE-44E6-8008-2127AC167168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EC4962-48DE-44E6-8008-2127AC167168}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC2E855D-6482-4482-972D-32EA78726230}
+	EndGlobalSection
+EndGlobal

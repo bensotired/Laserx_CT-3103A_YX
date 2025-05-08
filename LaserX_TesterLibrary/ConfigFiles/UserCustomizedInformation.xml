@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserCustomizedInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Left_Temp>58</Left_Temp>
+  <Right_Temp>58</Right_Temp>
+  <Tolerance_Temp>0.3</Tolerance_Temp>
+  <MaskName>DO721#3</MaskName>
+  <WaferName>TM043</WaferName>
+  <ChipName>Demo</ChipName>
+  <WorkOrder>X241112001</WorkOrder>
+</UserCustomizedInformation>

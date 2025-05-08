@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisionManagerConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <VisionCMDBook>
+    <Book>
+      <DataPairOfInt32String>
+        <Key>1</Key>
+        <Value>ColorRecognition</Value>
+      </DataPairOfInt32String>
+      <DataPairOfInt32String>
+        <Key>2</Key>
+        <Value>cmd 2</Value>
+      </DataPairOfInt32String>
+      <DataPairOfInt32String>
+        <Key>3</Key>
+        <Value>cmd 3</Value>
+      </DataPairOfInt32String>
+      <DataPairOfInt32String>
+        <Key>4</Key>
+        <Value>cmd 4</Value>
+      </DataPairOfInt32String>
+      <DataPairOfInt32String>
+        <Key>5</Key>
+        <Value>cmd 5</Value>
+      </DataPairOfInt32String>
+    </Book>
+  </VisionCMDBook>
+</VisionManagerConfig>

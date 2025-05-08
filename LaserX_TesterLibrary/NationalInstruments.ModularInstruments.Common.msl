@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<DotNETComponent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Visible>false</Visible>
+  <SupportedProjectTypes>
+    <string>CppCLI2012</string>
+    <string>WindowsFormsApplication2012</string>
+  </SupportedProjectTypes>
+  <SelectedByDefault>false</SelectedByDefault>
+  <Title>Measurement Studio Hardware Class Libraries/ModularInstruments Common Library</Title>
+  <Description>Contains common classes used to communicate with National Instruments ModularInstrument devices.</Description>
+  <Name2012>NationalInstruments.ModularInstruments.Common</Name2012>
+  <Licensed>false</Licensed>
+  <Dependencies>
+    <DotNETAssembly>
+      <Name>NationalInstruments.Common</Name>
+    </DotNETAssembly>
+  </Dependencies>
+  <Namespaces>
+    <string>NationalInstruments.ModularInstruments</string>
+  </Namespaces>
+</DotNETComponent>
+

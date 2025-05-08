@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2392C77-4A8D-4963-A0F7-3284A2EB23F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SolveWare_BurnInAppInterface</RootNamespace>
+    <AssemblyName>SolveWare_BurnInAppInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LaserX_TesterLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAccessPermissionLevel.cs" />
+    <Compile Include="ResourceProvider\IAccessResourceOwner.cs" />
+    <Compile Include="ResourceProvider\GenernalResourceOwner.cs" />
+    <Compile Include="ResourceProvider\IAxesPositionResourceProvider.cs" />
+    <Compile Include="ResourceProvider\IBinSortListResourceProvider.cs" />
+    <Compile Include="ResourceProvider\IBinSortResourceProvider.cs" />
+    <Compile Include="ResourceProvider\IVisionResourceProvider.cs" />
+    <Compile Include="ResourceProvider\ISpecResourceProvider.cs" />
+    <Compile Include="ResourceProvider\IIOResourceProvider.cs" />
+    <Compile Include="ResourceProvider\IAxisResourceProvider.cs" />
+    <Compile Include="TesterAppInterface\ITesterAppExceptionHandle.cs" />
+    <Compile Include="TesterAppInterface\ITesterAppLogHandle.cs" />
+    <Compile Include="TesterAppInterface\ITesterAppPluginUIModel.cs" />
+    <Compile Include="TesterAppInterface\ITesterAppConfig.cs" />
+    <Compile Include="TesterAppInterface\ITesterAppUI.cs" />
+    <Compile Include="TesterAppInterface\ITesterAssembly.cs" />
+    <Compile Include="TesterAppInterface\ITesterCoreResource.cs" />
+    <Compile Include="TesterAppInterface\ITesterDataBaseOperation.cs" />
+    <Compile Include="TesterAppInterface\TesterAppPluginUIModel.cs" />
+    <Compile Include="TesterAppInterface\TesterAppPluginModel.cs" />
+    <Compile Include="TesterAppInterface\ITesterAppPluginInteration.cs" />
+    <Compile Include="TesterAppInterface\ITesterCoreHandleUIAction.cs" />
+    <Compile Include="TesterAppInterface\TesterPluginModel.cs" />
+    <Compile Include="TesterAppInterface\ITesterCoreLink.cs" />
+    <Compile Include="TesterAppInterface\ITesterCoreInteration.cs" />
+    <Compile Include="IExceptionHandle.cs" />
+    <Compile Include="ILogHandle.cs" />
+    <Compile Include="InterationDelegates.cs" />
+    <Compile Include="PluginModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SolveWare_BurnInCommon\SolveWare_BurnInCommon.csproj">
+      <Project>{79bc6666-40ca-46ea-b248-dbca4ca15cc1}</Project>
+      <Name>SolveWare_BurnInCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SolveWare_BurnInMessage\SolveWare_BurnInMessage.csproj">
+      <Project>{fa48e509-4977-4847-b7dc-09bf86da2485}</Project>
+      <Name>SolveWare_BurnInMessage</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

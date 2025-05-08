@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{411F333E-1300-455D-8B84-5187517B8CA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SolveWare_TesterCore</RootNamespace>
+    <AssemblyName>SolveWare_TesterCore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LaserX_TesterLibrary\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LASERX_LOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LX_BurnInSolution.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\LX_BurnInSolution.Log.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LX_BurnInSolution.Utilities, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\LX_BurnInSolution.Utilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInAppInterface, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInAppInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInException, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInException.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInInstruments, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInInstruments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_BurnInMessage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_BurnInMessage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_Data_AccessDatabase, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_Data_AccessDatabase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_Permission, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_Permission.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SolveWare_TestComponents, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\SolveWare_TestComponents.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreGroup\AppPluginManager.cs" />
+    <Compile Include="CoreGroup\TesterCore_DB_Opera.cs" />
+    <Compile Include="CoreGroup\TestFrameManager_BK.cs" />
+    <Compile Include="CoreGroup\TestFrameManager.cs" />
+    <Compile Include="CoreGroup\TestStationManager.cs" />
+    <Compile Include="ProductConfig\Form_CreateNewProductConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductConfig\Form_CreateNewProductConfig.Designer.cs">
+      <DependentUpon>Form_CreateNewProductConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_NewExecutorCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_NewExecutorCombo.Designer.cs">
+      <DependentUpon>Form_NewExecutorCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_NewExecutorConfigItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_NewExecutorConfigItem.Designer.cs">
+      <DependentUpon>Form_NewExecutorConfigItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlatformUI\Form_StationBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlatformUI\Form_StationBoard.Designer.cs">
+      <DependentUpon>Form_StationBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlatformUI\Form_MessageBorad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlatformUI\Form_MessageBorad.Designer.cs">
+      <DependentUpon>Form_MessageBorad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoreGroup\GUIFactory.cs" />
+    <Compile Include="CoreGroup\TesterCore.cs" />
+    <Compile Include="PlatformUI\Form_UniversalTesterMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlatformUI\Form_UniversalTesterMain.Designer.cs">
+      <DependentUpon>Form_UniversalTesterMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoreEnums.cs" />
+    <Compile Include="TestFrameUIs\Form_CalculatorRecipe_Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_CalculatorRecipe_Builder.Designer.cs">
+      <DependentUpon>Form_CalculatorRecipe_Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_changeModelName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_changeModelName.Designer.cs">
+      <DependentUpon>Form_changeModelName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_Builder_SimpleMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_Builder_SimpleMode.Designer.cs">
+      <DependentUpon>Form_TestExecutorCombo_Builder_SimpleMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_InstrumentEditor_SimpleMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_InstrumentEditor_SimpleMode.Designer.cs">
+      <DependentUpon>Form_TestExecutorCombo_InstrumentEditor_SimpleMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutorCombo_InstrumentEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutorCombo_InstrumentEditor.Designer.cs">
+      <DependentUpon>Form_TestExecutorCombo_InstrumentEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutorCombo_Profiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutorCombo_Profiler.Designer.cs">
+      <DependentUpon>Form_TestExecutorCombo_Profiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_RecipeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_RecipeInfo.Designer.cs">
+      <DependentUpon>Form_RecipeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutorCombo_Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutorCombo_Builder.Designer.cs">
+      <DependentUpon>Form_TestExecutorCombo_Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_ParamsEditor_SimpleMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_ParamsEditor_SimpleMode.Designer.cs">
+      <DependentUpon>Form_TestExecutorCombo_ParamsEditor_SimpleMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_DynamicTestExecutorDebugger_SimpleMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_DynamicTestExecutorDebugger_SimpleMode.Designer.cs">
+      <DependentUpon>Form_DynamicTestExecutorDebugger_SimpleMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorDebugger_SimpleMode_NO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorDebugger_SimpleMode_NO.Designer.cs">
+      <DependentUpon>Form_TestExecutorDebugger_SimpleMode_NO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutorDebugger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutorDebugger.Designer.cs">
+      <DependentUpon>Form_TestExecutorDebugger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_InsertCalculatorIntoExecutorCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_InsertCalculatorIntoExecutorCombo.Designer.cs">
+      <DependentUpon>Form_InsertCalculatorIntoExecutorCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorItem_Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutorItem_Preview.Designer.cs">
+      <DependentUpon>Form_TestExecutorItem_Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutor_Builder_SimpleMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\SimpleMode\Form_TestExecutor_Builder_SimpleMode.Designer.cs">
+      <DependentUpon>Form_TestExecutor_Builder_SimpleMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestFrameBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestFrameBoard.designer.cs">
+      <DependentUpon>Form_TestFrameBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutor_Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestExecutor_Builder.Designer.cs">
+      <DependentUpon>Form_TestExecutor_Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestRecipe_Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrameUIs\Form_TestRecipe_Builder.Designer.cs">
+      <DependentUpon>Form_TestRecipe_Builder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPlatformStarterProgram.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProductConfig\Form_CreateNewProductConfig.resx">
+      <DependentUpon>Form_CreateNewProductConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_NewExecutorCombo.resx">
+      <DependentUpon>Form_NewExecutorCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_NewExecutorConfigItem.resx">
+      <DependentUpon>Form_NewExecutorConfigItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlatformUI\Form_StationBoard.resx">
+      <DependentUpon>Form_StationBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlatformUI\Form_MessageBorad.resx">
+      <DependentUpon>Form_MessageBorad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlatformUI\Form_UniversalTesterMain.resx">
+      <DependentUpon>Form_UniversalTesterMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_CalculatorRecipe_Builder.resx">
+      <DependentUpon>Form_CalculatorRecipe_Builder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_changeModelName.resx">
+      <DependentUpon>Form_changeModelName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_Builder_SimpleMode.resx">
+      <DependentUpon>Form_TestExecutorCombo_Builder_SimpleMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_InstrumentEditor_SimpleMode.resx">
+      <DependentUpon>Form_TestExecutorCombo_InstrumentEditor_SimpleMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_TestExecutorCombo_InstrumentEditor.resx">
+      <DependentUpon>Form_TestExecutorCombo_InstrumentEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_TestExecutorCombo_Profiler.resx">
+      <DependentUpon>Form_TestExecutorCombo_Profiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_RecipeInfo.resx">
+      <DependentUpon>Form_RecipeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_TestExecutorCombo_Builder.resx">
+      <DependentUpon>Form_TestExecutorCombo_Builder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_TestExecutorCombo_ParamsEditor_SimpleMode.resx">
+      <DependentUpon>Form_TestExecutorCombo_ParamsEditor_SimpleMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_DynamicTestExecutorDebugger_SimpleMode.resx">
+      <DependentUpon>Form_DynamicTestExecutorDebugger_SimpleMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_TestExecutorDebugger_SimpleMode_NO.resx">
+      <DependentUpon>Form_TestExecutorDebugger_SimpleMode_NO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_TestExecutorDebugger.resx">
+      <DependentUpon>Form_TestExecutorDebugger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_InsertCalculatorIntoExecutorCombo.resx">
+      <DependentUpon>Form_InsertCalculatorIntoExecutorCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_TestExecutorItem_Preview.resx">
+      <DependentUpon>Form_TestExecutorItem_Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\SimpleMode\Form_TestExecutor_Builder_SimpleMode.resx">
+      <DependentUpon>Form_TestExecutor_Builder_SimpleMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_TestFrameBoard.resx">
+      <DependentUpon>Form_TestFrameBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_TestExecutor_Builder.resx">
+      <DependentUpon>Form_TestExecutor_Builder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrameUIs\Form_TestRecipe_Builder.resx">
+      <DependentUpon>Form_TestRecipe_Builder.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SolveWare_TestPlugin\SolveWare_TestPlugin.csproj">
+      <Project>{0B05B032-8AF4-4624-8A07-B62AC1A62E58}</Project>
+      <Name>SolveWare_TestPlugin</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LASERX_LOGO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dev docs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

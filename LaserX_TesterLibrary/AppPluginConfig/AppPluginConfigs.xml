@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by tbd (tbd) -->
+<AppPluginConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<AppPlugins>
+		<AppPluginConfigItem>
+			<PluginName>运动模块</PluginName>
+			<PluginType>MotionManager</PluginType>
+			<PluginEnable>false</PluginEnable>
+			<PluginConfigFile>ConfigFiles\hello1111.xml</PluginConfigFile>
+			<PluginArguments/>
+			<PluginExecutor>Motion_Initializer_GUGAO</PluginExecutor>
+			<PluginDll>SolveWare_Motion.dll</PluginDll>
+			<PluginDiscription/>
+			<PluginSimulation>true</PluginSimulation>
+		</AppPluginConfigItem>
+	</AppPlugins>
+</AppPluginConfig>

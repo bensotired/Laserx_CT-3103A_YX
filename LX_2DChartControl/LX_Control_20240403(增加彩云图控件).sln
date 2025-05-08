@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34729.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LX_Control", "LX_Control\LX_Control.csproj", "{30FFF629-F030-4EC0-9BCA-93D6267C1776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{3EA4D98B-7793-4944-B223-BD63961A29A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30FFF629-F030-4EC0-9BCA-93D6267C1776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FFF629-F030-4EC0-9BCA-93D6267C1776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FFF629-F030-4EC0-9BCA-93D6267C1776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FFF629-F030-4EC0-9BCA-93D6267C1776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EA4D98B-7793-4944-B223-BD63961A29A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA4D98B-7793-4944-B223-BD63961A29A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA4D98B-7793-4944-B223-BD63961A29A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA4D98B-7793-4944-B223-BD63961A29A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61A8F1DD-3734-4F1F-8125-F3C5AAF671D7}
+	EndGlobalSection
+EndGlobal

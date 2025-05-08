@@ -1,0 +1,12 @@
+Machine name,Operater ID,Time,Work order,Purpose,Test Platform,Fixture ID,Socket number,CoC information_ID, , ,QWLT result, , , , , , , , , , , , , , ,LIV result, , , ,Coarse Tune
+Station name,worker ID, , , , , , ,Mask,Wafer,PIC,Gain[mA],SOA1[mA],SOA2[mA],Mrror1[mA],Mirror2[mA],L-phase[mA],Phase1[mA],Phase2[mA],Wavelength[nm],Deviation[nm],SMSR[dB],MZM Vbias[V],mPD Bias [V],MPD1[uA],MPD2[uA],Ith to SOA,Ith to Power,TapPD_Power,IS_Power[mW],Missing Channel,Judgement,Failure code,Test Temp[DegC]
+CT-3103A,operator,20241024_115717,X240704001,Pre BI,Left (A),93,4,DO721#1,TM038,TM038-F-01-13,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_115849,X240704001,Pre BI,Left (A),93,5,DO721#1,TM038,TM038-F-01-11,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_141249,X240704001,Pre BI,Rignt (B),93,4,DO721#1,TM038,TM038-F-01-13,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_141427,X240704001,Pre BI,Rignt (B),93,5,DO721#1,TM038,TM038-F-01-11,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_143158,X240704001,Pre BI,Rignt (B),93,4,DO721#1,TM038,TM038-F-01-13,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_143336,X240704001,Pre BI,Rignt (B),93,5,DO721#1,TM038,TM038-F-01-11,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_145108,X240704001,Pre BI,Rignt (B),93,4,DO721#1,TM038,TM038-F-01-13,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_145245,X240704001,Pre BI,Rignt (B),93,5,DO721#1,TM038,TM038-F-01-11,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_153643,X240704001,Pre BI,Left (A),93,4,DO721#1,TM038,TM038-F-01-13,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1
+CT-3103A,operator,20241024_153817,X240704001,Pre BI,Left (A),93,5,DO721#1,TM038,TM038-F-01-11,120,50,40,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,,Pass,,-1

@@ -1,0 +1,2678 @@
+
+
+[2024-7-19 16:24:0:416] in P9078_MotionDeinit:
+dev[1] RT task period, min: 938.0 us, max: 1159.4 us, mean: 1048.6 us
+
+
+[2024-7-19 16:24:0:463] in P9078_MotionDeinit:
+dev[0] RT task period, min: 892.0 us, max: 1204.4 us, mean: 1048.6 us
+
+
+[2024-7-19 16:24:0:495] in P9078_MotionDeinit:
+
+
+[2024-7-19 16:24:1:111] in P9078_MotionDeinit:
+
+
+[2024-7-19 16:29:43:209] in P9078_MotionDeinit:
+dev[1] RT task period, min: 935.2 us, max: 1162.0 us, mean: 1048.6 us
+
+
+[2024-7-19 16:29:43:255] in P9078_MotionDeinit:
+dev[0] RT task period, min: 921.5 us, max: 1180.2 us, mean: 1048.6 us
+
+
+[2024-7-19 16:29:43:287] in P9078_MotionDeinit:
+
+
+[2024-7-19 16:29:43:902] in P9078_MotionDeinit:
+
+
+[2024-7-19 16:51:24:205] in P9078_MotionDeinit:
+dev[1] RT task period, min: 917.4 us, max: 1177.2 us, mean: 1048.6 us
+
+
+[2024-7-19 16:51:24:252] in P9078_MotionDeinit:
+dev[0] RT task period, min: 872.0 us, max: 1222.3 us, mean: 1048.6 us
+
+
+[2024-7-19 16:51:24:283] in P9078_MotionDeinit:
+
+
+[2024-7-19 16:51:24:899] in P9078_MotionDeinit:
+
+
+[2024-7-19 16:52:58:829] in P9078_MotionDeinit:
+dev[1] RT task period, min: 960.6 us, max: 1137.0 us, mean: 1048.6 us
+
+
+[2024-7-19 16:52:58:875] in P9078_MotionDeinit:
+dev[0] RT task period, min: 916.2 us, max: 1183.7 us, mean: 1048.6 us
+
+
+[2024-7-19 16:52:58:906] in P9078_MotionDeinit:
+
+
+[2024-7-19 16:52:59:522] in P9078_MotionDeinit:
+
+
+[2024-7-19 17:5:9:613] in P9078_MotionDeinit:
+dev[1] RT task period, min: 953.0 us, max: 1145.5 us, mean: 1048.6 us
+
+
+[2024-7-19 17:5:9:660] in P9078_MotionDeinit:
+dev[0] RT task period, min: 916.2 us, max: 1177.9 us, mean: 1048.6 us
+
+
+[2024-7-19 17:5:9:690] in P9078_MotionDeinit:
+
+
+[2024-7-19 17:5:10:306] in P9078_MotionDeinit:
+
+
+[2024-7-19 17:58:46:296] in P9078_MotionDeinit:
+dev[1] RT task period, min: 213.2 us, max: 1877.6 us, mean: 1048.6 us
+
+
+[2024-7-19 17:58:46:342] in P9078_MotionDeinit:
+dev[0] RT task period, min: 213.3 us, max: 1879.2 us, mean: 1048.6 us
+
+
+[2024-7-19 17:58:46:373] in P9078_MotionDeinit:
+
+
+[2024-7-19 17:58:46:989] in P9078_MotionDeinit:
+
+
+[2024-7-19 18:0:25:917] in P9078_MotionDeinit:
+dev[1] RT task period, min: 923.6 us, max: 1173.6 us, mean: 1048.6 us
+
+
+[2024-7-19 18:0:25:962] in P9078_MotionDeinit:
+dev[0] RT task period, min: 927.7 us, max: 1174.0 us, mean: 1048.6 us
+
+
+[2024-7-19 18:0:25:994] in P9078_MotionDeinit:
+
+
+[2024-7-19 18:0:26:611] in P9078_MotionDeinit:
+
+
+[2024-7-19 18:20:18:79] in P9078_MotionDeinit:
+dev[1] RT task period, min: 543.1 us, max: 1549.6 us, mean: 1048.6 us
+
+
+[2024-7-19 18:20:18:126] in P9078_MotionDeinit:
+dev[0] RT task period, min: 546.0 us, max: 1920.9 us, mean: 1048.6 us
+
+
+[2024-7-19 18:20:18:157] in P9078_MotionDeinit:
+
+
+[2024-7-19 18:20:18:774] in P9078_MotionDeinit:
+
+
+[2024-7-20 17:58:35:668] in P9078_MotionDeinit:
+dev[1] RT task period, min: 221.0 us, max: 2606.1 us, mean: 1048.6 us
+
+
+[2024-7-20 17:58:35:715] in P9078_MotionDeinit:
+dev[0] RT task period, min: 181.9 us, max: 3911.5 us, mean: 1048.6 us
+
+
+[2024-7-20 17:58:35:746] in P9078_MotionDeinit:
+
+
+[2024-7-20 17:58:36:362] in P9078_MotionDeinit:
+
+
+[2024-7-22 9:37:47:226] in P9078_MotionDeinit:
+dev[0] RT task period, min: 858.2 us, max: 1241.7 us, mean: 1048.6 us
+
+
+[2024-7-22 9:37:47:260] in P9078_MotionDeinit:
+dev[1] RT task period, min: 962.2 us, max: 1135.0 us, mean: 1048.6 us
+
+
+[2024-7-22 9:37:47:292] in P9078_MotionDeinit:
+
+
+[2024-7-22 9:37:47:908] in P9078_MotionDeinit:
+
+
+[2024-7-22 10:27:23:836] in P9078_MotionDeinit:
+dev[0] RT task period, min: 855.7 us, max: 1244.0 us, mean: 1048.6 us
+
+
+[2024-7-22 10:27:23:871] in P9078_MotionDeinit:
+dev[1] RT task period, min: 994.0 us, max: 1103.7 us, mean: 1048.6 us
+
+
+[2024-7-22 10:27:23:916] in P9078_MotionDeinit:
+
+
+[2024-7-22 10:27:24:533] in P9078_MotionDeinit:
+
+
+[2024-7-22 11:29:13:746] in P9078_MotionDeinit:
+dev[0] RT task period, min: 970.7 us, max: 1126.6 us, mean: 1048.6 us
+
+
+[2024-7-22 11:29:13:781] in P9078_MotionDeinit:
+dev[1] RT task period, min: 967.4 us, max: 1129.7 us, mean: 1048.6 us
+
+
+[2024-7-22 11:29:13:826] in P9078_MotionDeinit:
+
+
+[2024-7-22 11:29:14:442] in P9078_MotionDeinit:
+
+
+[2024-7-22 12:59:19:830] in P9078_MotionDeinit:
+dev[0] RT task period, min: 912.3 us, max: 1185.2 us, mean: 1048.6 us
+
+
+[2024-7-22 12:59:19:873] in P9078_MotionDeinit:
+dev[1] RT task period, min: 874.6 us, max: 1223.2 us, mean: 1048.6 us
+
+
+[2024-7-22 12:59:19:905] in P9078_MotionDeinit:
+
+
+[2024-7-22 12:59:20:521] in P9078_MotionDeinit:
+
+
+[2024-7-22 21:6:8:937] in P9078_MotionDeinit:
+dev[0] RT task period, min: 564.7 us, max: 1531.8 us, mean: 1048.6 us
+
+
+[2024-7-22 21:6:8:978] in P9078_MotionDeinit:
+dev[1] RT task period, min: 483.2 us, max: 1586.3 us, mean: 1048.6 us
+
+
+[2024-7-22 21:6:9:10] in P9078_MotionDeinit:
+
+
+[2024-7-22 21:6:9:626] in P9078_MotionDeinit:
+
+
+[2024-7-22 21:9:36:847] in P9078_MotionDeinit:
+dev[0] RT task period, min: 898.3 us, max: 1198.7 us, mean: 1048.6 us
+
+
+[2024-7-22 21:9:36:892] in P9078_MotionDeinit:
+dev[1] RT task period, min: 941.2 us, max: 1153.0 us, mean: 1048.6 us
+
+
+[2024-7-22 21:9:36:924] in P9078_MotionDeinit:
+
+
+[2024-7-22 21:9:37:539] in P9078_MotionDeinit:
+
+
+[2024-7-23 10:9:33:779] in P9078_MotionDeinit:
+dev[0] RT task period, min: 701.6 us, max: 1393.7 us, mean: 1048.6 us
+
+
+[2024-7-23 10:9:33:826] in P9078_MotionDeinit:
+dev[1] RT task period, min: 566.0 us, max: 1509.6 us, mean: 1048.6 us
+
+
+[2024-7-23 10:9:33:858] in P9078_MotionDeinit:
+
+
+[2024-7-23 10:9:34:474] in P9078_MotionDeinit:
+
+
+[2024-7-24 9:39:59:630] in P9078_MotionDeinit:
+dev[0] RT task period, min: 193.2 us, max: 3276.4 us, mean: 1048.6 us
+
+
+[2024-7-24 9:39:59:677] in P9078_MotionDeinit:
+dev[1] RT task period, min: 153.0 us, max: 4189.3 us, mean: 1048.6 us
+
+
+[2024-7-24 9:39:59:709] in P9078_MotionDeinit:
+
+
+[2024-7-24 9:40:0:325] in P9078_MotionDeinit:
+
+
+[2024-7-24 17:58:0:344] in P9078_MotionDeinit:
+dev[0] RT task period, min: 135.3 us, max: 3469.8 us, mean: 1048.6 us
+
+
+[2024-7-24 17:58:0:391] in P9078_MotionDeinit:
+dev[1] RT task period, min: 138.8 us, max: 2896.3 us, mean: 1048.6 us
+
+
+[2024-7-24 17:58:0:422] in P9078_MotionDeinit:
+
+
+[2024-7-24 17:58:1:38] in P9078_MotionDeinit:
+
+
+[2024-7-25 11:50:58:344] in P9078_MotionDeinit:
+dev[0] RT task period, min: 950.0 us, max: 1150.4 us, mean: 1048.6 us
+
+
+[2024-7-25 11:50:58:378] in P9078_MotionDeinit:
+dev[1] RT task period, min: 962.3 us, max: 1134.5 us, mean: 1048.6 us
+
+
+[2024-7-25 11:50:58:410] in P9078_MotionDeinit:
+
+
+[2024-7-25 11:50:59:25] in P9078_MotionDeinit:
+
+
+[2024-8-5 17:29:35:98] in P9078_MotionDeinit:
+dev[0] RT task period, min: 94.1 us, max: 3051.5 us, mean: 1048.6 us
+
+
+[2024-8-5 17:29:35:132] in P9078_MotionDeinit:
+dev[1] RT task period, min: 365.2 us, max: 2717.4 us, mean: 1048.6 us
+
+
+[2024-8-5 17:29:35:164] in P9078_MotionDeinit:
+
+
+[2024-8-5 17:29:35:778] in P9078_MotionDeinit:
+
+
+[2024-8-6 11:28:22:441] in P9078_MotionDeinit:
+dev[0] RT task period, min: 867.7 us, max: 1229.4 us, mean: 1048.6 us
+
+
+[2024-8-6 11:28:22:475] in P9078_MotionDeinit:
+dev[1] RT task period, min: 828.9 us, max: 1270.7 us, mean: 1048.6 us
+
+
+[2024-8-6 11:28:22:507] in P9078_MotionDeinit:
+
+
+[2024-8-6 11:28:23:122] in P9078_MotionDeinit:
+
+
+[2024-8-7 15:46:2:134] in P9078_MotionDeinit:
+dev[0] RT task period, min: 948.6 us, max: 1152.8 us, mean: 1048.6 us
+
+
+[2024-8-7 15:46:2:168] in P9078_MotionDeinit:
+dev[1] RT task period, min: 949.5 us, max: 1148.9 us, mean: 1048.6 us
+
+
+[2024-8-7 15:46:2:199] in P9078_MotionDeinit:
+
+
+[2024-8-7 15:46:2:814] in P9078_MotionDeinit:
+
+
+[2024-8-9 17:14:50:960] in P9078_MotionDeinit:
+dev[0] RT task period, min: 173.0 us, max: 1916.5 us, mean: 1048.6 us
+
+
+[2024-8-9 17:14:50:993] in P9078_MotionDeinit:
+dev[1] RT task period, min: 397.1 us, max: 1698.2 us, mean: 1048.6 us
+
+
+[2024-8-9 17:14:51:25] in P9078_MotionDeinit:
+
+
+[2024-8-9 17:14:51:641] in P9078_MotionDeinit:
+
+
+[2024-8-14 17:16:43:16] in P9078_MotionDeinit:
+dev[0] RT task period, min: 966.2 us, max: 1131.3 us, mean: 1048.6 us
+
+
+[2024-8-14 17:16:43:50] in P9078_MotionDeinit:
+dev[1] RT task period, min: 968.9 us, max: 1128.3 us, mean: 1048.6 us
+
+
+[2024-8-14 17:16:43:82] in P9078_MotionDeinit:
+
+
+[2024-8-14 17:16:43:697] in P9078_MotionDeinit:
+
+
+[2024-8-19 15:54:24:603] in P9078_MotionDeinit:
+dev[0] RT task period, min: 962.5 us, max: 1134.9 us, mean: 1048.6 us
+
+
+[2024-8-19 15:54:24:649] in P9078_MotionDeinit:
+dev[1] RT task period, min: 879.4 us, max: 1219.3 us, mean: 1048.6 us
+
+
+[2024-8-19 15:54:24:681] in P9078_MotionDeinit:
+
+
+[2024-8-19 15:54:25:297] in P9078_MotionDeinit:
+
+
+[2024-8-19 15:55:16:273] in P9078_MotionDeinit:
+dev[0] RT task period, min: 969.2 us, max: 1127.6 us, mean: 1048.6 us
+
+
+[2024-8-19 15:55:16:313] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1019.6 us, max: 1077.0 us, mean: 1048.6 us
+
+
+[2024-8-19 15:55:16:358] in P9078_MotionDeinit:
+
+
+[2024-8-19 15:55:16:975] in P9078_MotionDeinit:
+
+
+[2024-8-19 17:21:5:229] in P9078_MotionDeinit:
+dev[0] RT task period, min: 418.7 us, max: 1677.0 us, mean: 1048.6 us
+
+
+[2024-8-19 17:21:5:273] in P9078_MotionDeinit:
+dev[1] RT task period, min: 314.4 us, max: 1764.7 us, mean: 1048.6 us
+
+
+[2024-8-19 17:21:5:319] in P9078_MotionDeinit:
+
+
+[2024-8-19 17:21:5:935] in P9078_MotionDeinit:
+
+
+[2024-8-19 18:28:18:661] in P9078_MotionDeinit:
+dev[0] RT task period, min: 180.9 us, max: 1908.8 us, mean: 1048.6 us
+
+
+[2024-8-19 18:28:18:694] in P9078_MotionDeinit:
+dev[1] RT task period, min: 289.3 us, max: 1807.9 us, mean: 1048.6 us
+
+
+[2024-8-19 18:28:18:740] in P9078_MotionDeinit:
+
+
+[2024-8-19 18:28:19:356] in P9078_MotionDeinit:
+
+
+[2024-8-20 9:54:13:824] in P9078_MotionDeinit:
+dev[0] RT task period, min: 964.5 us, max: 1132.4 us, mean: 1048.6 us
+
+
+[2024-8-20 9:54:13:865] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1008.3 us, max: 1091.5 us, mean: 1048.6 us
+
+
+[2024-8-20 9:54:13:897] in P9078_MotionDeinit:
+
+
+[2024-8-20 9:54:14:513] in P9078_MotionDeinit:
+
+
+[2024-8-20 10:29:15:46] in P9078_MotionDeinit:
+dev[0] RT task period, min: 134.9 us, max: 1948.6 us, mean: 1048.6 us
+
+
+[2024-8-20 10:29:15:81] in P9078_MotionDeinit:
+dev[1] RT task period, min: 321.7 us, max: 1758.4 us, mean: 1048.6 us
+
+
+[2024-8-20 10:29:15:112] in P9078_MotionDeinit:
+
+
+[2024-8-20 10:29:15:729] in P9078_MotionDeinit:
+
+
+[2024-8-20 10:33:14:606] in P9078_MotionDeinit:
+dev[0] RT task period, min: 973.0 us, max: 1124.5 us, mean: 1048.6 us
+
+
+[2024-8-20 10:33:14:651] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1005.4 us, max: 1093.2 us, mean: 1048.6 us
+
+
+[2024-8-20 10:33:14:682] in P9078_MotionDeinit:
+
+
+[2024-8-20 10:33:15:298] in P9078_MotionDeinit:
+
+
+[2024-8-20 10:58:47:821] in P9078_MotionDeinit:
+dev[0] RT task period, min: 969.7 us, max: 1126.1 us, mean: 1048.6 us
+
+
+[2024-8-20 10:58:47:857] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.1 us, max: 1099.0 us, mean: 1048.6 us
+
+
+[2024-8-20 10:58:47:889] in P9078_MotionDeinit:
+
+
+[2024-8-20 10:58:48:504] in P9078_MotionDeinit:
+
+
+[2024-8-20 11:15:0:543] in P9078_MotionDeinit:
+dev[0] RT task period, min: 991.2 us, max: 1101.3 us, mean: 1048.6 us
+
+
+[2024-8-20 11:15:0:588] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1011.9 us, max: 1083.7 us, mean: 1048.6 us
+
+
+[2024-8-20 11:15:0:620] in P9078_MotionDeinit:
+
+
+[2024-8-20 11:15:1:236] in P9078_MotionDeinit:
+
+
+[2024-8-20 11:16:22:850] in P9078_MotionDeinit:
+dev[0] RT task period, min: 996.2 us, max: 1102.5 us, mean: 1048.6 us
+
+
+[2024-8-20 11:16:22:884] in P9078_MotionDeinit:
+dev[1] RT task period, min: 812.5 us, max: 1286.5 us, mean: 1048.6 us
+
+
+[2024-8-20 11:16:22:929] in P9078_MotionDeinit:
+
+
+[2024-8-20 11:16:23:546] in P9078_MotionDeinit:
+
+
+[2024-8-20 11:47:2:423] in P9078_MotionDeinit:
+dev[0] RT task period, min: 467.8 us, max: 1629.4 us, mean: 1048.6 us
+
+
+[2024-8-20 11:47:2:464] in P9078_MotionDeinit:
+dev[1] RT task period, min: 599.4 us, max: 1478.0 us, mean: 1048.6 us
+
+
+[2024-8-20 11:47:2:496] in P9078_MotionDeinit:
+
+
+[2024-8-20 11:47:3:113] in P9078_MotionDeinit:
+
+
+[2024-8-20 13:28:39:29] in P9078_MotionDeinit:
+dev[0] RT task period, min: 152.2 us, max: 1935.7 us, mean: 1048.6 us
+
+
+[2024-8-20 13:28:39:75] in P9078_MotionDeinit:
+dev[1] RT task period, min: 266.6 us, max: 1820.3 us, mean: 1048.6 us
+
+
+[2024-8-20 13:28:39:106] in P9078_MotionDeinit:
+
+
+[2024-8-20 13:28:39:722] in P9078_MotionDeinit:
+
+
+[2024-8-20 13:30:10:980] in P9078_MotionDeinit:
+dev[0] RT task period, min: 968.9 us, max: 1127.6 us, mean: 1048.6 us
+
+
+[2024-8-20 13:30:11:12] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1015.5 us, max: 1080.4 us, mean: 1048.6 us
+
+
+[2024-8-20 13:30:11:44] in P9078_MotionDeinit:
+
+
+[2024-8-20 13:30:11:660] in P9078_MotionDeinit:
+
+
+[2024-8-20 13:34:18:345] in P9078_MotionDeinit:
+dev[0] RT task period, min: 965.9 us, max: 1131.0 us, mean: 1048.6 us
+
+
+[2024-8-20 13:34:18:380] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.9 us, max: 1099.6 us, mean: 1048.6 us
+
+
+[2024-8-20 13:34:18:411] in P9078_MotionDeinit:
+
+
+[2024-8-20 13:34:19:26] in P9078_MotionDeinit:
+
+
+[2024-8-20 13:48:3:641] in P9078_MotionDeinit:
+dev[0] RT task period, min: 971.0 us, max: 1127.4 us, mean: 1048.6 us
+
+
+[2024-8-20 13:48:3:675] in P9078_MotionDeinit:
+dev[1] RT task period, min: 980.4 us, max: 1113.7 us, mean: 1048.6 us
+
+
+[2024-8-20 13:48:3:720] in P9078_MotionDeinit:
+
+
+[2024-8-20 13:48:4:336] in P9078_MotionDeinit:
+
+
+[2024-8-20 15:4:22:747] in P9078_MotionDeinit:
+dev[0] RT task period, min: 145.9 us, max: 1927.1 us, mean: 1048.6 us
+
+
+[2024-8-20 15:4:22:791] in P9078_MotionDeinit:
+dev[1] RT task period, min: 275.6 us, max: 1820.6 us, mean: 1048.6 us
+
+
+[2024-8-20 15:4:22:823] in P9078_MotionDeinit:
+
+
+[2024-8-20 15:4:23:438] in P9078_MotionDeinit:
+
+
+[2024-8-20 16:1:30:161] in P9078_MotionDeinit:
+dev[0] RT task period, min: 579.4 us, max: 1514.6 us, mean: 1048.6 us
+
+
+[2024-8-20 16:1:30:205] in P9078_MotionDeinit:
+dev[1] RT task period, min: 337.3 us, max: 1759.7 us, mean: 1048.6 us
+
+
+[2024-8-20 16:1:30:237] in P9078_MotionDeinit:
+
+
+[2024-8-20 16:1:30:854] in P9078_MotionDeinit:
+
+
+[2024-8-20 16:44:39:673] in P9078_MotionDeinit:
+dev[0] RT task period, min: 861.7 us, max: 1236.0 us, mean: 1048.6 us
+
+
+[2024-8-20 16:44:39:713] in P9078_MotionDeinit:
+dev[1] RT task period, min: 432.8 us, max: 1665.0 us, mean: 1048.6 us
+
+
+[2024-8-20 16:44:39:760] in P9078_MotionDeinit:
+
+
+[2024-8-20 16:44:40:377] in P9078_MotionDeinit:
+
+
+[2024-8-20 17:10:13:945] in P9078_MotionDeinit:
+dev[0] RT task period, min: 962.8 us, max: 1134.7 us, mean: 1048.6 us
+
+
+[2024-8-20 17:10:13:990] in P9078_MotionDeinit:
+dev[1] RT task period, min: 978.6 us, max: 1118.2 us, mean: 1048.6 us
+
+
+[2024-8-20 17:10:14:22] in P9078_MotionDeinit:
+
+
+[2024-8-20 17:10:14:638] in P9078_MotionDeinit:
+
+
+[2024-8-20 17:30:40:51] in P9078_MotionDeinit:
+dev[0] RT task period, min: 581.4 us, max: 1514.3 us, mean: 1048.6 us
+
+
+[2024-8-20 17:30:40:85] in P9078_MotionDeinit:
+dev[1] RT task period, min: 442.2 us, max: 1653.2 us, mean: 1048.6 us
+
+
+[2024-8-20 17:30:40:131] in P9078_MotionDeinit:
+
+
+[2024-8-20 17:30:40:748] in P9078_MotionDeinit:
+
+
+[2024-8-20 18:28:27:630] in P9078_MotionDeinit:
+dev[0] RT task period, min: 964.3 us, max: 1133.1 us, mean: 1048.6 us
+
+
+[2024-8-20 18:28:27:671] in P9078_MotionDeinit:
+dev[1] RT task period, min: 886.2 us, max: 1210.6 us, mean: 1048.6 us
+
+
+[2024-8-20 18:28:27:703] in P9078_MotionDeinit:
+
+
+[2024-8-20 18:28:28:319] in P9078_MotionDeinit:
+
+
+[2024-8-20 18:41:23:100] in P9078_MotionDeinit:
+dev[0] RT task period, min: 949.4 us, max: 1147.7 us, mean: 1048.6 us
+
+
+[2024-8-20 18:41:23:144] in P9078_MotionDeinit:
+dev[1] RT task period, min: 992.7 us, max: 1104.4 us, mean: 1048.6 us
+
+
+[2024-8-20 18:41:23:176] in P9078_MotionDeinit:
+
+
+[2024-8-20 18:41:23:793] in P9078_MotionDeinit:
+
+
+[2024-8-22 13:24:39:156] in P9078_MotionDeinit:
+dev[0] RT task period, min: 932.6 us, max: 1161.9 us, mean: 1048.6 us
+
+
+[2024-8-22 13:24:39:192] in P9078_MotionDeinit:
+dev[1] RT task period, min: 942.9 us, max: 1154.2 us, mean: 1048.6 us
+
+
+[2024-8-22 13:24:39:224] in P9078_MotionDeinit:
+
+
+[2024-8-22 13:24:39:841] in P9078_MotionDeinit:
+
+
+[2024-8-26 15:12:21:486] in P9078_MotionDeinit:
+dev[0] RT task period, min: 960.8 us, max: 1137.5 us, mean: 1048.6 us
+
+
+[2024-8-26 15:12:21:518] in P9078_MotionDeinit:
+dev[1] RT task period, min: 953.1 us, max: 1144.1 us, mean: 1048.6 us
+
+
+[2024-8-26 15:12:21:550] in P9078_MotionDeinit:
+
+
+[2024-8-26 15:12:22:166] in P9078_MotionDeinit:
+
+
+[2024-8-27 19:56:5:566] in P9078_MotionDeinit:
+dev[0] RT task period, min: 268.6 us, max: 1825.3 us, mean: 1048.6 us
+
+
+[2024-8-27 19:56:5:613] in P9078_MotionDeinit:
+dev[1] RT task period, min: 499.9 us, max: 1596.5 us, mean: 1048.6 us
+
+
+[2024-8-27 19:56:5:645] in P9078_MotionDeinit:
+
+
+[2024-8-27 19:56:6:260] in P9078_MotionDeinit:
+
+
+[2024-8-28 15:9:30:957] in P9078_MotionDeinit:
+dev[0] RT task period, min: 153.9 us, max: 3432.6 us, mean: 1048.6 us
+
+
+[2024-8-28 15:9:30:998] in P9078_MotionDeinit:
+dev[1] RT task period, min: 198.5 us, max: 2351.3 us, mean: 1048.6 us
+
+
+[2024-8-28 15:9:31:30] in P9078_MotionDeinit:
+
+
+[2024-8-28 15:9:31:645] in P9078_MotionDeinit:
+
+
+[2024-8-28 15:50:54:371] in P9078_MotionDeinit:
+dev[0] RT task period, min: 219.6 us, max: 1875.8 us, mean: 1048.6 us
+
+
+[2024-8-28 15:50:54:404] in P9078_MotionDeinit:
+dev[1] RT task period, min: 521.2 us, max: 1575.7 us, mean: 1048.6 us
+
+
+[2024-8-28 15:50:54:436] in P9078_MotionDeinit:
+
+
+[2024-8-28 15:50:55:53] in P9078_MotionDeinit:
+
+
+[2024-8-28 16:49:45:962] in P9078_MotionDeinit:
+dev[0] RT task period, min: 146.0 us, max: 1945.5 us, mean: 1048.6 us
+
+
+[2024-8-28 16:49:45:999] in P9078_MotionDeinit:
+dev[1] RT task period, min: 222.5 us, max: 1866.9 us, mean: 1048.6 us
+
+
+[2024-8-28 16:49:46:31] in P9078_MotionDeinit:
+
+
+[2024-8-28 16:49:46:648] in P9078_MotionDeinit:
+
+
+[2024-8-28 17:33:20:859] in P9078_MotionDeinit:
+dev[0] RT task period, min: 961.0 us, max: 1135.0 us, mean: 1048.6 us
+
+
+[2024-8-28 17:33:20:903] in P9078_MotionDeinit:
+dev[1] RT task period, min: 963.4 us, max: 1133.9 us, mean: 1048.6 us
+
+
+[2024-8-28 17:33:20:935] in P9078_MotionDeinit:
+
+
+[2024-8-28 17:33:21:552] in P9078_MotionDeinit:
+
+
+[2024-8-28 17:34:57:509] in P9078_MotionDeinit:
+dev[0] RT task period, min: 976.1 us, max: 1122.0 us, mean: 1048.6 us
+
+
+[2024-8-28 17:34:57:541] in P9078_MotionDeinit:
+dev[1] RT task period, min: 999.7 us, max: 1094.7 us, mean: 1048.6 us
+
+
+[2024-8-28 17:34:57:573] in P9078_MotionDeinit:
+
+
+[2024-8-28 17:34:58:189] in P9078_MotionDeinit:
+
+
+[2024-8-28 17:58:28:3] in P9078_MotionDeinit:
+dev[0] RT task period, min: 960.4 us, max: 1135.8 us, mean: 1048.6 us
+
+
+[2024-8-28 17:58:28:37] in P9078_MotionDeinit:
+dev[1] RT task period, min: 938.0 us, max: 1156.6 us, mean: 1048.6 us
+
+
+[2024-8-28 17:58:28:83] in P9078_MotionDeinit:
+
+
+[2024-8-28 17:58:28:700] in P9078_MotionDeinit:
+
+
+[2024-8-29 8:56:8:227] in P9078_MotionDeinit:
+dev[0] RT task period, min: 209.1 us, max: 1883.5 us, mean: 1048.6 us
+
+
+[2024-8-29 8:56:8:270] in P9078_MotionDeinit:
+dev[1] RT task period, min: 787.1 us, max: 1306.9 us, mean: 1048.6 us
+
+
+[2024-8-29 8:56:8:302] in P9078_MotionDeinit:
+
+
+[2024-8-29 8:56:8:919] in P9078_MotionDeinit:
+
+
+[2024-8-29 18:11:44:872] in P9078_MotionDeinit:
+dev[0] RT task period, min: 840.5 us, max: 1257.3 us, mean: 1048.6 us
+
+
+[2024-8-29 18:11:44:932] in P9078_MotionDeinit:
+dev[1] RT task period, min: 828.0 us, max: 1269.4 us, mean: 1048.6 us
+
+
+[2024-8-29 18:11:44:992] in P9078_MotionDeinit:
+
+
+[2024-8-29 18:11:45:632] in P9078_MotionDeinit:
+
+
+[2024-8-30 10:16:58:154] in P9078_MotionDeinit:
+dev[0] RT task period, min: 806.4 us, max: 1231.8 us, mean: 1048.6 us
+
+
+[2024-8-30 10:16:58:217] in P9078_MotionDeinit:
+dev[1] RT task period, min: 803.2 us, max: 1244.4 us, mean: 1048.6 us
+
+
+[2024-8-30 10:16:58:277] in P9078_MotionDeinit:
+
+
+[2024-8-30 10:16:58:911] in P9078_MotionDeinit:
+
+
+[2024-8-30 10:55:25:246] in P9078_MotionDeinit:
+dev[0] RT task period, min: 913.7 us, max: 1126.9 us, mean: 1048.6 us
+
+
+[2024-8-30 10:55:25:306] in P9078_MotionDeinit:
+dev[1] RT task period, min: 903.9 us, max: 1143.7 us, mean: 1048.6 us
+
+
+[2024-8-30 10:55:25:366] in P9078_MotionDeinit:
+
+
+[2024-8-30 10:55:26:6] in P9078_MotionDeinit:
+
+
+[2024-8-30 10:58:9:755] in P9078_MotionDeinit:
+dev[0] RT task period, min: 938.4 us, max: 1104.9 us, mean: 1048.6 us
+
+
+[2024-8-30 10:58:9:815] in P9078_MotionDeinit:
+dev[1] RT task period, min: 922.9 us, max: 1120.1 us, mean: 1048.6 us
+
+
+[2024-8-30 10:58:9:875] in P9078_MotionDeinit:
+
+
+[2024-8-30 10:58:10:514] in P9078_MotionDeinit:
+
+
+[2024-8-30 10:59:49:528] in P9078_MotionDeinit:
+dev[0] RT task period, min: 975.2 us, max: 1124.4 us, mean: 1048.6 us
+
+
+[2024-8-30 10:59:49:590] in P9078_MotionDeinit:
+dev[1] RT task period, min: 955.3 us, max: 1143.1 us, mean: 1048.6 us
+
+
+[2024-8-30 10:59:49:653] in P9078_MotionDeinit:
+
+
+[2024-8-30 10:59:50:294] in P9078_MotionDeinit:
+
+
+[2024-8-30 11:6:47:297] in P9078_MotionDeinit:
+dev[0] RT task period, min: 936.8 us, max: 1105.3 us, mean: 1048.6 us
+
+
+[2024-8-30 11:6:47:357] in P9078_MotionDeinit:
+dev[1] RT task period, min: 924.1 us, max: 1122.3 us, mean: 1048.6 us
+
+
+[2024-8-30 11:6:47:421] in P9078_MotionDeinit:
+
+
+[2024-8-30 11:6:48:51] in P9078_MotionDeinit:
+
+
+[2024-8-30 11:18:21:89] in P9078_MotionDeinit:
+dev[0] RT task period, min: 992.9 us, max: 1100.9 us, mean: 1048.6 us
+
+
+[2024-8-30 11:18:21:179] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.4 us, max: 1100.2 us, mean: 1048.6 us
+
+
+[2024-8-30 11:18:21:239] in P9078_MotionDeinit:
+
+
+[2024-8-30 11:18:21:871] in P9078_MotionDeinit:
+
+
+[2024-8-30 11:30:27:285] in P9078_MotionDeinit:
+dev[0] RT task period, min: 914.8 us, max: 1124.1 us, mean: 1048.6 us
+
+
+[2024-8-30 11:30:27:345] in P9078_MotionDeinit:
+dev[1] RT task period, min: 911.8 us, max: 1134.1 us, mean: 1048.6 us
+
+
+[2024-8-30 11:30:27:405] in P9078_MotionDeinit:
+
+
+[2024-8-30 11:30:28:44] in P9078_MotionDeinit:
+
+
+[2024-8-30 16:15:12:210] in P9078_MotionDeinit:
+dev[0] RT task period, min: 988.4 us, max: 1108.3 us, mean: 1048.6 us
+
+
+[2024-8-30 16:15:12:280] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.0 us, max: 1100.1 us, mean: 1048.6 us
+
+
+[2024-8-30 16:15:12:340] in P9078_MotionDeinit:
+
+
+[2024-8-30 16:15:12:974] in P9078_MotionDeinit:
+
+
+[2024-8-30 16:16:9:237] in P9078_MotionDeinit:
+dev[0] RT task period, min: 994.4 us, max: 1103.4 us, mean: 1048.6 us
+
+
+[2024-8-30 16:16:9:307] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.1 us, max: 1100.6 us, mean: 1048.6 us
+
+
+[2024-8-30 16:16:9:367] in P9078_MotionDeinit:
+
+
+[2024-8-30 16:16:10:0] in P9078_MotionDeinit:
+
+
+[2024-8-30 17:47:47:956] in P9078_MotionDeinit:
+dev[0] RT task period, min: 932.6 us, max: 1164.9 us, mean: 1048.6 us
+
+
+[2024-8-30 17:47:48:16] in P9078_MotionDeinit:
+dev[1] RT task period, min: 999.0 us, max: 1098.0 us, mean: 1048.6 us
+
+
+[2024-8-30 17:47:48:76] in P9078_MotionDeinit:
+
+
+[2024-8-30 17:47:48:710] in P9078_MotionDeinit:
+
+
+[2024-8-30 18:19:16:436] in P9078_MotionDeinit:
+dev[0] RT task period, min: 150.3 us, max: 2054.9 us, mean: 1048.6 us
+
+
+[2024-8-30 18:19:16:506] in P9078_MotionDeinit:
+dev[1] RT task period, min: 140.7 us, max: 2045.1 us, mean: 1048.6 us
+
+
+[2024-8-30 18:19:16:566] in P9078_MotionDeinit:
+
+
+[2024-8-30 18:19:17:198] in P9078_MotionDeinit:
+
+
+[2024-9-2 10:8:46:606] in P9078_MotionDeinit:
+dev[0] RT task period, min: 358.7 us, max: 1980.5 us, mean: 1048.6 us
+
+
+[2024-9-2 10:8:46:688] in P9078_MotionDeinit:
+dev[1] RT task period, min: 348.9 us, max: 1973.1 us, mean: 1048.6 us
+
+
+[2024-9-2 10:8:46:747] in P9078_MotionDeinit:
+
+
+[2024-9-2 10:8:47:382] in P9078_MotionDeinit:
+
+
+[2024-9-2 10:35:25:341] in P9078_MotionDeinit:
+dev[0] RT task period, min: 996.7 us, max: 1103.5 us, mean: 1048.6 us
+
+
+[2024-9-2 10:35:25:408] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.8 us, max: 1096.8 us, mean: 1048.6 us
+
+
+[2024-9-2 10:35:25:476] in P9078_MotionDeinit:
+
+
+[2024-9-2 10:35:26:118] in P9078_MotionDeinit:
+
+
+[2024-9-2 10:40:14:617] in P9078_MotionDeinit:
+dev[0] RT task period, min: 978.5 us, max: 1119.2 us, mean: 1048.6 us
+
+
+[2024-9-2 10:40:14:674] in P9078_MotionDeinit:
+dev[1] RT task period, min: 995.2 us, max: 1105.0 us, mean: 1048.6 us
+
+
+[2024-9-2 10:40:14:728] in P9078_MotionDeinit:
+
+
+[2024-9-2 10:40:15:363] in P9078_MotionDeinit:
+
+
+[2024-9-2 10:49:28:885] in P9078_MotionDeinit:
+dev[0] RT task period, min: 990.7 us, max: 1104.7 us, mean: 1048.6 us
+
+
+[2024-9-2 10:49:28:972] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.8 us, max: 1098.6 us, mean: 1048.6 us
+
+
+[2024-9-2 10:49:29:38] in P9078_MotionDeinit:
+
+
+[2024-9-2 10:49:29:678] in P9078_MotionDeinit:
+
+
+[2024-9-2 13:49:47:783] in P9078_MotionDeinit:
+dev[0] RT task period, min: 970.9 us, max: 1120.9 us, mean: 1048.6 us
+
+
+[2024-9-2 13:49:47:853] in P9078_MotionDeinit:
+dev[1] RT task period, min: 989.1 us, max: 1108.0 us, mean: 1048.6 us
+
+
+[2024-9-2 13:49:47:913] in P9078_MotionDeinit:
+
+
+[2024-9-2 13:49:48:548] in P9078_MotionDeinit:
+
+
+[2024-9-2 17:34:35:726] in P9078_MotionDeinit:
+dev[0] RT task period, min: 94.8 us, max: 2113.5 us, mean: 1048.6 us
+
+
+[2024-9-2 17:34:35:788] in P9078_MotionDeinit:
+dev[1] RT task period, min: 86.8 us, max: 2123.3 us, mean: 1048.6 us
+
+
+[2024-9-2 17:34:35:852] in P9078_MotionDeinit:
+
+
+[2024-9-2 17:34:36:495] in P9078_MotionDeinit:
+
+
+[2024-9-3 10:56:6:829] in P9078_MotionDeinit:
+dev[0] RT task period, min: 127.6 us, max: 1998.5 us, mean: 1048.6 us
+
+
+[2024-9-3 10:56:6:907] in P9078_MotionDeinit:
+dev[1] RT task period, min: 118.0 us, max: 1974.1 us, mean: 1048.6 us
+
+
+[2024-9-3 10:56:6:971] in P9078_MotionDeinit:
+
+
+[2024-9-3 10:56:7:613] in P9078_MotionDeinit:
+
+
+[2024-9-3 11:35:10:924] in P9078_MotionDeinit:
+dev[0] RT task period, min: 101.2 us, max: 1950.2 us, mean: 1048.6 us
+
+
+[2024-9-3 11:35:10:986] in P9078_MotionDeinit:
+dev[1] RT task period, min: 159.9 us, max: 1967.4 us, mean: 1048.6 us
+
+
+[2024-9-3 11:35:11:50] in P9078_MotionDeinit:
+
+
+[2024-9-3 11:35:11:689] in P9078_MotionDeinit:
+
+
+[2024-9-3 18:42:49:481] in P9078_MotionDeinit:
+dev[0] RT task period, min: 212.8 us, max: 2109.6 us, mean: 1048.6 us
+
+
+[2024-9-3 18:42:49:544] in P9078_MotionDeinit:
+dev[1] RT task period, min: 202.6 us, max: 2106.2 us, mean: 1048.6 us
+
+
+[2024-9-3 18:42:49:608] in P9078_MotionDeinit:
+
+
+[2024-9-3 18:42:50:257] in P9078_MotionDeinit:
+
+
+[2024-9-4 15:33:22:514] in P9078_MotionDeinit:
+dev[0] RT task period, min: 94.0 us, max: 2837.5 us, mean: 1048.6 us
+
+
+[2024-9-4 15:33:22:576] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.9 us, max: 3018.8 us, mean: 1048.6 us
+
+
+[2024-9-4 15:33:22:640] in P9078_MotionDeinit:
+
+
+[2024-9-4 15:33:23:280] in P9078_MotionDeinit:
+
+
+[2024-9-5 17:53:30:821] in P9078_MotionDeinit:
+dev[0] RT task period, min: 80.6 us, max: 2591.5 us, mean: 1048.6 us
+
+
+[2024-9-5 17:53:30:880] in P9078_MotionDeinit:
+dev[1] RT task period, min: 83.9 us, max: 2612.0 us, mean: 1048.6 us
+
+
+[2024-9-5 17:53:30:944] in P9078_MotionDeinit:
+
+
+[2024-9-5 17:53:31:585] in P9078_MotionDeinit:
+
+
+[2024-9-6 17:28:42:245] in P9078_MotionDeinit:
+dev[0] RT task period, min: 105.4 us, max: 2867.5 us, mean: 1048.6 us
+
+
+[2024-9-6 17:28:42:310] in P9078_MotionDeinit:
+dev[1] RT task period, min: 84.4 us, max: 2764.8 us, mean: 1048.6 us
+
+
+[2024-9-6 17:28:42:373] in P9078_MotionDeinit:
+
+
+[2024-9-6 17:28:43:17] in P9078_MotionDeinit:
+
+
+[2024-9-9 9:20:3:149] in P9078_MotionDeinit:
+dev[0] RT task period, min: 849.6 us, max: 1213.1 us, mean: 1048.6 us
+
+
+[2024-9-9 9:20:3:208] in P9078_MotionDeinit:
+dev[1] RT task period, min: 859.3 us, max: 1203.6 us, mean: 1048.6 us
+
+
+[2024-9-9 9:20:3:272] in P9078_MotionDeinit:
+
+
+[2024-9-9 9:20:3:914] in P9078_MotionDeinit:
+
+
+[2024-9-9 9:22:27:852] in P9078_MotionDeinit:
+dev[0] RT task period, min: 1000.8 us, max: 1095.6 us, mean: 1048.6 us
+
+
+[2024-9-9 9:22:27:914] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.1 us, max: 1095.6 us, mean: 1048.6 us
+
+
+[2024-9-9 9:22:27:978] in P9078_MotionDeinit:
+
+
+[2024-9-9 9:22:28:617] in P9078_MotionDeinit:
+
+
+[2024-9-9 9:42:8:663] in P9078_MotionDeinit:
+dev[0] RT task period, min: 92.4 us, max: 1995.9 us, mean: 1048.6 us
+
+
+[2024-9-9 9:42:8:726] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.9 us, max: 1983.4 us, mean: 1048.6 us
+
+
+[2024-9-9 9:42:8:788] in P9078_MotionDeinit:
+
+
+[2024-9-9 9:42:9:427] in P9078_MotionDeinit:
+
+
+[2024-9-9 10:15:14:454] in P9078_MotionDeinit:
+dev[0] RT task period, min: 923.7 us, max: 1175.4 us, mean: 1048.6 us
+
+
+[2024-9-9 10:15:14:513] in P9078_MotionDeinit:
+dev[1] RT task period, min: 926.6 us, max: 1172.4 us, mean: 1048.6 us
+
+
+[2024-9-9 10:15:14:575] in P9078_MotionDeinit:
+
+
+[2024-9-9 10:15:15:216] in P9078_MotionDeinit:
+
+
+[2024-9-9 10:59:29:310] in P9078_MotionDeinit:
+dev[0] RT task period, min: 104.0 us, max: 2108.2 us, mean: 1048.6 us
+
+
+[2024-9-9 10:59:29:376] in P9078_MotionDeinit:
+dev[1] RT task period, min: 105.5 us, max: 2113.5 us, mean: 1048.6 us
+
+
+[2024-9-9 10:59:29:437] in P9078_MotionDeinit:
+
+
+[2024-9-9 10:59:30:81] in P9078_MotionDeinit:
+
+
+[2024-9-9 11:36:0:205] in P9078_MotionDeinit:
+dev[0] RT task period, min: 102.3 us, max: 2053.2 us, mean: 1048.6 us
+
+
+[2024-9-9 11:36:0:268] in P9078_MotionDeinit:
+dev[1] RT task period, min: 98.6 us, max: 2058.4 us, mean: 1048.6 us
+
+
+[2024-9-9 11:36:0:330] in P9078_MotionDeinit:
+
+
+[2024-9-9 11:36:0:971] in P9078_MotionDeinit:
+
+
+[2024-9-9 14:32:11:267] in P9078_MotionDeinit:
+dev[0] RT task period, min: 105.2 us, max: 2874.6 us, mean: 1048.6 us
+
+
+[2024-9-9 14:32:11:350] in P9078_MotionDeinit:
+dev[1] RT task period, min: 105.2 us, max: 2757.7 us, mean: 1048.6 us
+
+
+[2024-9-9 14:32:11:421] in P9078_MotionDeinit:
+
+
+[2024-9-9 14:32:12:63] in P9078_MotionDeinit:
+
+
+[2024-9-9 16:2:0:6] in P9078_MotionDeinit:
+dev[0] RT task period, min: 87.7 us, max: 1997.8 us, mean: 1048.6 us
+
+
+[2024-9-9 16:2:0:72] in P9078_MotionDeinit:
+dev[1] RT task period, min: 83.3 us, max: 1994.7 us, mean: 1048.6 us
+
+
+[2024-9-9 16:2:0:135] in P9078_MotionDeinit:
+
+
+[2024-9-9 16:2:0:777] in P9078_MotionDeinit:
+
+
+[2024-9-9 16:34:43:49] in P9078_MotionDeinit:
+dev[0] RT task period, min: 110.1 us, max: 2766.7 us, mean: 1048.6 us
+
+
+[2024-9-9 16:34:43:116] in P9078_MotionDeinit:
+dev[1] RT task period, min: 111.0 us, max: 2390.3 us, mean: 1048.6 us
+
+
+[2024-9-9 16:34:43:179] in P9078_MotionDeinit:
+
+
+[2024-9-9 16:34:43:819] in P9078_MotionDeinit:
+
+
+[2024-9-9 16:52:49:586] in P9078_MotionDeinit:
+dev[0] RT task period, min: 92.0 us, max: 2785.9 us, mean: 1048.6 us
+
+
+[2024-9-9 16:52:49:645] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.1 us, max: 2779.6 us, mean: 1048.6 us
+
+
+[2024-9-9 16:52:49:707] in P9078_MotionDeinit:
+
+
+[2024-9-9 16:52:50:350] in P9078_MotionDeinit:
+
+
+[2024-9-9 18:32:53:50] in P9078_MotionDeinit:
+dev[0] RT task period, min: 954.9 us, max: 1144.3 us, mean: 1048.6 us
+
+
+[2024-9-9 18:32:53:116] in P9078_MotionDeinit:
+dev[1] RT task period, min: 953.3 us, max: 1141.6 us, mean: 1048.6 us
+
+
+[2024-9-9 18:32:53:180] in P9078_MotionDeinit:
+
+
+[2024-9-9 18:32:53:819] in P9078_MotionDeinit:
+
+
+[2024-9-11 13:5:47:720] in P9078_MotionDeinit:
+dev[0] RT task period, min: 97.3 us, max: 3816.9 us, mean: 1048.6 us
+
+
+[2024-9-11 13:5:47:784] in P9078_MotionDeinit:
+dev[1] RT task period, min: 97.7 us, max: 3814.0 us, mean: 1048.6 us
+
+
+[2024-9-11 13:5:47:848] in P9078_MotionDeinit:
+
+
+[2024-9-11 13:5:48:488] in P9078_MotionDeinit:
+
+
+[2024-9-11 13:22:55:266] in P9078_MotionDeinit:
+dev[0] RT task period, min: 884.6 us, max: 1213.0 us, mean: 1048.6 us
+
+
+[2024-9-11 13:22:55:325] in P9078_MotionDeinit:
+dev[1] RT task period, min: 884.6 us, max: 1212.9 us, mean: 1048.6 us
+
+
+[2024-9-11 13:22:55:389] in P9078_MotionDeinit:
+
+
+[2024-9-11 13:22:56:30] in P9078_MotionDeinit:
+
+
+[2024-9-12 15:18:0:778] in P9078_MotionDeinit:
+dev[0] RT task period, min: 94.7 us, max: 2091.2 us, mean: 1048.6 us
+
+
+[2024-9-12 15:18:0:837] in P9078_MotionDeinit:
+dev[1] RT task period, min: 96.2 us, max: 2011.6 us, mean: 1048.6 us
+
+
+[2024-9-12 15:18:0:901] in P9078_MotionDeinit:
+
+
+[2024-9-12 15:18:1:543] in P9078_MotionDeinit:
+
+
+[2024-9-12 15:18:57:520] in P9078_MotionDeinit:
+dev[0] RT task period, min: 918.0 us, max: 1129.4 us, mean: 1048.6 us
+
+
+[2024-9-12 15:18:57:582] in P9078_MotionDeinit:
+dev[1] RT task period, min: 999.2 us, max: 1097.8 us, mean: 1048.6 us
+
+
+[2024-9-12 15:18:57:646] in P9078_MotionDeinit:
+
+
+[2024-9-12 15:18:58:286] in P9078_MotionDeinit:
+
+
+[2024-9-13 13:22:37:294] in P9078_MotionDeinit:
+dev[0] RT task period, min: 131.3 us, max: 2114.4 us, mean: 1048.6 us
+
+
+[2024-9-13 13:22:37:356] in P9078_MotionDeinit:
+dev[1] RT task period, min: 145.3 us, max: 2114.6 us, mean: 1048.6 us
+
+
+[2024-9-13 13:22:37:420] in P9078_MotionDeinit:
+
+
+[2024-9-13 13:22:38:61] in P9078_MotionDeinit:
+
+
+[2024-9-13 13:24:40:598] in P9078_MotionDeinit:
+dev[0] RT task period, min: 846.7 us, max: 1250.9 us, mean: 1048.6 us
+
+
+[2024-9-13 13:24:40:662] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.1 us, max: 1097.4 us, mean: 1048.6 us
+
+
+[2024-9-13 13:24:40:725] in P9078_MotionDeinit:
+
+
+[2024-9-13 13:24:41:365] in P9078_MotionDeinit:
+
+
+[2024-9-13 16:50:20:69] in P9078_MotionDeinit:
+dev[0] RT task period, min: 97.3 us, max: 2079.2 us, mean: 1048.6 us
+
+
+[2024-9-13 16:50:20:130] in P9078_MotionDeinit:
+dev[1] RT task period, min: 90.6 us, max: 2005.1 us, mean: 1048.6 us
+
+
+[2024-9-13 16:50:20:194] in P9078_MotionDeinit:
+
+
+[2024-9-13 16:50:20:834] in P9078_MotionDeinit:
+
+
+[2024-9-13 17:1:48:26] in P9078_MotionDeinit:
+dev[0] RT task period, min: 239.1 us, max: 2032.2 us, mean: 1048.6 us
+
+
+[2024-9-13 17:1:48:85] in P9078_MotionDeinit:
+dev[1] RT task period, min: 139.7 us, max: 1930.4 us, mean: 1048.6 us
+
+
+[2024-9-13 17:1:48:149] in P9078_MotionDeinit:
+
+
+[2024-9-13 17:1:48:790] in P9078_MotionDeinit:
+
+
+[2024-9-13 18:1:42:116] in P9078_MotionDeinit:
+dev[0] RT task period, min: 72.8 us, max: 2115.4 us, mean: 1048.6 us
+
+
+[2024-9-13 18:1:42:179] in P9078_MotionDeinit:
+dev[1] RT task period, min: 98.0 us, max: 2105.3 us, mean: 1048.6 us
+
+
+[2024-9-13 18:1:42:243] in P9078_MotionDeinit:
+
+
+[2024-9-13 18:1:42:883] in P9078_MotionDeinit:
+
+
+[2024-9-13 19:50:13:152] in P9078_MotionDeinit:
+dev[0] RT task period, min: 790.5 us, max: 1306.5 us, mean: 1048.6 us
+
+
+[2024-9-13 19:50:13:216] in P9078_MotionDeinit:
+dev[1] RT task period, min: 962.1 us, max: 1135.2 us, mean: 1048.6 us
+
+
+[2024-9-13 19:50:13:280] in P9078_MotionDeinit:
+
+
+[2024-9-13 19:50:13:920] in P9078_MotionDeinit:
+
+
+[2024-9-13 20:15:0:441] in P9078_MotionDeinit:
+dev[0] RT task period, min: 168.9 us, max: 2147.5 us, mean: 1048.6 us
+
+
+[2024-9-13 20:15:0:506] in P9078_MotionDeinit:
+dev[1] RT task period, min: 128.4 us, max: 1984.9 us, mean: 1048.6 us
+
+
+[2024-9-13 20:15:0:570] in P9078_MotionDeinit:
+
+
+[2024-9-13 20:15:1:212] in P9078_MotionDeinit:
+
+
+[2024-9-13 20:36:5:141] in P9078_MotionDeinit:
+dev[0] RT task period, min: 85.4 us, max: 2009.2 us, mean: 1048.6 us
+
+
+[2024-9-13 20:36:5:200] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.6 us, max: 1879.6 us, mean: 1048.6 us
+
+
+[2024-9-13 20:36:5:264] in P9078_MotionDeinit:
+
+
+[2024-9-13 20:36:5:906] in P9078_MotionDeinit:
+
+
+[2024-9-13 20:57:14:811] in P9078_MotionDeinit:
+dev[0] RT task period, min: 174.6 us, max: 2126.8 us, mean: 1048.6 us
+
+
+[2024-9-13 20:57:14:872] in P9078_MotionDeinit:
+dev[1] RT task period, min: 110.1 us, max: 1980.2 us, mean: 1048.6 us
+
+
+[2024-9-13 20:57:14:936] in P9078_MotionDeinit:
+
+
+[2024-9-13 20:57:15:578] in P9078_MotionDeinit:
+
+
+[2024-9-14 10:17:25:743] in P9078_MotionDeinit:
+dev[0] RT task period, min: 986.7 us, max: 1110.8 us, mean: 1048.6 us
+
+
+[2024-9-14 10:17:25:805] in P9078_MotionDeinit:
+dev[1] RT task period, min: 996.2 us, max: 1098.7 us, mean: 1048.6 us
+
+
+[2024-9-14 10:17:25:869] in P9078_MotionDeinit:
+
+
+[2024-9-14 10:17:26:512] in P9078_MotionDeinit:
+
+
+[2024-9-14 10:23:34:881] in P9078_MotionDeinit:
+dev[0] RT task period, min: 997.6 us, max: 1099.1 us, mean: 1048.6 us
+
+
+[2024-9-14 10:23:34:942] in P9078_MotionDeinit:
+dev[1] RT task period, min: 995.4 us, max: 1100.0 us, mean: 1048.6 us
+
+
+[2024-9-14 10:23:35:6] in P9078_MotionDeinit:
+
+
+[2024-9-14 10:23:35:647] in P9078_MotionDeinit:
+
+
+[2024-9-14 15:31:47:464] in P9078_MotionDeinit:
+dev[0] RT task period, min: 95.4 us, max: 2052.7 us, mean: 1048.6 us
+
+
+[2024-9-14 15:31:47:540] in P9078_MotionDeinit:
+dev[1] RT task period, min: 91.3 us, max: 1980.1 us, mean: 1048.6 us
+
+
+[2024-9-14 15:31:47:603] in P9078_MotionDeinit:
+
+
+[2024-9-14 15:31:48:251] in P9078_MotionDeinit:
+
+
+[2024-9-14 17:18:32:304] in P9078_MotionDeinit:
+dev[0] RT task period, min: 129.3 us, max: 2110.0 us, mean: 1048.6 us
+
+
+[2024-9-14 17:18:32:381] in P9078_MotionDeinit:
+dev[1] RT task period, min: 84.4 us, max: 1973.8 us, mean: 1048.6 us
+
+
+[2024-9-14 17:18:32:445] in P9078_MotionDeinit:
+
+
+[2024-9-14 17:18:33:91] in P9078_MotionDeinit:
+
+
+[2024-9-14 17:27:26:904] in P9078_MotionDeinit:
+dev[0] RT task period, min: 782.8 us, max: 1263.3 us, mean: 1048.6 us
+
+
+[2024-9-14 17:27:26:972] in P9078_MotionDeinit:
+dev[1] RT task period, min: 947.2 us, max: 1148.9 us, mean: 1048.6 us
+
+
+[2024-9-14 17:27:27:36] in P9078_MotionDeinit:
+
+
+[2024-9-14 17:27:27:682] in P9078_MotionDeinit:
+
+
+[2024-9-14 17:30:56:634] in P9078_MotionDeinit:
+dev[0] RT task period, min: 977.8 us, max: 1098.7 us, mean: 1048.6 us
+
+
+[2024-9-14 17:30:56:701] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.4 us, max: 1096.3 us, mean: 1048.6 us
+
+
+[2024-9-14 17:30:56:780] in P9078_MotionDeinit:
+
+
+[2024-9-14 17:30:57:426] in P9078_MotionDeinit:
+
+
+[2024-9-14 17:44:55:270] in P9078_MotionDeinit:
+dev[0] RT task period, min: 148.7 us, max: 2513.2 us, mean: 1048.6 us
+
+
+[2024-9-14 17:44:55:345] in P9078_MotionDeinit:
+dev[1] RT task period, min: 98.0 us, max: 2000.6 us, mean: 1048.6 us
+
+
+[2024-9-14 17:44:55:409] in P9078_MotionDeinit:
+
+
+[2024-9-14 17:44:56:55] in P9078_MotionDeinit:
+
+
+[2024-9-14 18:0:32:316] in P9078_MotionDeinit:
+dev[0] RT task period, min: 85.1 us, max: 2035.9 us, mean: 1048.6 us
+
+
+[2024-9-14 18:0:32:385] in P9078_MotionDeinit:
+dev[1] RT task period, min: 122.3 us, max: 2114.3 us, mean: 1048.6 us
+
+
+[2024-9-14 18:0:32:449] in P9078_MotionDeinit:
+
+
+[2024-9-14 18:0:33:95] in P9078_MotionDeinit:
+
+
+[2024-9-14 18:11:18:680] in P9078_MotionDeinit:
+dev[0] RT task period, min: 88.4 us, max: 2088.9 us, mean: 1048.6 us
+
+
+[2024-9-14 18:11:18:744] in P9078_MotionDeinit:
+dev[1] RT task period, min: 97.3 us, max: 1876.4 us, mean: 1048.6 us
+
+
+[2024-9-14 18:11:18:806] in P9078_MotionDeinit:
+
+
+[2024-9-14 18:11:19:452] in P9078_MotionDeinit:
+
+
+[2024-9-14 18:27:5:96] in P9078_MotionDeinit:
+dev[0] RT task period, min: 107.7 us, max: 2044.8 us, mean: 1048.6 us
+
+
+[2024-9-14 18:27:5:162] in P9078_MotionDeinit:
+dev[1] RT task period, min: 85.4 us, max: 1997.7 us, mean: 1048.6 us
+
+
+[2024-9-14 18:27:5:223] in P9078_MotionDeinit:
+
+
+[2024-9-14 18:27:5:872] in P9078_MotionDeinit:
+
+
+[2024-9-14 18:46:10:546] in P9078_MotionDeinit:
+dev[0] RT task period, min: 226.5 us, max: 1974.5 us, mean: 1048.6 us
+
+
+[2024-9-14 18:46:10:625] in P9078_MotionDeinit:
+dev[1] RT task period, min: 127.3 us, max: 2084.4 us, mean: 1048.6 us
+
+
+[2024-9-14 18:46:10:689] in P9078_MotionDeinit:
+
+
+[2024-9-14 18:46:11:336] in P9078_MotionDeinit:
+
+
+[2024-9-18 10:18:5:768] in P9078_MotionDeinit:
+dev[0] RT task period, min: 948.5 us, max: 1146.8 us, mean: 1048.6 us
+
+
+[2024-9-18 10:18:5:846] in P9078_MotionDeinit:
+dev[1] RT task period, min: 798.7 us, max: 1246.7 us, mean: 1048.6 us
+
+
+[2024-9-18 10:18:5:910] in P9078_MotionDeinit:
+
+
+[2024-9-18 10:18:6:559] in P9078_MotionDeinit:
+
+
+[2024-9-18 10:56:55:649] in P9078_MotionDeinit:
+dev[0] RT task period, min: 808.9 us, max: 1238.7 us, mean: 1048.6 us
+
+
+[2024-9-18 10:56:55:713] in P9078_MotionDeinit:
+dev[1] RT task period, min: 926.1 us, max: 1171.0 us, mean: 1048.6 us
+
+
+[2024-9-18 10:56:55:792] in P9078_MotionDeinit:
+
+
+[2024-9-18 10:56:56:440] in P9078_MotionDeinit:
+
+
+[2024-9-18 11:3:7:209] in P9078_MotionDeinit:
+dev[0] RT task period, min: 998.5 us, max: 1097.8 us, mean: 1048.6 us
+
+
+[2024-9-18 11:3:7:277] in P9078_MotionDeinit:
+dev[1] RT task period, min: 957.4 us, max: 1100.2 us, mean: 1048.6 us
+
+
+[2024-9-18 11:3:7:341] in P9078_MotionDeinit:
+
+
+[2024-9-18 11:3:7:988] in P9078_MotionDeinit:
+
+
+[2024-9-20 14:18:57:605] in P9078_MotionDeinit:
+dev[0] RT task period, min: 933.9 us, max: 1112.3 us, mean: 1048.6 us
+
+
+[2024-9-20 14:18:57:676] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.3 us, max: 1100.8 us, mean: 1048.6 us
+
+
+[2024-9-20 14:18:57:740] in P9078_MotionDeinit:
+
+
+[2024-9-20 14:18:58:385] in P9078_MotionDeinit:
+
+
+[2024-9-20 17:47:50:674] in P9078_MotionDeinit:
+dev[0] RT task period, min: 929.8 us, max: 1168.5 us, mean: 1048.6 us
+
+
+[2024-9-20 17:47:50:742] in P9078_MotionDeinit:
+dev[1] RT task period, min: 813.7 us, max: 1282.6 us, mean: 1048.6 us
+
+
+[2024-9-20 17:47:50:805] in P9078_MotionDeinit:
+
+
+[2024-9-20 17:47:51:452] in P9078_MotionDeinit:
+
+
+[2024-9-23 11:38:51:579] in P9078_MotionDeinit:
+dev[0] RT task period, min: 909.6 us, max: 1186.8 us, mean: 1048.6 us
+
+
+[2024-9-23 11:38:51:654] in P9078_MotionDeinit:
+dev[1] RT task period, min: 821.1 us, max: 1226.2 us, mean: 1048.6 us
+
+
+[2024-9-23 11:38:51:732] in P9078_MotionDeinit:
+
+
+[2024-9-23 11:38:52:377] in P9078_MotionDeinit:
+
+
+[2024-9-23 15:22:15:560] in P9078_MotionDeinit:
+dev[0] RT task period, min: 977.4 us, max: 1119.3 us, mean: 1048.6 us
+
+
+[2024-9-23 15:22:15:625] in P9078_MotionDeinit:
+dev[1] RT task period, min: 999.1 us, max: 1097.2 us, mean: 1048.6 us
+
+
+[2024-9-23 15:22:15:689] in P9078_MotionDeinit:
+
+
+[2024-9-23 15:22:16:333] in P9078_MotionDeinit:
+
+
+[2024-9-23 16:7:24:679] in P9078_MotionDeinit:
+dev[0] RT task period, min: 125.1 us, max: 2108.5 us, mean: 1048.6 us
+
+
+[2024-9-23 16:7:24:745] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.6 us, max: 1980.9 us, mean: 1048.6 us
+
+
+[2024-9-23 16:7:24:806] in P9078_MotionDeinit:
+
+
+[2024-9-23 16:7:25:448] in P9078_MotionDeinit:
+
+
+[2024-9-23 16:27:52:214] in P9078_MotionDeinit:
+dev[0] RT task period, min: 86.7 us, max: 2133.2 us, mean: 1048.6 us
+
+
+[2024-9-23 16:27:52:273] in P9078_MotionDeinit:
+dev[1] RT task period, min: 104.2 us, max: 1974.1 us, mean: 1048.6 us
+
+
+[2024-9-23 16:27:52:335] in P9078_MotionDeinit:
+
+
+[2024-9-23 16:27:52:976] in P9078_MotionDeinit:
+
+
+[2024-9-23 17:11:8:144] in P9078_MotionDeinit:
+dev[0] RT task period, min: 232.8 us, max: 2053.6 us, mean: 1048.6 us
+
+
+[2024-9-23 17:11:8:213] in P9078_MotionDeinit:
+dev[1] RT task period, min: 86.6 us, max: 2026.9 us, mean: 1048.6 us
+
+
+[2024-9-23 17:11:8:275] in P9078_MotionDeinit:
+
+
+[2024-9-23 17:11:8:917] in P9078_MotionDeinit:
+
+
+[2024-9-23 17:26:59:311] in P9078_MotionDeinit:
+dev[0] RT task period, min: 111.0 us, max: 2103.5 us, mean: 1048.6 us
+
+
+[2024-9-23 17:26:59:377] in P9078_MotionDeinit:
+dev[1] RT task period, min: 181.2 us, max: 2058.3 us, mean: 1048.6 us
+
+
+[2024-9-23 17:26:59:440] in P9078_MotionDeinit:
+
+
+[2024-9-23 17:27:0:82] in P9078_MotionDeinit:
+
+
+[2024-9-23 17:42:49:789] in P9078_MotionDeinit:
+dev[0] RT task period, min: 92.2 us, max: 2088.3 us, mean: 1048.6 us
+
+
+[2024-9-23 17:42:49:850] in P9078_MotionDeinit:
+dev[1] RT task period, min: 110.4 us, max: 1935.4 us, mean: 1048.6 us
+
+
+[2024-9-23 17:42:49:914] in P9078_MotionDeinit:
+
+
+[2024-9-23 17:42:50:555] in P9078_MotionDeinit:
+
+
+[2024-9-23 18:34:52:157] in P9078_MotionDeinit:
+dev[0] RT task period, min: 996.8 us, max: 1097.4 us, mean: 1048.6 us
+
+
+[2024-9-23 18:34:52:223] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1017.4 us, max: 1097.9 us, mean: 1048.6 us
+
+
+[2024-9-23 18:34:52:284] in P9078_MotionDeinit:
+
+
+[2024-9-23 18:34:52:925] in P9078_MotionDeinit:
+
+
+[2024-9-27 14:28:1:783] in P9078_MotionDeinit:
+dev[0] RT task period, min: 155.8 us, max: 1997.8 us, mean: 1048.6 us
+
+
+[2024-9-27 14:28:1:876] in P9078_MotionDeinit:
+dev[1] RT task period, min: 81.8 us, max: 1924.5 us, mean: 1048.6 us
+
+
+[2024-9-27 14:28:1:940] in P9078_MotionDeinit:
+
+
+[2024-9-27 14:28:2:582] in P9078_MotionDeinit:
+
+
+[2024-10-9 9:24:53:563] in P9078_MotionDeinit:
+dev[0] RT task period, min: 835.5 us, max: 1261.1 us, mean: 1048.6 us
+
+
+[2024-10-9 9:24:53:625] in P9078_MotionDeinit:
+dev[1] RT task period, min: 988.5 us, max: 1108.4 us, mean: 1048.6 us
+
+
+[2024-10-9 9:24:53:689] in P9078_MotionDeinit:
+
+
+[2024-10-9 9:24:54:330] in P9078_MotionDeinit:
+
+
+[2024-10-9 10:54:34:26] in P9078_MotionDeinit:
+dev[0] RT task period, min: 111.4 us, max: 2032.8 us, mean: 1048.6 us
+
+
+[2024-10-9 10:54:34:90] in P9078_MotionDeinit:
+dev[1] RT task period, min: 93.8 us, max: 2083.5 us, mean: 1048.6 us
+
+
+[2024-10-9 10:54:34:153] in P9078_MotionDeinit:
+
+
+[2024-10-9 10:54:34:795] in P9078_MotionDeinit:
+
+
+[2024-10-9 11:3:27:863] in P9078_MotionDeinit:
+dev[0] RT task period, min: 997.5 us, max: 1100.9 us, mean: 1048.6 us
+
+
+[2024-10-9 11:3:27:926] in P9078_MotionDeinit:
+dev[1] RT task period, min: 992.8 us, max: 1101.5 us, mean: 1048.6 us
+
+
+[2024-10-9 11:3:27:990] in P9078_MotionDeinit:
+
+
+[2024-10-9 11:3:28:630] in P9078_MotionDeinit:
+
+
+[2024-10-10 11:2:13:967] in P9078_MotionDeinit:
+dev[0] RT task period, min: 107.1 us, max: 2037.1 us, mean: 1048.6 us
+
+
+[2024-10-10 11:2:14:30] in P9078_MotionDeinit:
+dev[1] RT task period, min: 71.1 us, max: 1999.2 us, mean: 1048.6 us
+
+
+[2024-10-10 11:2:14:93] in P9078_MotionDeinit:
+
+
+[2024-10-10 11:2:14:737] in P9078_MotionDeinit:
+
+
+[2024-10-11 16:55:41:745] in P9078_MotionDeinit:
+dev[0] RT task period, min: 82.4 us, max: 2101.4 us, mean: 1048.6 us
+
+
+[2024-10-11 16:55:41:808] in P9078_MotionDeinit:
+dev[1] RT task period, min: 93.8 us, max: 2105.9 us, mean: 1048.6 us
+
+
+[2024-10-11 16:55:41:871] in P9078_MotionDeinit:
+
+
+[2024-10-11 16:55:42:513] in P9078_MotionDeinit:
+
+
+[2024-10-12 9:33:41:817] in P9078_MotionDeinit:
+dev[0] RT task period, min: 940.3 us, max: 1156.6 us, mean: 1048.6 us
+
+
+[2024-10-12 9:33:41:896] in P9078_MotionDeinit:
+dev[1] RT task period, min: 831.6 us, max: 1265.3 us, mean: 1048.6 us
+
+
+[2024-10-12 9:33:41:960] in P9078_MotionDeinit:
+
+
+[2024-10-12 9:33:42:603] in P9078_MotionDeinit:
+
+
+[2024-10-12 9:49:1:91] in P9078_MotionDeinit:
+dev[0] RT task period, min: 872.2 us, max: 1225.1 us, mean: 1048.6 us
+
+
+[2024-10-12 9:49:1:154] in P9078_MotionDeinit:
+dev[1] RT task period, min: 757.9 us, max: 1289.5 us, mean: 1048.6 us
+
+
+[2024-10-12 9:49:1:218] in P9078_MotionDeinit:
+
+
+[2024-10-12 9:49:1:890] in P9078_MotionDeinit:
+
+
+[2024-10-12 10:5:15:492] in P9078_MotionDeinit:
+dev[0] RT task period, min: 999.2 us, max: 1097.9 us, mean: 1048.6 us
+
+
+[2024-10-12 10:5:15:554] in P9078_MotionDeinit:
+dev[1] RT task period, min: 994.6 us, max: 1098.4 us, mean: 1048.6 us
+
+
+[2024-10-12 10:5:15:618] in P9078_MotionDeinit:
+
+
+[2024-10-12 10:5:16:258] in P9078_MotionDeinit:
+
+
+[2024-10-12 11:3:27:677] in P9078_MotionDeinit:
+dev[0] RT task period, min: 995.7 us, max: 1099.2 us, mean: 1048.6 us
+
+
+[2024-10-12 11:3:27:741] in P9078_MotionDeinit:
+dev[1] RT task period, min: 949.4 us, max: 1098.9 us, mean: 1048.6 us
+
+
+[2024-10-12 11:3:27:805] in P9078_MotionDeinit:
+
+
+[2024-10-12 11:3:28:446] in P9078_MotionDeinit:
+
+
+[2024-10-12 13:55:27:144] in P9078_MotionDeinit:
+dev[0] RT task period, min: 993.6 us, max: 1104.1 us, mean: 1048.6 us
+
+
+[2024-10-12 13:55:27:208] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.6 us, max: 1096.1 us, mean: 1048.6 us
+
+
+[2024-10-12 13:55:27:272] in P9078_MotionDeinit:
+
+
+[2024-10-12 13:55:27:914] in P9078_MotionDeinit:
+
+
+[2024-10-12 14:17:10:653] in P9078_MotionDeinit:
+dev[0] RT task period, min: 997.2 us, max: 1098.0 us, mean: 1048.6 us
+
+
+[2024-10-12 14:17:10:715] in P9078_MotionDeinit:
+dev[1] RT task period, min: 815.5 us, max: 1282.6 us, mean: 1048.6 us
+
+
+[2024-10-12 14:17:10:778] in P9078_MotionDeinit:
+
+
+[2024-10-12 14:17:11:421] in P9078_MotionDeinit:
+
+
+[2024-10-12 16:22:41:740] in P9078_MotionDeinit:
+dev[0] RT task period, min: 993.3 us, max: 1104.1 us, mean: 1048.6 us
+
+
+[2024-10-12 16:22:41:801] in P9078_MotionDeinit:
+dev[1] RT task period, min: 786.1 us, max: 1310.4 us, mean: 1048.6 us
+
+
+[2024-10-12 16:22:41:865] in P9078_MotionDeinit:
+
+
+[2024-10-12 16:22:42:509] in P9078_MotionDeinit:
+
+
+[2024-10-19 9:48:29:604] in P9078_MotionDeinit:
+dev[0] RT task period, min: 97.6 us, max: 2866.2 us, mean: 1048.6 us
+
+
+[2024-10-19 9:48:29:696] in P9078_MotionDeinit:
+dev[1] RT task period, min: 84.9 us, max: 2848.0 us, mean: 1048.6 us
+
+
+[2024-10-23 13:53:26:876] in P9078_MotionDeinit:
+dev[0] RT task period, min: 943.7 us, max: 1153.5 us, mean: 1048.6 us
+
+
+[2024-10-23 13:53:26:969] in P9078_MotionDeinit:
+dev[1] RT task period, min: 860.3 us, max: 1236.8 us, mean: 1048.6 us
+
+
+[2024-10-24 17:49:16:403] in P9078_MotionDeinit:
+dev[0] RT task period, min: 82.0 us, max: 2204.6 us, mean: 1048.6 us
+
+
+[2024-10-24 17:49:16:479] in P9078_MotionDeinit:
+dev[1] RT task period, min: 85.8 us, max: 2295.4 us, mean: 1048.6 us
+
+
+[2024-10-24 18:20:48:69] in P9078_MotionDeinit:
+dev[0] RT task period, min: 936.7 us, max: 1107.2 us, mean: 1048.6 us
+
+
+[2024-10-24 18:20:48:157] in P9078_MotionDeinit:
+dev[1] RT task period, min: 996.4 us, max: 1100.8 us, mean: 1048.6 us
+
+
+[2024-10-24 18:43:54:396] in P9078_MotionDeinit:
+dev[0] RT task period, min: 794.4 us, max: 1301.1 us, mean: 1048.6 us
+
+
+[2024-10-24 18:43:54:491] in P9078_MotionDeinit:
+dev[1] RT task period, min: 920.2 us, max: 1177.1 us, mean: 1048.6 us
+
+
+[2024-10-25 13:44:44:918] in P9078_MotionDeinit:
+dev[0] RT task period, min: 82.0 us, max: 2261.2 us, mean: 1048.6 us
+
+
+[2024-10-25 13:44:45:7] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.0 us, max: 2347.3 us, mean: 1048.6 us
+
+
+[2024-10-28 10:7:29:644] in P9078_MotionDeinit:
+dev[0] RT task period, min: 84.6 us, max: 2076.9 us, mean: 1048.6 us
+
+
+[2024-10-28 10:7:29:737] in P9078_MotionDeinit:
+dev[1] RT task period, min: 96.9 us, max: 2120.3 us, mean: 1048.6 us
+
+
+[2024-10-28 11:11:32:125] in P9078_MotionDeinit:
+dev[0] RT task period, min: 130.8 us, max: 1997.8 us, mean: 1048.6 us
+
+
+[2024-10-28 11:11:32:215] in P9078_MotionDeinit:
+dev[1] RT task period, min: 100.3 us, max: 1975.7 us, mean: 1048.6 us
+
+
+[2024-10-28 11:18:31:696] in P9078_MotionDeinit:
+dev[0] RT task period, min: 925.2 us, max: 1164.9 us, mean: 1048.6 us
+
+
+[2024-10-28 11:18:31:771] in P9078_MotionDeinit:
+dev[1] RT task period, min: 875.1 us, max: 1222.0 us, mean: 1048.6 us
+
+
+[2024-10-28 11:21:30:526] in P9078_MotionDeinit:
+dev[0] RT task period, min: 780.8 us, max: 1314.8 us, mean: 1048.6 us
+
+
+[2024-10-28 11:21:30:603] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1004.4 us, max: 1098.5 us, mean: 1048.6 us
+
+
+[2024-10-28 11:23:52:75] in P9078_MotionDeinit:
+dev[0] RT task period, min: 1000.7 us, max: 1097.2 us, mean: 1048.6 us
+
+
+[2024-10-28 11:23:52:155] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1001.1 us, max: 1099.3 us, mean: 1048.6 us
+
+
+[2024-10-28 12:8:7:612] in P9078_MotionDeinit:
+dev[0] RT task period, min: 773.4 us, max: 1274.6 us, mean: 1048.6 us
+
+
+[2024-10-28 12:8:7:688] in P9078_MotionDeinit:
+dev[1] RT task period, min: 999.1 us, max: 1097.4 us, mean: 1048.6 us
+
+
+[2024-10-28 13:1:58:732] in P9078_MotionDeinit:
+dev[0] RT task period, min: 998.3 us, max: 1101.0 us, mean: 1048.6 us
+
+
+[2024-10-28 13:1:58:809] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1008.6 us, max: 1099.2 us, mean: 1048.6 us
+
+
+[2024-10-28 13:5:58:265] in P9078_MotionDeinit:
+dev[0] RT task period, min: 998.8 us, max: 1116.7 us, mean: 1048.6 us
+
+
+[2024-10-28 13:5:58:345] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1001.6 us, max: 1098.0 us, mean: 1048.6 us
+
+
+[2024-10-28 13:23:44:165] in P9078_MotionDeinit:
+dev[0] RT task period, min: 773.1 us, max: 1347.3 us, mean: 1048.6 us
+
+
+[2024-10-28 13:23:44:254] in P9078_MotionDeinit:
+dev[1] RT task period, min: 996.0 us, max: 1096.4 us, mean: 1048.6 us
+
+
+[2024-10-28 14:9:48:979] in P9078_MotionDeinit:
+dev[0] RT task period, min: 912.1 us, max: 1188.1 us, mean: 1048.6 us
+
+
+[2024-10-28 14:9:49:57] in P9078_MotionDeinit:
+dev[1] RT task period, min: 898.7 us, max: 1198.7 us, mean: 1048.6 us
+
+
+[2024-10-28 14:23:9:822] in P9078_MotionDeinit:
+dev[0] RT task period, min: 787.8 us, max: 1310.1 us, mean: 1048.6 us
+
+
+[2024-10-28 14:23:9:901] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1009.2 us, max: 1100.2 us, mean: 1048.6 us
+
+
+[2024-10-28 14:30:57:865] in P9078_MotionDeinit:
+dev[0] RT task period, min: 998.9 us, max: 1098.2 us, mean: 1048.6 us
+
+
+[2024-10-28 14:30:57:943] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1009.3 us, max: 1097.4 us, mean: 1048.6 us
+
+
+[2024-10-28 14:41:33:560] in P9078_MotionDeinit:
+dev[0] RT task period, min: 942.1 us, max: 1155.8 us, mean: 1048.6 us
+
+
+[2024-10-28 14:41:33:640] in P9078_MotionDeinit:
+dev[1] RT task period, min: 855.0 us, max: 1241.7 us, mean: 1048.6 us
+
+
+[2024-11-1 9:57:42:487] in P9078_MotionDeinit:
+dev[0] RT task period, min: 95.8 us, max: 2118.0 us, mean: 1048.6 us
+
+
+[2024-11-1 9:57:42:565] in P9078_MotionDeinit:
+dev[1] RT task period, min: 134.7 us, max: 2116.4 us, mean: 1048.6 us
+
+
+[2024-11-1 16:37:55:683] in P9078_MotionDeinit:
+dev[0] RT task period, min: 82.5 us, max: 2148.7 us, mean: 1048.6 us
+
+
+[2024-11-1 16:37:55:759] in P9078_MotionDeinit:
+dev[1] RT task period, min: 70.9 us, max: 2448.1 us, mean: 1048.6 us
+
+
+[2024-11-4 13:49:35:279] in P9078_MotionDeinit:
+dev[0] RT task period, min: 983.0 us, max: 1114.7 us, mean: 1048.6 us
+
+
+[2024-11-4 13:49:35:357] in P9078_MotionDeinit:
+dev[1] RT task period, min: 767.0 us, max: 1330.3 us, mean: 1048.6 us
+
+
+[2024-11-8 9:55:15:225] in P9078_MotionDeinit:
+dev[0] RT task period, min: 895.1 us, max: 1153.2 us, mean: 1048.6 us
+
+
+[2024-11-8 9:55:15:332] in P9078_MotionDeinit:
+dev[1] RT task period, min: 842.2 us, max: 1203.5 us, mean: 1048.6 us
+
+
+[2024-11-8 16:53:55:655] in P9078_MotionDeinit:
+dev[0] RT task period, min: 795.5 us, max: 1252.9 us, mean: 1048.6 us
+
+
+[2024-11-8 16:53:55:735] in P9078_MotionDeinit:
+dev[1] RT task period, min: 743.8 us, max: 1304.6 us, mean: 1048.6 us
+
+
+[2024-11-9 16:10:9:588] in P9078_MotionDeinit:
+dev[0] RT task period, min: 993.2 us, max: 1102.5 us, mean: 1048.6 us
+
+
+[2024-11-9 16:10:9:667] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.4 us, max: 1101.5 us, mean: 1048.6 us
+
+
+[2024-11-12 8:55:38:643] in P9078_MotionDeinit:
+dev[0] RT task period, min: 94.7 us, max: 2192.0 us, mean: 1048.6 us
+
+
+[2024-11-12 8:55:38:719] in P9078_MotionDeinit:
+dev[1] RT task period, min: 84.6 us, max: 2361.5 us, mean: 1048.6 us
+
+
+[2024-11-12 9:7:40:763] in P9078_MotionDeinit:
+dev[0] RT task period, min: 961.0 us, max: 1135.8 us, mean: 1048.6 us
+
+
+[2024-11-12 9:7:40:842] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.8 us, max: 1099.1 us, mean: 1048.6 us
+
+
+[2024-11-12 18:48:20:247] in P9078_MotionDeinit:
+dev[0] RT task period, min: 81.9 us, max: 4182.6 us, mean: 1048.6 us
+
+
+[2024-11-12 18:48:20:326] in P9078_MotionDeinit:
+dev[1] RT task period, min: 88.4 us, max: 2976.2 us, mean: 1048.6 us
+
+
+[2024-11-13 8:10:39:482] in P9078_MotionDeinit:
+dev[0] RT task period, min: 86.1 us, max: 3057.7 us, mean: 1048.6 us
+
+
+[2024-11-13 8:10:39:560] in P9078_MotionDeinit:
+dev[1] RT task period, min: 89.3 us, max: 2490.0 us, mean: 1048.6 us
+
+
+[2024-11-13 13:49:44:611] in P9078_MotionDeinit:
+dev[0] RT task period, min: 75.9 us, max: 3177.3 us, mean: 1048.6 us
+
+
+[2024-11-13 13:49:44:704] in P9078_MotionDeinit:
+dev[1] RT task period, min: 78.7 us, max: 2936.4 us, mean: 1048.6 us
+
+
+[2024-11-13 20:27:42:797] in P9078_MotionDeinit:
+dev[0] RT task period, min: 79.9 us, max: 2552.0 us, mean: 1048.6 us
+
+
+[2024-11-13 20:27:42:906] in P9078_MotionDeinit:
+dev[1] RT task period, min: 76.7 us, max: 2132.1 us, mean: 1048.6 us
+
+
+[2024-11-13 20:37:36:990] in P9078_MotionDeinit:
+dev[0] RT task period, min: 784.8 us, max: 1163.6 us, mean: 1048.6 us
+
+
+[2024-11-13 20:37:37:68] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.7 us, max: 1097.2 us, mean: 1048.6 us
+
+
+[2024-11-14 9:29:1:635] in P9078_MotionDeinit:
+dev[0] RT task period, min: 84.6 us, max: 3835.3 us, mean: 1048.6 us
+
+
+[2024-11-14 9:29:1:713] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.4 us, max: 2947.9 us, mean: 1048.6 us
+
+
+[2024-11-14 9:39:43:783] in P9078_MotionDeinit:
+dev[0] RT task period, min: 89.5 us, max: 2140.5 us, mean: 1048.6 us
+
+
+[2024-11-14 9:39:43:861] in P9078_MotionDeinit:
+dev[1] RT task period, min: 84.7 us, max: 1988.7 us, mean: 1048.6 us
+
+
+[2024-11-14 11:20:33:141] in P9078_MotionDeinit:
+dev[0] RT task period, min: 78.7 us, max: 2727.6 us, mean: 1048.6 us
+
+
+[2024-11-14 11:20:33:220] in P9078_MotionDeinit:
+dev[1] RT task period, min: 78.5 us, max: 2107.5 us, mean: 1048.6 us
+
+
+[2024-11-14 15:50:38:221] in P9078_MotionDeinit:
+dev[0] RT task period, min: 91.2 us, max: 3423.7 us, mean: 1048.6 us
+
+
+[2024-11-14 15:50:38:298] in P9078_MotionDeinit:
+dev[1] RT task period, min: 93.6 us, max: 2513.3 us, mean: 1048.6 us
+
+
+[2024-11-16 11:40:2:837] in P9078_MotionDeinit:
+dev[0] RT task period, min: 84.9 us, max: 3398.6 us, mean: 1048.6 us
+
+
+[2024-11-16 11:40:2:917] in P9078_MotionDeinit:
+dev[1] RT task period, min: 101.2 us, max: 2958.1 us, mean: 1048.6 us
+
+
+[2024-11-16 13:22:23:646] in P9078_MotionDeinit:
+dev[0] RT task period, min: 84.1 us, max: 2441.2 us, mean: 1048.6 us
+
+
+[2024-11-16 13:22:23:726] in P9078_MotionDeinit:
+dev[1] RT task period, min: 89.5 us, max: 2569.9 us, mean: 1048.6 us
+
+
+[2024-11-20 10:41:35:636] in P9078_MotionDeinit:
+dev[0] RT task period, min: 74.0 us, max: 2966.5 us, mean: 1048.6 us
+
+
+[2024-11-20 10:41:35:726] in P9078_MotionDeinit:
+dev[1] RT task period, min: 72.4 us, max: 2590.0 us, mean: 1048.6 us
+
+
+[2024-11-20 15:23:40:889] in P9078_MotionDeinit:
+dev[0] RT task period, min: 85.6 us, max: 2190.4 us, mean: 1048.6 us
+
+
+[2024-11-20 15:23:40:978] in P9078_MotionDeinit:
+dev[1] RT task period, min: 89.5 us, max: 2128.7 us, mean: 1048.6 us
+
+
+[2024-11-20 16:42:18:461] in P9078_MotionDeinit:
+dev[0] RT task period, min: 122.8 us, max: 2994.0 us, mean: 1048.6 us
+
+
+[2024-11-20 16:42:18:541] in P9078_MotionDeinit:
+dev[1] RT task period, min: 122.1 us, max: 2619.3 us, mean: 1048.6 us
+
+
+[2024-11-20 18:47:17:684] in P9078_MotionDeinit:
+dev[0] RT task period, min: 882.8 us, max: 1207.1 us, mean: 1048.6 us
+
+
+[2024-11-20 18:47:17:759] in P9078_MotionDeinit:
+dev[1] RT task period, min: 912.3 us, max: 1182.9 us, mean: 1048.6 us
+
+
+[2024-11-20 21:3:1:544] in P9078_MotionDeinit:
+dev[0] RT task period, min: 79.7 us, max: 2372.7 us, mean: 1048.6 us
+
+
+[2024-11-20 21:3:1:630] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.7 us, max: 2259.3 us, mean: 1048.6 us
+
+
+[2024-11-21 9:20:47:622] in P9078_MotionDeinit:
+dev[0] RT task period, min: 95.6 us, max: 2126.5 us, mean: 1048.6 us
+
+
+[2024-11-21 9:20:47:700] in P9078_MotionDeinit:
+dev[1] RT task period, min: 85.1 us, max: 2798.8 us, mean: 1048.6 us
+
+
+[2024-11-21 11:14:32:954] in P9078_MotionDeinit:
+dev[0] RT task period, min: 83.4 us, max: 2647.8 us, mean: 1048.6 us
+
+
+[2024-11-21 11:14:33:63] in P9078_MotionDeinit:
+dev[1] RT task period, min: 97.3 us, max: 2103.0 us, mean: 1048.6 us
+
+
+[2024-11-21 12:27:46:255] in P9078_MotionDeinit:
+dev[0] RT task period, min: 95.4 us, max: 2238.8 us, mean: 1048.6 us
+
+
+[2024-11-21 12:27:46:331] in P9078_MotionDeinit:
+dev[1] RT task period, min: 153.0 us, max: 2318.7 us, mean: 1048.6 us
+
+
+[2024-11-21 13:6:43:598] in P9078_MotionDeinit:
+dev[0] RT task period, min: 972.7 us, max: 1124.2 us, mean: 1048.6 us
+
+
+[2024-11-21 13:6:43:673] in P9078_MotionDeinit:
+dev[1] RT task period, min: 923.6 us, max: 1123.8 us, mean: 1048.6 us
+
+
+[2024-11-21 13:7:28:23] in P9078_MotionDeinit:
+dev[0] RT task period, min: 999.7 us, max: 1098.6 us, mean: 1048.6 us
+
+
+[2024-11-21 13:7:28:107] in P9078_MotionDeinit:
+dev[1] RT task period, min: 770.8 us, max: 1276.7 us, mean: 1048.6 us
+
+
+[2024-11-21 13:54:2:215] in P9078_MotionDeinit:
+dev[0] RT task period, min: 105.7 us, max: 2222.6 us, mean: 1048.6 us
+
+
+[2024-11-21 13:54:2:303] in P9078_MotionDeinit:
+dev[1] RT task period, min: 107.3 us, max: 2084.5 us, mean: 1048.6 us
+
+
+[2024-11-21 14:0:49:262] in P9078_MotionDeinit:
+dev[0] RT task period, min: 772.6 us, max: 1275.3 us, mean: 1048.6 us
+
+
+[2024-11-21 14:0:49:339] in P9078_MotionDeinit:
+dev[1] RT task period, min: 971.7 us, max: 1098.8 us, mean: 1048.6 us
+
+
+[2024-11-21 15:42:42:271] in P9078_MotionDeinit:
+dev[0] RT task period, min: 862.3 us, max: 1233.7 us, mean: 1048.6 us
+
+
+[2024-11-21 15:42:42:345] in P9078_MotionDeinit:
+dev[1] RT task period, min: 971.3 us, max: 1125.8 us, mean: 1048.6 us
+
+
+[2024-11-21 16:17:50:960] in P9078_MotionDeinit:
+dev[0] RT task period, min: 996.5 us, max: 1101.7 us, mean: 1048.6 us
+
+
+[2024-11-21 16:17:51:40] in P9078_MotionDeinit:
+dev[1] RT task period, min: 903.4 us, max: 1193.5 us, mean: 1048.6 us
+
+
+[2024-11-21 16:23:52:898] in P9078_MotionDeinit:
+dev[0] RT task period, min: 999.6 us, max: 1098.0 us, mean: 1048.6 us
+
+
+[2024-11-21 16:23:52:976] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.3 us, max: 1099.6 us, mean: 1048.6 us
+
+
+[2024-11-21 17:49:20:53] in P9078_MotionDeinit:
+dev[0] RT task period, min: 961.1 us, max: 1099.1 us, mean: 1048.6 us
+
+
+[2024-11-21 17:49:20:131] in P9078_MotionDeinit:
+dev[1] RT task period, min: 999.6 us, max: 1097.3 us, mean: 1048.6 us
+
+
+[2024-11-22 9:38:48:511] in P9078_MotionDeinit:
+dev[0] RT task period, min: 82.0 us, max: 2355.2 us, mean: 1048.6 us
+
+
+[2024-11-22 9:38:48:589] in P9078_MotionDeinit:
+dev[1] RT task period, min: 81.9 us, max: 2423.6 us, mean: 1048.6 us
+
+
+[2024-11-22 22:14:47:496] in P9078_MotionDeinit:
+dev[0] RT task period, min: 70.7 us, max: 2593.0 us, mean: 1048.6 us
+
+
+[2024-11-22 22:14:47:575] in P9078_MotionDeinit:
+dev[1] RT task period, min: 69.0 us, max: 2463.6 us, mean: 1048.6 us
+
+
+[2024-11-22 22:16:56:167] in P9078_MotionDeinit:
+dev[0] RT task period, min: 964.2 us, max: 1133.2 us, mean: 1048.6 us
+
+
+[2024-11-22 22:16:56:244] in P9078_MotionDeinit:
+dev[1] RT task period, min: 994.1 us, max: 1101.9 us, mean: 1048.6 us
+
+
+[2024-11-22 23:41:7:702] in P9078_MotionDeinit:
+dev[0] RT task period, min: 85.6 us, max: 2145.2 us, mean: 1048.6 us
+
+
+[2024-11-22 23:41:7:779] in P9078_MotionDeinit:
+dev[1] RT task period, min: 85.9 us, max: 2405.8 us, mean: 1048.6 us
+
+
+[2024-11-22 23:44:46:438] in P9078_MotionDeinit:
+dev[0] RT task period, min: 900.2 us, max: 1147.4 us, mean: 1048.6 us
+
+
+[2024-11-22 23:44:46:516] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.8 us, max: 1096.1 us, mean: 1048.6 us
+
+
+[2024-11-23 1:33:52:446] in P9078_MotionDeinit:
+dev[0] RT task period, min: 74.0 us, max: 2682.3 us, mean: 1048.6 us
+
+
+[2024-11-23 1:33:52:542] in P9078_MotionDeinit:
+dev[1] RT task period, min: 70.6 us, max: 2431.7 us, mean: 1048.6 us
+
+
+[2024-11-23 2:7:40:863] in P9078_MotionDeinit:
+dev[0] RT task period, min: 823.6 us, max: 1273.0 us, mean: 1048.6 us
+
+
+[2024-11-23 2:7:40:953] in P9078_MotionDeinit:
+dev[1] RT task period, min: 943.0 us, max: 1104.7 us, mean: 1048.6 us
+
+
+[2024-11-23 2:25:56:49] in P9078_MotionDeinit:
+dev[0] RT task period, min: 89.3 us, max: 2001.5 us, mean: 1048.6 us
+
+
+[2024-11-23 2:25:56:129] in P9078_MotionDeinit:
+dev[1] RT task period, min: 109.8 us, max: 2366.7 us, mean: 1048.6 us
+
+
+[2024-11-23 2:41:1:432] in P9078_MotionDeinit:
+dev[0] RT task period, min: 120.9 us, max: 2139.3 us, mean: 1048.6 us
+
+
+[2024-11-23 2:41:1:518] in P9078_MotionDeinit:
+dev[1] RT task period, min: 89.4 us, max: 2121.4 us, mean: 1048.6 us
+
+
+[2024-11-23 2:42:8:135] in P9078_MotionDeinit:
+dev[0] RT task period, min: 936.3 us, max: 1162.3 us, mean: 1048.6 us
+
+
+[2024-11-23 2:42:8:231] in P9078_MotionDeinit:
+dev[1] RT task period, min: 997.7 us, max: 1098.6 us, mean: 1048.6 us
+
+
+[2024-11-23 3:24:44:807] in P9078_MotionDeinit:
+dev[0] RT task period, min: 83.1 us, max: 2820.9 us, mean: 1048.6 us
+
+
+[2024-11-23 3:24:44:886] in P9078_MotionDeinit:
+dev[1] RT task period, min: 83.3 us, max: 4184.6 us, mean: 1048.6 us
+
+
+[2024-11-23 3:27:1:50] in P9078_MotionDeinit:
+dev[0] RT task period, min: 771.5 us, max: 1325.3 us, mean: 1048.6 us
+
+
+[2024-11-23 3:27:1:130] in P9078_MotionDeinit:
+dev[1] RT task period, min: 828.5 us, max: 1212.7 us, mean: 1048.6 us
+
+
+[2024-11-23 8:14:29:283] in P9078_MotionDeinit:
+dev[0] RT task period, min: 95.1 us, max: 3016.8 us, mean: 1048.6 us
+
+
+[2024-11-23 8:14:29:389] in P9078_MotionDeinit:
+dev[1] RT task period, min: 87.7 us, max: 2772.8 us, mean: 1048.6 us
+
+
+[2024-11-23 15:43:44:551] in P9078_MotionDeinit:
+dev[0] RT task period, min: 70.6 us, max: 2803.1 us, mean: 1048.6 us
+
+
+[2024-11-23 15:43:44:660] in P9078_MotionDeinit:
+dev[1] RT task period, min: 67.9 us, max: 2425.0 us, mean: 1048.6 us
+
+
+[2024-11-23 16:9:14:251] in P9078_MotionDeinit:
+dev[0] RT task period, min: 117.7 us, max: 2081.4 us, mean: 1048.6 us
+
+
+[2024-11-23 16:9:14:331] in P9078_MotionDeinit:
+dev[1] RT task period, min: 116.9 us, max: 2306.8 us, mean: 1048.6 us
+
+
+[2024-11-23 16:31:57:998] in P9078_MotionDeinit:
+dev[0] RT task period, min: 98.4 us, max: 2103.4 us, mean: 1048.6 us
+
+
+[2024-11-23 16:31:58:83] in P9078_MotionDeinit:
+dev[1] RT task period, min: 119.5 us, max: 2094.2 us, mean: 1048.6 us
+
+
+[2024-11-23 16:52:44:195] in P9078_MotionDeinit:
+dev[0] RT task period, min: 166.5 us, max: 2963.3 us, mean: 1048.6 us
+
+
+[2024-11-23 16:52:44:305] in P9078_MotionDeinit:
+dev[1] RT task period, min: 180.2 us, max: 2604.3 us, mean: 1048.6 us
+
+
+[2024-11-24 17:34:46:488] in P9078_MotionDeinit:
+dev[0] RT task period, min: 83.4 us, max: 2995.5 us, mean: 1048.6 us
+
+
+[2024-11-24 17:34:46:581] in P9078_MotionDeinit:
+dev[1] RT task period, min: 78.9 us, max: 2935.2 us, mean: 1048.6 us
+
+
+[2024-11-26 9:23:31:373] in P9078_MotionDeinit:
+dev[0] RT task period, min: 72.9 us, max: 3112.9 us, mean: 1048.6 us
+
+
+[2024-11-26 9:23:31:450] in P9078_MotionDeinit:
+dev[1] RT task period, min: 82.0 us, max: 2941.6 us, mean: 1048.6 us
+
+
+[2024-11-27 13:25:8:496] in P9078_MotionDeinit:
+dev[0] RT task period, min: 85.1 us, max: 2118.5 us, mean: 1048.6 us
+
+
+[2024-11-27 13:25:8:589] in P9078_MotionDeinit:
+dev[1] RT task period, min: 82.9 us, max: 2117.1 us, mean: 1048.6 us
+
+
+[2024-11-27 14:32:2:949] in P9078_MotionDeinit:
+dev[0] RT task period, min: 172.7 us, max: 196147.0 us, mean: 1048.6 us
+
+
+[2024-11-27 14:32:3:28] in P9078_MotionDeinit:
+dev[1] RT task period, min: 98.7 us, max: 48490.5 us, mean: 1048.6 us
+
+
+[2024-11-27 14:40:54:23] in P9078_MotionDeinit:
+dev[0] RT task period, min: 174.9 us, max: 49108.5 us, mean: 1048.6 us
+
+
+[2024-11-27 14:40:54:101] in P9078_MotionDeinit:
+dev[1] RT task period, min: 976.5 us, max: 48248.6 us, mean: 1048.6 us
+
+
+[2024-11-27 14:59:2:483] in P9078_MotionDeinit:
+dev[0] RT task period, min: 123.1 us, max: 78427.3 us, mean: 1048.6 us
+
+
+[2024-11-27 14:59:2:561] in P9078_MotionDeinit:
+dev[1] RT task period, min: 113.8 us, max: 48264.7 us, mean: 1048.6 us
+
+
+[2024-11-27 17:1:31:770] in P9078_MotionDeinit:
+dev[0] RT task period, min: 89.0 us, max: 48235.8 us, mean: 1048.6 us
+
+
+[2024-11-27 17:1:31:849] in P9078_MotionDeinit:
+dev[1] RT task period, min: 84.2 us, max: 48330.0 us, mean: 1048.6 us
+
+
+[2024-11-27 17:38:15:48] in P9078_MotionDeinit:
+dev[0] RT task period, min: 112.3 us, max: 2054.5 us, mean: 1048.6 us
+
+
+[2024-11-27 17:38:15:123] in P9078_MotionDeinit:
+dev[1] RT task period, min: 94.2 us, max: 2271.4 us, mean: 1048.6 us
+
+
+[2024-11-27 17:39:19:191] in P9078_MotionDeinit:
+dev[0] RT task period, min: 997.4 us, max: 1097.8 us, mean: 1048.6 us
+
+
+[2024-11-27 17:39:19:275] in P9078_MotionDeinit:
+dev[1] RT task period, min: 982.2 us, max: 1115.0 us, mean: 1048.6 us
+
+
+[2024-11-27 18:38:54:482] in P9078_MotionDeinit:
+dev[0] RT task period, min: 83.5 us, max: 2505.2 us, mean: 1048.6 us
+
+
+[2024-11-27 18:38:54:563] in P9078_MotionDeinit:
+dev[1] RT task period, min: 93.4 us, max: 2538.6 us, mean: 1048.6 us
+
+
+[2024-11-27 18:42:50:282] in P9078_MotionDeinit:
+dev[0] RT task period, min: 822.3 us, max: 1275.4 us, mean: 1048.6 us
+
+
+[2024-11-27 18:42:50:359] in P9078_MotionDeinit:
+dev[1] RT task period, min: 1001.5 us, max: 1098.6 us, mean: 1048.6 us
+
+
+[2024-11-28 9:46:28:108] in P9078_MotionDeinit:
+dev[0] RT task period, min: 83.7 us, max: 48245.1 us, mean: 1048.6 us
+
+
+[2024-11-28 9:46:37:180] in P9078_MotionDeinit:
+dev[1] RT task period, min: 74.1 us, max: 48365.7 us, mean: 1048.6 us
+
+
+[2024-11-28 17:11:6:831] in P9078_MotionDeinit:
+dev[0] RT task period, min: 71.2 us, max: 2405.6 us, mean: 1048.6 us
+
+
+[2024-11-28 17:11:6:910] in P9078_MotionDeinit:
+dev[1] RT task period, min: 70.2 us, max: 2132.2 us, mean: 1048.6 us
+
+
+[2024-11-28 17:43:52:273] in P9078_MotionDeinit:
+dev[0] RT task period, min: 96.6 us, max: 2213.6 us, mean: 1048.6 us
+
+
+[2024-11-28 17:43:52:351] in P9078_MotionDeinit:
+dev[1] RT task period, min: 108.2 us, max: 2510.1 us, mean: 1048.6 us
+
+
+[2024-11-28 17:56:26:877] in P9078_MotionDeinit:
+dev[0] RT task period, min: 997.6 us, max: 1100.9 us, mean: 1048.6 us
+
+
+[2024-11-28 17:56:26:962] in P9078_MotionDeinit:
+dev[1] RT task period, min: 798.8 us, max: 1301.1 us, mean: 1048.6 us
+
+
+[2024-11-28 18:4:53:807] in P9078_MotionDeinit:
+dev[0] RT task period, min: 887.4 us, max: 1214.7 us, mean: 1048.6 us
+
+
+[2024-11-28 18:4:53:884] in P9078_MotionDeinit:
+dev[1] RT task period, min: 904.2 us, max: 1146.4 us, mean: 1048.6 us
+
+
+[2024-11-28 18:6:7:841] in P9078_MotionDeinit:
+dev[0] RT task period, min: 994.5 us, max: 1098.4 us, mean: 1048.6 us
+
+
+[2024-11-28 18:6:7:921] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.8 us, max: 1096.1 us, mean: 1048.6 us

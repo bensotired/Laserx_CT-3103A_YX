@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<DotNETComponent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Visible>true</Visible>
+    <SupportedProjectTypes>
+        <string>WindowsFormsApplication2012</string>
+        <string>WindowsFormsApplication2013</string>
+    </SupportedProjectTypes>
+    <SelectedByDefault>false</SelectedByDefault>
+    <Title>Measurement Studio Hardware Class Libraries/NI-DCPower Library</Title>
+    <Description>Contains classes for configuring and controlling NI DC power supply devices and SMUs using the NI-DCPower driver.</Description>
+    <Name2012>NationalInstruments.ModularInstruments.NIDCPower.Fx45</Name2012>
+    <Name2013>NationalInstruments.ModularInstruments.NIDCPower.Fx45</Name2013>
+    <Licensed>false</Licensed>
+    <Dependencies>
+        <DotNETAssembly>
+            <Name>NationalInstruments.ModularInstruments.Common</Name>
+        </DotNETAssembly>
+    </Dependencies>
+    <ThirdPartyDependencies>
+        <string>Ivi.Driver</string>
+        <string>Ivi.DCPwr</string>
+    </ThirdPartyDependencies>
+    <Namespaces>
+        <string>NationalInstruments.ModularInstruments.NIDCPower</string>
+    </Namespaces>
+</DotNETComponent>

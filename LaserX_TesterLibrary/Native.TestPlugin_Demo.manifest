@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <assemblyIdentity name="Native.TestPlugin_Demo" version="2.2.5.17" processorArchitecture="x86" type="win32" />
+  <dependency>
+    <dependentAssembly asmv2:dependencyType="install" asmv2:codebase="Native.SolveWare_ThorlabsApt.manifest" asmv2:size="1503">
+      <assemblyIdentity name="Native.SolveWare_ThorlabsApt" version="1.0.0.1" processorArchitecture="x86" type="win32" />
+      <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>i3GYHSjHSd5U+Mzmy1HP5P6+6F43ft7caGFCKm6H2LI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+</assembly>

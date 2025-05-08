@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestSpecManagerConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestSpecCollection>
+    <ItemCollection>
+      <TestSpecification>
+        <ItemCollection>
+          <TestSpecificationItem>
+            <Name>SampleSpecItem_0</Name>
+            <Unit>NA</Unit>
+            <Min>0</Min>
+            <Max>99</Max>
+            <DataType>Double</DataType>
+            <FailureCode>FC_0000</FailureCode>
+          </TestSpecificationItem>
+          <TestSpecificationItem>
+            <Name>SampleSpecItem_1</Name>
+            <Unit>NA</Unit>
+            <Min>0</Min>
+            <Max>99</Max>
+            <DataType>Double</DataType>
+            <FailureCode>FC_0001</FailureCode>
+          </TestSpecificationItem>
+          <TestSpecificationItem>
+            <Name>SampleSpecItem_2</Name>
+            <Unit>NA</Unit>
+            <Min>0</Min>
+            <Max>99</Max>
+            <DataType>Double</DataType>
+            <FailureCode>FC_0002</FailureCode>
+          </TestSpecificationItem>
+        </ItemCollection>
+        <ID>727082462</ID>
+        <Name>Demo</Name>
+        <Version>20240411</Version>
+      </TestSpecification>
+    </ItemCollection>
+  </TestSpecCollection>
+</TestSpecManagerConfig>
