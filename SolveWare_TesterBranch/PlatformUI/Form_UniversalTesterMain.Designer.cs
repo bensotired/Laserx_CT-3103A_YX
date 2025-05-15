@@ -52,10 +52,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_auxi = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabOESGuiTest = new System.Windows.Forms.TabPage();
+            this.btnOpenOesForm = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.ss_mainInfo.SuspendLayout();
             this.tlp_main.SuspendLayout();
             this.tab_MainPage.SuspendLayout();
+            this.tp_StationHardwareSetting.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +73,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1468, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1468, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,27 +83,27 @@
             this.管理ToolStripMenuItem,
             this.登录ToolStripMenuItem});
             this.tsm_User.Name = "tsm_User";
-            this.tsm_User.Size = new System.Drawing.Size(44, 21);
+            this.tsm_User.Size = new System.Drawing.Size(44, 20);
             this.tsm_User.Text = "用户";
             // 
             // 管理ToolStripMenuItem
             // 
             this.管理ToolStripMenuItem.Name = "管理ToolStripMenuItem";
-            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.管理ToolStripMenuItem.Text = "管理";
             this.管理ToolStripMenuItem.Click += new System.EventHandler(this.管理ToolStripMenuItem_Click);
             // 
             // 登录ToolStripMenuItem
             // 
             this.登录ToolStripMenuItem.Name = "登录ToolStripMenuItem";
-            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.登录ToolStripMenuItem.Text = "登录";
             this.登录ToolStripMenuItem.Click += new System.EventHandler(this.登录ToolStripMenuItem_Click);
             // 
             // tssl_BD
             // 
             this.tssl_BD.Name = "tssl_BD";
-            this.tssl_BD.Size = new System.Drawing.Size(96, 21);
+            this.tssl_BD.Size = new System.Drawing.Size(76, 20);
             this.tssl_BD.Text = "                   ";
             this.tssl_BD.Visible = false;
             // 
@@ -110,7 +113,7 @@
             this.切换配置参数ToolStripMenuItem,
             this.toolStripMenuItem2});
             this.配置参数管理ToolStripMenuItem.Name = "配置参数管理ToolStripMenuItem";
-            this.配置参数管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.配置参数管理ToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.配置参数管理ToolStripMenuItem.Text = "配置参数管理";
             // 
             // 切换配置参数ToolStripMenuItem
@@ -118,20 +121,20 @@
             this.切换配置参数ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem3});
             this.切换配置参数ToolStripMenuItem.Name = "切换配置参数ToolStripMenuItem";
-            this.切换配置参数ToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.切换配置参数ToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.切换配置参数ToolStripMenuItem.Text = "切换产品配置参数";
             this.切换配置参数ToolStripMenuItem.DropDownOpening += new System.EventHandler(this.切换配置参数ToolStripMenuItem_DropDownOpening);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(80, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(77, 22);
             this.toolStripMenuItem3.Text = " ";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(240, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(239, 22);
             this.toolStripMenuItem2.Text = "新建产品配置参数(按当前配置)";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -143,7 +146,7 @@
             this.tssl_CurrentUser,
             this.toolStripStatusLabel1,
             this.tssl_CurrentProductName});
-            this.ss_mainInfo.Location = new System.Drawing.Point(0, 754);
+            this.ss_mainInfo.Location = new System.Drawing.Point(0, 819);
             this.ss_mainInfo.Name = "ss_mainInfo";
             this.ss_mainInfo.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
             this.ss_mainInfo.Size = new System.Drawing.Size(1468, 22);
@@ -165,13 +168,13 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(83, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(84, 17);
             this.toolStripStatusLabel1.Text = "当前产品类型:";
             // 
             // tssl_CurrentProductName
             // 
             this.tssl_CurrentProductName.Name = "tssl_CurrentProductName";
-            this.tssl_CurrentProductName.Size = new System.Drawing.Size(32, 17);
+            this.tssl_CurrentProductName.Size = new System.Drawing.Size(31, 17);
             this.tssl_CurrentProductName.Text = "未知";
             // 
             // tlp_main
@@ -183,35 +186,37 @@
             this.tlp_main.Controls.Add(this.tab_MainPage, 0, 0);
             this.tlp_main.Controls.Add(this.tableLayoutPanel1, 1, 0);
             this.tlp_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp_main.Location = new System.Drawing.Point(0, 25);
+            this.tlp_main.Location = new System.Drawing.Point(0, 24);
             this.tlp_main.Margin = new System.Windows.Forms.Padding(0);
             this.tlp_main.Name = "tlp_main";
             this.tlp_main.RowCount = 1;
             this.tlp_main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp_main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp_main.Size = new System.Drawing.Size(1468, 729);
+            this.tlp_main.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tlp_main.Size = new System.Drawing.Size(1468, 795);
             this.tlp_main.TabIndex = 4;
             // 
             // tab_MainPage
             // 
             this.tab_MainPage.Controls.Add(this.tp_StationHardwareSetting);
             this.tab_MainPage.Controls.Add(this.tp_TestFrame);
+            this.tab_MainPage.Controls.Add(this.tabOESGuiTest);
             this.tab_MainPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_MainPage.Enabled = false;
             this.tab_MainPage.Location = new System.Drawing.Point(4, 4);
             this.tab_MainPage.Multiline = true;
             this.tab_MainPage.Name = "tab_MainPage";
             this.tab_MainPage.SelectedIndex = 0;
-            this.tab_MainPage.Size = new System.Drawing.Size(1076, 721);
+            this.tab_MainPage.Size = new System.Drawing.Size(1076, 787);
             this.tab_MainPage.TabIndex = 29;
             this.tab_MainPage.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tab_MainPage_Selecting);
             // 
             // tp_StationHardwareSetting
             // 
+            this.tp_StationHardwareSetting.Controls.Add(this.btnOpenOesForm);
             this.tp_StationHardwareSetting.Location = new System.Drawing.Point(4, 22);
             this.tp_StationHardwareSetting.Name = "tp_StationHardwareSetting";
             this.tp_StationHardwareSetting.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_StationHardwareSetting.Size = new System.Drawing.Size(1068, 695);
+            this.tp_StationHardwareSetting.Size = new System.Drawing.Size(1068, 761);
             this.tp_StationHardwareSetting.TabIndex = 1;
             this.tp_StationHardwareSetting.Text = "内外设配置";
             this.tp_StationHardwareSetting.UseVisualStyleBackColor = true;
@@ -220,7 +225,7 @@
             // 
             this.tp_TestFrame.Location = new System.Drawing.Point(4, 22);
             this.tp_TestFrame.Name = "tp_TestFrame";
-            this.tp_TestFrame.Size = new System.Drawing.Size(1068, 695);
+            this.tp_TestFrame.Size = new System.Drawing.Size(1068, 761);
             this.tp_TestFrame.TabIndex = 2;
             this.tp_TestFrame.Text = "测试综合设置";
             this.tp_TestFrame.UseVisualStyleBackColor = true;
@@ -238,7 +243,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 721);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(377, 787);
             this.tableLayoutPanel1.TabIndex = 30;
             // 
             // pictureBox1
@@ -248,7 +253,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(71, 6);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(70, 5, 70, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(235, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -256,20 +261,39 @@
             // pnl_auxi
             // 
             this.pnl_auxi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_auxi.Location = new System.Drawing.Point(4, 40);
+            this.pnl_auxi.Location = new System.Drawing.Point(4, 44);
             this.pnl_auxi.Name = "pnl_auxi";
-            this.pnl_auxi.Size = new System.Drawing.Size(369, 677);
+            this.pnl_auxi.Size = new System.Drawing.Size(369, 739);
             this.pnl_auxi.TabIndex = 30;
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tabOESGuiTest
+            // 
+            this.tabOESGuiTest.Location = new System.Drawing.Point(4, 22);
+            this.tabOESGuiTest.Name = "tabOESGuiTest";
+            this.tabOESGuiTest.Size = new System.Drawing.Size(1068, 761);
+            this.tabOESGuiTest.TabIndex = 3;
+            this.tabOESGuiTest.Text = "OES GUI test (temporary)";
+            this.tabOESGuiTest.UseVisualStyleBackColor = true;
+            // 
+            // btnOpenOesForm
+            // 
+            this.btnOpenOesForm.AutoSize = true;
+            this.btnOpenOesForm.Location = new System.Drawing.Point(397, 211);
+            this.btnOpenOesForm.Name = "btnOpenOesForm";
+            this.btnOpenOesForm.Size = new System.Drawing.Size(91, 23);
+            this.btnOpenOesForm.TabIndex = 0;
+            this.btnOpenOesForm.Text = "Open OES form";
+            this.btnOpenOesForm.UseVisualStyleBackColor = true;
+            // 
             // Form_UniversalTesterMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1468, 776);
+            this.ClientSize = new System.Drawing.Size(1468, 841);
             this.Controls.Add(this.tlp_main);
             this.Controls.Add(this.ss_mainInfo);
             this.Controls.Add(this.menuStrip1);
@@ -284,6 +308,8 @@
             this.ss_mainInfo.PerformLayout();
             this.tlp_main.ResumeLayout(false);
             this.tab_MainPage.ResumeLayout(false);
+            this.tp_StationHardwareSetting.ResumeLayout(false);
+            this.tp_StationHardwareSetting.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -315,5 +341,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TabPage tabOESGuiTest;
+        private System.Windows.Forms.Button btnOpenOesForm;
     }
 }
