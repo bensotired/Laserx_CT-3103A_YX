@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SolveWare_Data_AccessDatabase.TestDBUI;
 using System.Windows.Forms;
-using ADOX;
+ 
 using System.Data.OleDb;
 using System.IO;
 using System.Data;
@@ -63,16 +63,16 @@ namespace SolveWare_Data_AccessDatabase
             //conn.Close();
             #endregion
         }
-        static void KU()
-        {
-            ADOX.Catalog catalog = new Catalog();
-            string path = @"D:\test.mdb";
-            if (!File.Exists(path))
-            {
-                catalog.Create(@"Provider = Microsoft.Jet.OLEDB.4.0;Data Source=D:\test.mdb;Jet OLEDB:Engine Type = 5");
+        //static void KU()
+        //{
+        //    ADOX.Catalog catalog = new Catalog();
+        //    string path = @"D:\test.mdb";
+        //    if (!File.Exists(path))
+        //    {
+        //        catalog.Create(@"Provider = Microsoft.Jet.OLEDB.4.0;Data Source=D:\test.mdb;Jet OLEDB:Engine Type = 5");
                 
-            }
-        }
+        //    }
+        //}
         static void Table()
         {
             string conStr = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = D:\test.mdb";

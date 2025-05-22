@@ -59,8 +59,8 @@ namespace TestPlugin_Demo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tb_MainPage = new System.Windows.Forms.TabControl();
             this.tabPage测试 = new System.Windows.Forms.TabPage();
             this.tab_TestPage = new System.Windows.Forms.TabControl();
@@ -115,24 +115,26 @@ namespace TestPlugin_Demo
             this.panel_CV = new System.Windows.Forms.Panel();
             this.tabPage仪表 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.rb_left = new System.Windows.Forms.RadioButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.bt_TC_start = new System.Windows.Forms.Button();
             this.bt_TC_stop = new System.Windows.Forms.Button();
+            this.label62 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.bt_ted_start = new System.Windows.Forms.Button();
             this.bt_ted_stop = new System.Windows.Forms.Button();
             this.bt_gettemp = new System.Windows.Forms.Button();
             this.lab_ted = new System.Windows.Forms.Label();
+            this.tb_temp = new System.Windows.Forms.TextBox();
+            this.rb_right = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label63 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.txt_OpticalChannel = new System.Windows.Forms.TextBox();
             this.btn_SwitchCh = new System.Windows.Forms.Button();
-            this.rb_right = new System.Windows.Forms.RadioButton();
-            this.rb_left = new System.Windows.Forms.RadioButton();
-            this.tb_temp = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label62 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.tb_liv_pdcompCurr = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
@@ -309,9 +311,11 @@ namespace TestPlugin_Demo
             this.btn_AnalyzeFileData_Deviations = new System.Windows.Forms.Button();
             this.txt_SelectedChannel_Deviations = new System.Windows.Forms.TextBox();
             this.txt_SelectedFileList_Deviations = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnConnectAllInstruments = new System.Windows.Forms.Button();
+            this.btnRunOESTest = new System.Windows.Forms.Button();
+            this.btnDisConnectAllInstruments = new System.Windows.Forms.Button();
             this.timer_Engineer = new System.Windows.Forms.Timer(this.components);
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label63 = new System.Windows.Forms.Label();
             this.tb_MainPage.SuspendLayout();
             this.tabPage测试.SuspendLayout();
             this.tab_TestPage.SuspendLayout();
@@ -328,6 +332,7 @@ namespace TestPlugin_Demo
             this.tabPage视频.SuspendLayout();
             this.tabPage仪表.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -348,7 +353,7 @@ namespace TestPlugin_Demo
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_MainPage
@@ -361,6 +366,7 @@ namespace TestPlugin_Demo
             this.tb_MainPage.Controls.Add(this.CoarseTuning);
             this.tb_MainPage.Controls.Add(this.tabPage_coarse);
             this.tb_MainPage.Controls.Add(this.tabPage1);
+            this.tb_MainPage.Controls.Add(this.tabPage2);
             this.tb_MainPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_MainPage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_MainPage.ItemSize = new System.Drawing.Size(48, 38);
@@ -895,23 +901,23 @@ namespace TestPlugin_Demo
             this.dgv_TestData.AllowUserToAddRows = false;
             this.dgv_TestData.AllowUserToDeleteRows = false;
             this.dgv_TestData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TestData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TestData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_TestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TestData.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TestData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_TestData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_TestData.Location = new System.Drawing.Point(0, 0);
             this.dgv_TestData.Name = "dgv_TestData";
@@ -986,6 +992,33 @@ namespace TestPlugin_Demo
             this.panel2.Size = new System.Drawing.Size(1325, 806);
             this.panel2.TabIndex = 0;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.rb_left);
+            this.groupBox8.Controls.Add(this.groupBox7);
+            this.groupBox8.Controls.Add(this.label62);
+            this.groupBox8.Controls.Add(this.groupBox6);
+            this.groupBox8.Controls.Add(this.tb_temp);
+            this.groupBox8.Controls.Add(this.rb_right);
+            this.groupBox8.Location = new System.Drawing.Point(966, 382);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(260, 199);
+            this.groupBox8.TabIndex = 99;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "温控";
+            // 
+            // rb_left
+            // 
+            this.rb_left.AutoSize = true;
+            this.rb_left.Checked = true;
+            this.rb_left.Location = new System.Drawing.Point(6, 20);
+            this.rb_left.Name = "rb_left";
+            this.rb_left.Size = new System.Drawing.Size(59, 16);
+            this.rb_left.TabIndex = 95;
+            this.rb_left.TabStop = true;
+            this.rb_left.Text = "左载台";
+            this.rb_left.UseVisualStyleBackColor = true;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.bt_TC_start);
@@ -1016,6 +1049,15 @@ namespace TestPlugin_Demo
             this.bt_TC_stop.Text = "停止控温";
             this.bt_TC_stop.UseVisualStyleBackColor = true;
             this.bt_TC_stop.Click += new System.EventHandler(this.bt_TC_stop_Click);
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(155, 24);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(29, 12);
+            this.label62.TabIndex = 87;
+            this.label62.Text = "温度";
             // 
             // groupBox6
             // 
@@ -1069,6 +1111,25 @@ namespace TestPlugin_Demo
             this.lab_ted.TabIndex = 94;
             this.lab_ted.Text = "********";
             // 
+            // tb_temp
+            // 
+            this.tb_temp.Location = new System.Drawing.Point(190, 20);
+            this.tb_temp.Name = "tb_temp";
+            this.tb_temp.Size = new System.Drawing.Size(64, 21);
+            this.tb_temp.TabIndex = 91;
+            this.tb_temp.Text = "25";
+            this.tb_temp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // rb_right
+            // 
+            this.rb_right.AutoSize = true;
+            this.rb_right.Location = new System.Drawing.Point(77, 21);
+            this.rb_right.Name = "rb_right";
+            this.rb_right.Size = new System.Drawing.Size(59, 16);
+            this.rb_right.TabIndex = 96;
+            this.rb_right.Text = "右载台";
+            this.rb_right.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label63);
@@ -1082,6 +1143,16 @@ namespace TestPlugin_Demo
             this.groupBox3.TabIndex = 97;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "OSwitch";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.label63.Location = new System.Drawing.Point(25, 23);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(118, 60);
+            this.label63.TabIndex = 55;
+            this.label63.Text = "通道\r\n1:耦合\r\n2:光谱仪和波长计";
             // 
             // label56
             // 
@@ -1111,37 +1182,6 @@ namespace TestPlugin_Demo
             this.btn_SwitchCh.UseVisualStyleBackColor = true;
             this.btn_SwitchCh.Click += new System.EventHandler(this.btn_SwitchCh_Click);
             // 
-            // rb_right
-            // 
-            this.rb_right.AutoSize = true;
-            this.rb_right.Location = new System.Drawing.Point(77, 21);
-            this.rb_right.Name = "rb_right";
-            this.rb_right.Size = new System.Drawing.Size(59, 16);
-            this.rb_right.TabIndex = 96;
-            this.rb_right.Text = "右载台";
-            this.rb_right.UseVisualStyleBackColor = true;
-            // 
-            // rb_left
-            // 
-            this.rb_left.AutoSize = true;
-            this.rb_left.Checked = true;
-            this.rb_left.Location = new System.Drawing.Point(6, 20);
-            this.rb_left.Name = "rb_left";
-            this.rb_left.Size = new System.Drawing.Size(59, 16);
-            this.rb_left.TabIndex = 95;
-            this.rb_left.TabStop = true;
-            this.rb_left.Text = "左载台";
-            this.rb_left.UseVisualStyleBackColor = true;
-            // 
-            // tb_temp
-            // 
-            this.tb_temp.Location = new System.Drawing.Point(190, 20);
-            this.tb_temp.Name = "tb_temp";
-            this.tb_temp.Size = new System.Drawing.Size(64, 21);
-            this.tb_temp.TabIndex = 91;
-            this.tb_temp.Text = "25";
-            this.tb_temp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1165,15 +1205,6 @@ namespace TestPlugin_Demo
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(155, 24);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(29, 12);
-            this.label62.TabIndex = 87;
-            this.label62.Text = "温度";
             // 
             // label47
             // 
@@ -3016,34 +3047,52 @@ namespace TestPlugin_Demo
             this.txt_SelectedFileList_Deviations.Size = new System.Drawing.Size(429, 169);
             this.txt_SelectedFileList_Deviations.TabIndex = 1;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnConnectAllInstruments);
+            this.tabPage2.Controls.Add(this.btnRunOESTest);
+            this.tabPage2.Controls.Add(this.btnDisConnectAllInstruments);
+            this.tabPage2.Location = new System.Drawing.Point(4, 42);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage2.TabIndex = 22;
+            this.tabPage2.Text = "OES Test";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnConnectAllInstruments
+            // 
+            this.btnConnectAllInstruments.Location = new System.Drawing.Point(133, 319);
+            this.btnConnectAllInstruments.Name = "btnConnectAllInstruments";
+            this.btnConnectAllInstruments.Size = new System.Drawing.Size(172, 54);
+            this.btnConnectAllInstruments.TabIndex = 2;
+            this.btnConnectAllInstruments.Text = "ConnectAllInstruments";
+            this.btnConnectAllInstruments.UseVisualStyleBackColor = true;
+            this.btnConnectAllInstruments.Click += new System.EventHandler(this.btnConnectAllInstruments_Click);
+            // 
+            // btnRunOESTest
+            // 
+            this.btnRunOESTest.Location = new System.Drawing.Point(133, 206);
+            this.btnRunOESTest.Name = "btnRunOESTest";
+            this.btnRunOESTest.Size = new System.Drawing.Size(172, 54);
+            this.btnRunOESTest.TabIndex = 1;
+            this.btnRunOESTest.Text = "Run OES TestModule";
+            this.btnRunOESTest.UseVisualStyleBackColor = true;
+            this.btnRunOESTest.Click += new System.EventHandler(this.btnRunOESTest_Click);
+            // 
+            // btnDisConnectAllInstruments
+            // 
+            this.btnDisConnectAllInstruments.Location = new System.Drawing.Point(133, 86);
+            this.btnDisConnectAllInstruments.Name = "btnDisConnectAllInstruments";
+            this.btnDisConnectAllInstruments.Size = new System.Drawing.Size(172, 54);
+            this.btnDisConnectAllInstruments.TabIndex = 0;
+            this.btnDisConnectAllInstruments.Text = "DisConnectAllInstruments";
+            this.btnDisConnectAllInstruments.UseVisualStyleBackColor = true;
+            this.btnDisConnectAllInstruments.Click += new System.EventHandler(this.btnDisConnectAllInstruments_Click);
+            // 
             // timer_Engineer
             // 
             this.timer_Engineer.Tick += new System.EventHandler(this.timer_Engineer_Tick);
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.rb_left);
-            this.groupBox8.Controls.Add(this.groupBox7);
-            this.groupBox8.Controls.Add(this.label62);
-            this.groupBox8.Controls.Add(this.groupBox6);
-            this.groupBox8.Controls.Add(this.tb_temp);
-            this.groupBox8.Controls.Add(this.rb_right);
-            this.groupBox8.Location = new System.Drawing.Point(966, 382);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(260, 199);
-            this.groupBox8.TabIndex = 99;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "温控";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label63.Location = new System.Drawing.Point(25, 23);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(118, 60);
-            this.label63.TabIndex = 55;
-            this.label63.Text = "通道\r\n1:耦合\r\n2:光谱仪和波长计";
             // 
             // Form_MainPage_CT3103
             // 
@@ -3073,6 +3122,8 @@ namespace TestPlugin_Demo
             this.tabPage仪表.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -3101,8 +3152,7 @@ namespace TestPlugin_Demo
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3359,5 +3409,9 @@ namespace TestPlugin_Demo
         private Button bt_TC_stop;
         private GroupBox groupBox8;
         private Label label63;
+        private TabPage tabPage2;
+        private Button btnDisConnectAllInstruments;
+        private Button btnRunOESTest;
+        private Button btnConnectAllInstruments;
     }
 }

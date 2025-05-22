@@ -1,36 +1,25 @@
 ﻿using LX_BurnInSolution.Utilities;
 using SolveWare_BurnInAppInterface;
 using SolveWare_BurnInCommon;
-using SolveWare_Motion;
-using SolveWare_TestComponents.Model;
 using SolveWare_TestPlugin;
-using SolveWare_Vision;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TestPlugin_Demo
 {
-    using OpenCvSharp;
-    using OpenCvSharp.Extensions;
-    using Basler.Pylon;
-    using System.Drawing.Imaging;
-    using System.Runtime.InteropServices;
-    using System.Xml.Linq;
-    using System.Data;
-    using MySql.Data.MySqlClient;
     using LX_Utilities;
+    using Microsoft.WindowsAPICodePack.Dialogs;
+    using MySql.Data.MySqlClient;
+    using OpenCvSharp;
+    using SolveWare_BurnInInstruments;
+    using System.Data;
     using System.IO;
     using System.Text;
-    using SolveWare_BurnInInstruments;
     using TestPlugin_CoarseTuning;
-    using Microsoft.WindowsAPICodePack.Dialogs;
 
     public partial class Form_MainPage_CT3103 : Form_MainPage_TestPlugin<TestPluginWorker_CT3103>
     {
@@ -557,7 +546,7 @@ namespace TestPlugin_Demo
             {
                 this._core.Log_Global(ex.Message);
             }
-           
+
         }
 
 
@@ -2074,7 +2063,7 @@ namespace TestPlugin_Demo
             {
                 var ch = Convert.ToByte(txt_OpticalChannel.Text.Trim()) - 1;
                 if (ch < 0) ch = 0;
-                    
+
 
                 if (this._plugin.LocalResource.OSwitch.SetCH((byte)ch))
                 {
@@ -2118,7 +2107,7 @@ namespace TestPlugin_Demo
             try
             {
                 CommonOpenFileDialog ofd = new CommonOpenFileDialog();
-                string paths =Path.Combine( Application.StartupPath,"Data");
+                string paths = Path.Combine(Application.StartupPath, "Data");
                 if (Directory.Exists(paths) == false)
                 {
                     Directory.CreateDirectory(paths);
@@ -2366,7 +2355,7 @@ namespace TestPlugin_Demo
                                             if (Head == false)
                                             {
                                                 //输出文件头
-                                                if (col.Length>2 && col[1].Trim().ToUpper() == "CH")
+                                                if (col.Length > 2 && col[1].Trim().ToUpper() == "CH")
                                                 {
                                                     strHead += str;
                                                     Head = true;
@@ -2448,8 +2437,8 @@ namespace TestPlugin_Demo
         {
             try
             {
-                    this._plugin.LocalResource.IOs[IONameEnum_CT3103.TEC_Right].TurnOn(false);
-                    this._plugin.LocalResource.IOs[IONameEnum_CT3103.TEC_Left].TurnOn(false);
+                this._plugin.LocalResource.IOs[IONameEnum_CT3103.TEC_Right].TurnOn(false);
+                this._plugin.LocalResource.IOs[IONameEnum_CT3103.TEC_Left].TurnOn(false);
 
                 float start = 0;
                 if (!float.TryParse(this.tb_temp.Text, out start))
@@ -2496,6 +2485,61 @@ namespace TestPlugin_Demo
                 else if (this.rb_right.Checked)
                 {
                     this._plugin.LocalResource.TC_2.IsOutputEnabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"[{ex.Message}]-[{ex.StackTrace}]");
+            }
+        }
+
+        private void btnDisConnectAllInstruments_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DialogResult result = MessageBox.Show("Are you sure you want to close all instrument connections on the LaserX Test platform?", "Tips", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    this._core.TryDisConnectAllInstruments();
+
+                    MessageBox.Show($"All instrument connections on the platform have been closed");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"[{ex.Message}]-[{ex.StackTrace}]");
+            }
+        }
+
+        private void btnConnectAllInstruments_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DialogResult result = MessageBox.Show("Are you sure you want to connect all instrument connections on the LaserX Test platform?", "Tips", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    this._core.TryConnectAllInstruments();
+
+                    MessageBox.Show($"All instrument connections on the platform have been connected");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"[{ex.Message}]-[{ex.StackTrace}]");
+            }
+        }
+         
+        private void btnRunOESTest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to run OES TestModule_OES?", "Tips", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    this._plugin.ShowOESMainForm();
                 }
             }
             catch (Exception ex)

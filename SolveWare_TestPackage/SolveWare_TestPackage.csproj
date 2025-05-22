@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SolveWare_TestPackage</RootNamespace>
     <AssemblyName>SolveWare_TestPackage</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LaserXFineTuningDllTest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LaserX_TesterLibrary\LaserXFineTuningDllTest.dll</HintPath>
+    </Reference>
     <Reference Include="LX_2DChartControl, Version=2023.8.30.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\LaserX_TesterLibrary\LX_2DChartControl.dll</HintPath>
@@ -117,6 +122,8 @@
     <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH2_MultiRawData_SOA\TestCalculator_LIV_SOA_Ith2_MultiRawData.cs" />
     <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH3_MultiRawData_SOA\CalcRecipe_LIV_SOA_Ith3.cs" />
     <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH3_MultiRawData_SOA\TestCalculator_LIV_SOA_Ith3_MultiRawData.cs" />
+    <Compile Include="OES\TestModule_OES.cs" />
+    <Compile Include="OES\TestRecipe_OES.cs" />
     <Compile Include="QWLT2_TestDta.cs" />
     <Compile Include="CalculatorProgram_Nodelet.cs" />
     <Compile Include="LIV\CalculatorAndRecipe_LIV\DSEOP\CalcRecipe_LIV_Dseop.cs" />

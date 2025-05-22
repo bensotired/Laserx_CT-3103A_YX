@@ -61,6 +61,8 @@ namespace SolveWare_BurnInAppInterface
         string GetProductConfigFileDirectory();
         string[] GetProductConfigFolderNames();
 
+        bool TryDisConnectAllInstruments();
+        bool TryConnectAllInstruments();
 
         bool TryReleaseResourceBeforeClosing();
         string Get_Create_ProductConfigFileDirectory();

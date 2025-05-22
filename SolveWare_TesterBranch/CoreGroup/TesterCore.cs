@@ -1390,6 +1390,33 @@ namespace SolveWare_TesterCore
 
             return tempCalcRecipe;
         }
-    
+
+        public bool TryDisConnectAllInstruments()
+        {
+            try
+            {
+                TestStationManager.Instance.Close();    
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool TryConnectAllInstruments()
+        {
+            try
+            {
+                TestStationManager.Instance.InitializeInstrumentsChassis();
+                TestStationManager.Instance.InitializeInstruments();
+                TestStationManager.Instance.InitializeMonitors();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

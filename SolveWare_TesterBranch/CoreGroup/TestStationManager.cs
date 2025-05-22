@@ -73,14 +73,26 @@ namespace SolveWare_TesterCore
             }
 
             //连接所有通信底层
+            //this.Log_Global("正在连接通信底层...");
+            //foreach (var comChas in this.InstrumentChassisDict.Values)
+            //{
+            //    this.Log_Global($"正在连接通信底层[{comChas.Name}][{comChas.Resource}]默认在线状态[{comChas.IsOnline}]...");
+            //    comChas.Initialize(comChas.InitTimeout_ms);
+            //}
+            InitializeInstrumentsChassis();
+
+            this.Log_Global("硬件设备初始化完成.");
+        }
+
+        public void InitializeInstrumentsChassis()
+        {
+            //连接所有通信底层
             this.Log_Global("正在连接通信底层...");
             foreach (var comChas in this.InstrumentChassisDict.Values)
             {
                 this.Log_Global($"正在连接通信底层[{comChas.Name}][{comChas.Resource}]默认在线状态[{comChas.IsOnline}]...");
                 comChas.Initialize(comChas.InitTimeout_ms);
             }
-
-            this.Log_Global("硬件设备初始化完成.");
         }
 
         public void InitializeInstruments()

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestPluginImportProfile_CT3103 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Tunabie测试_OES</Name>
+  <CreateTime>2025/05/22 11:13:45</CreateTime>
+  <LastModifyTime>2025/05/22 11:14:26</LastModifyTime>
+  <TestExecutorComboDict>
+    <Book>
+      <DataPairOfStringTestExecutorCombo>
+        <Key>测试站1</Key>
+        <Value>
+          <Name>TestExecutorCombo</Name>
+          <CreateTime>2024/03/26 14:00:01</CreateTime>
+          <LastModifyTime>2024/03/26 14:00:01</LastModifyTime>
+          <ProductType>NoUse</ProductType>
+          <Pre_ExecutorConfigCollection />
+          <Main_ExecutorConfigCollection>
+            <ExecutorConfigItem>
+              <TestExecutorName>oes_test</TestExecutorName>
+              <TestModuleClassName>TestModule_OES</TestModuleClassName>
+              <TestRecipeFileName>TestRecipe_OES</TestRecipeFileName>
+              <UserDefineInstrumentConfig>
+                <Book />
+              </UserDefineInstrumentConfig>
+              <UserDefineAxisConfig>
+                <Book />
+              </UserDefineAxisConfig>
+              <UserDefinePositionConfig>
+                <Book />
+              </UserDefinePositionConfig>
+              <CalculatorCollection>
+                <Book />
+              </CalculatorCollection>
+            </ExecutorConfigItem>
+          </Main_ExecutorConfigCollection>
+          <Post_ExecutorConfigCollection />
+        </Value>
+      </DataPairOfStringTestExecutorCombo>
+    </Book>
+  </TestExecutorComboDict>
+  <TestParamsConfigComboDict>
+    <Book>
+      <DataPairOfStringExecutorConfigItem_TestParamsConfigCombo>
+        <Key>测试站1</Key>
+        <Value>
+          <IncludingTypes />
+          <Pre_TestParamsCollection />
+          <Main_TestParamsCollection>
+            <ExecutorConfigItem_TestParamsConfig>
+              <Name>oes_test</Name>
+              <IncludingTypes />
+              <TestRecipe xsi:type="TestRecipe_OES">
+                <ID>602395550</ID>
+                <SummaryData_PreFix />
+                <SummaryData_PostFix />
+                <ModuleName>OES</ModuleName>
+              </TestRecipe>
+              <CalcRecipeBook>
+                <Book />
+              </CalcRecipeBook>
+            </ExecutorConfigItem_TestParamsConfig>
+          </Main_TestParamsCollection>
+          <Post_TestParamsCollection />
+        </Value>
+      </DataPairOfStringExecutorConfigItem_TestParamsConfigCombo>
+    </Book>
+  </TestParamsConfigComboDict>
+  <IncludingTypes>
+    <string>SolveWare_TestPackage.TestRecipe_OES</string>
+  </IncludingTypes>
+  <BinCollectionName />
+  <UserDefinedCalibrationData_Loader>
+    <CalibrationItem>
+      <Name>VF1</Name>
+      <K>1</K>
+      <B>0</B>
+    </CalibrationItem>
+    <CalibrationItem>
+      <Name>VF2</Name>
+      <K>1</K>
+      <B>0</B>
+    </CalibrationItem>
+    <CalibrationItem>
+      <Name>VF3</Name>
+      <K>1</K>
+      <B>0</B>
+    </CalibrationItem>
+    <CalibrationItem>
+      <Name>VF4</Name>
+      <K>1</K>
+      <B>0</B>
+    </CalibrationItem>
+  </UserDefinedCalibrationData_Loader>
+</TestPluginImportProfile_CT3103>

@@ -1,4 +1,5 @@
-﻿using SolveWare_BinSorter;
+﻿using LaserXFineTuningDllTest;
+using SolveWare_BinSorter;
 using SolveWare_BurnInAppInterface;
 using SolveWare_BurnInCommon;
 using SolveWare_TestComponents.Data;
@@ -62,7 +63,6 @@ namespace TestPlugin_Demo
                 }
 
                 this.Initialize(this._myTokenSource.Token);
-
 
                 providerResourse.ConnectToCore(this._coreInteration);
                 providerResourse.ReinstallController();
@@ -575,7 +575,7 @@ namespace TestPlugin_Demo
             Task task5 = Task.Factory.StartNew(() => { LaserX_Step5_TurningOfMaterial(tokenSource); }, TaskCreationOptions.LongRunning);
             //Task task6 = Task.Factory.StartNew(() => { LaserX_Step6_UnLoadProduct(tokenSource); }, TaskCreationOptions.LongRunning);
             Thread.Sleep(500);
-            Task.WaitAll(new Task[] { task1 , task2, task3 , task4, task5 });//, task6
+            Task.WaitAll(new Task[] { task1, task2, task3, task4, task5 });//, task6
             (this._TestEnteranceUI as Form_TestEnterance_CT3103).Controls_Enable_True();
             RefreshCarrierID("Finished");
             RefreshOeskID("Finished");
@@ -821,6 +821,113 @@ namespace TestPlugin_Demo
                 });
             }
         }
+
+        #region OES
+
+        LaserXFineTuningDllTest.frmMain frmMain; //The OES dll main form
+
+        public void ShowOESMainForm()
+        {
+            this.InitOESMainForm();
+            this.RunOESAutoTest();
+        }
+
+        private void InitOESMainForm()
+        {
+            try
+            {
+                if (frmMain == null)
+                {
+                    frmMain = new LaserXFineTuningDllTest.frmMain();
+                    frmMain.MirrDiagGainCurrent = 130;
+                    frmMain.MirrDiagLaserPhaseCurrent = 4;
+                    frmMain.MirrDiagPhase1Current = 1;
+                    frmMain.MirrDiagPhase2Current = 0;
+                    frmMain.MirrDiagSoa1Current = 50;
+                    frmMain.MirrDiagSoa2Current = 40;
+                    frmMain.MirrDiagMZM1Voltage = -2.5M; //These are decimal data types, so using the 'M' handles the type casting
+                    frmMain.MirrDiagMZM2Voltage = -2.5M;
+                }
+            }
+            catch (Exception ex)
+            {
+                this.Log_Global($"Init OES MainForm Exception:{ex.Message}-{ex.StackTrace}");
+                MessageBox.Show($"Init OES MainForm Exception:{ex.Message}-{ex.StackTrace}");
+            }
+        }
+
+        private async void RunOESAutoTest()
+        {
+            if (frmMain != null)
+            {
+                bool testSuccess = await RunAutoTest();
+                this.Log_Global($"OES DLL 测试结果:{testSuccess}\r\n the OES TEST Result:{testSuccess}");
+            }
+        }
+
+        #region "Auto test execution"
+        private async Task<bool> RunAutoTest()
+        {
+            bool autoTestResult = false;
+
+            if (frmMain != null)
+            {
+                frmMain.Show();
+                SetChipInformation();
+                TransferQuickWavelngthSettings();
+                autoTestResult = await frmMain.ExecuteAutoTest();
+                frmMain.Hide(); //IMPORTANT, use hide() instead of close since calling Close() will dispose the form.
+            }
+            else
+            {
+                this.Log_Global($"OES测试窗体未初始化...\r\n The OES test form is not initialized...");
+            }
+            return autoTestResult;
+        }
+        #endregion
+
+        #region "Laser settings transfer functions"
+        /// <summary>
+        /// Sends the laser settings that were calculated from the quick wavelength form to the OES gui.
+        /// The settings are used if the mirror diagonal coarse tuning test runs
+        /// In this example, I am using arbitrary settings, but they should come from the QWLT test in the 
+        /// laserX GUI
+        /// </summary>
+        private void TransferQuickWavelngthSettings()
+        {
+            if (frmMain != null)
+            {
+                frmMain.MirrDiagGainCurrent = 130;
+                frmMain.MirrDiagLaserPhaseCurrent = 4;
+                frmMain.MirrDiagPhase1Current = 1;
+                frmMain.MirrDiagPhase2Current = 0;
+                frmMain.MirrDiagSoa1Current = 50;
+                frmMain.MirrDiagSoa2Current = 40;
+                frmMain.MirrDiagMZM1Voltage = -2.5M; //These are decimal data types, so using the 'M' handles the type casting
+                frmMain.MirrDiagMZM2Voltage = -2.5M;
+            }
+        }
+        #endregion
+
+        #region Chip information setting
+
+        /// <summary>
+        /// Demonstrates how to set the chip information. These are random values I picked
+        /// You would use the information of the current CoC to set this info
+        /// </summary>
+        private void SetChipInformation()
+        {
+            if (frmMain != null)
+            {
+                frmMain.MaskID = "DO987";
+                frmMain.WaferID = "TM678";
+                frmMain.ChipID = "T0123";
+                frmMain.OeskID = "Dll_demo";
+            }
+        }
+        #endregion 
+
+        #endregion
 
     }
 }
