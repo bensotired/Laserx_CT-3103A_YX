@@ -829,7 +829,7 @@ namespace TestPlugin_Demo
         public void ShowOESMainForm()
         {
             this.InitOESMainForm();
-            this.RunOESAutoTest();
+            frmMain.ShowDialog();
         }
 
         private void InitOESMainForm()

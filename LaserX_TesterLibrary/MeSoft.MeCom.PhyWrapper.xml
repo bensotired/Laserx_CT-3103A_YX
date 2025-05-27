@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MeSoft.MeCom.PhyWrapper</name>
+    </assembly>
+    <members>
+        <member name="T:MeSoft.MeCom.PhyWrapper.IMeComPhy">
+            <summary>
+            The upper communication level uses this interface 
+            to have standardized interface to the physical level.
+            The physical interface which implements this interface must already be open, 
+            before you can use functions of this interface. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.IMeComPhy.SendString(System.IO.MemoryStream)">
+            <summary>
+            Sends data to the physical interface.
+            </summary>
+            <param name="Stream">The whole content of the Stream is sent to the physical interface.</param>
+            <exception cref="T:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException">Thrown when the underlying physical interface is not or not all bytes were sent.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.IMeComPhy.GetDataOrTimeout(System.IO.MemoryStream)">
+            <summary>
+            Tries to read data from the physical interface or throws an timeout exception.
+            </summary>
+            <remarks>
+            Reads the available data in the physical interface buffer and returns immediately. 
+            If the receiving buffer is empty, it tries to read at least one byte. 
+            It will wait till the timeout occurs if nothing is received.
+            Must probably be called several times to receive the whole frame.
+            </remarks>
+            <param name="Stream">Stream where data will be added to.</param>
+            <exception cref="T:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException">Thrown when the underlying physical interface is not OK.</exception>
+            <exception cref="T:MeSoft.MeCom.PhyWrapper.MeComPhyTimeoutException">Thrown when 0 bytes were received during the specified timeout time.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.IMeComPhy.ChangeSpeed(System.Int32)">
+            <summary>
+            Used to change the Serial Speed in case of serial communication interfaces.
+            </summary>
+            <param name="NewBaudrate">Target Baud Rate</param>
+            <exception cref="T:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException">Thrown when the underlying physical interface is not OK.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.IMeComPhy.SetTimeout(System.Int32)">
+            <summary>
+            Used to modify the standard timeout of the physical interface.
+            </summary>
+            <param name="Miliseconds">Timeout in milliseconds.</param>
+            <exception cref="T:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException">Thrown when the underlying physical interface is not OK.</exception>
+        </member>
+        <member name="T:MeSoft.MeCom.PhyWrapper.MeComPhyTimeoutException">
+            <summary>
+            Represents timeout errors occur during data reception.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.MeComPhyTimeoutException.#ctor">
+            <summary>
+            Initializes a new instance of the Exception class with a specified error message.
+            </summary>
+        </member>
+        <member name="T:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException">
+            <summary>
+            Represents general physical interface errors.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Exception class with a specified error message.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the Exception class with a specified error message.
+            </summary>
+        </member>
+        <member name="T:MeSoft.MeCom.PhyWrapper.MeComPhySerialPort">
+            <summary>
+            Implements the IMeComPhy interface for the Serial Port interface. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.MeComPhySerialPort.OpenWithDefaultSettings(System.String,System.Int32)">
+            <summary>
+            Opens the SerialPort with the standard settings used to communicate with ME devices.
+            </summary>
+            <param name="portName">Name of the Port to open. Ex. COM1</param>
+            <param name="baudRate">Baud rate for the serial interface.</param>
+        </member>
+        <member name="T:MeSoft.MeCom.PhyWrapper.MeComPhyTcp">
+            <summary>
+            Implements the IMeComPhy interface for the TCP network interface. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.MeComPhyTcp.OpenClient(System.String,System.Int32)">
+            <summary>
+            Opens a TCP connection to the specified host.
+            Sets the send and receive timeout to 500ms.
+            This function may block the thread up to 10s if the host does not react.
+            </summary>
+            <param name="hostname">Host name to connect.</param>
+            <param name="port">Port to connect.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.MeComPhyTcp.CloseClient">
+            <summary>
+            Closes the connection. Ignores all exceptions.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.PhyWrapper.MeComPhyTcp.MeSoft#MeCom#PhyWrapper#IMeComPhy#GetDataOrTimeout(System.IO.MemoryStream)">
+            <summary>
+            Blocks till some data has been received. 
+            Does not thorw any timeout exception, because resend is not necessary over TCP.
+            </summary>
+        </member>
+        <member name="T:VersionDefinition">
+            <summary>Defines the version of the assembly.</summary>
+        </member>
+        <member name="F:VersionDefinition.Major">
+            <summary>Big version before the dot.</summary>
+        </member>
+        <member name="F:VersionDefinition.Minor">
+            <summary>Small version behind the dot.</summary>
+        </member>
+    </members>
+</doc>

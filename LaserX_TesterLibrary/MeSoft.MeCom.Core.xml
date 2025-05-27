@@ -1,0 +1,938 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MeSoft.MeCom.Core</name>
+    </assembly>
+    <members>
+        <member name="T:MeSoft.MeCom.Core.Bootloader.HexBootloader">
+            <summary>
+            Bootloader interaction methods for HEX firmware files.
+            Please have a look at the TEC Controller Communication Protocol document.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.Bootloader.HexBootloader.#ctor(MeSoft.MeCom.Core.MeComQuerySet)">
+            <summary>
+            Initializes a new instance of HexBootloader.
+            </summary>
+            <param name="meQuerySet">Reference to the communication interface.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.Bootloader.HexBootloader.DownloadFirmwareFile(System.Nullable{System.Byte},System.String,MeSoft.MeCom.Core.MeComG2Cmd.ProgressUpdateStatusCallback)">
+            <summary>
+            Download a Hex firmware file onto to the device.
+            This method splits the contents of the file into chunks and
+            downloads them to the device using the DownloadFirmwareData method.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="filePath">The path to the firmware file (*.hex).</param>
+            <param name="callback">Is called every time when the progress has changed.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.Bootloader.HexBootloader.SendCommand(System.Nullable{System.Byte},MeSoft.MeCom.Core.Bootloader.HexBootloaderCommand)">
+            <summary>
+            Sends a Bootloader Command to the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="command">The Bootloader Command to be sent to the device. Can be 0, 1, 2 or 4.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">When the command fails. Check the inner exception for details.</exception>
+            <returns>Bootloader Status enum</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.Bootloader.HexBootloader.WaitForBootloaderStatus(System.Nullable{System.Byte},MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus)">
+            <summary>
+            Wait up to 5 minutes for a specific bootloader status by continuously sending the
+            'NoOperation' (0) bootloader command to the device.
+            This is required because the device may need some time to process the received data until 
+            it can update the bootloader status.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="expectedStatus">The desired bootloader status that is waited for.</param>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.Bootloader.MeFwBootloader">
+            <summary>
+            Bootloader interaction methods for MeFw (Meerstetter Engineering Firmware) files.
+            Please have a look at the device specific communication protocol document.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.Bootloader.MeFwBootloader.#ctor(MeSoft.MeCom.Core.MeComQuerySet)">
+            <summary>
+            Initializes a new instance of MeFwBootloader.
+            </summary>
+            <param name="meQuerySet">Reference to the communication interface.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.Bootloader.MeFwBootloader.DownloadMeFwFirmwareData(System.Nullable{System.Byte},System.Byte[],System.Int32)">
+            <summary>
+            Downloads a portion of a meerstetter firmware update file (*.mefw) to the device.
+            This method must be called several times to download the whole content of the file.
+            This method converts the data base64url and sends it.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="buffer">Portion of *.mefw file.</param>
+            <param name="length">Length of the portion to download.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.Bootloader.HexBootloaderCommand">
+            <summary>
+            Commands to control the Bootloader for HEX firmware files.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderCommand.NoOperation">
+            <summary>Can be used to read only the Bootloader Status</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderCommand.BootloaderActivate">
+            <summary>Starts enabling the update memory.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderCommand.ClearMemory">
+            <summary>Starts clearing the update memory.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderCommand.ReBoot">
+            <summary>Starts replacing the running application. Will only be accepted if the Bootloader Status reports "Valid Application".</summary>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus">
+            <summary>
+            Bit field enumeration of the available Bootloader Status flags.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.Activated">
+            <summary>Bootloader is activated.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.MemoryCleared">
+            <summary>Update Memory is cleared.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.ValidApplication">
+            <summary>Valid Application. There is a Valid Application in the Update Memory.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.BootloaderError">
+            <summary>Bootloader Error. This flag will always be set if an error occurs. See additional flags below (FW >= v5.00).</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.CrcError">
+            <summary>Error: CRC error detected in the downloaded file.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.FwIdentStringError">
+            <summary>Error: The Firmware Identification String does not match. The downloaded firmware is not intended for this device.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.FwBranchError">
+            <summary>Error: This firmware is not made for this firmware branch.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.FwTooOldError">
+            <summary>Error: The firmware is too old for this device.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.FwDecryptionError">
+            <summary>Error: AES decryption failure. The code was encrypted with a different key.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.FwTooNewError">
+            <summary>Error: This firmware is too new for the currently installed firmware version. An intermediate firmware might be needed.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.FwUnencryptedError">
+            <summary>Error: Unencrypted firmware file detected. It is not possible to install this firmware anymore.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.FwFeatureTooOldError">
+            <summary>Error: Feature Firmware Update Limit reached. The downloaded file contains a too old firmware.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.Bootloader.HexBootloaderStatus.FwFeatureTooNewError">
+            <summary>Error: Feature Firmware Update Limit reached. The downloaded file contains a too new firmware.</summary>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.ComCommandException">
+            <summary>
+            Is used when a communication command to the server fails.
+            Check the inner exception for details.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.ComCommandException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of ComCommandException with the given parameters.
+            </summary>
+            <param name="message">Exception message.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.ComCommandException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of ComCommandException with the given parameters.
+            Check the innerException for details.
+            </summary>
+            <param name="message">Exception message.</param>
+            <param name="innerException">Inner Exception</param>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComBasicCmd">
+            <summary>
+            Basic communication commands. Most of the products do support them.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.#ctor(MeSoft.MeCom.Core.MeComQuerySet)">
+            <summary>
+            Initializes a new instance of MeComBasicCmd.
+            </summary>
+            <param name="meQuerySet">Reference to the communication interface.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.ResetDevice(System.Nullable{System.Byte})">
+            <summary>
+            Resets the device. 
+            Usually the device does answer to this command, because the reset is slightly delayed.
+            During reboot, the device can not answer to commands.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.GetIdentString(System.Nullable{System.Byte})">
+            <summary>
+            Returns the Device Identification String.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <returns>Device Identification String. Usually 20 Chars long.</returns>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.ChangeComSpeed(System.Nullable{System.Byte},System.UInt32)">
+            <summary>
+            Changes the baud rate of the device on the interface where this command is being received.
+            Do not forget to change the host baud rate after this command (MeComSetDefaultSettings).
+            Most devices will fall back to the old baud rate if there is no further command being received after CS within 5s.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="newBaudRate">New baud rate to be set on the devices interface.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.GetBranchId(System.Nullable{System.Byte})">
+            <summary>
+            Queries the Branch ID. 
+            The Branch ID can be used to identify several software branches from the same software.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <returns>Branch ID</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.DownloadSettingsDumpFile(System.Nullable{System.Byte},System.String)">
+            <summary>
+            Can download the file content of the Settings Dump file (*.mepar), which is created using the TEC Service Software. 
+            See Maintenance tab. 
+            Please read the TEC User Manual for further information about this feature. 
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="fileContent">Content of the .mepar file.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.GetINT32Value(System.Nullable{System.Byte},System.UInt16,System.Byte)">
+            <summary>
+            Returns a signed int 32Bit value from the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <returns>Returned value.</returns>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.GetFloatValue(System.Nullable{System.Byte},System.UInt16,System.Byte)">
+            <summary>
+            Returns a float 32Bit value from the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <returns>Returned value.</returns>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.GetDoubleValue(System.Nullable{System.Byte},System.UInt16,System.Byte)">
+            <summary>
+            Returns a double 64Bit value from the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <returns>Returned value.</returns>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.SetINT32Value(System.Nullable{System.Byte},System.UInt16,System.Byte,System.Int32)">
+            <summary>
+            Sets a signed int 32Bit value to the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <param name="value">Value to set.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.SetDeviceAddress(System.Nullable{System.Byte},System.Int32,System.Int32,System.Byte,System.Byte)">
+            <summary>
+            Sends out a command to set the device address by type and serial number
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="deviceType">Type of the device.</param>
+            <param name="serialNumber">Serial number of the Device</param>
+            <param name="setaddress">Address to be set.</param>
+            <param name="option">Option. 0=Set address, 1=rack system.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.SetFloatValue(System.Nullable{System.Byte},System.UInt16,System.Byte,System.Single)">
+            <summary>
+            Sets a float 32Bit value to the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <param name="value">Value to set.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.SetDoubleValue(System.Nullable{System.Byte},System.UInt16,System.Byte,System.Double)">
+            <summary>
+            Sets a double 64Bit value to the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <param name="value">Value to set.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComBasicCmd.GetLimits(System.Nullable{System.Byte},System.UInt16,System.Byte,System.Double@,System.Double@)">
+            <summary>
+            Returns the basic Meta data to the parameter.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <param name="min">Minimal value. Is always a double value.</param>
+            <param name="max">Maximal value. Is always a double value.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComFrame">
+            <summary>
+            Handles the communication Frame level of the Meerstetter Engineering GmbH
+            Communication protocol. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComFrame.#ctor(MeSoft.MeCom.PhyWrapper.IMeComPhy,MeSoft.MeCom.Core.Statistics)">
+            <summary>
+            Saves the needed interface internally for further use. 
+            </summary>
+            <param name="inPhyCom">Interface to the physical interface.</param>
+            <param name="statistics">Reference to the Statistics module.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComFrame.SendFrame(MeSoft.MeCom.Core.MeComPacket)">
+            <summary>
+            Serializes the given Data structure to a proper 
+            frame and sends it to the physical interface. 
+            It returns immediately. 
+            </summary>
+            <param name="txFrame">Data to send.</param>
+            <exception cref="T:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException">Thrown when the underlying physical interface is not or not all bytes were sent.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComFrame.ReceiveFrameOrTimeout">
+            <summary>
+            Receives a correct frame or throws an timeout exception.
+            </summary>
+            <returns>Received data.</returns>
+            <exception cref="T:MeSoft.MeCom.PhyWrapper.MeComPhyIntefaceException">Thrown when the underlying physical interface is not OK.</exception>
+            <exception cref="T:MeSoft.MeCom.PhyWrapper.MeComPhyTimeoutException">Thrown when no correct frame was received during the specified physical interface timeout.</exception>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComPacket">
+            <summary>
+            Represents all fields within an package.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComPacket.#ctor(System.Char,System.Nullable{System.Byte})">
+            <summary>
+            Initializes a new instance of an data package.
+            </summary>
+            <param name="control">The identifiers have been selected such that the receiving device, in order to detect the start of a frame, can synchronize to a character with a value.</param>
+            <param name="address">Destination address.</param>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComPacket.Control">
+            <summary>
+            The identifiers have been selected such that the receiving device, in order to detect the start of a frame, can synchronize to a character with a value.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComPacket.Address">
+            <summary>
+            Destination address.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComPacket.SeqNr">
+            <summary>
+            Sequence number of the package. Should be incremented for each package
+            that represents a new query or set with new content.
+            Resend packages should contain the same sequence number.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComPacket.Payload">
+            <summary>
+            Contains the Payload of the package.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComPacket.RcvType">
+            <summary>
+            Only used in case of reception. 
+            Defines the type of package that has been received.
+            </summary>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.ERcvType">
+            <summary>
+            Defines the type of the received package.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.ERcvType.Empty">
+            <summary>
+            No package has been received. 
+            The stream does not contain any data.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.ERcvType.ACK">
+            <summary>
+            A acknowledge has been received. 
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.ERcvType.Data">
+            <summary>
+            Data or an server error has been received.
+            </summary>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComG2Cmd">
+            <summary>
+            Two communication commands. Only newer devices support them.
+            Please have a look at the device specific communication protocol document.
+            </summary>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComG2Cmd.ProgressUpdateCallback">
+            <summary>
+            Delegate used to report back the progress of long running functions. 
+            </summary>
+            <param name="progress">Progress 0 - 100</param>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComG2Cmd.ProgressUpdateStatusCallback">
+            <summary>
+            Delegate used to report back the progress of long running functions as well as information about the status.
+            </summary>
+            <param name="progress">Progress 0 - 100</param>
+            <param name="status">Status Information</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.#ctor(MeSoft.MeCom.Core.MeComQuerySet)">
+            <summary>
+            Initializes a new instance of MeComG2Cmd.
+            </summary>
+            <param name="meQuerySet">Reference to the communication interface.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.GetMetaData(System.Nullable{System.Byte},System.UInt16,System.Byte)">
+            <summary>
+            Returns Meta data of the parameter.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <returns>Returned meta data object.</returns>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.SetValue(System.Nullable{System.Byte},System.UInt16,System.Byte,MeSoft.MeCom.Core.MeComG2Cmd.MeParType,System.Object)">
+            <summary>
+            Sets a FLOAT32, INT32 or DOUBLE64 value to the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <param name="type">Specifies the type of the value to be set.</param>
+            <param name="value">Value to be set. Make sure this value fits to the specified type.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.GetValue(System.Nullable{System.Byte},System.UInt16,System.Byte,MeSoft.MeCom.Core.MeComG2Cmd.MeParType)">
+            <summary>
+            Returns a FLOAT32, INT32 or DOUBLE64 value from the device.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <param name="type">Specifies the type of the value to be read.</param>
+            <returns>Returned value.</returns>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.BulkParRead(System.Nullable{System.Byte},System.Collections.Generic.List{MeSoft.MeCom.Core.MeComG2Cmd.BulkParElement})">
+            <summary>
+            Reads a list of values from the device within one command.
+            This is much more efficient than reading each value with an separate command. 
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="elements">List of parameter definitions to read from the device.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComG2Cmd.BulkParElement">
+            <summary>
+            Definition to make bulk par reads. Use BulkParRead.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.BulkParElement.ParameterId">
+            <summary>Device Parameter ID.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.BulkParElement.Instance">
+            <summary> Parameter Instance. (usually 1) </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.BulkParElement.Type">
+            <summary> Specifies the type of the value to be read. </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.BulkParElement.Value">
+            <summary> Will contain the read value. </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.BulkParElement.Parent">
+            <summary> This value is not used by the BulkParRead. It may be used after reading the parameters to evaluate the result by the end user code. </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.BulkParElement.#ctor(System.UInt16,System.Byte,MeSoft.MeCom.Core.MeComG2Cmd.MeParType,System.Object)">
+            <summary>
+            Initializes a new instance of BulkParElement.
+            </summary>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Specifies the type of the value to be read.</param>
+            <param name="type">Will contain the read value.</param>
+            <param name="parent">This value is not used by the BulkParRead.
+            It may be used after reading the parameters to evaluate the result by the end user code.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.GetBigData(System.Nullable{System.Byte},System.UInt16,System.Byte,MeSoft.MeCom.Core.MeComG2Cmd.MeParType,MeSoft.MeCom.Core.MeComG2Cmd.ProgressUpdateCallback,System.Int32)">
+            <summary>
+            Reads an array of FLOAT32, INT32, DOUBLE64 or ASCII (char) values form the device. 
+            The data length is given by the device. 
+            This method does only return when the device tells the host, that all data is read. 
+            The data is read in an loop with several sub queries.
+            During this command is working, it is possible to use other commands with an different thread.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <param name="type">Specifies the type of the value to be read.</param>
+            <param name="callback">Is called every time when the progress has changed.</param>
+            <param name="expectedNrOfElements">Defines the expected number of elements to calculate the progress for the callback function.</param>
+            <returns>Returned value.</returns>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.SetBigData(System.Nullable{System.Byte},System.UInt16,System.Byte,MeSoft.MeCom.Core.MeComG2Cmd.MeParType,System.Object,MeSoft.MeCom.Core.MeComG2Cmd.ProgressUpdateCallback)">
+            <summary>
+            Writes an array of FLOAT32, INT32, DOUBLE64 or ASCII (char) values to the device. 
+            The data length is given by the value parameter. 
+            This method does only return when all data is downloaded. 
+            The data is being written in a loop with several sub queries.
+            While this command is working, it is possible to use other commands with a different thread.
+            </summary>
+            <param name="address">Device Address. Use null to use the DefaultDeviceAddress defined on MeComQuerySet.</param>
+            <param name="parameterId">Device Parameter ID.</param>
+            <param name="instance">Parameter Instance. (usually 1)</param>
+            <param name="type">Specifies the type of the value to be written.</param>
+            <param name="values">Data to be written (can be float[], int[], double[] or string.</param>
+            <param name="callback">Is called every time when the progress has changed.</param>
+            <exception cref="T:MeSoft.MeCom.Core.ComCommandException">when the command fails. Check the inner exception for details.</exception>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComG2Cmd.MeParType">
+            <summary>
+            Enumeration of the available parameter system types.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.MeParType.FLOAT32">
+            <summary>float value.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.MeParType.INT32">
+            <summary>signed int value.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.MeParType.DOUBLE64">
+            <summary>double value.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.MeParType.LATIN1">
+            <summary>Latin-1 string according to ISO-8859-1 (like standard ASCII). On .net side this type is represented as normal string.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.MeParType.BYTE">
+            <summary>Byte Array. C: unsigned char. C#: byte</summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComG2Cmd.GetTypeLength(MeSoft.MeCom.Core.MeComG2Cmd.MeParType)">
+            <summary>
+            Returns the byte length of the type.
+            </summary>
+            <param name="Type">Value Type.</param>
+            <returns>length of the given type.</returns>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComG2Cmd.MeParFlags">
+            <summary>
+            Meta Data Flags for parameters.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.MeParFlags.ReadOK">
+            <summary>Reading of the value is allowed.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.MeParFlags.WriteOK">
+            <summary>Writing of the value is allowed.</summary>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComG2Cmd.ParMetaData">
+            <summary>
+            Parameter Meta Data definition.
+            </summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.ParMetaData.Type">
+            <summary>Parameter value type.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.ParMetaData.Flags">
+            <summary>Parameter value flags.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.ParMetaData.NrOfInst">
+            <summary>Number of instances available on this parameter.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.ParMetaData.MaxNrOfElements">
+            <summary>Maximum number of elements available on this parameter (usually 1).</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.ParMetaData.Min">
+            <summary>Minimal allowed value of the parameter.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.ParMetaData.Max">
+            <summary>Maximal allowed value of the parameter.</summary>
+        </member>
+        <member name="F:MeSoft.MeCom.Core.MeComG2Cmd.ParMetaData.Value">
+            <summary>Current parameter value.</summary>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComQuerySet">
+            <summary>
+            Represents the transport layer of the communication protocol.
+            Is responsible that each query of set is executed correctly, 
+            otherwise it will throw an exception.
+            </summary>
+        </member>
+        <member name="P:MeSoft.MeCom.Core.MeComQuerySet.IsReady">
+            <summary>
+            true when the interface is ready to use; false if not. 
+            </summary>
+            <remarks>
+            Is automatically set to false if an interface error or timeout error occurs. 
+            Must be set from application level with SetIsReady() function.
+            </remarks>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.SetIsReady(System.Boolean)">
+            <summary>
+            Used from application level to inform other threads that the interface is ready.
+            </summary>
+            <remarks>
+            Usually the application device connector searches for a valid device
+            and sets then the interface as ready.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">
+            Thrown when another thread than the creator of this instance tries to set ready.
+            </exception>
+        </member>
+        <member name="P:MeSoft.MeCom.Core.MeComQuerySet.VersionIsOK">
+            <summary>
+            true when the application connector has recognized a valid device firmware version;
+            </summary>
+            <remarks>
+            Is automatically set to false if an interface error or timeout error occurs. 
+            Must be set from application level with SetVersionIsOK() function.
+            </remarks>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.SetVersionIsOK(System.Boolean)">
+            <summary>
+            Used from application level to inform other threads that the interface 
+            is connected to a device with an valid firmware version. 
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            Thrown when another thread than the creator of this instance tries to set version OK.
+            </exception>
+        </member>
+        <member name="P:MeSoft.MeCom.Core.MeComQuerySet.DefaultDeviceAddress">
+            <summary>
+            Represents the default destination address for the device to be addressed.
+            This value is used if null is passed for the device address in a package.
+            </summary>
+            <remarks>
+            To set this value use the function SetDefaultDeviceAddress().
+            </remarks>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.SetDefaultDeviceAddress(System.Byte)">
+            <summary>
+            Sets the default destination address for the device to be addressed.
+            This value is used if null is passed for the device address in a package.
+            </summary>
+            <remarks>
+            Usually the application device connector searches for a valid device
+            and sets then this value.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">
+            Thrown when another thread than the creator of this instance tries to set.
+            </exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.GetStatistics(System.String@,System.String@)">
+            <summary>
+            Returns the collected communication statistics data.
+            </summary>
+            <param name="xmlTable">Table with all the values.</param>
+            <param name="additionalText">Additional text to display.</param>
+        </member>
+        <member name="P:MeSoft.MeCom.Core.MeComQuerySet.MaxTxPayloadSize">
+            <summary>
+            Defines the maximum payload size in bytes that is sent over the underlying interface. 
+            This value is not directly used by this class. (just a definition)
+            It is intended to use by the higher levels to calculate the maximum allowed elements size. 
+            For example where a query must be scaled into several sub queries.
+            The default value is 1024 Bytes. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.#ctor(MeSoft.MeCom.PhyWrapper.IMeComPhy)">
+            <summary>
+            Initializes the communication interface.
+            This object can then be passed to the Command objects like MeBasicCmd.
+            </summary>
+            <param name="phyCom">Physical connection.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.Query(MeSoft.MeCom.Core.MeComPacket)">
+            <summary>
+            Executes a Query. A Query is used to get some data back from the server.
+            It tries automatically 3 times to resend the package if no data is replayed from the server
+            of if the returned data is wrong.
+            </summary>
+            <param name="txFrame">Definition of the data to send.</param>
+            <returns>Received data.</returns>
+            <exception cref="T:MeSoft.MeCom.Core.MeComQuerySet.GeneralException">on timeout or any other exception. Check the inner exception for details.</exception>
+            <exception cref="T:MeSoft.MeCom.Core.MeComQuerySet.ServerException">when the server replays with an Server Error Code.</exception>
+            <exception cref="T:MeSoft.MeCom.Core.MeComQuerySet.NotConnectedException">when the interface is not connected. 
+            (Only if the calling thread is different from the creator of this object)</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.Set(MeSoft.MeCom.Core.MeComPacket)">
+            <summary>
+            Executes a Set. A Set is used to set some data to the server. 
+            No data can be received from the server. 
+            It tries automatically 3 times to resend the package if no data is replayed from the server
+            of if the returned data is wrong.
+            </summary>
+            <param name="txFrame">Definition of the data to send.</param>
+            <returns>Received data</returns>
+            <exception cref="T:MeSoft.MeCom.Core.MeComQuerySet.GeneralException">on timeout or any other exception. Check the inner exception for details.</exception>
+            <exception cref="T:MeSoft.MeCom.Core.MeComQuerySet.ServerException">when the server replays with an Server Error Code.</exception>
+            <exception cref="T:MeSoft.MeCom.Core.MeComQuerySet.NotConnectedException">when the interface is not connected. 
+            (Only if the calling thread is different from the creator of this object)</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.ChangePhyCom(MeSoft.MeCom.PhyWrapper.IMeComPhy)">
+            <summary>
+            Changes the physical connection interface for this communication object.
+            </summary>
+            <param name="phyCom"></param>
+            <exception cref="T:System.NotSupportedException">when a different thread then the creator of this object 
+            tries to change the physical interface.</exception>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComQuerySet.ServerException">
+            <summary>
+            Is used when the server has returned a Server Error Code.
+            </summary>
+        </member>
+        <member name="P:MeSoft.MeCom.Core.MeComQuerySet.ServerException.ServerErrorCode">
+            <summary>
+            Stores the Server Error Code.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.ServerException.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of ServerException with the given parameters.
+            </summary>
+            <param name="message">Server Error Message.</param>
+            <param name="ErrorCode">Server Error Code.</param>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComQuerySet.NotConnectedException">
+            <summary>
+            Is used when the interface is not connected and a different thread than 
+            the creator of this object tries to send data.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.NotConnectedException.#ctor">
+            <summary>
+            Initializes a new instance of NotConnectedException.
+            </summary>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComQuerySet.GeneralException">
+            <summary>
+            Is used to encapsulate all not specific exceptions.
+            Check the inner exception for details.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.GeneralException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of ServerException with the given parameters.
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComQuerySet.GeneralException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of ServerException with the given parameters.
+            </summary>
+            <param name="message">Error Message</param>
+            <param name="innerException">Detail exception.</param>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.MeComVarConvert">
+            <summary>
+            Contains functions format or interpret communication strings. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddBase64url(System.IO.MemoryStream,System.Byte[],System.Int32)">
+            <summary> Encodes the byte array base64url and adds it to the stream. </summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="array">Data source.</param>
+            <param name="length">Length of data source.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddString(System.IO.MemoryStream,System.String)">
+            <summary> Writes a string to the stream.  </summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddUint4(System.IO.MemoryStream,System.Byte)">
+            <summary>Writes a UINT4 (byte range 0-15) to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddInt8(System.IO.MemoryStream,System.SByte)">
+            <summary>Writes a INT8 (signed byte) to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddUint8(System.IO.MemoryStream,System.Byte)">
+            <summary>Writes a UINT8 (unsigned byte) to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddInt16(System.IO.MemoryStream,System.Int16)">
+            <summary>Writes a INT16 to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddUint16(System.IO.MemoryStream,System.UInt16)">
+            <summary>Writes a UINT16 to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddInt32(System.IO.MemoryStream,System.Int32)">
+            <summary>Writes a INT32 to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddFloat32(System.IO.MemoryStream,System.Single)">
+            <summary>Writes a FLOAT32 (.net float) to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddUint32(System.IO.MemoryStream,System.UInt32)">
+            <summary>Writes a UINT32 to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddDouble64(System.IO.MemoryStream,System.Double)">
+            <summary>Writes a DOUBLE64 (.net double) to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddUint64(System.IO.MemoryStream,System.UInt64)">
+            <summary>Writes a UINT64 to the stream.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddEncodedString(System.IO.MemoryStream,System.String)">
+            <summary>Adds the string to the stream payload. The string is converted to an ASCII char array. 
+            Then each ASCII char is added as a UINT8 element to the stream. Therefore the whole ASCII range can be used.
+            If a zero terminator is needed, just add it to the string before you run this method.</summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.AddByteArray(System.IO.MemoryStream,System.Byte[])">
+            <summary>
+            Writes each byte in the array to the stream.
+            </summary>
+            <param name="stream">Writes data to this stream.</param>
+            <param name="value">Value to be added.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ConvertToHex(System.Int64)">
+            <summary>Converts a value from 0 - 15 to a char '0' - 'F'</summary>
+            <param name="value">Number value to be converted.</param>
+            <returns>char value '0' - 'F' represented by a byte value.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">if value is not 0-15.</exception>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadString(System.IO.MemoryStream,System.Int32)">
+            <summary>
+            Reads a string with an specified length from the stream. 
+            The chars are not encoded, therefore only a limited range of chars are allowed.
+            Basically 'A-Z', 'a-z', '0-9', '-', ' ', 
+            For example, carriage return or line feed are not allowed, 
+            because they would conflict the communication protocol 'control characters'.
+            </summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <param name="Length">Length of the read string. To read 20 chars, write 20 to this parameter.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadEncodedString(System.IO.MemoryStream,System.Int32)">
+            <summary>
+            Reads a 0 terminated string from the stream. Each char is read as UINT8 element.
+            Therefore the full ASCII range is usable.
+            Stops writing to the output when 0 is detected.
+            Reads always readNrOfElements from the stream.
+            </summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <param name="readNrOfElements">Number of elements to be read from the stream. In this case 1 element equals 2 bytes.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadUint4(System.IO.MemoryStream)">
+            <summary>Reads a UINT4 (byte range 0-15) from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadUint8(System.IO.MemoryStream)">
+            <summary>Reads a UINT8 (byte) from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadInt16(System.IO.MemoryStream)">
+            <summary>Reads a UINT16 from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadUint16(System.IO.MemoryStream)">
+            <summary>Reads a UINT16 from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadInt32(System.IO.MemoryStream)">
+            <summary>Reads a INT32 from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadFloat32(System.IO.MemoryStream)">
+            <summary>Reads a FLOAT32 (.net float) from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadDouble64(System.IO.MemoryStream)">
+            <summary>Reads a DOUBLE64 (.net double) from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadUint32(System.IO.MemoryStream)">
+            <summary>Reads a UINT32 from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ReadUint64(System.IO.MemoryStream)">
+            <summary>Reads a UINT64 from the stream.</summary>
+            <param name="Stream">Stream where the value is read from.</param>
+            <returns>The read and converted value.</returns>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.MeComVarConvert.ConvertToNr(System.Int32)">
+            <summary>Converts a char from '0' - 'F' to a number value 0-15.</summary>
+            <param name="value">char value '0' - 'F' represented by a int.</param>
+            <returns>number value 0-15.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">if char value is not '0' - '15'.</exception>
+        </member>
+        <member name="T:MeSoft.MeCom.Core.Statistics">
+            <summary>
+            Communication statistic class.
+            Observes each call to the communication interface.
+            Each calling thread is individually observed.
+            Call every 10s GetStatistics to generate the current statistic data.
+            </summary>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.Statistics.GetStatistics(System.String@,System.String@)">
+            <summary>
+            Calculates and returns the statistic data. 
+            It is recommended to call this function every 1s or 10s and put the received data into a DataSet Table.
+            It is not mandatory to use this, but the statistic data will be collected anyway.
+            </summary>
+            <param name="xmlTable">XML structure that is compatible with System.Data.DataSet</param>
+            <param name="additionalText">Some additional information. May be displayed under the table.</param>
+        </member>
+        <member name="M:MeSoft.MeCom.Core.Statistics.#ctor">
+            <summary>
+            Internal constructor. 
+            Means this object can not be instantiated outside of this assembly. (Just because it is not necessary)
+            </summary>
+        </member>
+        <member name="T:VersionDefinition">
+            <summary>Defines the version of the assembly.</summary>
+        </member>
+        <member name="F:VersionDefinition.Major">
+            <summary>Big version before the dot.</summary>
+        </member>
+        <member name="F:VersionDefinition.Minor">
+            <summary>Small version behind the dot.</summary>
+        </member>
+    </members>
+</doc>

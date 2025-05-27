@@ -1,0 +1,659 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MeSoft.Core</name>
+    </assembly>
+    <members>
+        <member name="T:MeSoft.Core.Calculations.PIDL">
+            <summary>PID Controller with limitation capabilities. Has the same functionality like the TEC-Family temperature Controller</summary>
+        </member>
+        <member name="E:MeSoft.Core.Calculations.PIDL.PropertyChanged">
+            <summary>Standard ProperyChanged event</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.Actual">
+            <summary>Actual value as input for the PID</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.Set">
+            <summary>Set value as input for the PID</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.Kp">
+            <summary>Proportional term</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.Ti">
+            <summary>Integral term in seconds</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.Td">
+            <summary>Derivative term in seconds</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.DPartDamping">
+            <summary>Damping value for the D output. PT1 Filter: 1 has no effect, near to 0 has a big effect. Default is 0.3.</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.LimitP">
+            <summary>Upper limitation value for the output</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.LimitN">
+            <summary>Lower limitation vlaue for the output</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.TimeBase">
+            <summary>Time Base in seconds. If the controller is being executed every 1ms, write 0.001.</summary>
+        </member>
+        <member name="P:MeSoft.Core.Calculations.PIDL.Output">
+            <summary>Output of the PID controller</summary>
+        </member>
+        <member name="M:MeSoft.Core.Calculations.PIDL.#ctor">
+            <summary>Creates a new instance of this class and resets the values. </summary>
+        </member>
+        <member name="M:MeSoft.Core.Calculations.PIDL.Reset">
+            <summary>Resets all values to 0</summary>
+        </member>
+        <member name="M:MeSoft.Core.Calculations.PIDL.Run">
+            <summary>Runs the PID controller</summary>
+        </member>
+        <member name="M:MeSoft.Core.Calculations.PIDL.PresetOutput(System.Double)">
+            <summary>Can preset the PID output. Might be useful if another value than 0 is needed at the beginning of the control.</summary>
+        </member>
+        <member name="T:MeSoft.Core.Calculations.CCITT32">
+            <summary>
+            Calculates a CCITT32 CRC. This is the same CRC which is also being used in the STM32 hardware CRC generator. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.Calculations.CCITT32.Calculate(System.IO.MemoryStream)">
+            <summary>
+            Calculates the CRC of a stream.
+            It starts to calculate at the current position of the stream.
+            The image length must be a multiple of 4!
+            </summary>
+            <param name="image">Stream to calculate</param>
+            <returns>CRC</returns>
+        </member>
+        <member name="M:MeSoft.Core.Calculations.CCITT32.AddWord(System.UInt32,System.UInt32)">
+            <summary>
+            Just adds a word to the CRC.
+            </summary>
+            <param name="CRC">Previous CRC</param>
+            <param name="Data">Word to add</param>
+            <returns>New CRC</returns>
+        </member>
+        <member name="T:MeSoft.Core.ConsoleHelper.ConsoleIO">
+            <summary>
+            Static helper class for simple console IO Applications.
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.ConsoleHelper.ConsoleIO.ReadInt(System.Int32,System.Int32,System.String)">
+            <summary>
+            Does not return until the user has entered a value between min and max
+            </summary>
+            <param name="min">Min value for the output value</param>
+            <param name="max">Max value for the output value</param>
+            <param name="instructionString">Instruction string for the user.</param>
+            <returns>A value between min and max</returns>
+        </member>
+        <member name="M:MeSoft.Core.ConsoleHelper.ConsoleIO.ReadFloat(System.Single,System.Single,System.String)">
+            <summary>
+            Does not return until the user has entered a value between min and max
+            </summary>
+            <param name="min">Min value for the output value</param>
+            <param name="max">Max value for the output value</param>
+            <param name="instructionString">Instruction string for the user.</param>
+            <returns>A value between min and max</returns>
+        </member>
+        <member name="M:MeSoft.Core.ConsoleHelper.ConsoleIO.ReadString(System.String)">
+            <summary>
+            Does not return until the user has entered a string.
+            </summary>
+            <param name="instructionString">Instruction string for the user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MeSoft.Core.ConsoleHelper.ConsoleIO.WriteRed(System.String,System.Object[])">
+            <summary>
+            Prints a red text like string.Format()
+            </summary>
+            <param name="format">Format string or jut text.</param>
+            <param name="args">Optional parameters</param>
+        </member>
+        <member name="M:MeSoft.Core.ConsoleHelper.ConsoleIO.WriteGreen(System.String,System.Object[])">
+            <summary>
+            Prints a green text like string.Format()
+            </summary>
+            <param name="format">Format string or jut text.</param>
+            <param name="args">Optional parameters</param>
+        </member>
+        <member name="M:MeSoft.Core.ConsoleHelper.ConsoleIO.WriteBlue(System.String,System.Object[])">
+            <summary>
+            Prints a blue text like string.Format()
+            </summary>
+            <param name="format">Format string or jut text.</param>
+            <param name="args">Optional parameters</param>
+        </member>
+        <member name="T:MeSoft.Core.Diagnostics.MeAssert">
+            <summary>
+            Asserting Class for various comparisons. 
+            Each fiction generates an MeAssertException if the comparison fails. 
+            Workaround for the old Visual Studio Version. 
+            Should be similar like the following standard class:
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.MeAssert.AreEqual(System.String,System.String,System.String)">
+            <summary>
+            Compares two strings.
+            Throws an MeAssertException if the strings are not equal. 
+            The message in the MeAssertException will contain the expected and actual value. Also the user message is shown. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.MeAssert.AreEqual(System.Double,System.Double,System.String)">
+            <summary>
+            Compares two doubles.
+            Throws an MeAssertException if the strings are not equal. 
+            The message in the MeAssertException will contain the expected and actual value. Also the user message is shown. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.MeAssert.AreNearlyEqual(System.Double,System.Double,System.Double,System.String)">
+            <summary>
+            Compares two doubles with an allowed deviation factor.
+            Throws an MeAssertException if the strings are not equal. 
+            The message in the MeAssertException will contain the expected and actual value. Also the user message is shown. 
+            Calculated: Math.Abs(expected-actual) > Math.Abs(expected*AllowedDeviation)
+            </summary>
+        </member>
+        <member name="T:MeSoft.Core.Diagnostics.MeAssertException">
+            <summary>
+            Exception which is thrown, when an MeAssert operation fails. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.MeAssertException.#ctor(System.String)">
+            <summary>
+            Exception which is thrown, when an MeAssert operation fails. 
+            </summary>
+            <param name="message">User Message</param>
+        </member>
+        <member name="T:MeSoft.Core.Diagnostics.TraceLog">
+            <summary>
+            This class is used to feed the trace messages to the System Trace.
+            It has 4 Trace levels (Verbose, Info, Warn, Error)
+            </summary>
+            <remarks>
+            The 4 Trace levels can be enabled or disabled over the TraceSwitch. 
+            When no TraceSwitch is configured, the Trace is fully disabled.
+            To set the default TraceSwitch, use the TraceSwitch name "default".
+            It is possible to set the TraceSwitch individually for each Namespace or class.
+            When a TraceSwitch is found with exact the fully Namespace.Class, it takes this switch.
+            If no such switch is found, it removes one Namespace level and searches again and again.
+            When no such entry is found, it takes the Default definition. 
+            By default it prints only the className.FunctionName. 
+            When the TraceSwitch PrintFullNamespace is defined other than off, the full Namespace is printed.
+            </remarks>
+        </member>
+        <member name="P:MeSoft.Core.Diagnostics.TraceLog.InstancePrefix">
+            <summary>Sets the prefix for all messages created with the methods ending with ....P</summary>
+        </member>
+        <member name="F:MeSoft.Core.Diagnostics.TraceLog.ThreadStaticPrefix">
+            <summary>Sets the prefix for all messages created with the same thread for the standard methods</summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.#ctor(System.String)">
+            <summary>Creates an instance if this class, which holds a prefix for all messages.</summary>
+            <param name="prefix">Prefix which is being added to all Messages created with the methods ending with ...P</param>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.VerboseP(System.String,System.Object[])">
+            <summary>This TraceLevel is intended for debug purpose. It may print out massive amount of information.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.InfoP(System.String,System.Object[])">
+            <summary>This TraceLevel should only be used for rare outputs. No cyclical outputs.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.WarnP(System.String,System.Object[])">
+            <summary>This TraceLevel is to be used if something happens that is not good, but the process can go on.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.ErrorP(System.String,System.Object[])">
+            <summary>This TraceLevel is to be used if something happens that is critical. The process can not go on or just in a limited way.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.Verbose(System.String,System.Object[])">
+            <summary>This TraceLevel is intended for debug purpose. It may print out massive amount of information.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.Info(System.String,System.Object[])">
+            <summary>This TraceLevel should only be used for rare outputs. No cyclical outputs.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.Warn(System.String,System.Object[])">
+            <summary>This TraceLevel is to be used if something happens that is not good, but the process can go on.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Diagnostics.TraceLog.Error(System.String,System.Object[])">
+            <summary>This TraceLevel is to be used if something happens that is critical. The process can not go on or just in a limited way.</summary>
+        </member>
+        <member name="T:MeSoft.Core.EnumHelper.EnumExtension">
+            <summary>
+            Custom Enum extension methods.
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.EnumHelper.EnumExtension.GetDescription(System.Enum)">
+            <summary>
+            Extension method that returns the description attribute of an Enum
+            or the Enum name as string if there is no description defined.
+            </summary>
+            <param name="value">The Enum to get the description of.</param>
+            <returns>Enum description.</returns>
+        </member>
+        <member name="T:MeSoft.Core.ObjectHelper.ObjectCopier">
+            <summary>
+            Reference Article http://www.codeproject.com/KB/tips/SerializedObjectCloner.aspx
+            Provides a method for performing a deep copy of an object.
+            Binary Serialization is used to perform the copy.
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.ObjectHelper.ObjectCopier.DeepCopy``1(``0)">
+            <summary>
+            Perform a deep Copy of the object.
+            </summary>
+            <typeparam name="T">The type of object being copied.</typeparam>
+            <param name="source">The object instance to copy.</param>
+            <returns>The copied object.</returns>
+        </member>
+        <member name="T:MeSoft.Core.ObjectHelper.ObjectUpdater">
+            <summary>
+            Provides some static functions to copy data in objects.
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.ObjectHelper.ObjectUpdater.UpdatePublicProperties(System.Object,System.Object)">
+            <summary>
+            Updates all public properties from the source object to the destination object.
+            </summary>
+            <param name="destination">The properties of this object will be set.</param>
+            <param name="source">The property values will be taken form this object.</param>
+        </member>
+        <member name="T:MeSoft.Core.PropHelper.NotifyProperty">
+            <summary>
+            Implementation for simple use of INotifyPropertyChanged.
+            The parent class must implement the INotifyPropertyChanged interface, but the event will be fired from this class.
+            This class holds all values from the parent class in a private dictionary. 
+            Usage of the Property in the parent class: 
+            public int MyProperty1 { get { return props.Get(0); } set { props.Set(value); } }
+            There are two code snippets in the source folder of this class: propnf.snippet and propnfStore.snippet
+            </summary>
+            <remarks>
+            Info source about MulticastDelegate:
+            http://stackoverflow.com/questions/198543/how-do-i-raise-an-event-via-reflection-in-net-c
+            </remarks>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.NotifyProperty.#ctor(System.Object)">
+            <summary>Generates an new instance.</summary>
+            <param name="parent">Pass this of the parent object that implements INotifyPropertyChanged</param>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.NotifyProperty.Get(System.Object,System.String)">
+            <summary>Gets the value.</summary>
+            <param name="defaultValue">The default value that is being used when the first time Get is called instead of Set.</param>
+            <param name="propertyName">Passes automatically the name of the property.</param>
+            <returns>The current value of the property.</returns>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.NotifyProperty.Set(System.Object,System.String)">
+            <summary>Sets and notifies if the value has changed.</summary>
+            <param name="newValue">The new value for the property.</param>
+            <param name="propertyName">Passes automatically the name of the property.</param>
+        </member>
+        <member name="T:MeSoft.Core.PropHelper.NotifyPropertyBinder">
+            <summary>
+            This class can link (make a binding) between two properties which implement the INotifyPropertyChanged interface.
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.NotifyPropertyBinder.MakeTwoWayBinding(System.Object,System.String,System.Object,System.String)">
+            <summary>
+            Binds two properties together and synchronizes the values in both directories.
+            It is very important that the INotifyPropertyChanged implementation checks whether 
+            the value has really changed before the INotifyPropertyChanged event is being raised, 
+            otherwise an endless recursive call will be the result. 
+            
+            By calling this function, the value is once being copied from property2 to property1
+            </summary>
+            <param name="parentOfProperty1">Parent object of the property1</param>
+            <param name="nameOfProperty1">Name of the property1</param>
+            <param name="parentOfProperty2">Parent object of the property2</param>
+            <param name="nameOfProperty2">Name of the property1</param>
+            <example>
+            NotifyPropertyBinder.MakeTwoWayBinding(this, nameof(PidOutput), pidl, nameof(pidl.TestProp));
+            </example>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.NotifyPropertyBinder.MakeOneWayBinding(System.Object,System.String,System.Object,System.String)">
+            <summary>
+            Binds the destination property to the source property. Means when the source property changes, 
+            the destination property will be updated. 
+            
+            By calling this function the value is once being copied from the source to the destination property.
+            </summary>
+            <param name="parentOfDestinationProperty">Parent object of the destination property</param>
+            <param name="nameOfDestinationProperty">Name of the destination property</param>
+            <param name="parentOfSourceProperty">Parent object of the source property</param>
+            <param name="nameOfSourceProperty">Name of the source property</param>
+            <example>
+            NotifyPropertyBinder.MakeOneWayBinding(pidl, nameof(pidl.TestProp), this, nameof(PidOutput));
+            </example>
+        </member>
+        <member name="T:MeSoft.Core.PropHelper.PropertiesUpdater">
+            <summary>
+            Provides some static functions to copy data in objects.
+            </summary>
+        </member>
+        <member name="T:MeSoft.Core.PropHelper.PropertiesUpdater.DispatcherCallback">
+            <summary>
+            This callback is used to change list objects. 
+            </summary>
+            <param name="callback">Callback from the update function</param>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.PropertiesUpdater.UpdatePublicProperties(System.Object,System.Object)">
+            <summary>
+            Updates all public properties from the source object to the destination object.
+            </summary>
+            <param name="destination">The properties of this object will be set.</param>
+            <param name="source">The property values will be taken form this object.</param>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.PropertiesUpdater.UpdatePropertiesTree(System.Object,System.Object,MeSoft.Core.PropHelper.PropertiesUpdater.DispatcherCallback)">
+            <summary>
+            Updates all properties of an object tree with lists containing objects with lists fully recursive
+            Does only update the differences between the two objects to reduce the number of property or collection changed events. 
+            </summary>
+            <param name="destinationObject">Old object to be updated. The one which is bound to the view.</param>
+            <param name="sourceObject">Object containing the new data.</param>
+            <param name="dispatcher">Dispatcher for WPF project. If null, the values are not updated, just the comparison is done</param>
+            <returns>true if the objects are equal, otherwise false</returns>
+        </member>
+        <member name="T:MeSoft.Core.PropHelper.PropObservable`1">
+            <summary>
+            Can make any simple data type observable. 
+            Implements the INotifyPropertyChanged, so WPF elements can bind to it.
+            Provides an PropObservableChanged event which provides more information about the change event.
+            </summary>
+            <typeparam name="T">For example bool</typeparam>
+        </member>
+        <member name="P:MeSoft.Core.PropHelper.PropObservable`1.UserReference">
+            <summary>Space for user data, will be passed on an event</summary>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.PropObservable`1.#ctor">
+            <summary>Initializes a new instance of the PropObservable class</summary>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.PropObservable`1.#ctor(`0)">
+            <summary>Initializes a new instance of the PropObservable class</summary>
+            <param name="value">Preset value</param>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.PropObservable`1.#ctor(`0,System.Object)">
+            <summary>Initializes a new instance of the PropObservable class</summary>
+            <param name="value">Preset value</param>
+            <param name="userReference">Preset user reference</param>
+        </member>
+        <member name="P:MeSoft.Core.PropHelper.PropObservable`1.Value">
+            <summary>
+            Gets or sets the value of this instance. 
+            Rises the PropertyChanged event if the value is different.
+            </summary>
+        </member>
+        <member name="E:MeSoft.Core.PropHelper.PropObservable`1.PropertyChanged">
+            <summary>Standard PropertyChanged event</summary>
+        </member>
+        <member name="E:MeSoft.Core.PropHelper.PropObservable`1.PropObservableChanged">
+            <summary>Same as PropertyChanged event, but with more passed information</summary>
+        </member>
+        <member name="T:MeSoft.Core.PropHelper.PropObservableEventArgs`1">
+            <summary>
+            Is passed when the PropObservableChanged is invoked. 
+            </summary>
+            <typeparam name="T">Generic type</typeparam>
+        </member>
+        <member name="M:MeSoft.Core.PropHelper.PropObservableEventArgs`1.#ctor(System.Object,`0,`0)">
+            <summary>
+            
+            </summary>
+            <param name="userReference"></param>
+            <param name="oldValue"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="F:MeSoft.Core.PropHelper.PropObservableEventArgs`1.UserReference">
+            <summary>Custom user reference</summary>
+        </member>
+        <member name="F:MeSoft.Core.PropHelper.PropObservableEventArgs`1.OldValue">
+            <summary>Old value before the value change.</summary>
+        </member>
+        <member name="F:MeSoft.Core.PropHelper.PropObservableEventArgs`1.NewValue">
+            <summary>New value, after the value change</summary>
+        </member>
+        <member name="T:MeSoft.Core.StartupHelper.StartupArgumentHandler">
+            <summary>
+            Command line parser for Meerstetter software that uses a few 
+            abstractions of DOS, Windows, OS/2 option conventions.
+            More information: https://en.wikipedia.org/wiki/Command-line_interface
+            Conventions:
+            - A command is always initialized using a forward-slash character ("/")
+            - Options following a command always have the hyphen character as prefix ("-")
+            - Options are separated into key and value using an equals character ("=")
+            - Multiple commands can be used in a startup string
+            - The order of the options does not matter
+            Example: Service_TEC.exe /MeComDev -IP=127.0.0.1 -Port=5000 -DevAddr=7
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.StartupHelper.StartupArgumentHandler.ParseStartupArguments(System.String[])">
+            <summary>
+            Parse the given startup command line arguments into an easy-to-use collection.
+            </summary>
+            <param name="args">String array that holds all arguments</param>
+            <returns>Filterable list of commands and their options</returns>
+        </member>
+        <member name="T:MeSoft.Core.Threading.UnexpectedThreadEndEventArgs">
+            <summary>
+            Contains information about the unexpected ended thread
+            </summary>
+        </member>
+        <member name="P:MeSoft.Core.Threading.UnexpectedThreadEndEventArgs.ThreadName">
+            <summary>Name of the ended thread</summary>
+        </member>
+        <member name="P:MeSoft.Core.Threading.UnexpectedThreadEndEventArgs.ThrownException">
+            <summary>Exception of the ended thread</summary>
+        </member>
+        <member name="T:MeSoft.Core.Threading.ThreadCreator">
+            <summary>Manages a sub thread in an application. (Creation, catch/Trace exceptions and cancellation)</summary>
+            <remarks>
+            Before it is possible to use this class. The ThreadMaster must be set. 
+            It helps you to create new sub threads in your application. 
+            Each new thread is registered at the ThreadMaster object. 
+            The ThreadMaster can then simultaneously ask each thread to cancel and wait till each thread has canceled.
+            The ThreadStatic reference to the ThreadMaster is passed to the new thread.
+            If the external threadMethod returns with an exception, the exception message will be traced. 
+            The new thread should watch the cancellation token on this class and 
+            return as fast as possible if the cancellation token requests to cancel.
+            </remarks>
+        </member>
+        <member name="P:MeSoft.Core.Threading.ThreadCreator.CancellationToken">
+            <summary>
+            The cancellation token for the new thread. The new thread should watch the cancellation Token on this class and 
+            return as fast as possible if the cancellation token requests to cancel.
+            </summary>
+        </member>
+        <member name="F:MeSoft.Core.Threading.ThreadCreator.ThreadObject">
+            <summary>Reference to the Thread object of the created thread.</summary>
+        </member>
+        <member name="P:MeSoft.Core.Threading.ThreadCreator.IsCancellationRequested">
+            <summary>Shortcut to the cancellation token which is set when the application ends.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadCreator.#ctor(System.Threading.ThreadStart,System.String)">
+            <summary>Creates an new Thread with the standard ThreadMaster that is registered on the current thread.</summary>
+            <param name="threadMethod">Method that should be called from the new thread.</param>
+            <param name="threadName">Name of the new Thread. Is used for the effective Thread name and for trace.</param>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadCreator.#ctor(System.Threading.ThreadStart,System.String,MeSoft.Core.Threading.ThreadMaster)">
+            <summary>Creates an new Thread with the standard ThreadMaster that is registered on the current thread.</summary>
+            <param name="threadMethod">Method that should be called from the new thread.</param>
+            <param name="threadName">Name of the new Thread. Is used for the effective Thread name and for trace.</param>
+            <param name="differentMaster">Reference to an specific ThreadMaster. Not to use the master that is maybe registered on the current thread.</param>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadCreator.Start">
+            <summary>Starts the new Thread.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadCreator.NotCancelled(System.Int32)">
+            <summary>Shortcut to the cancellation token. Is intended to use as a while loop condition with delay.</summary>
+            <param name="milisecondsDelay">Delay before this function returns, if the cancellation is not requested.</param>
+            <returns>true, while the cancellation is not requested</returns>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadCreator.NotCancelled">
+            <summary>Shortcut to the cancellation token. Is intended to use as a while loop condition without delay.</summary>
+            <returns>true, while the cancellation is not requested</returns>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadCreator.IsCancelled(System.Int32)">
+            <summary>
+            Shortcut to the cancellation token. Is intended to use as a delay with the option to immediately cancel:
+            if(threadCreator.IsCancelled(100)) return;
+            </summary>
+            <param name="milisecondsDelay">Delay before this function returns, if the cancellation is not requested.</param>
+            <returns>true, if the cancellation is requested</returns>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadCreator.IsCancelled">
+            <summary>
+            Shortcut to the cancellation token. Is intended to use as a option to immediately cancel:
+            if(threadCreator.IsCancelled()) return;
+            </summary>
+            <returns>true, if the cancellation is requested</returns>
+        </member>
+        <member name="T:MeSoft.Core.Threading.ThreadMaster">
+            <summary>
+            Defines the ThreadMaster on the current thread.
+            The ThreadMaster is mainly used to manage the cancellation of all the threads 
+            that are created with the ThreadCreator.
+            A reference to the ThreadMaster will be stored to a thread static reference.
+            The ThreadCreator will have access to this reference by default.
+            </summary>
+            <remarks>
+            May tell all threads (created from ThreadCreator with a reference to this Master)
+            to cancel over the cancellation token.
+            May wait till all threads have canceled.
+            </remarks>
+        </member>
+        <member name="E:MeSoft.Core.Threading.ThreadMaster.OnUnexpectedThreadEnd">
+            <summary>
+            Notifies clients that a thread has ended because of an exception. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadMaster.#ctor(System.String)">
+            <summary>
+            Creates a new ThreadMaster object that is saved on the current thread.
+            Creates its own internal cancellationTokenSource object. 
+            If this constructor is used, you may use CancelAllThreads method to start the cancellation.
+            </summary>
+            <param name="name">Name of the ThreadMaster. This is only used for trace.</param>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadMaster.#ctor(System.Threading.CancellationToken,System.String)">
+            <summary>
+            Creates a new ThreadMaster object that is saved on the current thread.
+            Uses the external cancellation token. 
+            The method CancelAllThreads can not be used. 
+            </summary>
+            <param name="cancellationToken">External cancellation token. Will be passed to all the new threads.</param>
+            <param name="name">Name of the ThreadMaster. This is only used for trace.</param>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadMaster.CancelAllThreads">
+            <summary>
+            Tells all Threads to cancel over the internal cancellation token.
+            </summary>
+            <remarks>
+            Returns immediately.
+            Can not be used if an external cancellation token is passed with the constructor. 
+            </remarks>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadMaster.WaitTillAllThreadsAreTerminated(System.Int32)">
+            <summary>
+            Waits till all registered threads are canceled or the timeout is reached.
+            </summary>
+            <remarks>
+            Blocks the current thread!
+            Make sure the method CancelAllThreads was called before or the external cancellation token is set to cancel.
+            Traces the time that was necessary to cancel all threads.
+            If the timeout is reached, it traces which threads have not terminated.
+            </remarks>
+            <param name="timeout">Timeout in milliseconds. 0 means no timeout.</param>
+        </member>
+        <member name="P:MeSoft.Core.Threading.ThreadMaster.CancellationToken">
+            <summary>Provides static access to the CancellationToken which is registered on the current thread.</summary>
+        </member>
+        <member name="M:MeSoft.Core.Threading.ThreadMaster.Dispose">
+            <summary>Releases all resources used by the current instance.</summary>
+        </member>
+        <member name="T:MeSoft.Core.VersionControl.VersionEx">
+            <summary>
+            Extended Version object which adds and a string for the Git Commit Hash.
+            </summary>
+        </member>
+        <member name="F:MeSoft.Core.VersionControl.VersionEx.Version">
+            <summary>
+            Version object.
+            Standard ME Format: [Major].[Minor].[SourceStatus].[CommitCount]
+            </summary>
+        </member>
+        <member name="F:MeSoft.Core.VersionControl.VersionEx.Hash">
+            <summary>
+            Git Commit Hash.
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.VersionControl.VersionEx.#ctor(System.Version,System.String)">
+            <summary>
+            Constructor of the extended Version object.
+            </summary>
+            <param name="version">Version object.</param>
+            <param name="hash">Git Commit Hash.</param>
+        </member>
+        <member name="T:MeSoft.Core.VersionControl.VersionHelper">
+            <summary>
+            Provides some help functions around the version control implemented by Meerstetter Engineering.
+            Notation: The assembly version is used as follows:
+            Major: is used as big version field.
+            Minor: is used as small version field.
+            Build: is used to represent the enumeration "SourceStatus".
+            Revision: is used to represent the commit count in the current branch.
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.VersionControl.VersionHelper.GetSourceStatus(System.Version)">
+            <summary>Converts the Build field to an SourceStatus enumeration</summary>
+        </member>
+        <member name="M:MeSoft.Core.VersionControl.VersionHelper.GetTitleExtension">
+            <summary>
+            Returns a string that can be used to extend the title text in a graphical application. 
+            It always adds the version information of the entry assembly. 
+            Additionally, the following 5 cases also add something (or nothing) to the title text:
+            -It adds the revision number/hash and locally modified if the entry assembly is locally modified.
+            -It adds the revision number/hash and committed if the source of the entry assembly is fully committed.
+            -It adds a not released message if the entry assembly is marked to be released but one of the referenced 
+             ME assemblies is not marked as released.
+            -It adds nothing if all ME assemblies are marked as released. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.VersionControl.VersionHelper.GetShortTitleExtension">
+            <summary>
+            Returns a short string that can be used to extend the title text in a graphical application. 
+            It adds the Major and Minor version information of the entry assembly. 
+            </summary>
+        </member>
+        <member name="M:MeSoft.Core.VersionControl.VersionHelper.GetAssemblyInformationalVersion">
+            <summary>
+            Splits the AssemblyInformationalVersionAttribute string into an custom VersionEx object that
+            holds the Version object and a string for the Git Hash.
+            If no such AssemblyAttribute is defined then this function will return null.
+            Format: [Major].[Minor].[SourceStatus].[CommitCount]  Rev. [GitHash] [SourceStatus.Text]
+            Example: 1.12.0.24  Rev. e280ad94 Committed
+            </summary>
+        </member>
+        <member name="T:MeSoft.Core.VersionControl.SourceStatus">
+            <summary>Status of the source files in the version control system.</summary>
+        </member>
+        <member name="F:MeSoft.Core.VersionControl.SourceStatus.LocallyModifed">
+            <summary>At least one source file is locally modified.</summary>
+        </member>
+        <member name="F:MeSoft.Core.VersionControl.SourceStatus.Committed">
+            <summary>All files are committed, but it is not released.</summary>
+        </member>
+        <member name="F:MeSoft.Core.VersionControl.SourceStatus.Released">
+            <summary>All files are committed and it is marked as released.</summary>
+        </member>
+        <member name="F:MeSoft.Core.VersionControl.SourceStatus.Unknown">
+            <summary>Unknown file status.</summary>
+        </member>
+        <member name="T:VersionDefinition">
+            <summary>Defines the version of the assembly.</summary>
+        </member>
+        <member name="F:VersionDefinition.Major">
+            <summary>Big version before the dot.</summary>
+        </member>
+        <member name="F:VersionDefinition.Minor">
+            <summary>Small version behind the dot.</summary>
+        </member>
+    </members>
+</doc>

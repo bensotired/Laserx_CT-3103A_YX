@@ -60,8 +60,9 @@
       <HintPath>..\..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="LaserXFineTuningDllTest">
-      <HintPath>..\..\LaserX_TesterLibrary\LaserXFineTuningDllTest.dll</HintPath>
+    <Reference Include="LaserXFineTuningDllTest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\source\repos\LaserXApi\LaserXFineTuningDllTest\bin\Debug\LaserXFineTuningDllTest.dll</HintPath>
     </Reference>
     <Reference Include="LX_BurnInSolution.Log">
       <HintPath>..\..\LaserX_TesterLibrary\LX_BurnInSolution.Log.dll</HintPath>

@@ -310,3 +310,159 @@ StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
 
 
+5/27/2025 1:20:24 PM: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes():  : Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:20:24 PM: Error in Hardware.Devices.clsDevicesManager..ctor():  : Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:20:24 PM: Error in Hardware.Devices.clsHardwareManager..ctor():  : Message: Error in Hardware.Devices.clsDevicesManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager..ctor()
+   at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+
+Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:20:24 PM: Error in Hardware.Devices.clsHardwareManager.getInstance():  : Message: Error in Hardware.Devices.clsHardwareManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+   at Hardware.Devices.clsHardwareManager.getInstance()
+
+Message: Error in Hardware.Devices.clsDevicesManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager..ctor()
+   at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+
+Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:28:40 PM: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes():  : Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:28:40 PM: Error in Hardware.Devices.clsDevicesManager..ctor():  : Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:28:40 PM: Error in Hardware.Devices.clsHardwareManager..ctor():  : Message: Error in Hardware.Devices.clsDevicesManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager..ctor()
+   at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+
+Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:28:40 PM: Error in Hardware.Devices.clsHardwareManager.getInstance():  : Message: Error in Hardware.Devices.clsHardwareManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+   at Hardware.Devices.clsHardwareManager.getInstance()
+
+Message: Error in Hardware.Devices.clsDevicesManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager..ctor()
+   at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+
+Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:42:59 PM: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes():  : Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:42:59 PM: Error in Hardware.Devices.clsDevicesManager..ctor():  : Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:42:59 PM: Error in Hardware.Devices.clsHardwareManager..ctor():  : Message: Error in Hardware.Devices.clsDevicesManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager..ctor()
+   at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+
+Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
+5/27/2025 1:42:59 PM: Error in Hardware.Devices.clsHardwareManager.getInstance():  : Message: Error in Hardware.Devices.clsHardwareManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+   at Hardware.Devices.clsHardwareManager.getInstance()
+
+Message: Error in Hardware.Devices.clsDevicesManager..ctor(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager..ctor()
+   at Hardware.Devices.clsHardwareManager..ctor(intfcAssignments assignment)
+
+Message: Error in Hardware.Devices.clsDevicesManager.initVisableDeviceTypes(): 
+StackTrace:    at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+   at Hardware.Devices.clsDevicesManager..ctor()
+
+Message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+StackTrace:    at System.Reflection.RuntimeModule.GetTypes(RuntimeModule module)
+   at System.Reflection.RuntimeModule.GetTypes()
+   at System.Reflection.Assembly.GetTypes()
+   at Hardware.Devices.clsDevicesManager.initVisableDeviceTypes()
+
+
