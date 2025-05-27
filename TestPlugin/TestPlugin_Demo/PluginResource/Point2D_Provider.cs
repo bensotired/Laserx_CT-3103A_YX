@@ -1,4 +1,4 @@
-using SolveWare_Vision;
+ï»¿using SolveWare_Vision;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -9,16 +9,11 @@ namespace TestPlugin_Demo
 
     public enum PixPoint2D_Enum_CT3103
     {
-        ¾«¶¨Î»Ïà»ú_¶¥Õë¿×_ÖĞĞÄµãÏñËØ,
-
-        ¾«¶¨Î»Ïà»ú_Îü×ì1_¶¨Î»Æ¬_ÖĞĞÄµãÏñËØ,
-
-        ¹¤Î»1_ÏÂÏà»ú_Îü×ì1_ÖĞĞÄµãÏñËØ,
-
-        ¹¤Î»2_ÏÂÏà»ú_Îü×ì2_ÖĞĞÄµãÏñËØ,
-
-        ¹¤Î»2_ÏÂÏà»ú_Îü×ì3_ÖĞĞÄµãÏñËØ
-
+        ç²¾å®šä½ç›¸æœº_é¡¶é’ˆå—_ä¸­å¿ƒç‚¹åƒç´ ,       // Precision positioning camera - ejector pin block - center pixel
+        ç²¾å®šä½ç›¸æœº_æ¯æ²»1_å®šä½ç‰‡_ä¸­å¿ƒç‚¹åƒç´ , // Precision positioning camera - female die 1 - positioning piece - center pixel
+        å·¥ä½1_ä¸‹ç›¸æœº_æ¯æ²»1_ä¸­å¿ƒç‚¹åƒç´ ,      // Station 1 - bottom camera - female die 1 - center pixel
+        å·¥ä½2_ä¸‹ç›¸æœº_æ¯æ²»2_ä¸­å¿ƒç‚¹åƒç´ ,      // Station 2 - bottom camera - female die 2 - center pixel
+        å·¥ä½2_ä¸‹ç›¸æœº_æ¯æ²»3_ä¸­å¿ƒç‚¹åƒç´        // Station 2 - bottom camera - female die 3 - center pixel
     }
     public class PixelPoint_Provider_CT3103 : PixelPoint_ProviderBase
     {
