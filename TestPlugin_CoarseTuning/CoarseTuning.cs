@@ -166,7 +166,7 @@ namespace TestPlugin_CoarseTuning
 
                 //this.ReadRawDataFromFile(mirrorMapFileName);
                 //string mirrorMapFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DO123_TM124_T0326_MirrorMapping#Wavelength@34.64C_2024-04-02_10-48-50.csv");
-                clsCsvHandler mirrorMapReader = new clsCsvHandler();
+                clsIndividualSweepCsvHandler mirrorMapReader = new clsIndividualSweepCsvHandler();
                 //configure the reader to read 3d data, then trigger the read
                 mirrorMapReader.IsReading3dData = true;
                 mirrorMapReader.ReadRawDataFromFile(mirrorMapFileName);
@@ -321,7 +321,7 @@ namespace TestPlugin_CoarseTuning
                     modChartDirectorPlotHelpers.AddScatterPlot(ref plotArea, midline.Mirr1Vals.ToArray(), midline.Mirr2Vals.ToArray());
                 }
                 //add the mirror map wavelength data
-                double[] filteredWlVals = General.modGlobals.ClampArrayValues(wlVals, 1510, 1580); //filter the data to get a good graph scale, "zero" points will mess up the scale
+                double[] filteredWlVals = General.modCommonDataStructureHelpers.ClampArrayValues(wlVals, 1510, 1580); //filter the data to get a good graph scale, "zero" points will mess up the scale
                 ContourLayer wlLayer = plotArea.addContourLayer(mirr1Vals, mirr2Vals, filteredWlVals);
                 modChartDirectorPlotHelpers.UpdateChart(ref Chart_Midlines, plotArea);
             }
@@ -353,7 +353,7 @@ namespace TestPlugin_CoarseTuning
                 ituScatter.addExtraField(ituLabels);
                 ituScatter.setDataLabelFormat("{field0}");
                 //add the wavelength data to the plot
-                double[] filteredWlVals = modGlobals.ClampArrayValues(wlVals, 1510, 1580); //filter out any abnormal wl values to avoid a weird scale
+                double[] filteredWlVals = modCommonDataStructureHelpers.ClampArrayValues(wlVals, 1510, 1580); //filter out any abnormal wl values to avoid a weird scale
                 plotArea.addContourLayer(mirr1Vals, mirr2Vals, filteredWlVals);
                 modChartDirectorPlotHelpers.UpdateChart(ref Chart_LabeledPoints, plotArea);
             }
