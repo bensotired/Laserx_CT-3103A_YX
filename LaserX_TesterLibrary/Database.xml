@@ -5526,19 +5526,7 @@ Database
  <param name="IDMeasurement"></param>
  <remarks></remarks>
 </member>
-<member name="M:Database.clsMeasurementWriter.BeforeInsertCommit(MySql.Data.MySqlClient.MySqlTransaction@)">
- <summary>
- Falls ein neuer Datensatz erstellt wurde, dann wird diese Methode vor dem Commit
- in <see cref="M:Database.clsTypeWriter.Update">Update</see> aufgerufen. 
- <para></para>
- <para>In diesem speziellen Fall vergibt sie die MeasurementNumbers, indem sie
- <see
- cref="M:Database.clsMeasurementWriter.AddMeasurementNumber(MySql.Data.MySqlClient.MySqlTransaction@)">AddMeasurementNumber</see>
- aufruft.</para>
- </summary>
- <param name="Transaction"></param>
-</member>
-<member name="M:Database.clsMeasurementWriter.AddMeasurementNumber(MySql.Data.MySqlClient.MySqlTransaction@)">
+<member name="M:Database.clsMeasurementWriter.AddMeasurementNumber(System.Object@)">
  <summary>
  Sorgt dafür, dass innerhalb der laufenden Transaktion die MeasurementNumber
  bestimmt wird und setzt sie.
@@ -6201,7 +6189,7 @@ Database
  <seealso
  cref="M:Database.clsTypeReader.FromDYN(System.String@)">FromDYN</seealso>
 </member>
-<member name="M:Database.clsTypeWriter.BeforeUpdateCommit(MySql.Data.MySqlClient.MySqlTransaction@)">
+<member name="M:Database.clsTypeWriter.BeforeUpdateCommit(System.Object@)">
  <summary>
  Falls ein Datensatz modifiziert wird, dann wird diese Methode vor dem Commit in
  <see cref="M:Database.clsTypeWriter.Update">Update</see> aufgerufen.
@@ -6210,7 +6198,7 @@ Database
  </summary>
  <param name="Transaction"></param>
 </member>
-<member name="M:Database.clsTypeWriter.BeforeInsertCommit(MySql.Data.MySqlClient.MySqlTransaction@)">
+<member name="M:Database.clsTypeWriter.BeforeInsertCommit(System.Object@)">
  <summary>
  Falls ein neuer Datensatz erstellt wurde, dann wird diese Methode vor dem Commit
  in <see cref="M:Database.clsTypeWriter.Update">Update</see> aufgerufen.
@@ -6980,7 +6968,7 @@ Database
  </summary>
  <param name="szCmd">Required.</param>
 </member>
-<member name="M:Database.clsDatabase.ExecuteScalar(System.String,MySql.Data.MySqlClient.MySqlTransaction)">
+<member name="M:Database.clsDatabase.ExecuteScalar(System.String,System.Object)">
  <summary>
  Führt ein Skalar aus.
  </summary>

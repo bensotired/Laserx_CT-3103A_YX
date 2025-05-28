@@ -1,4 +1,4 @@
-using SolveWare_Vision;
+ï»¿using SolveWare_Vision;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -9,17 +9,13 @@ namespace TestPlugin_Demo
 
     public enum PixPoint2D_Enum_CT3103
     {
-        ¾«¶¨Î»Ïà»ú_¶¥Õë¿×_ÖĞĞÄµãÏñËØ,
-
-        ¾«¶¨Î»Ïà»ú_Îü×ì1_¶¨Î»Æ¬_ÖĞĞÄµãÏñËØ,
-
-        ¹¤Î»1_ÏÂÏà»ú_Îü×ì1_ÖĞĞÄµãÏñËØ,
-
-        ¹¤Î»2_ÏÂÏà»ú_Îü×ì2_ÖĞĞÄµãÏñËØ,
-
-        ¹¤Î»2_ÏÂÏà»ú_Îü×ì3_ÖĞĞÄµãÏñËØ
-
+        ç²¾å®šä½ç›¸æœº_é¡¶é’ˆå£_ä¸­å¿ƒç‚¹åƒç´ ,       // Precision camera, pin port, center pixel
+        ç²¾å®šä½ç›¸æœº_è…”ä½“1_å®šä½ç‰‡_ä¸­å¿ƒç‚¹åƒç´ ,  // Precision camera, cavity 1, positioning piece, center pixel
+        å·¥ä½1_ä¸‹ç›¸æœº_è…”ä½“1_ä¸­å¿ƒç‚¹åƒç´ ,      // Workstation 1, bottom camera, cavity 1, center pixel
+        å·¥ä½2_ä¸‹ç›¸æœº_è…”ä½“2_ä¸­å¿ƒç‚¹åƒç´ ,      // Workstation 2, bottom camera, cavity 2, center pixel
+        å·¥ä½2_ä¸‹ç›¸æœº_è…”ä½“3_ä¸­å¿ƒç‚¹åƒç´        // Workstation 2, bottom camera, cavity 3, center pixel
     }
+
     public class PixelPoint_Provider_CT3103 : PixelPoint_ProviderBase
     {
         public PixelPoint_Provider_CT3103() : base()

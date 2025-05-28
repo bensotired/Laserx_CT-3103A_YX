@@ -1,0 +1,20 @@
+﻿5/27/2025 5:46:54 PM: Message: Second path fragment must not be a drive or UNC name.
+Parameter name: path2
+StackTrace:    at System.IO.Path.InternalCombine(String path1, String path2)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+   at General.modCommonCsvFunctions.SelectMostRecentFile(String directoryPath, String searchPattern, String filter) in C:\Users\Travis Koski\source\repos\Tunable_TestSuite_VB.NET\general\Modules\modCommonCsvFunctions.vb:line 162
+   at General.modCommonCsvFunctions.SelectCsvByFolderAndFilename(String folderName, String fileName, Boolean chooseMostRecent, String completePath, String fileExtension) in C:\Users\Travis Koski\source\repos\Tunable_TestSuite_VB.NET\general\Modules\modCommonCsvFunctions.vb:line 87
+
+
+5/27/2025 5:46:54 PM: Message: Second path fragment must not be a drive or UNC name.
+Parameter name: path2
+StackTrace:    at System.IO.Path.InternalCombine(String path1, String path2)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path, String searchPattern, SearchOption searchOption)
+   at General.modCommonCsvFunctions.SelectMostRecentFile(String directoryPath, String searchPattern, String filter) in C:\Users\Travis Koski\source\repos\Tunable_TestSuite_VB.NET\general\Modules\modCommonCsvFunctions.vb:line 162
+   at General.modCommonCsvFunctions.SelectCsvByFolderAndFilename(String folderName, String fileName, Boolean chooseMostRecent, String completePath, String fileExtension) in C:\Users\Travis Koski\source\repos\Tunable_TestSuite_VB.NET\general\Modules\modCommonCsvFunctions.vb:line 87
+
+

@@ -78,18 +78,15 @@
     </Reference>
     <Reference Include="MeSoft.Core, Version=1.10.2.44, Culture=neutral, PublicKeyToken=9cd7e28f25af7ad4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SolveWare_BurnInLibrary\MeSoft.Core.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\LaserX_GUI_DLLS\MeSoft.Core.dll</HintPath>
     </Reference>
     <Reference Include="MeSoft.MeCom.Core, Version=1.45.2.113, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SolveWare_BurnInLibrary\MeSoft.MeCom.Core.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\LaserX_GUI_DLLS\MeSoft.MeCom.Core.dll</HintPath>
     </Reference>
     <Reference Include="MeSoft.MeCom.PhyWrapper, Version=1.45.2.113, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SolveWare_BurnInLibrary\MeSoft.MeCom.PhyWrapper.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\LaserX_GUI_DLLS\MeSoft.MeCom.PhyWrapper.dll</HintPath>
     </Reference>
     <Reference Include="NationalInstruments.Common, Version=8.7.35.133, Culture=neutral, PublicKeyToken=18cbae0f9955702a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -321,6 +318,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\lxsmuconfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MeSoft_Dlls\MeSoft.Core.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MeSoft_Dlls\MeSoft.MeCom.Core.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MeSoft_Dlls\MeSoft.MeCom.PhyWrapper.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

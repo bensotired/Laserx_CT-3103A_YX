@@ -242,7 +242,7 @@ namespace TestPlugin_CoarseTuning
             try
             {
                 //get the list of target wavelengths from channels 1 to 96
-                List<double> ituChannelWavelengths = clsMtGrouperFunctions.GetItuWavelengthRange(-19, 110);
+                List<double> ituChannelWavelengths = clsMtGrouperFunctions.GetItuWavelengthRange(-19, 110, 196.15, 50);
                 //The following lines is how the VB gui does the coarse tuning: there may be a more concise way to write this, but this sequence
                 //has been tested, and works well for the time being
                 var mirr1ItuData = clsMtGrouperFunctions.ItuGridAll(midLines, ituChannelWavelengths.ToArray(), modUniversalLaserControllerHelpers.MIRROR1);
@@ -256,7 +256,7 @@ namespace TestPlugin_CoarseTuning
                 if (interpolatedMirr1Currents.Length > 0 && interpolatedMirr2Currents.Length > 0 && midlinePointers.Length > 0 && targetChannelWavelengths.Length > 0)
                 {
                     //command that generates the labeled points
-                    ituChannels = midlineAndItuFinder.GetLabledItuPoints(-19, targetChannelWavelengths, interpolatedMirr1Currents, interpolatedMirr2Currents, midlinePointers);
+                    ituChannels = midlineAndItuFinder.GetLabledItuPoints(-19, 110, targetChannelWavelengths, interpolatedMirr1Currents, interpolatedMirr2Currents, midlinePointers);
                     AssociateItuChannelsWithMidlines();
                 }
             }
