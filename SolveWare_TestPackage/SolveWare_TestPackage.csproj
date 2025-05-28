@@ -38,7 +38,7 @@
   <ItemGroup>
     <Reference Include="LaserXFineTuningDllTest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\source\repos\LaserXApi\LaserXFineTuningDllTest\bin\Debug\LaserXFineTuningDllTest.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\GitHub\LaserXApi\LaserXFineTuningDllTest\bin\Debug\LaserXFineTuningDllTest.dll</HintPath>
     </Reference>
     <Reference Include="LX_2DChartControl, Version=2023.8.30.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

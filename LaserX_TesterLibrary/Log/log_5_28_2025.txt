@@ -1,0 +1,24 @@
+﻿5/28/2025 9:23:40 AM: Error in Hardware.clsVisaCommunication.OpenCommChannel():  : Message: Insufficient location information or the device or resource is not present in the system.
+StackTrace:    at NationalInstruments.Visa.ResourceManager.Open(String resourceName, AccessModes accessModes, Int32 timeoutMilliseconds, ResourceOpenStatus& openStatus)
+   at NationalInstruments.Visa.ResourceManager.Open(String resourceName)
+   at Hardware.clsVisaCommunication.OpenCommChannel()
+
+
+5/28/2025 9:23:48 AM: Error in Hardware.clsVisaCommunication.OpenCommChannel():  : Message: Insufficient location information or the device or resource is not present in the system.
+StackTrace:    at NationalInstruments.Visa.ResourceManager.Open(String resourceName, AccessModes accessModes, Int32 timeoutMilliseconds, ResourceOpenStatus& openStatus)
+   at NationalInstruments.Visa.ResourceManager.Open(String resourceName)
+   at Hardware.clsVisaCommunication.OpenCommChannel()
+
+
+5/28/2025 10:22:26 AM: Error in Hardware.clsVisaCommunication.OpenCommChannel():  : Message: Insufficient location information or the device or resource is not present in the system.
+StackTrace:    at NationalInstruments.Visa.ResourceManager.Open(String resourceName, AccessModes accessModes, Int32 timeoutMilliseconds, ResourceOpenStatus& openStatus)
+   at NationalInstruments.Visa.ResourceManager.Open(String resourceName)
+   at Hardware.clsVisaCommunication.OpenCommChannel() in C:\Users\Travis Koski\Documents\GitHub\Tunable_TestSuite_VB.NET\hardware\Hardware\Classes\Communication\common\clsVISACommunication.vb:line 143
+
+
+5/28/2025 10:25:33 AM: Error in Hardware.clsVisaCommunication.OpenCommChannel():  : Message: Insufficient location information or the device or resource is not present in the system.
+StackTrace:    at NationalInstruments.Visa.ResourceManager.Open(String resourceName, AccessModes accessModes, Int32 timeoutMilliseconds, ResourceOpenStatus& openStatus)
+   at NationalInstruments.Visa.ResourceManager.Open(String resourceName)
+   at Hardware.clsVisaCommunication.OpenCommChannel() in C:\Users\Travis Koski\Documents\GitHub\Tunable_TestSuite_VB.NET\hardware\Hardware\Classes\Communication\common\clsVISACommunication.vb:line 143
+
+
