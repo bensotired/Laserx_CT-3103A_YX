@@ -404,6 +404,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="External_DLLs\LaserXFineTuningDllTest.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Image\ALLOW_CCW.png" />
     <Content Include="Image\ALLOW_CW.png" />
     <Content Include="Image\ALLOW_D.png" />
