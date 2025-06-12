@@ -387,6 +387,22 @@ Measurements
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:Measurements.clsAsynchronousMeasurement.ToDYN(System.Collections.Generic.List{System.Double})">
+ <summary>
+ 
+ </summary>
+ <param name="aList"></param>
+ <returns></returns>
+ <remarks>DO NOT REMOVE OR EDIT. This method is not congruent to the one from the General project and the BD-Logic will fail.</remarks>
+</member>
+<member name="M:Measurements.clsAsynchronousMeasurement.FromDYN(System.String@)">
+ <summary>
+ 
+ </summary>
+ <param name="strDYN"></param>
+ <returns></returns>
+ <remarks>DO NOT REMOVE OR EDIT. This method is not congruent to the one from the General project and the BD-Logic will fail.</remarks>
+</member>
 <member name="T:Measurements.clsFineTuneResultsAnalyzerAndGrapher">
  <summary>
  Class clsFineTuneResultsAnalyzerAndGrapher.
@@ -611,6 +627,92 @@ Generates an XY chart with a box and whisker plot detailing the SMSR statistics
  </summary>
  <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
 </member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.ConfigureElectrodeSettings(Measurements.clsAsyncSingleSweepMeasurement.eLaserControlPoints[],System.Action{System.String,System.Double})">
+ <summary>
+ Configures the startup settings (current or voltage) for various electrodes.
+ Excludes electrodes specified in the `electrodesToExclude` parameter.
+ </summary>
+ <param name="electrodesToInclude">Electrodes to exclude from configuration.</param>
+ <param name="configureAction">
+ A delegate representing the configuration method to call (e.g., ConfigureStartupCurrent or ConfigureStartupVoltage).
+ </param>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.ConfigureCurrentSourceStartups(Measurements.clsAsyncSingleSweepMeasurement.eLaserControlPoints[])">
+ <summary>
+ Configures the startup currents for various electrodes.
+ Excludes electrodes specified in the `electrodesToExclude` parameter.
+ </summary>
+ <param name="electrodesToInclude">Electrodes to exclude from configuration.</param>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.ConfigureVoltageSourceStartups(Measurements.clsAsyncSingleSweepMeasurement.eLaserControlPoints[])">
+ <summary>
+ Configures the startup voltages for various electrodes.
+ Excludes electrodes specified in the `electrodesToExclude` parameter.
+ </summary>
+ <param name="electrodesToInclude">Electrodes to exclude from configuration.</param>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.Measure">
+ <summary>
+ Performs a full measurement cycle:
+  - Prepares external instruments and laser
+  - Starts the measurement task
+  - Monitors for either measurement completion or user cancellation
+  - Processes the measurement result and performs analysis if successful
+  - Cleans up hardware states regardless of outcome
+ </summary>
+ <returns>
+ A Task representing the asynchronous operation, returning an <see cref="T:Measurements.clsAsynchronousMeasurement.enumMeasurementResult"/>:
+ - <c>Successful</c> if the measurement and analysis completed without issues
+ - <c>StoppedByUser</c> if the measurement was cancelled
+ - <c>ErrorOccured</c> if an error occurred during the measurement process
+ </returns>
+ <remarks>
+ This method observes a cancellation token for user-requested cancellation.
+ It ensures that hardware resources (laser, external instruments) are always
+ properly disabled, even in case of an error or cancellation.
+ </remarks>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.ConfigureLaserStartupSettings">
+ <summary>
+ Derived classes will implement this method to configure the startup settings for the laser controller
+ </summary>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.PerformMeasurement(System.Threading.CancellationToken)">
+ <summary>
+ Derived classes will implment this method to perform the actual sweep specified by the test specifications
+ </summary>
+ <returns>clsMeasurement.enumMeasurementResult.</returns>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.EnableExternalInstruments">
+ <summary>
+ Derived classes will implement this method to connect to the required external instruments
+ An external instrument is defined as something other than the laser itself
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.DisableExternalInstruments">
+ <summary>
+ Derived classes will implement this method to disconnect from anyexternal instruments
+ An external instrument is defined as something other than the laser itself
+ </summary>
+ <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.SaveDataToCsv(System.String)">
+ <summary>
+ Derived classes will implement this method to save any relevant data to a csv file in the format specified by the test specifications
+ </summary>
+ <param name="nameOfCaller">The name of caller.</param>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.DoCleanup">
+ <summary>
+ Derived classes will implement this method to clean up any resources used when the "dispose" method is called
+ </summary>
+</member>
+<member name="M:Measurements.clsAsyncSingleSweepMeasurement.PerformAnalysis">
+ <summary>
+ Derived classes will implement this method to perform any analysis specified by the specific test
+ </summary>
+</member>
 <member name="M:Measurements.clsMeasurement.ToDYN(System.Collections.Generic.List{System.Double})">
  <summary>
  
@@ -697,33 +799,170 @@ Generates an XY chart with a box and whisker plot detailing the SMSR statistics
  Derived classes will implement this method to perform any analysis specified by the specific test
  </summary>
 </member>
-<member name="M:Measurements.clsLivToPowerMeter.SendPlotDataToUi">
+<member name="M:Measurements.clsIvSweepV2.InitElectrodeToLaserControllerIdMap">
  <summary>
- Once the data is gathered, this function sends it to the UI (test form) to be plotted
+ Builds an association of electrode enumeration values to strings that are used 
+ to access certain electrodes in the laser controller class
  </summary>
 </member>
-<member name="M:Measurements.clsLivToPowerMeter.ConfigureSinglePhaseSweepSettings">
+<member name="M:Measurements.clsIvSweepV2.GetCurrentSweepElectrodeHandles">
  <summary>
- Configures the settings that the phase sweep will run at when the phase section mode is set to "phase sweep".
- Right now, these are hardcoded, but could be confgiurable later
+ Gets a list of electrode names that the laser controller will use for an IV current sweep.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Measurements.clsIvSweepV2.ComputeCurrentSweepMetric(Measurements.clsIvSweepV2.eElectrodes,System.Func{System.Double},System.Action{Measurements.clsIvSweepV2.eElectrodes,System.Double},System.Collections.Generic.Dictionary{Measurements.clsIvSweepV2.eElectrodes,System.Double})">
+ <summary>
+ Performs a current‐sweep calculation for a given electrode by:
+ 1. Verifying that the analyzer has been initialized.
+ 2. Invoking the provided <paramref name="valueProvider"/> to compute the metric.
+ 3. Calling <paramref name="resultHandler"/> to raise the appropriate event.
+ 4. Caching the result in <paramref name="targetMap"/>, if not already present.
+ </summary>
+ <param name="electrode">
+   The electrode identifier for which the metric is being computed.  
+   This value is used as the key when raising events and caching the result.
+ </param>
+ <param name="valueProvider">
+   A delegate that computes and returns the metric (e.g. series resistance or turn‐on voltage)
+   from <see cref="F:Measurements.clsIvSweepV2.m_currentSweepAnalyzer"/>.  It will only be invoked if
+   <see cref="F:Measurements.clsIvSweepV2.m_currentSweepAnalyzerInitialized"/> is <c>True</c>.
+ </param>
+ <param name="resultHandler">
+   An action that accepts the electrode and computed value.  Typically this will
+   raise the corresponding event to notify subscribers that the metric is ready.
+ </param>
+ <param name="targetMap">
+   A dictionary used to cache computed values keyed by electrode.  If the dictionary
+   already contains an entry for <paramref name="electrode"/>, the value will not be overwritten.
+ </param>
+ <remarks>
+   - If <see cref="F:Measurements.clsIvSweepV2.m_currentSweepAnalyzerInitialized"/> is <c>False</c>, no computation,
+     event raising, or caching occurs.  
+   - The cache step ensures that once a value for an electrode is stored, it remains
+     unchanged for the duration of this sweep pass.
+ </remarks>
+</member>
+<member name="M:Measurements.clsIvSweepV2.ComputeSeriesResistanceCurrentSweep(Measurements.clsIvSweepV2.eElectrodes)">
+ <summary>
+ Computes the series‐resistance metric for the specified electrode:
+ calls into <see cref="M:Measurements.clsIvSweepV2.ComputeCurrentSweepMetric(Measurements.clsIvSweepV2.eElectrodes,System.Func{System.Double},System.Action{Measurements.clsIvSweepV2.eElectrodes,System.Double},System.Collections.Generic.Dictionary{Measurements.clsIvSweepV2.eElectrodes,System.Double})"/> with the appropriate analyzer function,
+ event‐raiser, and cache dictionary.
+ </summary>
+ <param name="electrode">
+   The electrode for which to compute series resistance.
+ </param>
+ <remarks>
+   Subscribers to <see cref="!:SeriesResistanceCalculationReady"/> will be notified
+   once the value is available.
+ </remarks>
+</member>
+<member name="M:Measurements.clsIvSweepV2.ComputeTurnOnVoltageCurrentSweep(Measurements.clsIvSweepV2.eElectrodes)">
+ <summary>
+ Computes the turn-on voltage metric for the specified electrode:
+ calls into <see cref="M:Measurements.clsIvSweepV2.ComputeCurrentSweepMetric(Measurements.clsIvSweepV2.eElectrodes,System.Func{System.Double},System.Action{Measurements.clsIvSweepV2.eElectrodes,System.Double},System.Collections.Generic.Dictionary{Measurements.clsIvSweepV2.eElectrodes,System.Double})"/> with the appropriate analyzer function,
+ event‐raiser, and cache dictionary.
+ </summary>
+ <param name="electrode">
+   The electrode for which to compute turn-on voltage.
+ </param>
+ <remarks>
+   Subscribers to <see cref="!:TurnOnVoltageCalculationReady"/> will be notified
+   once the value is available.
+ </remarks>
+</member>
+<member name="M:Measurements.clsIvSweepV2.ComputeCurveFitQualityValueCurrentSweep(Measurements.clsIvSweepV2.eElectrodes)">
+ <summary>
+ Computes the curve fit quality (r-squared) value of the given current sweep curve then sends it to the UI
+ for display
  </summary>
 </member>
-<member name="M:Measurements.clsLivToSoa.MeasureSOA1">
+<member name="M:Measurements.clsIvSweepV2.ConfigureLaserStartupSettings">
  <summary>
- Measures the SOA1 photocurrent, or voltahe
+ Configures the laser controller's startup settings by initializing either voltages or currents
+ to 0 depending on the selected sweep type.
  </summary>
- <returns>System.Double.</returns>
 </member>
-<member name="M:Measurements.clsLivToSoa.MeasureSOA2">
+<member name="T:Measurements.clsIvSweepV2Analyzer">
  <summary>
- Measures the SOA2 photocurrent, or voltage
+ This class represents a template that all IV sweep analysis classes need to have in common. Namely, the ability
+ to calculate both series resistance, and turn on voltage. The implementation details depend on the class that
+ uses this template
  </summary>
- <returns>System.Double.</returns>
 </member>
-<member name="M:Measurements.clsLivToSoa.ConfigureCommonCsvWriterParams(General.clsCsvIndividualTestCsvHandlerV2)">
+<member name="T:Measurements.clsIvCurrentSweepLinearFitAnalyzer">
  <summary>
- Configures the common CSV writer parameters between the SOA measurement, and MPD csv files
+ This class employs linear curve fitting methods to calculate the series resistance and turn on voltage.
+ It also has specialty functions to analyze the curve quality like the R^2 value, etc
  </summary>
+</member>
+<member name="T:Measurements.clsLivSweep">
+ <summary>
+ Represents the template which all LIV sweeps (to power meter, and SOA) will follow
+ </summary>
+</member>
+<member name="M:Measurements.clsLivSweep.WriteTestParametersToCsv(General.clsCsvIndividualTestCsvHandlerV2)">
+ <summary>
+ Writes all of the test params (laser settings, sweep bounds, etc...)
+ </summary>
+ <param name="writer"></param>
+</member>
+<member name="M:Measurements.clsLivSweep.RunPreSweepAction">
+ <summary>
+ This action runs before the sweep itself starts
+ </summary>
+</member>
+<member name="M:Measurements.clsLivSweep.RunPreDataPointMeasurementAction">
+ <summary>
+ This action runs after the gain current is set in each iteration
+ </summary>
+</member>
+<member name="P:Measurements.clsLivSweep.AdditionalAxisIdentifiers">
+ <summary>
+ Represents additional axis ids which will be included in the csv header
+ i.e (Y2,Y3..)
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Measurements.clsLivSweep.AdditionalAxisNames">
+ <summary>
+ Represents additional axis names which go in the csv header. For example,
+ the liv to power meter has an optical power curve, so an additional axis name would be
+ "Optical power"
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Measurements.clsLivSweep.AdditionalAxisUnits">
+ <summary>
+ Represents additional axis units from specialized liv measurements which are included in the csv header.
+ For example, the LIV to power meter would have mW as an additional unit for the optical power curve
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Measurements.clsLivSweep.AdditionalCsvDataToSave">
+ <summary>
+ Represents additional data arrays to be saved into the csv file on top of the gain current, and voltage
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Measurements.clsLivSweep.AdditionalCsvDataRoundingPlaces">
+ <summary>
+ Represents the decimal places that additional data on top of the gain current and gain voltage will 
+ be rounded to
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Measurements.clsLivSweep.WriteThresholdEvaluationToCsv(General.clsCsvIndividualTestCsvHandlerV2)">
+ <summary>
+ Writes any threshold evaluation data calculated in child classes
+ </summary>
+ <param name="writer"></param>
+</member>
+<member name="P:Measurements.clsLivToPowerMeterV2.PhaseSweeper">
+ <summary>
+ Exposes the sweep object so it can be linked to the phase sweep plot control on the UI
+ </summary>
+ <returns></returns>
 </member>
 <member name="M:Measurements.clsMZMMapperV2.ConfigureCommonCsvParams(General.clsCsvIndividualTestCsvHandlerV2)">
  <summary>
@@ -731,43 +970,85 @@ Generates an XY chart with a box and whisker plot detailing the SMSR statistics
  </summary>
  <param name="writer">The writer.</param>
 </member>
-<member name="M:Measurements.clsPhase1_2Sweep.BuildPhaseCurrentAxis(System.Double,System.Double,System.Double,System.Int32)">
+<member name="M:Measurements.clsPhase1_2Sweep.FitAndAssign(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double}@,System.Collections.Generic.List{System.Double}@,System.Int32,System.Int32)">
  <summary>
- Helper function to build the current axis for phase 1 and 2
+ Fits X/Y data and assigns to output lists, using specified fit type and parameters.
  </summary>
- <param name="startCurrent">The start current.</param>
- <param name="stopCurrent">The stop current.</param>
- <param name="linearStepSize">Size of the linear step.</param>
- <param name="numSqrtSteps">The number SQRT steps.</param>
- <returns>List(Of System.Double).</returns>
+ <param name="xData">Input X values</param>
+ <param name="yData">Input Y values</param>
+ <param name="outX">Destination for fit X</param>
+ <param name="outY">Destination for fit Y</param>
+ <param name="fitType">Fit type (Spline, Polynomial, etc)</param>
+ <param name="numFitPoints">Number of fit points (default 500)</param>
+ <param name="polyDegree">Polynomial degree (default 9, ignored for spline)</param>
+</member>
+<member name="M:Measurements.clsPhase1_2Sweep.GetAllOpticalPowerPointsOfInterest">
+ <summary>
+ Returns all peaks, valleys, -3dB rising edge, and -3dB falling edge points
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Measurements.clsPhase1_2Sweep.PhaseSweepPointOfInterestHelper(System.Collections.Generic.List{General.modPhaseSweepAnalysis.PhaseSweepPointOfInterest})">
+ <summary>
+ Collects points of interest (peaks, valleys, and -3dB points) from phase sweep data.
+ </summary>
+ <param name="peaks">The list of PhaseSweepPointOfInterest instances.</param>
+ <returns>
+     peaks: Locations and intensities of peaks.
+     valleys: Locations and intensities of valleys.
+     minus3dBRisingPoints: Locations and intensities of -3dB rising edge points.
+     minus3dBFallingPoints: Locations and intensities of -3dB falling edge points.
+ </returns>
+</member>
+<member name="M:Measurements.clsPhase1_2Sweep.GetPowerPercentagePointWithLowestCurrent(System.Double,System.Nullable{System.Double})">
+ <summary>
+ Finds all of the -3d points on either a rising, or falling edge, and selects the one that is closest to 0mA to save power consumption
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Measurements.clsPhase1_2Sweep.GetHighPowerPointWithLowestCurrent">
+ <summary>
+ Gets the peak of the phase sweep graph with the lowest power consumption (phase 1 or 2 current)
+ </summary>
+ <returns>System.Double.</returns>
+</member>
+<member name="M:Measurements.clsPhase1_2Sweep.GetHighestPowerPoint">
+ <summary>
+ Retrieves the highest power point from a collection of phase sweep points.
+ </summary>
+ <returns>
+ A Tuple of two Double values:
+     - Item1: The phase current of the highest power point.
+     - Item2: The intensity of the highest power point.
+ </returns>
  <remarks>
- The linear step size param will be used if the StepType is set to linear mode.
- If set to sqrt mode, then the numSqrt steps param will be used
+ This function calls GetAllPhaseSweepPointsOfInterest() to obtain the phase sweep points,
+ which are assumed to be sorted by intensity in descending order. The function then
+ retrieves the maximum power point from the first (highest) peak in this collection.
+ 
+ The function is enclosed within a Try-Catch block for robust error handling. If an
+ exception occurs, it rethrows a new exception with detailed information including
+ the class and method names where the error occurred.
+ 
+ Usage Notes:
+ - Ensure that the GetAllPhaseSweepPointsOfInterest() method returns peaks sorted by intensity.
+ - The function returns a Tuple; the calling code should handle or unpack this Tuple accordingly.
+ 
+ Example:
+ Try
+     Dim powerPoint As (Double, Double) = GetHighestPowerPoint()
+     ' Use powerPoint.Item1 and powerPoint.Item2 as needed
+ Catch ex As Exception
+     ' Handle exceptions
+ End Try
  </remarks>
+ <exception cref="T:System.Exception">Thrown when an error occurs within the function.</exception>
 </member>
-<member name="M:Measurements.clsPhase1_2Sweep.PerformPhaseSweep(Measurements.clsPhase1_2Sweep.ePhaseElectrodes,System.Collections.Generic.List{System.Double},System.Collections.Generic.List{General.modGlobals.clsXYData}@,System.Collections.Generic.List{General.modGlobals.clsXYData}@,System.Collections.Generic.List{General.modGlobals.clsXYData}@)">
+<member name="M:Measurements.clsPhase1_2Sweep.GetIntensityExtremaPhaseCurrent(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Func{System.Collections.Generic.List{System.Double},System.Double})">
  <summary>
- Sweeps the specified phase electrode, gathering the measurment results
+ Generic function which returns the phase current where a max, or min occurs
  </summary>
- <param name="phaseElectrode">The phase electrode.</param>
- <param name="phaseCurrentAxis">The phase current axis.</param>
- <param name="measuredPowerResults">The measured power results.</param>
- <param name="measuredMpdResults">The measured MPD results.</param>
-</member>
-<member name="M:Measurements.clsPhase1_2Sweep.InitializePhaseElectrodes">
- <summary>
- records the initial phase electrode currents, then sets them both to 0 mA
- </summary>
-</member>
-<member name="M:Measurements.clsPhase1_2Sweep.ResetPhaseElectrodes">
- <summary>
- Sets the phase electrodes back to their initial current from before the sweep
- </summary>
-</member>
-<member name="M:Measurements.clsPhase1_2Sweep.PerformFits">
- <summary>
- After the data is measured, this function performs the polynomial fitting
- </summary>
+ <returns></returns>
 </member>
 <member name="M:Measurements.clsPowerConsumptionTest.AggregateCurrentSourcePowerConsumptions(System.String[])">
  <summary>
@@ -4646,6 +4927,12 @@ turned on
  2. A box and whisker plot to view more in depth statistics about the parameter 
  </summary>
 </member>
+<member name="T:Measurements.ctlLivSweepWithGainVoltagePlot">
+ <summary>
+ This control represents the plotting handler for all LIV sweep plots which have the gain voltage as one of the curves
+ The other curves (if any) are deciced by the extending classes
+ </summary>
+</member>
 <member name="M:Measurements.ctlBpgController.UpdateConnectionLED(System.Windows.Forms.Button,System.Boolean)">
  <summary>
  Generic method to handle UI LED for device connections.
@@ -5917,45 +6204,16 @@ turned on
  Computes the power hysteresis between corresponding SOA and Laser Phase combinations in the forward and backward laser phase sweeps.
  </summary>
 </member>
-<member name="M:Measurements.frmLivSweep.InitializePlots">
+<member name="M:Measurements.frmIvSweepV2.BuildSweepCheckBoxToConfigMap(System.ValueTuple{System.Windows.Forms.CheckBox,Measurements.clsIvSweepV2.eElectrodes,Measurements.ctlIVSweepConfig}[])">
  <summary>
- Initializes the titles, colors, axes, etc of all of the fastline plots, then adds them into their proper tee charts
+ Builds a map from sweep checkboxes to their corresponding configuration controls based on the provided mappings.
+ Only checked checkboxes are included in the map.
  </summary>
+ <param name="mappings">An array of (CheckBox, Electrode, Control) tuples.</param>
 </member>
-<member name="M:Measurements.frmLivSweep.CreateThresholdLine(System.Double,System.Drawing.Color,Steema.TeeChart.Axis)">
+<member name="M:Measurements.frmIvSweepV2.ResetUi">
  <summary>
- Sets up a threshold line with the specified properties.
- </summary>
- <param name="value">The threshold value.</param>
- <param name="color">The color of the line.</param>
- <param name="axis">The axis to which the line belongs.</param>
- <returns>The configured ColorLine tool.</returns>
-</member>
-<member name="M:Measurements.frmLivSweep.CreateAnnotation(System.String,System.Int32,Steema.TeeChart.Tools.AnnotationPositions,System.Int32)">
- <summary>
- Sets up a text annotation with the specified properties.
- </summary>
- <param name="text">The text to display.</param>
- <param name="fontSize">The font size of the annotation.</param>
- <param name="position">The position of the annotation.</param>
- <param name="left">The custom left position for the annotation.</param>
- <returns>The configured Annotation tool.</returns>
-</member>
-<member name="M:Measurements.frmLivSweep.AddToolsToChart(Steema.TeeChart.TChart,System.Object[])">
- <summary>
- Adds a collection of tools to a TChart.
- </summary>
- <param name="chart">The TChart to which the tools will be added.</param>
- <param name="tools">The tools to add.</param>
-</member>
-<member name="M:Measurements.frmLivSweep.PlotLivToPowerMeterThresholdCurrents">
- <summary>
- Plots LIV to power meter threshold currents on specified charts.
- </summary>
-</member>
-<member name="M:Measurements.frmLivSweep.ConfigureLivToSoaSettings">
- <summary>
- Configures the liv to soa settings such as the SOA measurement method, annd gain sweep parameters
+ Clears all plots, and analysis infortmation from the form
  </summary>
 </member>
 <member name="M:Measurements.frmPowerConsumption.#ctor">

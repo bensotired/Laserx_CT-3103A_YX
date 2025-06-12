@@ -1841,6 +1841,14 @@ the instance behind everything
  </code>
  </example>
 </member>
+<member name="M:General.modUtilities.IsStringNumeric(System.String)">
+ <summary>
+ Validates whether a given string looks like a numeric value using pattern matching.
+ Supports optional sign, integer, decimal, and scientific notation patterns.
+ </summary>
+ <param name="input">The input string to validate.</param>
+ <returns><c>True</c> if the string matches common numeric patterns; otherwise, <c>False</c>.</returns>
+</member>
 <member name="T:General.modAxisBuilding">
  <summary>
  Functions for building custom axes using a variety of different scales
@@ -1890,12 +1898,6 @@ the instance behind everything
  <param name="xAxisName"></param>
  <param name="yAxisName"></param>
  <param name="isTransparent"></param>
-</member>
-<member name="M:General.modChartDirectorPlotHelpers.ClearPlot(ChartDirector.WinChartViewer@)">
- <summary>
- utility that "clears" a plot viewer by setting it to a dummy x y chart with no data in it
- </summary>
- <param name="chartViewer"></param>
 </member>
 <member name="M:General.modChartDirectorPlotHelpers.SetupPlotArea(ChartDirector.WinChartViewer@,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.String)">
  <summary>
@@ -2126,7 +2128,8 @@ the instance behind everything
 </member>
 <member name="M:General.modEvaluationAlgorithms.CalcSeriesResistanceVICurve(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double})">
  <summary>
- calculates series resistance of a VI curve by using the maximum first derivative, and doing 1/result
+ Calculates the series resistance of a VI curve by using the first derivative.
+ For increasing Y, uses 1 / max derivative. For decreasing Y, uses 1 / min derivative.
  </summary>
  <param name="X_values"></param>
  <param name="Y_values"></param>
@@ -2214,19 +2217,6 @@ the instance behind everything
  ' Result will now contain only increasing subsequences.
  </code>
  </example>
-</member>
-<member name="M:General.modEvaluationAlgorithms.FindSubsequenceWithBadFitClosestToZero(System.Double[],System.Double[],System.Int32,System.Nullable{System.Double})">
- <summary>
- Iterates thru each sequence of a given length, and does the following:
- 1. performs a linear fit on the sequence, and records the RMSE (root mean squared error) value, and adds the association to a dictionary
- 2. Takes the reions which have an RMSE value of at least 20% of the max RMSE value calcaulted; these are the regions that do not have a good fit
- 3. Sorts the regions by X values in ascending order
- 4. Returns the region which has the lowest x values
- </summary>
- <param name="XValues"> input x values</param>
- <param name="yValues"> input y values</param>
- <param name="seqLen"> the length of each sequence</param>
- <returns>The region with the lowest x values which has an RMSE of at least 20% of the max RMSE value</returns>
 </member>
 <member name="M:General.modEvaluationAlgorithms.ComputeThresholdCurrentUsingIncreasingSubsequences(System.Double[],System.Double[],System.Int32)">
  <summary>
@@ -3779,6 +3769,64 @@ Triggers the request for the etalon temperature variable in modGlobalTestParams 
  Core method that sets up and writes OSA data to CSV, given parameters and evaluation data.
  </summary>
 </member>
+<member name="P:General.modIvSweepAnalysis.Currents">
+ <summary>
+ The currents array to fit (in mA).
+ </summary>
+</member>
+<member name="P:General.modIvSweepAnalysis.Voltages">
+ <summary>
+ The voltages array to fit (in V).
+ </summary>
+</member>
+<member name="P:General.modIvSweepAnalysis.MaxAllowedAbsKink">
+ <summary>
+ Maximum allowed absolute second-derivative kink when selecting the linear portion.
+ </summary>
+</member>
+<member name="P:General.modIvSweepAnalysis.HighestCurrentConsidered">
+ <summary>
+ Highest current (mA) used in the fit.
+ </summary>
+</member>
+<member name="P:General.modIvSweepAnalysis.LowestCurrentConsidered">
+ <summary>
+ Lowest current (mA) used in the fit.
+ </summary>
+</member>
+<member name="P:General.modIvSweepAnalysis.NumPointsUsedInFit">
+ <summary>
+ Number of points used in the linear fit.
+ </summary>
+</member>
+<member name="P:General.modIvSweepAnalysis.R2Value">
+ <summary>
+ R² of the linear fit.
+ </summary>
+</member>
+<member name="P:General.modIvSweepAnalysis.LastTurnOnVoltage">
+ <summary>
+ Last-computed turn-on voltage (V).
+ </summary>
+</member>
+<member name="P:General.modIvSweepAnalysis.LastSeriesResistance">
+ <summary>
+ Last-computed series resistance (Ω).
+ </summary>
+</member>
+<member name="M:General.modIvSweepAnalysis.Initialize(System.Double[],System.Double[])">
+ <summary>
+ Reset module state and set the arrays to fit.
+ </summary>
+ <param name="currents_mA">Array of currents in mA.</param>
+ <param name="voltages_V">Array of voltages in V.</param>
+</member>
+<member name="M:General.modIvSweepAnalysis.BuildLinearFit">
+ <summary>
+ Builds the 1-D barycentric interpolant over the selected “most linear” portion,
+ and populates the intermediate metrics (R², min/max current, point count).
+ </summary>
+</member>
 <member name="M:General.modLaserPhaseSweepAnalysis.GetStableRegions(System.Collections.Generic.List{General.modGlobals.clsXYData})">
  <summary>
  Utility function to return each "stable" region in a wavelength vs laser phase graph
@@ -3956,6 +4004,17 @@ Triggers the request for the etalon temperature variable in modGlobalTestParams 
  <param name="curveData">The curve data in List of clsXYData format.</param>
  <param name="absVariationFromMinimum">Optional parameter for variation check.</param>
  <returns>Threshold current value as Double.</returns>
+</member>
+<member name="M:General.modLIVSweepAnalysis.GetSoaThresholdCurrent(System.Collections.Generic.List{General.modGlobals.clsXYData},System.String)">
+ <summary>
+ Wrapper for when SOA data is in a list of clsXYData.
+ </summary>
+</member>
+<member name="M:General.modLIVSweepAnalysis.GetSoaThresholdCurrent(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.String)">
+ <summary>
+ Gets SOA threshold current given gain inputs and SOA outputs as two double lists.
+ Handles smoothing and threshold method selection.
+ </summary>
 </member>
 <member name="M:General.modLIVSweepAnalysis.GetPowerAtSpecificGainCurrent(System.Double[],System.Double[],System.Double)">
  <summary>
@@ -4260,7 +4319,7 @@ Triggers the request for the etalon temperature variable in modGlobalTestParams 
  The conversion might not capture all the nuances of ChartFont if it contains properties not directly mappable to .NET Font.
  </remarks>
 </member>
-<member name="M:General.modTeeChartUtilities.IntializeFastlineSeries(Steema.TeeChart.Styles.FastLine@,System.String,System.Drawing.Color,System.Int32,Steema.TeeChart.Styles.VerticalAxis)">
+<member name="M:General.modTeeChartUtilities.InitializeFastlineSeries(Steema.TeeChart.Styles.FastLine@,System.String,System.Drawing.Color,System.Int32,Steema.TeeChart.Styles.VerticalAxis)">
  <summary>
  utility function to easily initialize the title, color, width, and vertical axis of a fastline
  </summary>
