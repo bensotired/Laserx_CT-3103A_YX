@@ -95,6 +95,23 @@ namespace SolveWare_TesterCore
             }
         }
 
+        public void InitializeInstrumentsChassisForOES()
+        {
+            //连接所有通信底层
+            this.Log_Global("正在连接通信底层...");
+            foreach (var comChas in this.InstrumentChassisDict.Values)
+            {
+                this.Log_Global($"正在连接通信底层[{comChas.Name}][{comChas.Resource}]默认在线状态[{comChas.IsOnline}]...");
+                if (comChas.Name.Contains("9078")|| comChas.Name.Contains("TC")|| comChas.Name.Contains("OSwitch"))
+                {
+                }
+                else
+                { 
+                    comChas.Initialize(comChas.InitTimeout_ms);
+                }
+            }
+        }
+
         public void InitializeInstruments()
         {
             //分配通信底层到仪器
@@ -109,6 +126,29 @@ namespace SolveWare_TesterCore
             {
                 this.Log_Global($"正在分配通信底层到辅助仪器[{inst.Name}]ID[{inst.Address}]...");
                 inst.Initialize();
+            }
+        }
+
+        public void InitializeInstrumentsForOES()
+        {
+            //分配通信底层到仪器
+            this.Log_Global("正在分配通信底层到辅助仪器...");
+            foreach (var auxInst in this.AuxiliaryInstrumentDict.Values)
+            {
+                this.Log_Global($"正在分配通信底层到辅助仪器[{auxInst.Name}]ID[{auxInst.Address}]...");
+                auxInst.Initialize();
+            }
+            this.Log_Global("正在分配通信底层到仪器...");
+            foreach (var inst in this.InstrumentDict.Values)
+            {
+                this.Log_Global($"正在分配通信底层到辅助仪器[{inst.Name}]ID[{inst.Address}]...");
+                if (inst.Name.Contains("9078") || inst.Name.Contains("TC") || inst.Name.Contains("OSwitch"))
+                {
+                }
+                else
+                {
+                    inst.Initialize();
+                }
             }
         }
         public void InitializeMonitors()
@@ -348,6 +388,35 @@ namespace SolveWare_TesterCore
             catch (Exception ex)
             {
                 this.Log_Global($"释放资源错误:[{ex.Message}{ex.StackTrace}]!");
+            }
+        }
+
+        public  override void CloseForOES()
+        {
+            try
+            {
+                ShutDownMonitor();
+                foreach (var chas in this.InstrumentChassisDict.Values)
+                {
+                    //20240711 不能因为某个不能关闭而后面的都关闭了
+                    try
+                    {
+                        if (chas.Name.Contains("9078") || chas.Name.Contains("TC") || chas.Name.Contains("OSwitch"))
+                        {
+                        }
+                        else
+                        {
+                            chas.ClearConnection();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                this.Log_Global($"CloseForOES 释放资源错误:[{ex.Message}{ex.StackTrace}]!");
             }
         }
     }

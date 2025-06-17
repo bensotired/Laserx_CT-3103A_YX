@@ -1395,7 +1395,7 @@ namespace SolveWare_TesterCore
         {
             try
             {
-                TestStationManager.Instance.Close();    
+                TestStationManager.Instance.CloseForOES();
             }
             catch (Exception)
             {
@@ -1408,8 +1408,8 @@ namespace SolveWare_TesterCore
         {
             try
             {
-                TestStationManager.Instance.InitializeInstrumentsChassis();
-                TestStationManager.Instance.InitializeInstruments();
+                TestStationManager.Instance.InitializeInstrumentsChassisForOES();
+                TestStationManager.Instance.InitializeInstrumentsForOES();
                 TestStationManager.Instance.InitializeMonitors();
             }
             catch (Exception)

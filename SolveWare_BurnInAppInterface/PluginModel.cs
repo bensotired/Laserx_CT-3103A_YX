@@ -43,6 +43,17 @@ namespace SolveWare_BurnInAppInterface
             }
         }
 
+        public virtual void CloseForOES()
+        {
+            if (this.modelTask != null)
+            {
+                if (this._myTokenSource.IsCancellationRequested == false)
+                {
+                    this._myTokenSource.Cancel();
+                }
+            }
+        }
+
 
 
         protected virtual void Cancel()
