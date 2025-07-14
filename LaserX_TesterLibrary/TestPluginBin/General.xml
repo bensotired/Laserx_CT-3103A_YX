@@ -1507,6 +1507,16 @@ the instance behind everything
  Thrown when the <paramref name="array"/> is null.
  </exception>
 </member>
+<member name="M:General.modCommonDataStructureHelpers.AnyListsOverlap(System.Collections.Generic.List{System.Collections.Generic.List{System.Double}},System.Collections.Generic.List{System.Collections.Generic.List{System.Double}})">
+ <summary>
+ Determines if any list in the second list of 2D lists overlaps with any list in the first list.
+ Each inner list is assumed to be sorted in ascending order.
+ Overlap is defined as any intersection of numeric ranges formed by the min and max of the inner lists.
+ </summary>
+ <param name="firstList">A list of sorted double lists representing numeric intervals.</param>
+ <param name="secondList">A list of sorted double lists to check for overlap with the first list.</param>
+ <returns>True if any list in secondList overlaps with any list in firstList; otherwise, False.</returns>
+</member>
 <member name="M:General.modCommonDataStructureHelpers.GenerateValues(System.Double,System.Double,System.Int32)">
  <summary>
  Generates an array of evenly spaced values between a specified start and end value.
@@ -3834,6 +3844,17 @@ Triggers the request for the etalon temperature variable in modGlobalTestParams 
  </summary>
  <param name="wavelengthData"></param>
  <returns></returns>
+</member>
+<member name="M:General.modLaserPhaseSweepAnalysis.SegmentLaserPhaseCurrentsByMeanThreshold(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double})">
+ <summary>
+ Segments the x-values into runs between true “mode jumps,” 
+ where a mode jump is any crossing of the mean(y) line.
+ </summary>
+ <param name="xVals">Monotonic x-values.</param>
+ <param name="yVals">Corresponding y-values.</param>
+ <returns>
+ A List(Of List(Of Double)), each inner list is the x-run between successive crossings of the y-mean.
+ </returns>
 </member>
 <member name="M:General.modLaserPhaseSweepAnalysis.GetMidPointBetween2ModeJumps(System.Collections.Generic.List{General.modLaserPhaseSweepAnalysis.LaserPhaseSweepModeJump})">
  <summary>

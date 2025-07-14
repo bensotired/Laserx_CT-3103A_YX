@@ -1519,11 +1519,6 @@ Builds the rows used to represent midline data. This data eventually gets writte
  If the list has fewer than two elements, no oscillations are counted.
  </remarks>
 </member>
-<member name="M:Measurements.clsFineTunerAndSoaBalancer.ExecuteFineTuningStep">
- <summary>
- Executes an iteration of phase, and laser phase sweeps, recording back the analysis results from them both
- </summary>
-</member>
 <member name="M:Measurements.clsFineTunerAndSoaBalancer.CenterMirrorsInSuperMode">
  <summary>
  Centers the point within a midline by running an orthogonal scan, then selecting the 50% point
@@ -1590,6 +1585,12 @@ Builds the rows used to represent midline data. This data eventually gets writte
  Adjusts the laser phase section.
  </summary>
  <param name="laserPhaseCurrent">The laser phase current.</param>
+</member>
+<member name="M:Measurements.clsFineTunerAndSoaBalancer.CheckModeHoppingFailure">
+ <summary>
+ Checks whether there has been a mode hopping failure by comparing the current and previous
+ incorrect laser phase regions. If any overlap is detected, increments the failure counter.
+ </summary>
 </member>
 <member name="M:Measurements.clsFineTunerAndSoaBalancer.RunBiDirectionalLaserPhaseSweep">
  <summary>
@@ -2257,14 +2258,6 @@ Base behavior of stopping the measurement if the SOAS get too high for safety.
  <summary>
  SImilar to the DC power target check, but the RF equipment will be running, and the tolerance will be 0.5 dB
  </summary>
- <returns></returns>
-</member>
-<member name="M:Measurements.clsFineTuningAndSoaBalancingWithRfValidation.VerifyPowerStillInTarget(System.Double)">
- <summary>
- In the case of an rf power step being taken, we do not want the default behavior of checking the output power,
- because the DC power will read too high in that case.
- </summary>
- <param name="subTolerance"></param>
  <returns></returns>
 </member>
 <member name="M:Measurements.clsFineTuningAndSoaBalancingWithRfValidation.AllRfParamsOnTarget(System.Boolean)">
@@ -3773,6 +3766,13 @@ Base behavior of stopping the measurement if the SOAS get too high for safety.
  <param name="type">The type.</param>
  <returns>System.Object.</returns>
 </member>
+<member name="M:Measurements.clsMZMDiagonalTest.IsOverBiasState">
+ <summary>
+ Checks to see if the MZM curve suggests an over-bias problem.
+ an over bias problem occurs when the maximum value is at the end o
+ </summary>
+ <returns></returns>
+</member>
 <member name="M:Measurements.clsMZMDiagonalTest.Measure">
  <summary>
  Full measurement algorithm which starts up hardware, runs the sweep, then shuts it back down 
@@ -4772,7 +4772,7 @@ turned on
  </summary>
  <returns></returns>
 </member>
-<member name="M:Measurements.clsPhaseSweep.GetHalfPowerPointWithLowestCurrent(System.Double,System.Nullable{System.Double})">
+<member name="M:Measurements.clsPhaseSweep.GetHalfPowerPointWithLowestCurrent(System.Double,System.Nullable{System.Double},System.Double)">
  <summary>
  Finds all of the -3d points on either a rising, or falling edge, and selects the one that is closest to 0mA to save power consumption
  </summary>
@@ -4878,6 +4878,16 @@ turned on
 <member name="T:Measurements.ctlFineTuningMainPlots">
  <summary>
  Central control to easily plot fine tuning data
+ </summary>
+</member>
+<member name="M:Measurements.ctlFineTuningMainPlots.AttachPowerAndXingModeEventHandler(Measurements.clsFineTunerAndSoaBalancer)">
+ <summary>
+ Attaches handler for PowerAndXingOptimizationModeChanged if object is the right type.
+ </summary>
+</member>
+<member name="M:Measurements.ctlFineTuningMainPlots.DetachPowerAndXingModeEventHandler(Measurements.clsFineTunerAndSoaBalancer)">
+ <summary>
+ Detaches handler for PowerAndXingOptimizationModeChanged if previously attached.
  </summary>
 </member>
 <member name="M:Measurements.ctlFineTuningMainPlots.PlaceNewMirrorCoordinatesOnZoomedMtMap(System.Double,System.Double)">
