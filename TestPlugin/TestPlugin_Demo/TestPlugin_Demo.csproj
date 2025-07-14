@@ -60,9 +60,9 @@
       <HintPath>..\..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="LaserXFineTuningDllTest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="LaserXFineTuningDllTest, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Documents\GitHub\LaserXApi\LaserXFineTuningDllTest\bin\Debug\LaserXFineTuningDllTest.dll</HintPath>
+      <HintPath>External_DLLs\LaserXFineTuningDllTest.dll</HintPath>
     </Reference>
     <Reference Include="LX_BurnInSolution.Log">
       <HintPath>..\..\LaserX_TesterLibrary\LX_BurnInSolution.Log.dll</HintPath>
@@ -405,7 +405,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="External_DLLs\LaserXFineTuningDllTest.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\ALLOW_CCW.png" />
     <Content Include="Image\ALLOW_CW.png" />

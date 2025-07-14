@@ -327,7 +327,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="External_Dlls\LaserXFineTuningDllTest.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
