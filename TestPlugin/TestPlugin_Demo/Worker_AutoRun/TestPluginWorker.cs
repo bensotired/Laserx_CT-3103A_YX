@@ -839,6 +839,7 @@ namespace TestPlugin_Demo
                 if (frmMain == null)
                 {
                     frmMain = new LaserXFineTuningDllTest.frmMain();
+                    frmMain.PrintMe();
                     frmMain.MirrDiagGainCurrent = 130;
                     frmMain.MirrDiagLaserPhaseCurrent = 4;
                     frmMain.MirrDiagPhase1Current = 1;

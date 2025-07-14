@@ -36,10 +36,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LaserXFineTuningDllTest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>External_Dlls\LaserXFineTuningDllTest.dll</HintPath>
-    </Reference>
     <Reference Include="LX_2DChartControl, Version=2023.8.30.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\LaserX_TesterLibrary\LX_2DChartControl.dll</HintPath>
@@ -326,9 +322,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="External_Dlls\LaserXFineTuningDllTest.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Folder Include="External_Dlls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

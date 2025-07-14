@@ -57,6 +57,7 @@ namespace SolveWare_TestPackage
                     frmMain.MirrDiagSoa2Current = 40;
                     frmMain.MirrDiagMZM1Voltage = -2.5M; //These are decimal data types, so using the 'M' handles the type casting
                     frmMain.MirrDiagMZM2Voltage = -2.5M;
+
                 }
             }
             catch (Exception ex)
