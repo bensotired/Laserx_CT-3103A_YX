@@ -111,8 +111,7 @@ namespace SolveWare_TestPackage
             {
                 frmMain.Show();
                 SetChipInformation();
-                TransferQuickWavelngthSettings();
-                autoTestResult = await frmMain.ExecuteAutoTest();
+                autoTestResult = await frmMain.ExecuteFineTuningTest();
                 frmMain.Hide(); //IMPORTANT, use hide() instead of close since calling Close() will dispose the form.
             }
             else

@@ -839,7 +839,6 @@ namespace TestPlugin_Demo
                 if (frmMain == null)
                 {
                     frmMain = new LaserXFineTuningDllTest.frmMain();
-                    frmMain.PrintMe();
                     frmMain.MirrDiagGainCurrent = 130;
                     frmMain.MirrDiagLaserPhaseCurrent = 4;
                     frmMain.MirrDiagPhase1Current = 1;
@@ -874,9 +873,10 @@ namespace TestPlugin_Demo
             if (frmMain != null)
             {
                 frmMain.Show();
+                SetFineTuningInputFileNames();
                 SetChipInformation();
                 TransferQuickWavelngthSettings();
-                autoTestResult = await frmMain.ExecuteAutoTest();
+                autoTestResult = await frmMain.ExecuteFineTuningTest();
                 frmMain.Hide(); //IMPORTANT, use hide() instead of close since calling Close() will dispose the form.
             }
             else
@@ -926,8 +926,24 @@ namespace TestPlugin_Demo
                 frmMain.OeskID = "Dll_demo";
             }
         }
-        #endregion 
+        #endregion
+        #endregion
 
+        #region Mirror map and coarse tuning fileName input        
+        /// <summary>
+        /// Sets the filename which the fine tuning routine uses as its input
+        /// The file names for the mirror map wavelength, the coarse tuning midlines,
+        /// and coarse tuning deviations are set in this method
+        /// </summary>
+       private void SetFineTuningInputFileNames()
+        {
+          if(frmMain != null)
+            {
+                frmMain.MirrorMapWlFileName = ""; //Set this fileName to the corresponding mirror tuning wavelength name
+                frmMain.CoarseTuningMidlineFileName = ""; //Set this to the corresponding midline file name 
+                frmMain.CoarseTuningDeviationsFileName = ""; //Set this to the corresponding coarse tuning deviations file name
+            }
+        }
         #endregion
 
     }
