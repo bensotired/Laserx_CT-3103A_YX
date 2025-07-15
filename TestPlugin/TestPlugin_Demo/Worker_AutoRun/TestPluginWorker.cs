@@ -51,6 +51,10 @@ namespace TestPlugin_Demo
         }
 
 
+        public string MMFilePath = "";
+        public string CTMFilePath = "";
+        public string CTDFilePath = "";
+
         public override void StartUp()
         {
             try
@@ -937,11 +941,11 @@ namespace TestPlugin_Demo
         /// </summary>
        private void SetFineTuningInputFileNames()
         {
-          if(frmMain != null)
+            if (frmMain != null)
             {
-                frmMain.MirrorMapWlFileName = ""; //Set this fileName to the corresponding mirror tuning wavelength name
-                frmMain.CoarseTuningMidlineFileName = ""; //Set this to the corresponding midline file name 
-                frmMain.CoarseTuningDeviationsFileName = ""; //Set this to the corresponding coarse tuning deviations file name
+                frmMain.MirrorMapWlFileName = MMFilePath; //Set this fileName to the corresponding mirror tuning wavelength name
+                frmMain.CoarseTuningMidlineFileName = CTMFilePath; //Set this to the corresponding midline file name 
+                frmMain.CoarseTuningDeviationsFileName = CTDFilePath; //Set this to the corresponding coarse tuning deviations file name
             }
         }
         #endregion

@@ -312,6 +312,15 @@ namespace TestPlugin_Demo
             this.txt_SelectedChannel_Deviations = new System.Windows.Forms.TextBox();
             this.txt_SelectedFileList_Deviations = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnCTDSelect = new System.Windows.Forms.Button();
+            this.txtCTD_Path = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.btnCTMSelect = new System.Windows.Forms.Button();
+            this.txtCTM_Path = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.btnMMSelect = new System.Windows.Forms.Button();
+            this.txtMM_Path = new System.Windows.Forms.TextBox();
+            this.lb1 = new System.Windows.Forms.Label();
             this.btnConnectAllInstruments = new System.Windows.Forms.Button();
             this.btnRunOESTest = new System.Windows.Forms.Button();
             this.btnDisConnectAllInstruments = new System.Windows.Forms.Button();
@@ -371,9 +380,10 @@ namespace TestPlugin_Demo
             this.tb_MainPage.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tb_MainPage.ItemSize = new System.Drawing.Size(48, 38);
             this.tb_MainPage.Location = new System.Drawing.Point(0, 0);
+            this.tb_MainPage.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MainPage.Name = "tb_MainPage";
             this.tb_MainPage.SelectedIndex = 0;
-            this.tb_MainPage.Size = new System.Drawing.Size(1339, 858);
+            this.tb_MainPage.Size = new System.Drawing.Size(1785, 1072);
             this.tb_MainPage.TabIndex = 7;
             this.tb_MainPage.SelectedIndexChanged += new System.EventHandler(this.tb_MainPage_SelectedIndexChanged);
             // 
@@ -381,9 +391,10 @@ namespace TestPlugin_Demo
             // 
             this.tabPage测试.Controls.Add(this.tab_TestPage);
             this.tabPage测试.Location = new System.Drawing.Point(4, 42);
+            this.tabPage测试.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage测试.Name = "tabPage测试";
-            this.tabPage测试.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage测试.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage测试.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage测试.Size = new System.Drawing.Size(1777, 1026);
             this.tabPage测试.TabIndex = 7;
             this.tabPage测试.Text = "测试";
             this.tabPage测试.UseVisualStyleBackColor = true;
@@ -394,10 +405,11 @@ namespace TestPlugin_Demo
             this.tab_TestPage.Controls.Add(this.tabPage9);
             this.tab_TestPage.Controls.Add(this.tabPage12);
             this.tab_TestPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_TestPage.Location = new System.Drawing.Point(3, 3);
+            this.tab_TestPage.Location = new System.Drawing.Point(4, 4);
+            this.tab_TestPage.Margin = new System.Windows.Forms.Padding(4);
             this.tab_TestPage.Name = "tab_TestPage";
             this.tab_TestPage.SelectedIndex = 0;
-            this.tab_TestPage.Size = new System.Drawing.Size(1325, 806);
+            this.tab_TestPage.Size = new System.Drawing.Size(1769, 1018);
             this.tab_TestPage.TabIndex = 1;
             // 
             // tabPage9
@@ -405,9 +417,10 @@ namespace TestPlugin_Demo
             this.tabPage9.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage9.Controls.Add(this.pnl_TestEnterance);
             this.tabPage9.Location = new System.Drawing.Point(4, 4);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1317, 780);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Size = new System.Drawing.Size(1761, 989);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "测试配置";
             // 
@@ -415,18 +428,20 @@ namespace TestPlugin_Demo
             // 
             this.pnl_TestEnterance.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_TestEnterance.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.pnl_TestEnterance.Location = new System.Drawing.Point(3, 3);
+            this.pnl_TestEnterance.Location = new System.Drawing.Point(4, 4);
+            this.pnl_TestEnterance.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_TestEnterance.Name = "pnl_TestEnterance";
-            this.pnl_TestEnterance.Size = new System.Drawing.Size(1311, 774);
+            this.pnl_TestEnterance.Size = new System.Drawing.Size(1753, 981);
             this.pnl_TestEnterance.TabIndex = 0;
             // 
             // tabPage12
             // 
             this.tabPage12.Controls.Add(this.pnl_RuntimeOverviewPage);
             this.tabPage12.Location = new System.Drawing.Point(4, 4);
+            this.tabPage12.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(1317, 780);
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage12.Size = new System.Drawing.Size(1761, 989);
             this.tabPage12.TabIndex = 1;
             this.tabPage12.Text = "实时数据";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -434,17 +449,19 @@ namespace TestPlugin_Demo
             // pnl_RuntimeOverviewPage
             // 
             this.pnl_RuntimeOverviewPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_RuntimeOverviewPage.Location = new System.Drawing.Point(3, 3);
+            this.pnl_RuntimeOverviewPage.Location = new System.Drawing.Point(4, 4);
+            this.pnl_RuntimeOverviewPage.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_RuntimeOverviewPage.Name = "pnl_RuntimeOverviewPage";
-            this.pnl_RuntimeOverviewPage.Size = new System.Drawing.Size(1311, 774);
+            this.pnl_RuntimeOverviewPage.Size = new System.Drawing.Size(1753, 981);
             this.pnl_RuntimeOverviewPage.TabIndex = 1;
             // 
             // tabPage调试
             // 
             this.tabPage调试.Controls.Add(this.tableLayoutPanel4);
             this.tabPage调试.Location = new System.Drawing.Point(4, 42);
+            this.tabPage调试.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage调试.Name = "tabPage调试";
-            this.tabPage调试.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage调试.Size = new System.Drawing.Size(1777, 1026);
             this.tabPage调试.TabIndex = 17;
             this.tabPage调试.Text = "马达运动";
             this.tabPage调试.UseVisualStyleBackColor = true;
@@ -453,23 +470,25 @@ namespace TestPlugin_Demo
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel4.Controls.Add(this.panel_debug, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 812F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1331, 812);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1026F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1777, 1026);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // panel_debug
             // 
             this.panel_debug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_debug.Location = new System.Drawing.Point(3, 3);
+            this.panel_debug.Location = new System.Drawing.Point(4, 4);
+            this.panel_debug.Margin = new System.Windows.Forms.Padding(4);
             this.panel_debug.Name = "panel_debug";
-            this.panel_debug.Size = new System.Drawing.Size(1325, 806);
+            this.panel_debug.Size = new System.Drawing.Size(1769, 1018);
             this.panel_debug.TabIndex = 1;
             // 
             // tabPage数据库
@@ -477,9 +496,10 @@ namespace TestPlugin_Demo
             this.tabPage数据库.Controls.Add(this.panel7);
             this.tabPage数据库.Controls.Add(this.label2);
             this.tabPage数据库.Location = new System.Drawing.Point(4, 42);
+            this.tabPage数据库.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage数据库.Name = "tabPage数据库";
-            this.tabPage数据库.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage数据库.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage数据库.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage数据库.Size = new System.Drawing.Size(1777, 1026);
             this.tabPage数据库.TabIndex = 0;
             this.tabPage数据库.Text = "数据库";
             this.tabPage数据库.UseVisualStyleBackColor = true;
@@ -488,9 +508,10 @@ namespace TestPlugin_Demo
             // 
             this.panel7.Controls.Add(this.tableLayoutPanel5);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Location = new System.Drawing.Point(4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1325, 806);
+            this.panel7.Size = new System.Drawing.Size(1769, 1018);
             this.panel7.TabIndex = 20;
             // 
             // tableLayoutPanel5
@@ -502,12 +523,13 @@ namespace TestPlugin_Demo
             this.tableLayoutPanel5.Controls.Add(this.panel10, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.38441F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.06209F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1325, 806);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1769, 1018);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // panel1
@@ -546,9 +568,10 @@ namespace TestPlugin_Demo
             this.panel1.Controls.Add(this.label32);
             this.panel1.Controls.Add(this.cbo_WorkOrder);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1319, 295);
+            this.panel1.Size = new System.Drawing.Size(1761, 373);
             this.panel1.TabIndex = 0;
             // 
             // cb_PostBIColumn
@@ -556,9 +579,10 @@ namespace TestPlugin_Demo
             this.cb_PostBIColumn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_PostBIColumn.Enabled = false;
             this.cb_PostBIColumn.FormattingEnabled = true;
-            this.cb_PostBIColumn.Location = new System.Drawing.Point(759, 17);
+            this.cb_PostBIColumn.Location = new System.Drawing.Point(1012, 21);
+            this.cb_PostBIColumn.Margin = new System.Windows.Forms.Padding(4);
             this.cb_PostBIColumn.Name = "cb_PostBIColumn";
-            this.cb_PostBIColumn.Size = new System.Drawing.Size(121, 20);
+            this.cb_PostBIColumn.Size = new System.Drawing.Size(160, 23);
             this.cb_PostBIColumn.TabIndex = 41;
             this.cb_PostBIColumn.SelectedIndexChanged += new System.EventHandler(this.cb_PostBIColumn_SelectedIndexChanged);
             // 
@@ -566,9 +590,10 @@ namespace TestPlugin_Demo
             // 
             this.rb_PostBI.AutoSize = true;
             this.rb_PostBI.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rb_PostBI.Location = new System.Drawing.Point(656, 16);
+            this.rb_PostBI.Location = new System.Drawing.Point(875, 20);
+            this.rb_PostBI.Margin = new System.Windows.Forms.Padding(4);
             this.rb_PostBI.Name = "rb_PostBI";
-            this.rb_PostBI.Size = new System.Drawing.Size(84, 23);
+            this.rb_PostBI.Size = new System.Drawing.Size(103, 28);
             this.rb_PostBI.TabIndex = 40;
             this.rb_PostBI.Text = "老化后";
             this.rb_PostBI.UseVisualStyleBackColor = true;
@@ -579,9 +604,10 @@ namespace TestPlugin_Demo
             this.rb_PreBI.AutoSize = true;
             this.rb_PreBI.Checked = true;
             this.rb_PreBI.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rb_PreBI.Location = new System.Drawing.Point(555, 16);
+            this.rb_PreBI.Location = new System.Drawing.Point(740, 20);
+            this.rb_PreBI.Margin = new System.Windows.Forms.Padding(4);
             this.rb_PreBI.Name = "rb_PreBI";
-            this.rb_PreBI.Size = new System.Drawing.Size(84, 23);
+            this.rb_PreBI.Size = new System.Drawing.Size(103, 28);
             this.rb_PreBI.TabIndex = 39;
             this.rb_PreBI.TabStop = true;
             this.rb_PreBI.Text = "老化前";
@@ -591,9 +617,10 @@ namespace TestPlugin_Demo
             // 
             this.rb_GS.AutoSize = true;
             this.rb_GS.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rb_GS.Location = new System.Drawing.Point(465, 16);
+            this.rb_GS.Location = new System.Drawing.Point(620, 20);
+            this.rb_GS.Margin = new System.Windows.Forms.Padding(4);
             this.rb_GS.Name = "rb_GS";
-            this.rb_GS.Size = new System.Drawing.Size(65, 23);
+            this.rb_GS.Size = new System.Drawing.Size(79, 28);
             this.rb_GS.TabIndex = 38;
             this.rb_GS.Text = "金样";
             this.rb_GS.UseVisualStyleBackColor = true;
@@ -601,18 +628,20 @@ namespace TestPlugin_Demo
             // label90
             // 
             this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(686, 110);
+            this.label90.Location = new System.Drawing.Point(915, 138);
+            this.label90.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(53, 12);
+            this.label90.Size = new System.Drawing.Size(67, 15);
             this.label90.TabIndex = 35;
             this.label90.Text = "截止时间";
             // 
             // label89
             // 
             this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(465, 110);
+            this.label89.Location = new System.Drawing.Point(620, 138);
+            this.label89.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(53, 12);
+            this.label89.Size = new System.Drawing.Size(67, 15);
             this.label89.TabIndex = 34;
             this.label89.Text = "开始时间";
             // 
@@ -620,27 +649,30 @@ namespace TestPlugin_Demo
             // 
             this.dtpTo.CustomFormat = "yyyy/MM/dd HH:mm";
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTo.Location = new System.Drawing.Point(689, 131);
+            this.dtpTo.Location = new System.Drawing.Point(919, 164);
+            this.dtpTo.Margin = new System.Windows.Forms.Padding(4);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.ShowCheckBox = true;
-            this.dtpTo.Size = new System.Drawing.Size(172, 21);
+            this.dtpTo.Size = new System.Drawing.Size(228, 25);
             this.dtpTo.TabIndex = 33;
             // 
             // dtpFrom
             // 
             this.dtpFrom.CustomFormat = "yyyy/MM/dd HH:mm";
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFrom.Location = new System.Drawing.Point(465, 131);
+            this.dtpFrom.Location = new System.Drawing.Point(620, 164);
+            this.dtpFrom.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.ShowCheckBox = true;
-            this.dtpFrom.Size = new System.Drawing.Size(170, 21);
+            this.dtpFrom.Size = new System.Drawing.Size(225, 25);
             this.dtpFrom.TabIndex = 32;
             // 
             // btn_GetTestStations
             // 
-            this.btn_GetTestStations.Location = new System.Drawing.Point(344, 211);
+            this.btn_GetTestStations.Location = new System.Drawing.Point(459, 264);
+            this.btn_GetTestStations.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GetTestStations.Name = "btn_GetTestStations";
-            this.btn_GetTestStations.Size = new System.Drawing.Size(75, 27);
+            this.btn_GetTestStations.Size = new System.Drawing.Size(100, 34);
             this.btn_GetTestStations.TabIndex = 27;
             this.btn_GetTestStations.Text = "读取";
             this.btn_GetTestStations.UseVisualStyleBackColor = true;
@@ -650,9 +682,10 @@ namespace TestPlugin_Demo
             // 
             this.lbl_teststation.AutoSize = true;
             this.lbl_teststation.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_teststation.Location = new System.Drawing.Point(21, 215);
+            this.lbl_teststation.Location = new System.Drawing.Point(28, 269);
+            this.lbl_teststation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_teststation.Name = "lbl_teststation";
-            this.lbl_teststation.Size = new System.Drawing.Size(66, 19);
+            this.lbl_teststation.Size = new System.Drawing.Size(82, 24);
             this.lbl_teststation.TabIndex = 26;
             this.lbl_teststation.Text = "工位号";
             // 
@@ -660,24 +693,27 @@ namespace TestPlugin_Demo
             // 
             this.cbo_TestStation.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_TestStation.FormattingEnabled = true;
-            this.cbo_TestStation.Location = new System.Drawing.Point(148, 211);
+            this.cbo_TestStation.Location = new System.Drawing.Point(197, 264);
+            this.cbo_TestStation.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_TestStation.Name = "cbo_TestStation";
-            this.cbo_TestStation.Size = new System.Drawing.Size(167, 27);
+            this.cbo_TestStation.Size = new System.Drawing.Size(221, 32);
             this.cbo_TestStation.TabIndex = 25;
             // 
             // tb_DataFile
             // 
             this.tb_DataFile.Enabled = false;
-            this.tb_DataFile.Location = new System.Drawing.Point(468, 211);
+            this.tb_DataFile.Location = new System.Drawing.Point(624, 264);
+            this.tb_DataFile.Margin = new System.Windows.Forms.Padding(4);
             this.tb_DataFile.Name = "tb_DataFile";
-            this.tb_DataFile.Size = new System.Drawing.Size(627, 21);
+            this.tb_DataFile.Size = new System.Drawing.Size(835, 25);
             this.tb_DataFile.TabIndex = 23;
             // 
             // btn_UploadData
             // 
-            this.btn_UploadData.Location = new System.Drawing.Point(578, 170);
+            this.btn_UploadData.Location = new System.Drawing.Point(771, 212);
+            this.btn_UploadData.Margin = new System.Windows.Forms.Padding(4);
             this.btn_UploadData.Name = "btn_UploadData";
-            this.btn_UploadData.Size = new System.Drawing.Size(92, 23);
+            this.btn_UploadData.Size = new System.Drawing.Size(123, 29);
             this.btn_UploadData.TabIndex = 22;
             this.btn_UploadData.Text = "上传数据";
             this.btn_UploadData.UseVisualStyleBackColor = true;
@@ -686,9 +722,10 @@ namespace TestPlugin_Demo
             // 
             // btn_SelectData
             // 
-            this.btn_SelectData.Location = new System.Drawing.Point(465, 170);
+            this.btn_SelectData.Location = new System.Drawing.Point(620, 212);
+            this.btn_SelectData.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SelectData.Name = "btn_SelectData";
-            this.btn_SelectData.Size = new System.Drawing.Size(94, 23);
+            this.btn_SelectData.Size = new System.Drawing.Size(125, 29);
             this.btn_SelectData.TabIndex = 21;
             this.btn_SelectData.Text = "选择数据文件";
             this.btn_SelectData.UseVisualStyleBackColor = true;
@@ -696,9 +733,10 @@ namespace TestPlugin_Demo
             // 
             // btn_ExportData
             // 
-            this.btn_ExportData.Location = new System.Drawing.Point(787, 59);
+            this.btn_ExportData.Location = new System.Drawing.Point(1049, 74);
+            this.btn_ExportData.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ExportData.Name = "btn_ExportData";
-            this.btn_ExportData.Size = new System.Drawing.Size(93, 30);
+            this.btn_ExportData.Size = new System.Drawing.Size(124, 38);
             this.btn_ExportData.TabIndex = 20;
             this.btn_ExportData.Text = "导出";
             this.btn_ExportData.UseVisualStyleBackColor = true;
@@ -710,9 +748,10 @@ namespace TestPlugin_Demo
             this.cb_Fail.Checked = true;
             this.cb_Fail.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_Fail.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cb_Fail.Location = new System.Drawing.Point(567, 66);
+            this.cb_Fail.Location = new System.Drawing.Point(756, 82);
+            this.cb_Fail.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Fail.Name = "cb_Fail";
-            this.cb_Fail.Size = new System.Drawing.Size(68, 23);
+            this.cb_Fail.Size = new System.Drawing.Size(80, 28);
             this.cb_Fail.TabIndex = 19;
             this.cb_Fail.Text = "FAIL";
             this.cb_Fail.UseVisualStyleBackColor = true;
@@ -723,18 +762,20 @@ namespace TestPlugin_Demo
             this.cb_Pass.Checked = true;
             this.cb_Pass.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_Pass.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cb_Pass.Location = new System.Drawing.Point(465, 66);
+            this.cb_Pass.Location = new System.Drawing.Point(620, 82);
+            this.cb_Pass.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Pass.Name = "cb_Pass";
-            this.cb_Pass.Size = new System.Drawing.Size(68, 23);
+            this.cb_Pass.Size = new System.Drawing.Size(80, 28);
             this.cb_Pass.TabIndex = 18;
             this.cb_Pass.Text = "PASS";
             this.cb_Pass.UseVisualStyleBackColor = true;
             // 
             // btn_GetChipID
             // 
-            this.btn_GetChipID.Location = new System.Drawing.Point(344, 173);
+            this.btn_GetChipID.Location = new System.Drawing.Point(459, 216);
+            this.btn_GetChipID.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GetChipID.Name = "btn_GetChipID";
-            this.btn_GetChipID.Size = new System.Drawing.Size(75, 27);
+            this.btn_GetChipID.Size = new System.Drawing.Size(100, 34);
             this.btn_GetChipID.TabIndex = 17;
             this.btn_GetChipID.Text = "读取";
             this.btn_GetChipID.UseVisualStyleBackColor = true;
@@ -742,9 +783,10 @@ namespace TestPlugin_Demo
             // 
             // btn_GetCarrierID
             // 
-            this.btn_GetCarrierID.Location = new System.Drawing.Point(344, 134);
+            this.btn_GetCarrierID.Location = new System.Drawing.Point(459, 168);
+            this.btn_GetCarrierID.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GetCarrierID.Name = "btn_GetCarrierID";
-            this.btn_GetCarrierID.Size = new System.Drawing.Size(75, 27);
+            this.btn_GetCarrierID.Size = new System.Drawing.Size(100, 34);
             this.btn_GetCarrierID.TabIndex = 16;
             this.btn_GetCarrierID.Text = "读取";
             this.btn_GetCarrierID.UseVisualStyleBackColor = true;
@@ -752,9 +794,10 @@ namespace TestPlugin_Demo
             // 
             // btn_GetPN
             // 
-            this.btn_GetPN.Location = new System.Drawing.Point(344, 95);
+            this.btn_GetPN.Location = new System.Drawing.Point(459, 119);
+            this.btn_GetPN.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GetPN.Name = "btn_GetPN";
-            this.btn_GetPN.Size = new System.Drawing.Size(75, 27);
+            this.btn_GetPN.Size = new System.Drawing.Size(100, 34);
             this.btn_GetPN.TabIndex = 15;
             this.btn_GetPN.Text = "读取";
             this.btn_GetPN.UseVisualStyleBackColor = true;
@@ -762,9 +805,10 @@ namespace TestPlugin_Demo
             // 
             // btn_GetSubOrder
             // 
-            this.btn_GetSubOrder.Location = new System.Drawing.Point(344, 56);
+            this.btn_GetSubOrder.Location = new System.Drawing.Point(459, 70);
+            this.btn_GetSubOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GetSubOrder.Name = "btn_GetSubOrder";
-            this.btn_GetSubOrder.Size = new System.Drawing.Size(75, 27);
+            this.btn_GetSubOrder.Size = new System.Drawing.Size(100, 34);
             this.btn_GetSubOrder.TabIndex = 14;
             this.btn_GetSubOrder.Text = "读取";
             this.btn_GetSubOrder.UseVisualStyleBackColor = true;
@@ -772,9 +816,10 @@ namespace TestPlugin_Demo
             // 
             // btn_QueryData
             // 
-            this.btn_QueryData.Location = new System.Drawing.Point(665, 59);
+            this.btn_QueryData.Location = new System.Drawing.Point(887, 74);
+            this.btn_QueryData.Margin = new System.Windows.Forms.Padding(4);
             this.btn_QueryData.Name = "btn_QueryData";
-            this.btn_QueryData.Size = new System.Drawing.Size(93, 30);
+            this.btn_QueryData.Size = new System.Drawing.Size(124, 38);
             this.btn_QueryData.TabIndex = 13;
             this.btn_QueryData.Text = "查询";
             this.btn_QueryData.UseVisualStyleBackColor = true;
@@ -782,9 +827,10 @@ namespace TestPlugin_Demo
             // 
             // btn_GetWO
             // 
-            this.btn_GetWO.Location = new System.Drawing.Point(344, 17);
+            this.btn_GetWO.Location = new System.Drawing.Point(459, 21);
+            this.btn_GetWO.Margin = new System.Windows.Forms.Padding(4);
             this.btn_GetWO.Name = "btn_GetWO";
-            this.btn_GetWO.Size = new System.Drawing.Size(75, 27);
+            this.btn_GetWO.Size = new System.Drawing.Size(100, 34);
             this.btn_GetWO.TabIndex = 12;
             this.btn_GetWO.Text = "读取";
             this.btn_GetWO.UseVisualStyleBackColor = true;
@@ -794,9 +840,10 @@ namespace TestPlugin_Demo
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label36.Location = new System.Drawing.Point(21, 177);
+            this.label36.Location = new System.Drawing.Point(28, 221);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(66, 19);
+            this.label36.Size = new System.Drawing.Size(82, 24);
             this.label36.TabIndex = 9;
             this.label36.Text = "管芯号";
             // 
@@ -804,18 +851,20 @@ namespace TestPlugin_Demo
             // 
             this.cbo_ChipID.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_ChipID.FormattingEnabled = true;
-            this.cbo_ChipID.Location = new System.Drawing.Point(148, 173);
+            this.cbo_ChipID.Location = new System.Drawing.Point(197, 216);
+            this.cbo_ChipID.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_ChipID.Name = "cbo_ChipID";
-            this.cbo_ChipID.Size = new System.Drawing.Size(167, 27);
+            this.cbo_ChipID.Size = new System.Drawing.Size(221, 32);
             this.cbo_ChipID.TabIndex = 8;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label35.Location = new System.Drawing.Point(21, 137);
+            this.label35.Location = new System.Drawing.Point(28, 171);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(66, 19);
+            this.label35.Size = new System.Drawing.Size(82, 24);
             this.label35.TabIndex = 7;
             this.label35.Text = "夹具号";
             // 
@@ -823,18 +872,20 @@ namespace TestPlugin_Demo
             // 
             this.cbo_CarrierID.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_CarrierID.FormattingEnabled = true;
-            this.cbo_CarrierID.Location = new System.Drawing.Point(148, 134);
+            this.cbo_CarrierID.Location = new System.Drawing.Point(197, 168);
+            this.cbo_CarrierID.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_CarrierID.Name = "cbo_CarrierID";
-            this.cbo_CarrierID.Size = new System.Drawing.Size(167, 27);
+            this.cbo_CarrierID.Size = new System.Drawing.Size(221, 32);
             this.cbo_CarrierID.TabIndex = 6;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label34.Location = new System.Drawing.Point(21, 98);
+            this.label34.Location = new System.Drawing.Point(28, 122);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(66, 19);
+            this.label34.Size = new System.Drawing.Size(82, 24);
             this.label34.TabIndex = 5;
             this.label34.Text = "物料号";
             // 
@@ -842,18 +893,20 @@ namespace TestPlugin_Demo
             // 
             this.cbo_PartNumber.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_PartNumber.FormattingEnabled = true;
-            this.cbo_PartNumber.Location = new System.Drawing.Point(148, 95);
+            this.cbo_PartNumber.Location = new System.Drawing.Point(197, 119);
+            this.cbo_PartNumber.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_PartNumber.Name = "cbo_PartNumber";
-            this.cbo_PartNumber.Size = new System.Drawing.Size(167, 27);
+            this.cbo_PartNumber.Size = new System.Drawing.Size(221, 32);
             this.cbo_PartNumber.TabIndex = 4;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label33.Location = new System.Drawing.Point(21, 59);
+            this.label33.Location = new System.Drawing.Point(28, 74);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(66, 19);
+            this.label33.Size = new System.Drawing.Size(82, 24);
             this.label33.TabIndex = 3;
             this.label33.Text = "子工单";
             // 
@@ -861,18 +914,20 @@ namespace TestPlugin_Demo
             // 
             this.cbo_SubOrder.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_SubOrder.FormattingEnabled = true;
-            this.cbo_SubOrder.Location = new System.Drawing.Point(148, 56);
+            this.cbo_SubOrder.Location = new System.Drawing.Point(197, 70);
+            this.cbo_SubOrder.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_SubOrder.Name = "cbo_SubOrder";
-            this.cbo_SubOrder.Size = new System.Drawing.Size(167, 27);
+            this.cbo_SubOrder.Size = new System.Drawing.Size(221, 32);
             this.cbo_SubOrder.TabIndex = 2;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label32.Location = new System.Drawing.Point(21, 21);
+            this.label32.Location = new System.Drawing.Point(28, 26);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(66, 19);
+            this.label32.Size = new System.Drawing.Size(82, 24);
             this.label32.TabIndex = 1;
             this.label32.Text = "工单号";
             // 
@@ -880,9 +935,10 @@ namespace TestPlugin_Demo
             // 
             this.cbo_WorkOrder.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbo_WorkOrder.FormattingEnabled = true;
-            this.cbo_WorkOrder.Location = new System.Drawing.Point(148, 17);
+            this.cbo_WorkOrder.Location = new System.Drawing.Point(197, 21);
+            this.cbo_WorkOrder.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_WorkOrder.Name = "cbo_WorkOrder";
-            this.cbo_WorkOrder.Size = new System.Drawing.Size(167, 27);
+            this.cbo_WorkOrder.Size = new System.Drawing.Size(221, 32);
             this.cbo_WorkOrder.TabIndex = 0;
             // 
             // panel10
@@ -890,10 +946,11 @@ namespace TestPlugin_Demo
             this.tableLayoutPanel5.SetColumnSpan(this.panel10, 2);
             this.panel10.Controls.Add(this.dgv_TestData);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 304);
+            this.panel10.Location = new System.Drawing.Point(4, 385);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.tableLayoutPanel5.SetRowSpan(this.panel10, 2);
-            this.panel10.Size = new System.Drawing.Size(1319, 499);
+            this.panel10.Size = new System.Drawing.Size(1761, 629);
             this.panel10.TabIndex = 1;
             // 
             // dgv_TestData
@@ -920,28 +977,31 @@ namespace TestPlugin_Demo
             this.dgv_TestData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_TestData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_TestData.Location = new System.Drawing.Point(0, 0);
+            this.dgv_TestData.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_TestData.Name = "dgv_TestData";
             this.dgv_TestData.ReadOnly = true;
             this.dgv_TestData.RowHeadersVisible = false;
             this.dgv_TestData.RowHeadersWidth = 50;
             this.dgv_TestData.RowTemplate.Height = 23;
-            this.dgv_TestData.Size = new System.Drawing.Size(1319, 499);
+            this.dgv_TestData.Size = new System.Drawing.Size(1761, 629);
             this.dgv_TestData.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 336);
+            this.label2.Location = new System.Drawing.Point(87, 420);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 12);
+            this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 4;
             // 
             // tabPage视频
             // 
             this.tabPage视频.Controls.Add(this.panel_CV);
             this.tabPage视频.Location = new System.Drawing.Point(4, 42);
+            this.tabPage视频.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage视频.Name = "tabPage视频";
-            this.tabPage视频.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage视频.Size = new System.Drawing.Size(1777, 1026);
             this.tabPage视频.TabIndex = 9;
             this.tabPage视频.Text = "视频";
             this.tabPage视频.UseVisualStyleBackColor = true;
@@ -950,17 +1010,19 @@ namespace TestPlugin_Demo
             // 
             this.panel_CV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_CV.Location = new System.Drawing.Point(0, 0);
+            this.panel_CV.Margin = new System.Windows.Forms.Padding(4);
             this.panel_CV.Name = "panel_CV";
-            this.panel_CV.Size = new System.Drawing.Size(1331, 812);
+            this.panel_CV.Size = new System.Drawing.Size(1777, 1026);
             this.panel_CV.TabIndex = 1;
             // 
             // tabPage仪表
             // 
             this.tabPage仪表.Controls.Add(this.panel2);
             this.tabPage仪表.Location = new System.Drawing.Point(4, 42);
+            this.tabPage仪表.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage仪表.Name = "tabPage仪表";
-            this.tabPage仪表.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage仪表.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage仪表.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage仪表.Size = new System.Drawing.Size(1777, 1026);
             this.tabPage仪表.TabIndex = 18;
             this.tabPage仪表.Text = "仪表";
             this.tabPage仪表.UseVisualStyleBackColor = true;
@@ -987,9 +1049,10 @@ namespace TestPlugin_Demo
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1325, 806);
+            this.panel2.Size = new System.Drawing.Size(1769, 1018);
             this.panel2.TabIndex = 0;
             // 
             // groupBox8
@@ -1000,9 +1063,11 @@ namespace TestPlugin_Demo
             this.groupBox8.Controls.Add(this.groupBox6);
             this.groupBox8.Controls.Add(this.tb_temp);
             this.groupBox8.Controls.Add(this.rb_right);
-            this.groupBox8.Location = new System.Drawing.Point(966, 382);
+            this.groupBox8.Location = new System.Drawing.Point(1288, 478);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(260, 199);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Size = new System.Drawing.Size(347, 249);
             this.groupBox8.TabIndex = 99;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "温控";
@@ -1011,9 +1076,10 @@ namespace TestPlugin_Demo
             // 
             this.rb_left.AutoSize = true;
             this.rb_left.Checked = true;
-            this.rb_left.Location = new System.Drawing.Point(6, 20);
+            this.rb_left.Location = new System.Drawing.Point(8, 25);
+            this.rb_left.Margin = new System.Windows.Forms.Padding(4);
             this.rb_left.Name = "rb_left";
-            this.rb_left.Size = new System.Drawing.Size(59, 16);
+            this.rb_left.Size = new System.Drawing.Size(73, 19);
             this.rb_left.TabIndex = 95;
             this.rb_left.TabStop = true;
             this.rb_left.Text = "左载台";
@@ -1023,18 +1089,21 @@ namespace TestPlugin_Demo
             // 
             this.groupBox7.Controls.Add(this.bt_TC_start);
             this.groupBox7.Controls.Add(this.bt_TC_stop);
-            this.groupBox7.Location = new System.Drawing.Point(6, 133);
+            this.groupBox7.Location = new System.Drawing.Point(8, 166);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(248, 56);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Size = new System.Drawing.Size(331, 70);
             this.groupBox7.TabIndex = 98;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "平台";
             // 
             // bt_TC_start
             // 
-            this.bt_TC_start.Location = new System.Drawing.Point(14, 20);
+            this.bt_TC_start.Location = new System.Drawing.Point(19, 25);
+            this.bt_TC_start.Margin = new System.Windows.Forms.Padding(4);
             this.bt_TC_start.Name = "bt_TC_start";
-            this.bt_TC_start.Size = new System.Drawing.Size(75, 23);
+            this.bt_TC_start.Size = new System.Drawing.Size(100, 29);
             this.bt_TC_start.TabIndex = 90;
             this.bt_TC_start.Text = "开始控温";
             this.bt_TC_start.UseVisualStyleBackColor = true;
@@ -1042,9 +1111,10 @@ namespace TestPlugin_Demo
             // 
             // bt_TC_stop
             // 
-            this.bt_TC_stop.Location = new System.Drawing.Point(122, 20);
+            this.bt_TC_stop.Location = new System.Drawing.Point(163, 25);
+            this.bt_TC_stop.Margin = new System.Windows.Forms.Padding(4);
             this.bt_TC_stop.Name = "bt_TC_stop";
-            this.bt_TC_stop.Size = new System.Drawing.Size(75, 23);
+            this.bt_TC_stop.Size = new System.Drawing.Size(100, 29);
             this.bt_TC_stop.TabIndex = 92;
             this.bt_TC_stop.Text = "停止控温";
             this.bt_TC_stop.UseVisualStyleBackColor = true;
@@ -1053,9 +1123,10 @@ namespace TestPlugin_Demo
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(155, 24);
+            this.label62.Location = new System.Drawing.Point(207, 30);
+            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(29, 12);
+            this.label62.Size = new System.Drawing.Size(37, 15);
             this.label62.TabIndex = 87;
             this.label62.Text = "温度";
             // 
@@ -1065,18 +1136,21 @@ namespace TestPlugin_Demo
             this.groupBox6.Controls.Add(this.bt_ted_stop);
             this.groupBox6.Controls.Add(this.bt_gettemp);
             this.groupBox6.Controls.Add(this.lab_ted);
-            this.groupBox6.Location = new System.Drawing.Point(6, 43);
+            this.groupBox6.Location = new System.Drawing.Point(8, 54);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(248, 84);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Size = new System.Drawing.Size(331, 105);
             this.groupBox6.TabIndex = 98;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "TED4015";
             // 
             // bt_ted_start
             // 
-            this.bt_ted_start.Location = new System.Drawing.Point(14, 20);
+            this.bt_ted_start.Location = new System.Drawing.Point(19, 25);
+            this.bt_ted_start.Margin = new System.Windows.Forms.Padding(4);
             this.bt_ted_start.Name = "bt_ted_start";
-            this.bt_ted_start.Size = new System.Drawing.Size(75, 23);
+            this.bt_ted_start.Size = new System.Drawing.Size(100, 29);
             this.bt_ted_start.TabIndex = 90;
             this.bt_ted_start.Text = "开始控温";
             this.bt_ted_start.UseVisualStyleBackColor = true;
@@ -1084,9 +1158,10 @@ namespace TestPlugin_Demo
             // 
             // bt_ted_stop
             // 
-            this.bt_ted_stop.Location = new System.Drawing.Point(122, 20);
+            this.bt_ted_stop.Location = new System.Drawing.Point(163, 25);
+            this.bt_ted_stop.Margin = new System.Windows.Forms.Padding(4);
             this.bt_ted_stop.Name = "bt_ted_stop";
-            this.bt_ted_stop.Size = new System.Drawing.Size(75, 23);
+            this.bt_ted_stop.Size = new System.Drawing.Size(100, 29);
             this.bt_ted_stop.TabIndex = 92;
             this.bt_ted_stop.Text = "停止控温";
             this.bt_ted_stop.UseVisualStyleBackColor = true;
@@ -1094,9 +1169,10 @@ namespace TestPlugin_Demo
             // 
             // bt_gettemp
             // 
-            this.bt_gettemp.Location = new System.Drawing.Point(122, 54);
+            this.bt_gettemp.Location = new System.Drawing.Point(163, 68);
+            this.bt_gettemp.Margin = new System.Windows.Forms.Padding(4);
             this.bt_gettemp.Name = "bt_gettemp";
-            this.bt_gettemp.Size = new System.Drawing.Size(75, 23);
+            this.bt_gettemp.Size = new System.Drawing.Size(100, 29);
             this.bt_gettemp.TabIndex = 93;
             this.bt_gettemp.Text = "读取";
             this.bt_gettemp.UseVisualStyleBackColor = true;
@@ -1105,17 +1181,19 @@ namespace TestPlugin_Demo
             // lab_ted
             // 
             this.lab_ted.AutoSize = true;
-            this.lab_ted.Location = new System.Drawing.Point(51, 59);
+            this.lab_ted.Location = new System.Drawing.Point(68, 74);
+            this.lab_ted.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_ted.Name = "lab_ted";
-            this.lab_ted.Size = new System.Drawing.Size(53, 12);
+            this.lab_ted.Size = new System.Drawing.Size(71, 15);
             this.lab_ted.TabIndex = 94;
             this.lab_ted.Text = "********";
             // 
             // tb_temp
             // 
-            this.tb_temp.Location = new System.Drawing.Point(190, 20);
+            this.tb_temp.Location = new System.Drawing.Point(253, 25);
+            this.tb_temp.Margin = new System.Windows.Forms.Padding(4);
             this.tb_temp.Name = "tb_temp";
-            this.tb_temp.Size = new System.Drawing.Size(64, 21);
+            this.tb_temp.Size = new System.Drawing.Size(84, 25);
             this.tb_temp.TabIndex = 91;
             this.tb_temp.Text = "25";
             this.tb_temp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1123,9 +1201,10 @@ namespace TestPlugin_Demo
             // rb_right
             // 
             this.rb_right.AutoSize = true;
-            this.rb_right.Location = new System.Drawing.Point(77, 21);
+            this.rb_right.Location = new System.Drawing.Point(103, 26);
+            this.rb_right.Margin = new System.Windows.Forms.Padding(4);
             this.rb_right.Name = "rb_right";
-            this.rb_right.Size = new System.Drawing.Size(59, 16);
+            this.rb_right.Size = new System.Drawing.Size(73, 19);
             this.rb_right.TabIndex = 96;
             this.rb_right.Text = "右载台";
             this.rb_right.UseVisualStyleBackColor = true;
@@ -1137,9 +1216,11 @@ namespace TestPlugin_Demo
             this.groupBox3.Controls.Add(this.txt_OpticalChannel);
             this.groupBox3.Controls.Add(this.btn_SwitchCh);
             this.groupBox3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox3.Location = new System.Drawing.Point(966, 592);
+            this.groupBox3.Location = new System.Drawing.Point(1288, 740);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(260, 145);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(347, 181);
             this.groupBox3.TabIndex = 97;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "OSwitch";
@@ -1148,9 +1229,10 @@ namespace TestPlugin_Demo
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label63.Location = new System.Drawing.Point(25, 23);
+            this.label63.Location = new System.Drawing.Point(33, 29);
+            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(118, 60);
+            this.label63.Size = new System.Drawing.Size(143, 69);
             this.label63.TabIndex = 55;
             this.label63.Text = "通道\r\n1:耦合\r\n2:光谱仪和波长计";
             // 
@@ -1158,25 +1240,28 @@ namespace TestPlugin_Demo
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.label56.Location = new System.Drawing.Point(25, 106);
+            this.label56.Location = new System.Drawing.Point(33, 132);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(37, 20);
+            this.label56.Size = new System.Drawing.Size(44, 23);
             this.label56.TabIndex = 55;
             this.label56.Text = "通道";
             // 
             // txt_OpticalChannel
             // 
-            this.txt_OpticalChannel.Location = new System.Drawing.Point(82, 108);
+            this.txt_OpticalChannel.Location = new System.Drawing.Point(109, 135);
+            this.txt_OpticalChannel.Margin = new System.Windows.Forms.Padding(4);
             this.txt_OpticalChannel.Name = "txt_OpticalChannel";
-            this.txt_OpticalChannel.Size = new System.Drawing.Size(69, 21);
+            this.txt_OpticalChannel.Size = new System.Drawing.Size(91, 25);
             this.txt_OpticalChannel.TabIndex = 50;
             this.txt_OpticalChannel.Text = "1";
             // 
             // btn_SwitchCh
             // 
-            this.btn_SwitchCh.Location = new System.Drawing.Point(157, 103);
+            this.btn_SwitchCh.Location = new System.Drawing.Point(209, 129);
+            this.btn_SwitchCh.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SwitchCh.Name = "btn_SwitchCh";
-            this.btn_SwitchCh.Size = new System.Drawing.Size(84, 28);
+            this.btn_SwitchCh.Size = new System.Drawing.Size(112, 35);
             this.btn_SwitchCh.TabIndex = 49;
             this.btn_SwitchCh.Text = "切换";
             this.btn_SwitchCh.UseVisualStyleBackColor = true;
@@ -1189,17 +1274,19 @@ namespace TestPlugin_Demo
             this.comboBox1.Items.AddRange(new object[] {
             "GAIN",
             "SOA1"});
-            this.comboBox1.Location = new System.Drawing.Point(1000, 249);
+            this.comboBox1.Location = new System.Drawing.Point(1333, 311);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.Size = new System.Drawing.Size(160, 23);
             this.comboBox1.TabIndex = 89;
             this.comboBox1.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1031, 290);
+            this.button1.Location = new System.Drawing.Point(1375, 362);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 88;
             this.button1.Text = "测试";
             this.button1.UseVisualStyleBackColor = true;
@@ -1209,18 +1296,20 @@ namespace TestPlugin_Demo
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(998, 199);
+            this.label47.Location = new System.Drawing.Point(1331, 249);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(137, 12);
+            this.label47.Size = new System.Drawing.Size(183, 15);
             this.label47.TabIndex = 87;
             this.label47.Text = "pdComplianceCurrent_mA";
             this.label47.Visible = false;
             // 
             // tb_liv_pdcompCurr
             // 
-            this.tb_liv_pdcompCurr.Location = new System.Drawing.Point(1151, 196);
+            this.tb_liv_pdcompCurr.Location = new System.Drawing.Point(1535, 245);
+            this.tb_liv_pdcompCurr.Margin = new System.Windows.Forms.Padding(4);
             this.tb_liv_pdcompCurr.Name = "tb_liv_pdcompCurr";
-            this.tb_liv_pdcompCurr.Size = new System.Drawing.Size(64, 21);
+            this.tb_liv_pdcompCurr.Size = new System.Drawing.Size(84, 25);
             this.tb_liv_pdcompCurr.TabIndex = 86;
             this.tb_liv_pdcompCurr.Text = "0.001";
             this.tb_liv_pdcompCurr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1229,18 +1318,20 @@ namespace TestPlugin_Demo
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(1040, 163);
+            this.label49.Location = new System.Drawing.Point(1387, 204);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(95, 12);
+            this.label49.Size = new System.Drawing.Size(127, 15);
             this.label49.TabIndex = 85;
             this.label49.Text = "pdBiasVoltage_V";
             this.label49.Visible = false;
             // 
             // tb_liv_pdbiasV
             // 
-            this.tb_liv_pdbiasV.Location = new System.Drawing.Point(1151, 160);
+            this.tb_liv_pdbiasV.Location = new System.Drawing.Point(1535, 200);
+            this.tb_liv_pdbiasV.Margin = new System.Windows.Forms.Padding(4);
             this.tb_liv_pdbiasV.Name = "tb_liv_pdbiasV";
-            this.tb_liv_pdbiasV.Size = new System.Drawing.Size(64, 21);
+            this.tb_liv_pdbiasV.Size = new System.Drawing.Size(84, 25);
             this.tb_liv_pdbiasV.TabIndex = 84;
             this.tb_liv_pdbiasV.Text = "0";
             this.tb_liv_pdbiasV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1249,18 +1340,20 @@ namespace TestPlugin_Demo
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(1016, 129);
+            this.label50.Location = new System.Drawing.Point(1355, 161);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(119, 12);
+            this.label50.Size = new System.Drawing.Size(159, 15);
             this.label50.TabIndex = 83;
             this.label50.Text = "ComplianceVoltage_V";
             this.label50.Visible = false;
             // 
             // tb_liv_compV
             // 
-            this.tb_liv_compV.Location = new System.Drawing.Point(1151, 126);
+            this.tb_liv_compV.Location = new System.Drawing.Point(1535, 158);
+            this.tb_liv_compV.Margin = new System.Windows.Forms.Padding(4);
             this.tb_liv_compV.Name = "tb_liv_compV";
-            this.tb_liv_compV.Size = new System.Drawing.Size(64, 21);
+            this.tb_liv_compV.Size = new System.Drawing.Size(84, 25);
             this.tb_liv_compV.TabIndex = 82;
             this.tb_liv_compV.Text = "2.0";
             this.tb_liv_compV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1269,18 +1362,20 @@ namespace TestPlugin_Demo
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(1067, 88);
+            this.label46.Location = new System.Drawing.Point(1423, 110);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(41, 12);
+            this.label46.Size = new System.Drawing.Size(55, 15);
             this.label46.TabIndex = 81;
             this.label46.Text = "End_mA";
             this.label46.Visible = false;
             // 
             // tb_liv_end
             // 
-            this.tb_liv_end.Location = new System.Drawing.Point(1151, 85);
+            this.tb_liv_end.Location = new System.Drawing.Point(1535, 106);
+            this.tb_liv_end.Margin = new System.Windows.Forms.Padding(4);
             this.tb_liv_end.Name = "tb_liv_end";
-            this.tb_liv_end.Size = new System.Drawing.Size(64, 21);
+            this.tb_liv_end.Size = new System.Drawing.Size(84, 25);
             this.tb_liv_end.TabIndex = 80;
             this.tb_liv_end.Text = "10.0";
             this.tb_liv_end.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1289,18 +1384,20 @@ namespace TestPlugin_Demo
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(1061, 52);
+            this.label45.Location = new System.Drawing.Point(1415, 65);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(47, 12);
+            this.label45.Size = new System.Drawing.Size(63, 15);
             this.label45.TabIndex = 79;
             this.label45.Text = "Step_mA";
             this.label45.Visible = false;
             // 
             // tb_liv_step
             // 
-            this.tb_liv_step.Location = new System.Drawing.Point(1151, 49);
+            this.tb_liv_step.Location = new System.Drawing.Point(1535, 61);
+            this.tb_liv_step.Margin = new System.Windows.Forms.Padding(4);
             this.tb_liv_step.Name = "tb_liv_step";
-            this.tb_liv_step.Size = new System.Drawing.Size(64, 21);
+            this.tb_liv_step.Size = new System.Drawing.Size(84, 25);
             this.tb_liv_step.TabIndex = 78;
             this.tb_liv_step.Text = "0.1";
             this.tb_liv_step.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1309,18 +1406,20 @@ namespace TestPlugin_Demo
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(1055, 18);
+            this.label44.Location = new System.Drawing.Point(1407, 22);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(53, 12);
+            this.label44.Size = new System.Drawing.Size(71, 15);
             this.label44.TabIndex = 77;
             this.label44.Text = "Start_mA";
             this.label44.Visible = false;
             // 
             // tb_liv_start
             // 
-            this.tb_liv_start.Location = new System.Drawing.Point(1151, 15);
+            this.tb_liv_start.Location = new System.Drawing.Point(1535, 19);
+            this.tb_liv_start.Margin = new System.Windows.Forms.Padding(4);
             this.tb_liv_start.Name = "tb_liv_start";
-            this.tb_liv_start.Size = new System.Drawing.Size(64, 21);
+            this.tb_liv_start.Size = new System.Drawing.Size(84, 25);
             this.tb_liv_start.TabIndex = 76;
             this.tb_liv_start.Text = "0.0";
             this.tb_liv_start.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1328,9 +1427,10 @@ namespace TestPlugin_Demo
             // 
             // bt_LIV
             // 
-            this.bt_LIV.Location = new System.Drawing.Point(1151, 247);
+            this.bt_LIV.Location = new System.Drawing.Point(1535, 309);
+            this.bt_LIV.Margin = new System.Windows.Forms.Padding(4);
             this.bt_LIV.Name = "bt_LIV";
-            this.bt_LIV.Size = new System.Drawing.Size(75, 23);
+            this.bt_LIV.Size = new System.Drawing.Size(100, 29);
             this.bt_LIV.TabIndex = 75;
             this.bt_LIV.Text = "开始";
             this.bt_LIV.UseVisualStyleBackColor = true;
@@ -1393,9 +1493,11 @@ namespace TestPlugin_Demo
             this.groupBox2.Controls.Add(this.tb_Bias1_I);
             this.groupBox2.Controls.Add(this.tb_Bias1_V);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(4, 441);
+            this.groupBox2.Location = new System.Drawing.Point(5, 551);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(945, 296);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1260, 370);
             this.groupBox2.TabIndex = 43;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "电压源";
@@ -1403,17 +1505,19 @@ namespace TestPlugin_Demo
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(97, 217);
+            this.label55.Location = new System.Drawing.Point(129, 271);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(17, 12);
+            this.label55.Size = new System.Drawing.Size(23, 15);
             this.label55.TabIndex = 94;
             this.label55.Text = "WL";
             // 
             // tb_wave
             // 
-            this.tb_wave.Location = new System.Drawing.Point(99, 232);
+            this.tb_wave.Location = new System.Drawing.Point(132, 290);
+            this.tb_wave.Margin = new System.Windows.Forms.Padding(4);
             this.tb_wave.Name = "tb_wave";
-            this.tb_wave.Size = new System.Drawing.Size(100, 21);
+            this.tb_wave.Size = new System.Drawing.Size(132, 25);
             this.tb_wave.TabIndex = 93;
             this.tb_wave.Text = "1550";
             this.tb_wave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1421,17 +1525,19 @@ namespace TestPlugin_Demo
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(271, 214);
+            this.label54.Location = new System.Drawing.Point(361, 268);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(29, 12);
+            this.label54.Size = new System.Drawing.Size(39, 15);
             this.label54.TabIndex = 92;
             this.label54.Text = "Rang";
             // 
             // tb_PD_I
             // 
-            this.tb_PD_I.Location = new System.Drawing.Point(273, 229);
+            this.tb_PD_I.Location = new System.Drawing.Point(364, 286);
+            this.tb_PD_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_PD_I.Name = "tb_PD_I";
-            this.tb_PD_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_PD_I.Size = new System.Drawing.Size(132, 25);
             this.tb_PD_I.TabIndex = 91;
             this.tb_PD_I.Text = "2";
             this.tb_PD_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1439,17 +1545,19 @@ namespace TestPlugin_Demo
             // lab_GetPD_V
             // 
             this.lab_GetPD_V.AutoSize = true;
-            this.lab_GetPD_V.Location = new System.Drawing.Point(688, 232);
+            this.lab_GetPD_V.Location = new System.Drawing.Point(917, 290);
+            this.lab_GetPD_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetPD_V.Name = "lab_GetPD_V";
-            this.lab_GetPD_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetPD_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetPD_V.TabIndex = 90;
             this.lab_GetPD_V.Text = "********";
             // 
             // bt_GetPD
             // 
-            this.bt_GetPD.Location = new System.Drawing.Point(843, 227);
+            this.bt_GetPD.Location = new System.Drawing.Point(1124, 284);
+            this.bt_GetPD.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetPD.Name = "bt_GetPD";
-            this.bt_GetPD.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetPD.Size = new System.Drawing.Size(100, 29);
             this.bt_GetPD.TabIndex = 89;
             this.bt_GetPD.Text = "回读";
             this.bt_GetPD.UseVisualStyleBackColor = true;
@@ -1458,17 +1566,19 @@ namespace TestPlugin_Demo
             // lab_GetPD_I
             // 
             this.lab_GetPD_I.AutoSize = true;
-            this.lab_GetPD_I.Location = new System.Drawing.Point(773, 232);
+            this.lab_GetPD_I.Location = new System.Drawing.Point(1031, 290);
+            this.lab_GetPD_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetPD_I.Name = "lab_GetPD_I";
-            this.lab_GetPD_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetPD_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetPD_I.TabIndex = 88;
             this.lab_GetPD_I.Text = "********";
             // 
             // bt_PD_OFF
             // 
-            this.bt_PD_OFF.Location = new System.Drawing.Point(561, 227);
+            this.bt_PD_OFF.Location = new System.Drawing.Point(748, 284);
+            this.bt_PD_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PD_OFF.Name = "bt_PD_OFF";
-            this.bt_PD_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_PD_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_PD_OFF.TabIndex = 87;
             this.bt_PD_OFF.Text = "OFF";
             this.bt_PD_OFF.UseVisualStyleBackColor = true;
@@ -1476,9 +1586,10 @@ namespace TestPlugin_Demo
             // 
             // bt_PD_ON
             // 
-            this.bt_PD_ON.Location = new System.Drawing.Point(443, 227);
+            this.bt_PD_ON.Location = new System.Drawing.Point(591, 284);
+            this.bt_PD_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PD_ON.Name = "bt_PD_ON";
-            this.bt_PD_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_PD_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_PD_ON.TabIndex = 86;
             this.bt_PD_ON.Text = "ON";
             this.bt_PD_ON.UseVisualStyleBackColor = true;
@@ -1487,71 +1598,79 @@ namespace TestPlugin_Demo
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(22, 232);
+            this.label53.Location = new System.Drawing.Point(29, 290);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(17, 12);
+            this.label53.Size = new System.Drawing.Size(23, 15);
             this.label53.TabIndex = 85;
             this.label53.Text = "PD";
             // 
             // lab_GetMPD2_V
             // 
             this.lab_GetMPD2_V.AutoSize = true;
-            this.lab_GetMPD2_V.Location = new System.Drawing.Point(682, 176);
+            this.lab_GetMPD2_V.Location = new System.Drawing.Point(909, 220);
+            this.lab_GetMPD2_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetMPD2_V.Name = "lab_GetMPD2_V";
-            this.lab_GetMPD2_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetMPD2_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetMPD2_V.TabIndex = 84;
             this.lab_GetMPD2_V.Text = "********";
             // 
             // lab_GetMPD1_V
             // 
             this.lab_GetMPD1_V.AutoSize = true;
-            this.lab_GetMPD1_V.Location = new System.Drawing.Point(682, 132);
+            this.lab_GetMPD1_V.Location = new System.Drawing.Point(909, 165);
+            this.lab_GetMPD1_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetMPD1_V.Name = "lab_GetMPD1_V";
-            this.lab_GetMPD1_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetMPD1_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetMPD1_V.TabIndex = 83;
             this.lab_GetMPD1_V.Text = "********";
             // 
             // lab_GetBIAS2_V
             // 
             this.lab_GetBIAS2_V.AutoSize = true;
-            this.lab_GetBIAS2_V.Location = new System.Drawing.Point(682, 88);
+            this.lab_GetBIAS2_V.Location = new System.Drawing.Point(909, 110);
+            this.lab_GetBIAS2_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetBIAS2_V.Name = "lab_GetBIAS2_V";
-            this.lab_GetBIAS2_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetBIAS2_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetBIAS2_V.TabIndex = 82;
             this.lab_GetBIAS2_V.Text = "********";
             // 
             // lab_GetBIAS1_V
             // 
             this.lab_GetBIAS1_V.AutoSize = true;
-            this.lab_GetBIAS1_V.Location = new System.Drawing.Point(682, 51);
+            this.lab_GetBIAS1_V.Location = new System.Drawing.Point(909, 64);
+            this.lab_GetBIAS1_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetBIAS1_V.Name = "lab_GetBIAS1_V";
-            this.lab_GetBIAS1_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetBIAS1_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetBIAS1_V.TabIndex = 81;
             this.lab_GetBIAS1_V.Text = "********";
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(688, 211);
+            this.label57.Location = new System.Drawing.Point(917, 264);
+            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(53, 12);
+            this.label57.Size = new System.Drawing.Size(69, 15);
             this.label57.TabIndex = 80;
             this.label57.Text = "功率(mW)";
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(688, 17);
+            this.label52.Location = new System.Drawing.Point(917, 21);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(47, 12);
+            this.label52.Size = new System.Drawing.Size(61, 15);
             this.label52.TabIndex = 80;
             this.label52.Text = "电压(v)";
             // 
             // bt_GetMPD2
             // 
-            this.bt_GetMPD2.Location = new System.Drawing.Point(843, 171);
+            this.bt_GetMPD2.Location = new System.Drawing.Point(1124, 214);
+            this.bt_GetMPD2.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetMPD2.Name = "bt_GetMPD2";
-            this.bt_GetMPD2.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetMPD2.Size = new System.Drawing.Size(100, 29);
             this.bt_GetMPD2.TabIndex = 79;
             this.bt_GetMPD2.Text = "回读";
             this.bt_GetMPD2.UseVisualStyleBackColor = true;
@@ -1559,9 +1678,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetMPD1
             // 
-            this.bt_GetMPD1.Location = new System.Drawing.Point(843, 128);
+            this.bt_GetMPD1.Location = new System.Drawing.Point(1124, 160);
+            this.bt_GetMPD1.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetMPD1.Name = "bt_GetMPD1";
-            this.bt_GetMPD1.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetMPD1.Size = new System.Drawing.Size(100, 29);
             this.bt_GetMPD1.TabIndex = 78;
             this.bt_GetMPD1.Text = "回读";
             this.bt_GetMPD1.UseVisualStyleBackColor = true;
@@ -1569,9 +1689,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetBIAS2
             // 
-            this.bt_GetBIAS2.Location = new System.Drawing.Point(843, 84);
+            this.bt_GetBIAS2.Location = new System.Drawing.Point(1124, 105);
+            this.bt_GetBIAS2.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetBIAS2.Name = "bt_GetBIAS2";
-            this.bt_GetBIAS2.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetBIAS2.Size = new System.Drawing.Size(100, 29);
             this.bt_GetBIAS2.TabIndex = 77;
             this.bt_GetBIAS2.Text = "回读";
             this.bt_GetBIAS2.UseVisualStyleBackColor = true;
@@ -1579,9 +1700,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetBIAS1
             // 
-            this.bt_GetBIAS1.Location = new System.Drawing.Point(843, 46);
+            this.bt_GetBIAS1.Location = new System.Drawing.Point(1124, 58);
+            this.bt_GetBIAS1.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetBIAS1.Name = "bt_GetBIAS1";
-            this.bt_GetBIAS1.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetBIAS1.Size = new System.Drawing.Size(100, 29);
             this.bt_GetBIAS1.TabIndex = 76;
             this.bt_GetBIAS1.Text = "回读";
             this.bt_GetBIAS1.UseVisualStyleBackColor = true;
@@ -1590,63 +1712,70 @@ namespace TestPlugin_Demo
             // lab_GetMPD2_I
             // 
             this.lab_GetMPD2_I.AutoSize = true;
-            this.lab_GetMPD2_I.Location = new System.Drawing.Point(773, 176);
+            this.lab_GetMPD2_I.Location = new System.Drawing.Point(1031, 220);
+            this.lab_GetMPD2_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetMPD2_I.Name = "lab_GetMPD2_I";
-            this.lab_GetMPD2_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetMPD2_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetMPD2_I.TabIndex = 75;
             this.lab_GetMPD2_I.Text = "********";
             // 
             // lab_GetMPD1_I
             // 
             this.lab_GetMPD1_I.AutoSize = true;
-            this.lab_GetMPD1_I.Location = new System.Drawing.Point(773, 132);
+            this.lab_GetMPD1_I.Location = new System.Drawing.Point(1031, 165);
+            this.lab_GetMPD1_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetMPD1_I.Name = "lab_GetMPD1_I";
-            this.lab_GetMPD1_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetMPD1_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetMPD1_I.TabIndex = 74;
             this.lab_GetMPD1_I.Text = "********";
             // 
             // lab_GetBIAS2_I
             // 
             this.lab_GetBIAS2_I.AutoSize = true;
-            this.lab_GetBIAS2_I.Location = new System.Drawing.Point(773, 88);
+            this.lab_GetBIAS2_I.Location = new System.Drawing.Point(1031, 110);
+            this.lab_GetBIAS2_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetBIAS2_I.Name = "lab_GetBIAS2_I";
-            this.lab_GetBIAS2_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetBIAS2_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetBIAS2_I.TabIndex = 73;
             this.lab_GetBIAS2_I.Text = "********";
             // 
             // lab_GetBIAS1_I
             // 
             this.lab_GetBIAS1_I.AutoSize = true;
-            this.lab_GetBIAS1_I.Location = new System.Drawing.Point(773, 51);
+            this.lab_GetBIAS1_I.Location = new System.Drawing.Point(1031, 64);
+            this.lab_GetBIAS1_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetBIAS1_I.Name = "lab_GetBIAS1_I";
-            this.lab_GetBIAS1_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetBIAS1_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetBIAS1_I.TabIndex = 72;
             this.lab_GetBIAS1_I.Text = "********";
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(773, 211);
+            this.label58.Location = new System.Drawing.Point(1031, 264);
+            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(53, 12);
+            this.label58.Size = new System.Drawing.Size(69, 15);
             this.label58.TabIndex = 71;
             this.label58.Text = "电流(mA)";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(773, 17);
+            this.label48.Location = new System.Drawing.Point(1031, 21);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(53, 12);
+            this.label48.Size = new System.Drawing.Size(69, 15);
             this.label48.TabIndex = 71;
             this.label48.Text = "电流(mA)";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(379, 177);
+            this.label42.Location = new System.Drawing.Point(505, 221);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(41, 12);
+            this.label42.Size = new System.Drawing.Size(55, 15);
             this.label42.TabIndex = 59;
             this.label42.Text = "(-0.1)";
             this.label42.Visible = false;
@@ -1654,9 +1783,10 @@ namespace TestPlugin_Demo
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(379, 132);
+            this.label41.Location = new System.Drawing.Point(505, 165);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(35, 12);
+            this.label41.Size = new System.Drawing.Size(47, 15);
             this.label41.TabIndex = 58;
             this.label41.Text = "(-10)";
             this.label41.Visible = false;
@@ -1664,9 +1794,10 @@ namespace TestPlugin_Demo
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(379, 89);
+            this.label40.Location = new System.Drawing.Point(505, 111);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(35, 12);
+            this.label40.Size = new System.Drawing.Size(47, 15);
             this.label40.TabIndex = 57;
             this.label40.Text = "(-10)";
             this.label40.Visible = false;
@@ -1674,9 +1805,10 @@ namespace TestPlugin_Demo
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(379, 52);
+            this.label39.Location = new System.Drawing.Point(505, 65);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(35, 12);
+            this.label39.Size = new System.Drawing.Size(47, 15);
             this.label39.TabIndex = 56;
             this.label39.Text = "(-10)";
             this.label39.Visible = false;
@@ -1684,44 +1816,49 @@ namespace TestPlugin_Demo
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(205, 177);
+            this.label38.Location = new System.Drawing.Point(273, 221);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(29, 12);
+            this.label38.Size = new System.Drawing.Size(39, 15);
             this.label38.TabIndex = 55;
             this.label38.Text = "(-5)";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(205, 133);
+            this.label37.Location = new System.Drawing.Point(273, 166);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(29, 12);
+            this.label37.Size = new System.Drawing.Size(39, 15);
             this.label37.TabIndex = 54;
             this.label37.Text = "(-5)";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(205, 90);
+            this.label31.Location = new System.Drawing.Point(273, 112);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(29, 12);
+            this.label31.Size = new System.Drawing.Size(39, 15);
             this.label31.TabIndex = 53;
             this.label31.Text = "(-7)";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(205, 52);
+            this.label30.Location = new System.Drawing.Point(273, 65);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(29, 12);
+            this.label30.Size = new System.Drawing.Size(39, 15);
             this.label30.TabIndex = 52;
             this.label30.Text = "(-7)";
             // 
             // bt_MPD2_OFF
             // 
-            this.bt_MPD2_OFF.Location = new System.Drawing.Point(561, 171);
+            this.bt_MPD2_OFF.Location = new System.Drawing.Point(748, 214);
+            this.bt_MPD2_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_MPD2_OFF.Name = "bt_MPD2_OFF";
-            this.bt_MPD2_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_MPD2_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_MPD2_OFF.TabIndex = 51;
             this.bt_MPD2_OFF.Text = "OFF";
             this.bt_MPD2_OFF.UseVisualStyleBackColor = true;
@@ -1729,9 +1866,10 @@ namespace TestPlugin_Demo
             // 
             // bt_MPD2_ON
             // 
-            this.bt_MPD2_ON.Location = new System.Drawing.Point(443, 171);
+            this.bt_MPD2_ON.Location = new System.Drawing.Point(591, 214);
+            this.bt_MPD2_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_MPD2_ON.Name = "bt_MPD2_ON";
-            this.bt_MPD2_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_MPD2_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_MPD2_ON.TabIndex = 50;
             this.bt_MPD2_ON.Text = "ON";
             this.bt_MPD2_ON.UseVisualStyleBackColor = true;
@@ -1739,18 +1877,20 @@ namespace TestPlugin_Demo
             // 
             // tb_MPD2_I
             // 
-            this.tb_MPD2_I.Location = new System.Drawing.Point(273, 173);
+            this.tb_MPD2_I.Location = new System.Drawing.Point(364, 216);
+            this.tb_MPD2_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MPD2_I.Name = "tb_MPD2_I";
-            this.tb_MPD2_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_MPD2_I.Size = new System.Drawing.Size(132, 25);
             this.tb_MPD2_I.TabIndex = 49;
             this.tb_MPD2_I.Text = "-0.1";
             this.tb_MPD2_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_MPD2_V
             // 
-            this.tb_MPD2_V.Location = new System.Drawing.Point(99, 174);
+            this.tb_MPD2_V.Location = new System.Drawing.Point(132, 218);
+            this.tb_MPD2_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MPD2_V.Name = "tb_MPD2_V";
-            this.tb_MPD2_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_MPD2_V.Size = new System.Drawing.Size(132, 25);
             this.tb_MPD2_V.TabIndex = 48;
             this.tb_MPD2_V.Text = "0";
             this.tb_MPD2_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1758,17 +1898,19 @@ namespace TestPlugin_Demo
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(22, 182);
+            this.label12.Location = new System.Drawing.Point(29, 228);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(29, 12);
+            this.label12.Size = new System.Drawing.Size(39, 15);
             this.label12.TabIndex = 47;
             this.label12.Text = "MPD2";
             // 
             // bt_MPD1_OFF
             // 
-            this.bt_MPD1_OFF.Location = new System.Drawing.Point(561, 127);
+            this.bt_MPD1_OFF.Location = new System.Drawing.Point(748, 159);
+            this.bt_MPD1_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_MPD1_OFF.Name = "bt_MPD1_OFF";
-            this.bt_MPD1_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_MPD1_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_MPD1_OFF.TabIndex = 46;
             this.bt_MPD1_OFF.Text = "OFF";
             this.bt_MPD1_OFF.UseVisualStyleBackColor = true;
@@ -1776,9 +1918,10 @@ namespace TestPlugin_Demo
             // 
             // bt_MPD1_ON
             // 
-            this.bt_MPD1_ON.Location = new System.Drawing.Point(443, 127);
+            this.bt_MPD1_ON.Location = new System.Drawing.Point(591, 159);
+            this.bt_MPD1_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_MPD1_ON.Name = "bt_MPD1_ON";
-            this.bt_MPD1_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_MPD1_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_MPD1_ON.TabIndex = 45;
             this.bt_MPD1_ON.Text = "ON";
             this.bt_MPD1_ON.UseVisualStyleBackColor = true;
@@ -1786,18 +1929,20 @@ namespace TestPlugin_Demo
             // 
             // tb_MPD1_I
             // 
-            this.tb_MPD1_I.Location = new System.Drawing.Point(273, 129);
+            this.tb_MPD1_I.Location = new System.Drawing.Point(364, 161);
+            this.tb_MPD1_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MPD1_I.Name = "tb_MPD1_I";
-            this.tb_MPD1_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_MPD1_I.Size = new System.Drawing.Size(132, 25);
             this.tb_MPD1_I.TabIndex = 44;
             this.tb_MPD1_I.Text = "-10";
             this.tb_MPD1_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_MPD1_V
             // 
-            this.tb_MPD1_V.Location = new System.Drawing.Point(99, 130);
+            this.tb_MPD1_V.Location = new System.Drawing.Point(132, 162);
+            this.tb_MPD1_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MPD1_V.Name = "tb_MPD1_V";
-            this.tb_MPD1_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_MPD1_V.Size = new System.Drawing.Size(132, 25);
             this.tb_MPD1_V.TabIndex = 43;
             this.tb_MPD1_V.Text = "0";
             this.tb_MPD1_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1805,17 +1950,19 @@ namespace TestPlugin_Demo
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(22, 138);
+            this.label13.Location = new System.Drawing.Point(29, 172);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(29, 12);
+            this.label13.Size = new System.Drawing.Size(39, 15);
             this.label13.TabIndex = 42;
             this.label13.Text = "MPD1";
             // 
             // bt_Bias2_OFF
             // 
-            this.bt_Bias2_OFF.Location = new System.Drawing.Point(561, 84);
+            this.bt_Bias2_OFF.Location = new System.Drawing.Point(748, 105);
+            this.bt_Bias2_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Bias2_OFF.Name = "bt_Bias2_OFF";
-            this.bt_Bias2_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_Bias2_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_Bias2_OFF.TabIndex = 41;
             this.bt_Bias2_OFF.Text = "OFF";
             this.bt_Bias2_OFF.UseVisualStyleBackColor = true;
@@ -1823,9 +1970,10 @@ namespace TestPlugin_Demo
             // 
             // bt_Bias2_ON
             // 
-            this.bt_Bias2_ON.Location = new System.Drawing.Point(443, 84);
+            this.bt_Bias2_ON.Location = new System.Drawing.Point(591, 105);
+            this.bt_Bias2_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Bias2_ON.Name = "bt_Bias2_ON";
-            this.bt_Bias2_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_Bias2_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_Bias2_ON.TabIndex = 40;
             this.bt_Bias2_ON.Text = "ON";
             this.bt_Bias2_ON.UseVisualStyleBackColor = true;
@@ -1833,18 +1981,20 @@ namespace TestPlugin_Demo
             // 
             // tb_Bias2_I
             // 
-            this.tb_Bias2_I.Location = new System.Drawing.Point(273, 86);
+            this.tb_Bias2_I.Location = new System.Drawing.Point(364, 108);
+            this.tb_Bias2_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Bias2_I.Name = "tb_Bias2_I";
-            this.tb_Bias2_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_Bias2_I.Size = new System.Drawing.Size(132, 25);
             this.tb_Bias2_I.TabIndex = 39;
             this.tb_Bias2_I.Text = "-10";
             this.tb_Bias2_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_Bias2_V
             // 
-            this.tb_Bias2_V.Location = new System.Drawing.Point(99, 87);
+            this.tb_Bias2_V.Location = new System.Drawing.Point(132, 109);
+            this.tb_Bias2_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Bias2_V.Name = "tb_Bias2_V";
-            this.tb_Bias2_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_Bias2_V.Size = new System.Drawing.Size(132, 25);
             this.tb_Bias2_V.TabIndex = 38;
             this.tb_Bias2_V.Text = "0";
             this.tb_Bias2_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1852,17 +2002,19 @@ namespace TestPlugin_Demo
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 95);
+            this.label10.Location = new System.Drawing.Point(29, 119);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 12);
+            this.label10.Size = new System.Drawing.Size(87, 15);
             this.label10.TabIndex = 37;
             this.label10.Text = "Bias2/MZM2";
             // 
             // bt_Bias1_OFF
             // 
-            this.bt_Bias1_OFF.Location = new System.Drawing.Point(561, 46);
+            this.bt_Bias1_OFF.Location = new System.Drawing.Point(748, 58);
+            this.bt_Bias1_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Bias1_OFF.Name = "bt_Bias1_OFF";
-            this.bt_Bias1_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_Bias1_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_Bias1_OFF.TabIndex = 36;
             this.bt_Bias1_OFF.Text = "OFF";
             this.bt_Bias1_OFF.UseVisualStyleBackColor = true;
@@ -1870,9 +2022,10 @@ namespace TestPlugin_Demo
             // 
             // bt_Bias1_ON
             // 
-            this.bt_Bias1_ON.Location = new System.Drawing.Point(443, 46);
+            this.bt_Bias1_ON.Location = new System.Drawing.Point(591, 58);
+            this.bt_Bias1_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Bias1_ON.Name = "bt_Bias1_ON";
-            this.bt_Bias1_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_Bias1_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_Bias1_ON.TabIndex = 35;
             this.bt_Bias1_ON.Text = "ON";
             this.bt_Bias1_ON.UseVisualStyleBackColor = true;
@@ -1880,18 +2033,20 @@ namespace TestPlugin_Demo
             // 
             // tb_Bias1_I
             // 
-            this.tb_Bias1_I.Location = new System.Drawing.Point(273, 48);
+            this.tb_Bias1_I.Location = new System.Drawing.Point(364, 60);
+            this.tb_Bias1_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Bias1_I.Name = "tb_Bias1_I";
-            this.tb_Bias1_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_Bias1_I.Size = new System.Drawing.Size(132, 25);
             this.tb_Bias1_I.TabIndex = 34;
             this.tb_Bias1_I.Text = "-10";
             this.tb_Bias1_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_Bias1_V
             // 
-            this.tb_Bias1_V.Location = new System.Drawing.Point(99, 49);
+            this.tb_Bias1_V.Location = new System.Drawing.Point(132, 61);
+            this.tb_Bias1_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_Bias1_V.Name = "tb_Bias1_V";
-            this.tb_Bias1_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_Bias1_V.Size = new System.Drawing.Size(132, 25);
             this.tb_Bias1_V.TabIndex = 33;
             this.tb_Bias1_V.Text = "0";
             this.tb_Bias1_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1899,9 +2054,10 @@ namespace TestPlugin_Demo
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 57);
+            this.label11.Location = new System.Drawing.Point(29, 71);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.Size = new System.Drawing.Size(87, 15);
             this.label11.TabIndex = 32;
             this.label11.Text = "Bias1/MZM1";
             // 
@@ -1992,18 +2148,21 @@ namespace TestPlugin_Demo
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.bt_LP_ON);
             this.groupBox1.Controls.Add(this.bt_LP_OFF);
-            this.groupBox1.Location = new System.Drawing.Point(5, 3);
+            this.groupBox1.Location = new System.Drawing.Point(7, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(944, 431);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1259, 539);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "电流源";
             // 
             // bt_OFF_All
             // 
-            this.bt_OFF_All.Location = new System.Drawing.Point(560, 15);
+            this.bt_OFF_All.Location = new System.Drawing.Point(747, 19);
+            this.bt_OFF_All.Margin = new System.Windows.Forms.Padding(4);
             this.bt_OFF_All.Name = "bt_OFF_All";
-            this.bt_OFF_All.Size = new System.Drawing.Size(75, 23);
+            this.bt_OFF_All.Size = new System.Drawing.Size(100, 29);
             this.bt_OFF_All.TabIndex = 75;
             this.bt_OFF_All.Text = "OFF_All";
             this.bt_OFF_All.UseVisualStyleBackColor = true;
@@ -2012,161 +2171,179 @@ namespace TestPlugin_Demo
             // lab_GetMIRROR2_I
             // 
             this.lab_GetMIRROR2_I.AutoSize = true;
-            this.lab_GetMIRROR2_I.Location = new System.Drawing.Point(687, 384);
+            this.lab_GetMIRROR2_I.Location = new System.Drawing.Point(916, 480);
+            this.lab_GetMIRROR2_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetMIRROR2_I.Name = "lab_GetMIRROR2_I";
-            this.lab_GetMIRROR2_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetMIRROR2_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetMIRROR2_I.TabIndex = 74;
             this.lab_GetMIRROR2_I.Text = "********";
             // 
             // lab_GetMIRROR2_V
             // 
             this.lab_GetMIRROR2_V.AutoSize = true;
-            this.lab_GetMIRROR2_V.Location = new System.Drawing.Point(772, 383);
+            this.lab_GetMIRROR2_V.Location = new System.Drawing.Point(1029, 479);
+            this.lab_GetMIRROR2_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetMIRROR2_V.Name = "lab_GetMIRROR2_V";
-            this.lab_GetMIRROR2_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetMIRROR2_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetMIRROR2_V.TabIndex = 74;
             this.lab_GetMIRROR2_V.Text = "********";
             // 
             // lab_GetMIRROR1_I
             // 
             this.lab_GetMIRROR1_I.AutoSize = true;
-            this.lab_GetMIRROR1_I.Location = new System.Drawing.Point(687, 334);
+            this.lab_GetMIRROR1_I.Location = new System.Drawing.Point(916, 418);
+            this.lab_GetMIRROR1_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetMIRROR1_I.Name = "lab_GetMIRROR1_I";
-            this.lab_GetMIRROR1_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetMIRROR1_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetMIRROR1_I.TabIndex = 73;
             this.lab_GetMIRROR1_I.Text = "********";
             // 
             // lab_GetMIRROR1_V
             // 
             this.lab_GetMIRROR1_V.AutoSize = true;
-            this.lab_GetMIRROR1_V.Location = new System.Drawing.Point(772, 334);
+            this.lab_GetMIRROR1_V.Location = new System.Drawing.Point(1029, 418);
+            this.lab_GetMIRROR1_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetMIRROR1_V.Name = "lab_GetMIRROR1_V";
-            this.lab_GetMIRROR1_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetMIRROR1_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetMIRROR1_V.TabIndex = 73;
             this.lab_GetMIRROR1_V.Text = "********";
             // 
             // lab_GetPH2_I
             // 
             this.lab_GetPH2_I.AutoSize = true;
-            this.lab_GetPH2_I.Location = new System.Drawing.Point(687, 287);
+            this.lab_GetPH2_I.Location = new System.Drawing.Point(916, 359);
+            this.lab_GetPH2_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetPH2_I.Name = "lab_GetPH2_I";
-            this.lab_GetPH2_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetPH2_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetPH2_I.TabIndex = 72;
             this.lab_GetPH2_I.Text = "********";
             // 
             // lab_GetPH2_V
             // 
             this.lab_GetPH2_V.AutoSize = true;
-            this.lab_GetPH2_V.Location = new System.Drawing.Point(772, 287);
+            this.lab_GetPH2_V.Location = new System.Drawing.Point(1029, 359);
+            this.lab_GetPH2_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetPH2_V.Name = "lab_GetPH2_V";
-            this.lab_GetPH2_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetPH2_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetPH2_V.TabIndex = 72;
             this.lab_GetPH2_V.Text = "********";
             // 
             // lab_GetPH1_I
             // 
             this.lab_GetPH1_I.AutoSize = true;
-            this.lab_GetPH1_I.Location = new System.Drawing.Point(687, 244);
+            this.lab_GetPH1_I.Location = new System.Drawing.Point(916, 305);
+            this.lab_GetPH1_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetPH1_I.Name = "lab_GetPH1_I";
-            this.lab_GetPH1_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetPH1_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetPH1_I.TabIndex = 71;
             this.lab_GetPH1_I.Text = "********";
             // 
             // lab_GetPH1_V
             // 
             this.lab_GetPH1_V.AutoSize = true;
-            this.lab_GetPH1_V.Location = new System.Drawing.Point(772, 243);
+            this.lab_GetPH1_V.Location = new System.Drawing.Point(1029, 304);
+            this.lab_GetPH1_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetPH1_V.Name = "lab_GetPH1_V";
-            this.lab_GetPH1_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetPH1_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetPH1_V.TabIndex = 71;
             this.lab_GetPH1_V.Text = "********";
             // 
             // lab_GetLP_I
             // 
             this.lab_GetLP_I.AutoSize = true;
-            this.lab_GetLP_I.Location = new System.Drawing.Point(687, 199);
+            this.lab_GetLP_I.Location = new System.Drawing.Point(916, 249);
+            this.lab_GetLP_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetLP_I.Name = "lab_GetLP_I";
-            this.lab_GetLP_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetLP_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetLP_I.TabIndex = 70;
             this.lab_GetLP_I.Text = "********";
             // 
             // lab_GetLP_V
             // 
             this.lab_GetLP_V.AutoSize = true;
-            this.lab_GetLP_V.Location = new System.Drawing.Point(772, 198);
+            this.lab_GetLP_V.Location = new System.Drawing.Point(1029, 248);
+            this.lab_GetLP_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetLP_V.Name = "lab_GetLP_V";
-            this.lab_GetLP_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetLP_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetLP_V.TabIndex = 70;
             this.lab_GetLP_V.Text = "********";
             // 
             // lab_GetSOA2_I
             // 
             this.lab_GetSOA2_I.AutoSize = true;
-            this.lab_GetSOA2_I.Location = new System.Drawing.Point(687, 155);
+            this.lab_GetSOA2_I.Location = new System.Drawing.Point(916, 194);
+            this.lab_GetSOA2_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetSOA2_I.Name = "lab_GetSOA2_I";
-            this.lab_GetSOA2_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetSOA2_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetSOA2_I.TabIndex = 69;
             this.lab_GetSOA2_I.Text = "********";
             // 
             // lab_GetSOA2_V
             // 
             this.lab_GetSOA2_V.AutoSize = true;
-            this.lab_GetSOA2_V.Location = new System.Drawing.Point(772, 154);
+            this.lab_GetSOA2_V.Location = new System.Drawing.Point(1029, 192);
+            this.lab_GetSOA2_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetSOA2_V.Name = "lab_GetSOA2_V";
-            this.lab_GetSOA2_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetSOA2_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetSOA2_V.TabIndex = 69;
             this.lab_GetSOA2_V.Text = "********";
             // 
             // lab_GetSOA1_I
             // 
             this.lab_GetSOA1_I.AutoSize = true;
-            this.lab_GetSOA1_I.Location = new System.Drawing.Point(687, 106);
+            this.lab_GetSOA1_I.Location = new System.Drawing.Point(916, 132);
+            this.lab_GetSOA1_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetSOA1_I.Name = "lab_GetSOA1_I";
-            this.lab_GetSOA1_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetSOA1_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetSOA1_I.TabIndex = 68;
             this.lab_GetSOA1_I.Text = "********";
             // 
             // lab_GetSOA1_V
             // 
             this.lab_GetSOA1_V.AutoSize = true;
-            this.lab_GetSOA1_V.Location = new System.Drawing.Point(772, 105);
+            this.lab_GetSOA1_V.Location = new System.Drawing.Point(1029, 131);
+            this.lab_GetSOA1_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetSOA1_V.Name = "lab_GetSOA1_V";
-            this.lab_GetSOA1_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetSOA1_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetSOA1_V.TabIndex = 68;
             this.lab_GetSOA1_V.Text = "********";
             // 
             // lab_GetGAIN_I
             // 
             this.lab_GetGAIN_I.AutoSize = true;
-            this.lab_GetGAIN_I.Location = new System.Drawing.Point(687, 57);
+            this.lab_GetGAIN_I.Location = new System.Drawing.Point(916, 71);
+            this.lab_GetGAIN_I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetGAIN_I.Name = "lab_GetGAIN_I";
-            this.lab_GetGAIN_I.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetGAIN_I.Size = new System.Drawing.Size(71, 15);
             this.lab_GetGAIN_I.TabIndex = 67;
             this.lab_GetGAIN_I.Text = "********";
             // 
             // lab_GetGAIN_V
             // 
             this.lab_GetGAIN_V.AutoSize = true;
-            this.lab_GetGAIN_V.Location = new System.Drawing.Point(772, 57);
+            this.lab_GetGAIN_V.Location = new System.Drawing.Point(1029, 71);
+            this.lab_GetGAIN_V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_GetGAIN_V.Name = "lab_GetGAIN_V";
-            this.lab_GetGAIN_V.Size = new System.Drawing.Size(53, 12);
+            this.lab_GetGAIN_V.Size = new System.Drawing.Size(71, 15);
             this.lab_GetGAIN_V.TabIndex = 67;
             this.lab_GetGAIN_V.Text = "********";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(772, 24);
+            this.label43.Location = new System.Drawing.Point(1029, 30);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(47, 12);
+            this.label43.Size = new System.Drawing.Size(61, 15);
             this.label43.TabIndex = 66;
             this.label43.Text = "电压(v)";
             // 
             // bt_GetMIRROR2
             // 
-            this.bt_GetMIRROR2.Location = new System.Drawing.Point(842, 379);
+            this.bt_GetMIRROR2.Location = new System.Drawing.Point(1123, 474);
+            this.bt_GetMIRROR2.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetMIRROR2.Name = "bt_GetMIRROR2";
-            this.bt_GetMIRROR2.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetMIRROR2.Size = new System.Drawing.Size(100, 29);
             this.bt_GetMIRROR2.TabIndex = 65;
             this.bt_GetMIRROR2.Text = "回读";
             this.bt_GetMIRROR2.UseVisualStyleBackColor = true;
@@ -2174,9 +2351,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetMIRROR1
             // 
-            this.bt_GetMIRROR1.Location = new System.Drawing.Point(842, 329);
+            this.bt_GetMIRROR1.Location = new System.Drawing.Point(1123, 411);
+            this.bt_GetMIRROR1.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetMIRROR1.Name = "bt_GetMIRROR1";
-            this.bt_GetMIRROR1.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetMIRROR1.Size = new System.Drawing.Size(100, 29);
             this.bt_GetMIRROR1.TabIndex = 64;
             this.bt_GetMIRROR1.Text = "回读";
             this.bt_GetMIRROR1.UseVisualStyleBackColor = true;
@@ -2184,9 +2362,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetGAIN
             // 
-            this.bt_GetGAIN.Location = new System.Drawing.Point(842, 52);
+            this.bt_GetGAIN.Location = new System.Drawing.Point(1123, 65);
+            this.bt_GetGAIN.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetGAIN.Name = "bt_GetGAIN";
-            this.bt_GetGAIN.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetGAIN.Size = new System.Drawing.Size(100, 29);
             this.bt_GetGAIN.TabIndex = 58;
             this.bt_GetGAIN.Text = "回读";
             this.bt_GetGAIN.UseVisualStyleBackColor = true;
@@ -2194,9 +2373,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetPH2
             // 
-            this.bt_GetPH2.Location = new System.Drawing.Point(842, 282);
+            this.bt_GetPH2.Location = new System.Drawing.Point(1123, 352);
+            this.bt_GetPH2.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetPH2.Name = "bt_GetPH2";
-            this.bt_GetPH2.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetPH2.Size = new System.Drawing.Size(100, 29);
             this.bt_GetPH2.TabIndex = 63;
             this.bt_GetPH2.Text = "回读";
             this.bt_GetPH2.UseVisualStyleBackColor = true;
@@ -2204,9 +2384,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetSOA1
             // 
-            this.bt_GetSOA1.Location = new System.Drawing.Point(842, 100);
+            this.bt_GetSOA1.Location = new System.Drawing.Point(1123, 125);
+            this.bt_GetSOA1.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetSOA1.Name = "bt_GetSOA1";
-            this.bt_GetSOA1.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetSOA1.Size = new System.Drawing.Size(100, 29);
             this.bt_GetSOA1.TabIndex = 59;
             this.bt_GetSOA1.Text = "回读";
             this.bt_GetSOA1.UseVisualStyleBackColor = true;
@@ -2214,9 +2395,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetPH1
             // 
-            this.bt_GetPH1.Location = new System.Drawing.Point(842, 238);
+            this.bt_GetPH1.Location = new System.Drawing.Point(1123, 298);
+            this.bt_GetPH1.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetPH1.Name = "bt_GetPH1";
-            this.bt_GetPH1.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetPH1.Size = new System.Drawing.Size(100, 29);
             this.bt_GetPH1.TabIndex = 62;
             this.bt_GetPH1.Text = "回读";
             this.bt_GetPH1.UseVisualStyleBackColor = true;
@@ -2224,9 +2406,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetSOA2
             // 
-            this.bt_GetSOA2.Location = new System.Drawing.Point(842, 149);
+            this.bt_GetSOA2.Location = new System.Drawing.Point(1123, 186);
+            this.bt_GetSOA2.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetSOA2.Name = "bt_GetSOA2";
-            this.bt_GetSOA2.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetSOA2.Size = new System.Drawing.Size(100, 29);
             this.bt_GetSOA2.TabIndex = 60;
             this.bt_GetSOA2.Text = "回读";
             this.bt_GetSOA2.UseVisualStyleBackColor = true;
@@ -2234,9 +2417,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GetLP
             // 
-            this.bt_GetLP.Location = new System.Drawing.Point(842, 193);
+            this.bt_GetLP.Location = new System.Drawing.Point(1123, 241);
+            this.bt_GetLP.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GetLP.Name = "bt_GetLP";
-            this.bt_GetLP.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetLP.Size = new System.Drawing.Size(100, 29);
             this.bt_GetLP.TabIndex = 61;
             this.bt_GetLP.Text = "回读";
             this.bt_GetLP.UseVisualStyleBackColor = true;
@@ -2245,81 +2429,90 @@ namespace TestPlugin_Demo
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(378, 385);
+            this.label29.Location = new System.Drawing.Point(504, 481);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(29, 12);
+            this.label29.Size = new System.Drawing.Size(39, 15);
             this.label29.TabIndex = 57;
             this.label29.Text = "(65)";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(378, 335);
+            this.label28.Location = new System.Drawing.Point(504, 419);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(29, 12);
+            this.label28.Size = new System.Drawing.Size(39, 15);
             this.label28.TabIndex = 56;
             this.label28.Text = "(65)";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(378, 288);
+            this.label27.Location = new System.Drawing.Point(504, 360);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(29, 12);
+            this.label27.Size = new System.Drawing.Size(39, 15);
             this.label27.TabIndex = 55;
             this.label27.Text = "(20)";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(378, 244);
+            this.label26.Location = new System.Drawing.Point(504, 305);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(29, 12);
+            this.label26.Size = new System.Drawing.Size(39, 15);
             this.label26.TabIndex = 54;
             this.label26.Text = "(20)";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(378, 198);
+            this.label25.Location = new System.Drawing.Point(504, 248);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(29, 12);
+            this.label25.Size = new System.Drawing.Size(39, 15);
             this.label25.TabIndex = 53;
             this.label25.Text = "(20)";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(378, 154);
+            this.label24.Location = new System.Drawing.Point(504, 192);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(35, 12);
+            this.label24.Size = new System.Drawing.Size(47, 15);
             this.label24.TabIndex = 52;
             this.label24.Text = "(120)";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(378, 105);
+            this.label23.Location = new System.Drawing.Point(504, 131);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(35, 12);
+            this.label23.Size = new System.Drawing.Size(47, 15);
             this.label23.TabIndex = 51;
             this.label23.Text = "(120)";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(378, 57);
+            this.label22.Location = new System.Drawing.Point(504, 71);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 12);
+            this.label22.Size = new System.Drawing.Size(47, 15);
             this.label22.TabIndex = 50;
             this.label22.Text = "(180)";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(204, 385);
+            this.label21.Location = new System.Drawing.Point(272, 481);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 12);
+            this.label21.Size = new System.Drawing.Size(47, 15);
             this.label21.TabIndex = 49;
             this.label21.Text = "(1.6)";
             this.label21.Visible = false;
@@ -2327,9 +2520,10 @@ namespace TestPlugin_Demo
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(204, 106);
+            this.label20.Location = new System.Drawing.Point(272, 132);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(35, 12);
+            this.label20.Size = new System.Drawing.Size(47, 15);
             this.label20.TabIndex = 48;
             this.label20.Text = "(1.6)";
             this.label20.Visible = false;
@@ -2337,9 +2531,10 @@ namespace TestPlugin_Demo
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(204, 155);
+            this.label19.Location = new System.Drawing.Point(272, 194);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 12);
+            this.label19.Size = new System.Drawing.Size(47, 15);
             this.label19.TabIndex = 47;
             this.label19.Text = "(1.6)";
             this.label19.Visible = false;
@@ -2347,9 +2542,10 @@ namespace TestPlugin_Demo
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(204, 199);
+            this.label18.Location = new System.Drawing.Point(272, 249);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 12);
+            this.label18.Size = new System.Drawing.Size(47, 15);
             this.label18.TabIndex = 46;
             this.label18.Text = "(1.5)";
             this.label18.Visible = false;
@@ -2357,9 +2553,10 @@ namespace TestPlugin_Demo
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(204, 244);
+            this.label17.Location = new System.Drawing.Point(272, 305);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 12);
+            this.label17.Size = new System.Drawing.Size(47, 15);
             this.label17.TabIndex = 45;
             this.label17.Text = "(1.5)";
             this.label17.Visible = false;
@@ -2367,9 +2564,10 @@ namespace TestPlugin_Demo
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(204, 288);
+            this.label16.Location = new System.Drawing.Point(272, 360);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 12);
+            this.label16.Size = new System.Drawing.Size(47, 15);
             this.label16.TabIndex = 44;
             this.label16.Text = "(1.5)";
             this.label16.Visible = false;
@@ -2377,9 +2575,10 @@ namespace TestPlugin_Demo
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(204, 335);
+            this.label15.Location = new System.Drawing.Point(272, 419);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 12);
+            this.label15.Size = new System.Drawing.Size(47, 15);
             this.label15.TabIndex = 43;
             this.label15.Text = "(1.6)";
             this.label15.Visible = false;
@@ -2387,9 +2586,10 @@ namespace TestPlugin_Demo
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(204, 58);
+            this.label14.Location = new System.Drawing.Point(272, 72);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 12);
+            this.label14.Size = new System.Drawing.Size(31, 15);
             this.label14.TabIndex = 42;
             this.label14.Text = "(2)";
             this.label14.Visible = false;
@@ -2397,17 +2597,19 @@ namespace TestPlugin_Demo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(131, 27);
+            this.label3.Location = new System.Drawing.Point(175, 34);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 12);
+            this.label3.Size = new System.Drawing.Size(61, 15);
             this.label3.TabIndex = 1;
             this.label3.Text = "电压(v)";
             // 
             // bt_MIRROR2_OFF
             // 
-            this.bt_MIRROR2_OFF.Location = new System.Drawing.Point(560, 379);
+            this.bt_MIRROR2_OFF.Location = new System.Drawing.Point(747, 474);
+            this.bt_MIRROR2_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_MIRROR2_OFF.Name = "bt_MIRROR2_OFF";
-            this.bt_MIRROR2_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_MIRROR2_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_MIRROR2_OFF.TabIndex = 41;
             this.bt_MIRROR2_OFF.Text = "OFF";
             this.bt_MIRROR2_OFF.UseVisualStyleBackColor = true;
@@ -2416,17 +2618,19 @@ namespace TestPlugin_Demo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 63);
+            this.label1.Location = new System.Drawing.Point(28, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "GAIN";
             // 
             // bt_MIRROR2_ON
             // 
-            this.bt_MIRROR2_ON.Location = new System.Drawing.Point(442, 379);
+            this.bt_MIRROR2_ON.Location = new System.Drawing.Point(589, 474);
+            this.bt_MIRROR2_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_MIRROR2_ON.Name = "bt_MIRROR2_ON";
-            this.bt_MIRROR2_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_MIRROR2_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_MIRROR2_ON.TabIndex = 40;
             this.bt_MIRROR2_ON.Text = "ON";
             this.bt_MIRROR2_ON.UseVisualStyleBackColor = true;
@@ -2435,53 +2639,59 @@ namespace TestPlugin_Demo
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(687, 24);
+            this.label51.Location = new System.Drawing.Point(916, 30);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(53, 12);
+            this.label51.Size = new System.Drawing.Size(69, 15);
             this.label51.TabIndex = 2;
             this.label51.Text = "电流(mA)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(304, 27);
+            this.label4.Location = new System.Drawing.Point(405, 34);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.Size = new System.Drawing.Size(69, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "电流(mA)";
             // 
             // tb_MIRROR2_I
             // 
-            this.tb_MIRROR2_I.Location = new System.Drawing.Point(272, 381);
+            this.tb_MIRROR2_I.Location = new System.Drawing.Point(363, 476);
+            this.tb_MIRROR2_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MIRROR2_I.Name = "tb_MIRROR2_I";
-            this.tb_MIRROR2_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_MIRROR2_I.Size = new System.Drawing.Size(132, 25);
             this.tb_MIRROR2_I.TabIndex = 39;
             this.tb_MIRROR2_I.Text = "0";
             this.tb_MIRROR2_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_GAIN_V
             // 
-            this.tb_GAIN_V.Location = new System.Drawing.Point(98, 55);
+            this.tb_GAIN_V.Location = new System.Drawing.Point(131, 69);
+            this.tb_GAIN_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_GAIN_V.Name = "tb_GAIN_V";
-            this.tb_GAIN_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_GAIN_V.Size = new System.Drawing.Size(132, 25);
             this.tb_GAIN_V.TabIndex = 3;
             this.tb_GAIN_V.Text = "2";
             this.tb_GAIN_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_MIRROR2_V
             // 
-            this.tb_MIRROR2_V.Location = new System.Drawing.Point(98, 382);
+            this.tb_MIRROR2_V.Location = new System.Drawing.Point(131, 478);
+            this.tb_MIRROR2_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MIRROR2_V.Name = "tb_MIRROR2_V";
-            this.tb_MIRROR2_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_MIRROR2_V.Size = new System.Drawing.Size(132, 25);
             this.tb_MIRROR2_V.TabIndex = 38;
             this.tb_MIRROR2_V.Text = "1.6";
             this.tb_MIRROR2_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_GAIN_I
             // 
-            this.tb_GAIN_I.Location = new System.Drawing.Point(272, 54);
+            this.tb_GAIN_I.Location = new System.Drawing.Point(363, 68);
+            this.tb_GAIN_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_GAIN_I.Name = "tb_GAIN_I";
-            this.tb_GAIN_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_GAIN_I.Size = new System.Drawing.Size(132, 25);
             this.tb_GAIN_I.TabIndex = 4;
             this.tb_GAIN_I.Text = "0";
             this.tb_GAIN_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2489,17 +2699,19 @@ namespace TestPlugin_Demo
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 390);
+            this.label9.Location = new System.Drawing.Point(28, 488);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 12);
+            this.label9.Size = new System.Drawing.Size(63, 15);
             this.label9.TabIndex = 37;
             this.label9.Text = "MIRROR2";
             // 
             // bt_GAIN_ON
             // 
-            this.bt_GAIN_ON.Location = new System.Drawing.Point(442, 52);
+            this.bt_GAIN_ON.Location = new System.Drawing.Point(589, 65);
+            this.bt_GAIN_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GAIN_ON.Name = "bt_GAIN_ON";
-            this.bt_GAIN_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_GAIN_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_GAIN_ON.TabIndex = 5;
             this.bt_GAIN_ON.Text = "ON";
             this.bt_GAIN_ON.UseVisualStyleBackColor = true;
@@ -2507,9 +2719,10 @@ namespace TestPlugin_Demo
             // 
             // bt_MIRROR1_OFF
             // 
-            this.bt_MIRROR1_OFF.Location = new System.Drawing.Point(560, 329);
+            this.bt_MIRROR1_OFF.Location = new System.Drawing.Point(747, 411);
+            this.bt_MIRROR1_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_MIRROR1_OFF.Name = "bt_MIRROR1_OFF";
-            this.bt_MIRROR1_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_MIRROR1_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_MIRROR1_OFF.TabIndex = 36;
             this.bt_MIRROR1_OFF.Text = "OFF";
             this.bt_MIRROR1_OFF.UseVisualStyleBackColor = true;
@@ -2517,9 +2730,10 @@ namespace TestPlugin_Demo
             // 
             // bt_GAIN_OFF
             // 
-            this.bt_GAIN_OFF.Location = new System.Drawing.Point(560, 52);
+            this.bt_GAIN_OFF.Location = new System.Drawing.Point(747, 65);
+            this.bt_GAIN_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_GAIN_OFF.Name = "bt_GAIN_OFF";
-            this.bt_GAIN_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_GAIN_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_GAIN_OFF.TabIndex = 6;
             this.bt_GAIN_OFF.Text = "OFF";
             this.bt_GAIN_OFF.UseVisualStyleBackColor = true;
@@ -2527,9 +2741,10 @@ namespace TestPlugin_Demo
             // 
             // bt_MIRROR1_ON
             // 
-            this.bt_MIRROR1_ON.Location = new System.Drawing.Point(442, 329);
+            this.bt_MIRROR1_ON.Location = new System.Drawing.Point(589, 411);
+            this.bt_MIRROR1_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_MIRROR1_ON.Name = "bt_MIRROR1_ON";
-            this.bt_MIRROR1_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_MIRROR1_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_MIRROR1_ON.TabIndex = 35;
             this.bt_MIRROR1_ON.Text = "ON";
             this.bt_MIRROR1_ON.UseVisualStyleBackColor = true;
@@ -2538,44 +2753,49 @@ namespace TestPlugin_Demo
             // SOA1
             // 
             this.SOA1.AutoSize = true;
-            this.SOA1.Location = new System.Drawing.Point(21, 111);
+            this.SOA1.Location = new System.Drawing.Point(28, 139);
+            this.SOA1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SOA1.Name = "SOA1";
-            this.SOA1.Size = new System.Drawing.Size(29, 12);
+            this.SOA1.Size = new System.Drawing.Size(39, 15);
             this.SOA1.TabIndex = 7;
             this.SOA1.Text = "SOA1";
             // 
             // tb_MIRROR1_I
             // 
-            this.tb_MIRROR1_I.Location = new System.Drawing.Point(272, 331);
+            this.tb_MIRROR1_I.Location = new System.Drawing.Point(363, 414);
+            this.tb_MIRROR1_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MIRROR1_I.Name = "tb_MIRROR1_I";
-            this.tb_MIRROR1_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_MIRROR1_I.Size = new System.Drawing.Size(132, 25);
             this.tb_MIRROR1_I.TabIndex = 34;
             this.tb_MIRROR1_I.Text = "0";
             this.tb_MIRROR1_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_SOA1_V
             // 
-            this.tb_SOA1_V.Location = new System.Drawing.Point(98, 103);
+            this.tb_SOA1_V.Location = new System.Drawing.Point(131, 129);
+            this.tb_SOA1_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_SOA1_V.Name = "tb_SOA1_V";
-            this.tb_SOA1_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_SOA1_V.Size = new System.Drawing.Size(132, 25);
             this.tb_SOA1_V.TabIndex = 8;
             this.tb_SOA1_V.Text = "1.6";
             this.tb_SOA1_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_MIRROR1_V
             // 
-            this.tb_MIRROR1_V.Location = new System.Drawing.Point(98, 332);
+            this.tb_MIRROR1_V.Location = new System.Drawing.Point(131, 415);
+            this.tb_MIRROR1_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MIRROR1_V.Name = "tb_MIRROR1_V";
-            this.tb_MIRROR1_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_MIRROR1_V.Size = new System.Drawing.Size(132, 25);
             this.tb_MIRROR1_V.TabIndex = 33;
             this.tb_MIRROR1_V.Text = "1.6";
             this.tb_MIRROR1_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_SOA1_I
             // 
-            this.tb_SOA1_I.Location = new System.Drawing.Point(272, 102);
+            this.tb_SOA1_I.Location = new System.Drawing.Point(363, 128);
+            this.tb_SOA1_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_SOA1_I.Name = "tb_SOA1_I";
-            this.tb_SOA1_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_SOA1_I.Size = new System.Drawing.Size(132, 25);
             this.tb_SOA1_I.TabIndex = 9;
             this.tb_SOA1_I.Text = "0";
             this.tb_SOA1_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2583,17 +2803,19 @@ namespace TestPlugin_Demo
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 340);
+            this.label8.Location = new System.Drawing.Point(28, 425);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 12);
+            this.label8.Size = new System.Drawing.Size(63, 15);
             this.label8.TabIndex = 32;
             this.label8.Text = "MIRROR1";
             // 
             // bt_SOA1_ON
             // 
-            this.bt_SOA1_ON.Location = new System.Drawing.Point(442, 100);
+            this.bt_SOA1_ON.Location = new System.Drawing.Point(589, 125);
+            this.bt_SOA1_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_SOA1_ON.Name = "bt_SOA1_ON";
-            this.bt_SOA1_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_SOA1_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_SOA1_ON.TabIndex = 10;
             this.bt_SOA1_ON.Text = "ON";
             this.bt_SOA1_ON.UseVisualStyleBackColor = true;
@@ -2601,9 +2823,10 @@ namespace TestPlugin_Demo
             // 
             // bt_PH2_OFF
             // 
-            this.bt_PH2_OFF.Location = new System.Drawing.Point(560, 282);
+            this.bt_PH2_OFF.Location = new System.Drawing.Point(747, 352);
+            this.bt_PH2_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PH2_OFF.Name = "bt_PH2_OFF";
-            this.bt_PH2_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_PH2_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_PH2_OFF.TabIndex = 31;
             this.bt_PH2_OFF.Text = "OFF";
             this.bt_PH2_OFF.UseVisualStyleBackColor = true;
@@ -2611,9 +2834,10 @@ namespace TestPlugin_Demo
             // 
             // bt_SOA1_OFF
             // 
-            this.bt_SOA1_OFF.Location = new System.Drawing.Point(560, 100);
+            this.bt_SOA1_OFF.Location = new System.Drawing.Point(747, 125);
+            this.bt_SOA1_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_SOA1_OFF.Name = "bt_SOA1_OFF";
-            this.bt_SOA1_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_SOA1_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_SOA1_OFF.TabIndex = 11;
             this.bt_SOA1_OFF.Text = "OFF";
             this.bt_SOA1_OFF.UseVisualStyleBackColor = true;
@@ -2621,9 +2845,10 @@ namespace TestPlugin_Demo
             // 
             // bt_PH2_ON
             // 
-            this.bt_PH2_ON.Location = new System.Drawing.Point(442, 282);
+            this.bt_PH2_ON.Location = new System.Drawing.Point(589, 352);
+            this.bt_PH2_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PH2_ON.Name = "bt_PH2_ON";
-            this.bt_PH2_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_PH2_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_PH2_ON.TabIndex = 30;
             this.bt_PH2_ON.Text = "ON";
             this.bt_PH2_ON.UseVisualStyleBackColor = true;
@@ -2632,44 +2857,49 @@ namespace TestPlugin_Demo
             // SOA2
             // 
             this.SOA2.AutoSize = true;
-            this.SOA2.Location = new System.Drawing.Point(21, 160);
+            this.SOA2.Location = new System.Drawing.Point(28, 200);
+            this.SOA2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SOA2.Name = "SOA2";
-            this.SOA2.Size = new System.Drawing.Size(29, 12);
+            this.SOA2.Size = new System.Drawing.Size(39, 15);
             this.SOA2.TabIndex = 12;
             this.SOA2.Text = "SOA2";
             // 
             // tb_PH2_I
             // 
-            this.tb_PH2_I.Location = new System.Drawing.Point(272, 284);
+            this.tb_PH2_I.Location = new System.Drawing.Point(363, 355);
+            this.tb_PH2_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_PH2_I.Name = "tb_PH2_I";
-            this.tb_PH2_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_PH2_I.Size = new System.Drawing.Size(132, 25);
             this.tb_PH2_I.TabIndex = 29;
             this.tb_PH2_I.Text = "0";
             this.tb_PH2_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_SOA2_V
             // 
-            this.tb_SOA2_V.Location = new System.Drawing.Point(98, 152);
+            this.tb_SOA2_V.Location = new System.Drawing.Point(131, 190);
+            this.tb_SOA2_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_SOA2_V.Name = "tb_SOA2_V";
-            this.tb_SOA2_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_SOA2_V.Size = new System.Drawing.Size(132, 25);
             this.tb_SOA2_V.TabIndex = 13;
             this.tb_SOA2_V.Text = "1.6";
             this.tb_SOA2_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_PH2_V
             // 
-            this.tb_PH2_V.Location = new System.Drawing.Point(98, 285);
+            this.tb_PH2_V.Location = new System.Drawing.Point(131, 356);
+            this.tb_PH2_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_PH2_V.Name = "tb_PH2_V";
-            this.tb_PH2_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_PH2_V.Size = new System.Drawing.Size(132, 25);
             this.tb_PH2_V.TabIndex = 28;
             this.tb_PH2_V.Text = "1.5";
             this.tb_PH2_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_SOA2_I
             // 
-            this.tb_SOA2_I.Location = new System.Drawing.Point(272, 151);
+            this.tb_SOA2_I.Location = new System.Drawing.Point(363, 189);
+            this.tb_SOA2_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_SOA2_I.Name = "tb_SOA2_I";
-            this.tb_SOA2_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_SOA2_I.Size = new System.Drawing.Size(132, 25);
             this.tb_SOA2_I.TabIndex = 14;
             this.tb_SOA2_I.Text = "0";
             this.tb_SOA2_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2677,17 +2907,19 @@ namespace TestPlugin_Demo
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 293);
+            this.label7.Location = new System.Drawing.Point(28, 366);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 12);
+            this.label7.Size = new System.Drawing.Size(31, 15);
             this.label7.TabIndex = 27;
             this.label7.Text = "PH2";
             // 
             // bt_SOA2_ON
             // 
-            this.bt_SOA2_ON.Location = new System.Drawing.Point(442, 149);
+            this.bt_SOA2_ON.Location = new System.Drawing.Point(589, 186);
+            this.bt_SOA2_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_SOA2_ON.Name = "bt_SOA2_ON";
-            this.bt_SOA2_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_SOA2_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_SOA2_ON.TabIndex = 15;
             this.bt_SOA2_ON.Text = "ON";
             this.bt_SOA2_ON.UseVisualStyleBackColor = true;
@@ -2695,9 +2927,10 @@ namespace TestPlugin_Demo
             // 
             // bt_PH1_OFF
             // 
-            this.bt_PH1_OFF.Location = new System.Drawing.Point(560, 238);
+            this.bt_PH1_OFF.Location = new System.Drawing.Point(747, 298);
+            this.bt_PH1_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PH1_OFF.Name = "bt_PH1_OFF";
-            this.bt_PH1_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_PH1_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_PH1_OFF.TabIndex = 26;
             this.bt_PH1_OFF.Text = "OFF";
             this.bt_PH1_OFF.UseVisualStyleBackColor = true;
@@ -2705,9 +2938,10 @@ namespace TestPlugin_Demo
             // 
             // bt_SOA2_OFF
             // 
-            this.bt_SOA2_OFF.Location = new System.Drawing.Point(560, 149);
+            this.bt_SOA2_OFF.Location = new System.Drawing.Point(747, 186);
+            this.bt_SOA2_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_SOA2_OFF.Name = "bt_SOA2_OFF";
-            this.bt_SOA2_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_SOA2_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_SOA2_OFF.TabIndex = 16;
             this.bt_SOA2_OFF.Text = "OFF";
             this.bt_SOA2_OFF.UseVisualStyleBackColor = true;
@@ -2715,9 +2949,10 @@ namespace TestPlugin_Demo
             // 
             // bt_PH1_ON
             // 
-            this.bt_PH1_ON.Location = new System.Drawing.Point(442, 238);
+            this.bt_PH1_ON.Location = new System.Drawing.Point(589, 298);
+            this.bt_PH1_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_PH1_ON.Name = "bt_PH1_ON";
-            this.bt_PH1_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_PH1_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_PH1_ON.TabIndex = 25;
             this.bt_PH1_ON.Text = "ON";
             this.bt_PH1_ON.UseVisualStyleBackColor = true;
@@ -2726,44 +2961,49 @@ namespace TestPlugin_Demo
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 204);
+            this.label5.Location = new System.Drawing.Point(28, 255);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.Size = new System.Drawing.Size(87, 15);
             this.label5.TabIndex = 17;
             this.label5.Text = "L_Phase/LP";
             // 
             // tb_PH1_I
             // 
-            this.tb_PH1_I.Location = new System.Drawing.Point(272, 240);
+            this.tb_PH1_I.Location = new System.Drawing.Point(363, 300);
+            this.tb_PH1_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_PH1_I.Name = "tb_PH1_I";
-            this.tb_PH1_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_PH1_I.Size = new System.Drawing.Size(132, 25);
             this.tb_PH1_I.TabIndex = 24;
             this.tb_PH1_I.Text = "0";
             this.tb_PH1_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_LP_V
             // 
-            this.tb_LP_V.Location = new System.Drawing.Point(98, 196);
+            this.tb_LP_V.Location = new System.Drawing.Point(131, 245);
+            this.tb_LP_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_LP_V.Name = "tb_LP_V";
-            this.tb_LP_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_LP_V.Size = new System.Drawing.Size(132, 25);
             this.tb_LP_V.TabIndex = 18;
             this.tb_LP_V.Text = "1.5";
             this.tb_LP_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_PH1_V
             // 
-            this.tb_PH1_V.Location = new System.Drawing.Point(98, 241);
+            this.tb_PH1_V.Location = new System.Drawing.Point(131, 301);
+            this.tb_PH1_V.Margin = new System.Windows.Forms.Padding(4);
             this.tb_PH1_V.Name = "tb_PH1_V";
-            this.tb_PH1_V.Size = new System.Drawing.Size(100, 21);
+            this.tb_PH1_V.Size = new System.Drawing.Size(132, 25);
             this.tb_PH1_V.TabIndex = 23;
             this.tb_PH1_V.Text = "1.5";
             this.tb_PH1_V.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_LP_I
             // 
-            this.tb_LP_I.Location = new System.Drawing.Point(272, 195);
+            this.tb_LP_I.Location = new System.Drawing.Point(363, 244);
+            this.tb_LP_I.Margin = new System.Windows.Forms.Padding(4);
             this.tb_LP_I.Name = "tb_LP_I";
-            this.tb_LP_I.Size = new System.Drawing.Size(100, 21);
+            this.tb_LP_I.Size = new System.Drawing.Size(132, 25);
             this.tb_LP_I.TabIndex = 19;
             this.tb_LP_I.Text = "0";
             this.tb_LP_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2771,17 +3011,19 @@ namespace TestPlugin_Demo
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 249);
+            this.label6.Location = new System.Drawing.Point(28, 311);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 12);
+            this.label6.Size = new System.Drawing.Size(31, 15);
             this.label6.TabIndex = 22;
             this.label6.Text = "PH1";
             // 
             // bt_LP_ON
             // 
-            this.bt_LP_ON.Location = new System.Drawing.Point(442, 193);
+            this.bt_LP_ON.Location = new System.Drawing.Point(589, 241);
+            this.bt_LP_ON.Margin = new System.Windows.Forms.Padding(4);
             this.bt_LP_ON.Name = "bt_LP_ON";
-            this.bt_LP_ON.Size = new System.Drawing.Size(75, 23);
+            this.bt_LP_ON.Size = new System.Drawing.Size(100, 29);
             this.bt_LP_ON.TabIndex = 20;
             this.bt_LP_ON.Text = "ON";
             this.bt_LP_ON.UseVisualStyleBackColor = true;
@@ -2789,9 +3031,10 @@ namespace TestPlugin_Demo
             // 
             // bt_LP_OFF
             // 
-            this.bt_LP_OFF.Location = new System.Drawing.Point(560, 193);
+            this.bt_LP_OFF.Location = new System.Drawing.Point(747, 241);
+            this.bt_LP_OFF.Margin = new System.Windows.Forms.Padding(4);
             this.bt_LP_OFF.Name = "bt_LP_OFF";
-            this.bt_LP_OFF.Size = new System.Drawing.Size(75, 23);
+            this.bt_LP_OFF.Size = new System.Drawing.Size(100, 29);
             this.bt_LP_OFF.TabIndex = 21;
             this.bt_LP_OFF.Text = "OFF";
             this.bt_LP_OFF.UseVisualStyleBackColor = true;
@@ -2801,8 +3044,9 @@ namespace TestPlugin_Demo
             // 
             this.CoarseTuning.Controls.Add(this.panel_coarsetuning);
             this.CoarseTuning.Location = new System.Drawing.Point(4, 42);
+            this.CoarseTuning.Margin = new System.Windows.Forms.Padding(4);
             this.CoarseTuning.Name = "CoarseTuning";
-            this.CoarseTuning.Size = new System.Drawing.Size(1331, 812);
+            this.CoarseTuning.Size = new System.Drawing.Size(1777, 1026);
             this.CoarseTuning.TabIndex = 19;
             this.CoarseTuning.Text = "CoarseTuning";
             this.CoarseTuning.UseVisualStyleBackColor = true;
@@ -2811,17 +3055,19 @@ namespace TestPlugin_Demo
             // 
             this.panel_coarsetuning.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_coarsetuning.Location = new System.Drawing.Point(0, 0);
+            this.panel_coarsetuning.Margin = new System.Windows.Forms.Padding(4);
             this.panel_coarsetuning.Name = "panel_coarsetuning";
-            this.panel_coarsetuning.Size = new System.Drawing.Size(1331, 812);
+            this.panel_coarsetuning.Size = new System.Drawing.Size(1777, 1026);
             this.panel_coarsetuning.TabIndex = 0;
             // 
             // tabPage_coarse
             // 
             this.tabPage_coarse.Controls.Add(this.tableLayoutPanel1);
             this.tabPage_coarse.Location = new System.Drawing.Point(4, 42);
+            this.tabPage_coarse.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage_coarse.Name = "tabPage_coarse";
-            this.tabPage_coarse.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_coarse.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage_coarse.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage_coarse.Size = new System.Drawing.Size(1777, 1026);
             this.tabPage_coarse.TabIndex = 20;
             this.tabPage_coarse.Text = "coarseTuning";
             this.tabPage_coarse.UseVisualStyleBackColor = true;
@@ -2833,27 +3079,30 @@ namespace TestPlugin_Demo
             this.tableLayoutPanel1.Controls.Add(this.panel_coarse, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.bt_choose, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.970223F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96.02978F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1325, 806);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1769, 1018);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel_coarse
             // 
             this.panel_coarse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_coarse.Location = new System.Drawing.Point(3, 34);
+            this.panel_coarse.Location = new System.Drawing.Point(4, 44);
+            this.panel_coarse.Margin = new System.Windows.Forms.Padding(4);
             this.panel_coarse.Name = "panel_coarse";
-            this.panel_coarse.Size = new System.Drawing.Size(1319, 769);
+            this.panel_coarse.Size = new System.Drawing.Size(1761, 970);
             this.panel_coarse.TabIndex = 2;
             // 
             // bt_choose
             // 
-            this.bt_choose.Location = new System.Drawing.Point(3, 3);
+            this.bt_choose.Location = new System.Drawing.Point(4, 4);
+            this.bt_choose.Margin = new System.Windows.Forms.Padding(4);
             this.bt_choose.Name = "bt_choose";
-            this.bt_choose.Size = new System.Drawing.Size(145, 23);
+            this.bt_choose.Size = new System.Drawing.Size(193, 29);
             this.bt_choose.TabIndex = 0;
             this.bt_choose.Text = "选择文件";
             this.bt_choose.UseVisualStyleBackColor = true;
@@ -2864,9 +3113,10 @@ namespace TestPlugin_Demo
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 42);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1777, 1026);
             this.tabPage1.TabIndex = 21;
             this.tabPage1.Text = "客户定制辅助";
             // 
@@ -2879,22 +3129,25 @@ namespace TestPlugin_Demo
             this.tableLayoutPanel2.Controls.Add(this.groupBox5, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBox4, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1325, 806);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1769, 1018);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.splitContainer2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(444, 3);
+            this.groupBox5.Location = new System.Drawing.Point(593, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(435, 262);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Size = new System.Drawing.Size(581, 331);
             this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "合并(AlternativeQWLT)文件抽选数据";
@@ -2903,7 +3156,8 @@ namespace TestPlugin_Demo
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 17);
+            this.splitContainer2.Location = new System.Drawing.Point(4, 22);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -2916,32 +3170,36 @@ namespace TestPlugin_Demo
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.txt_SelectedFileList_AlternativeQWLT);
-            this.splitContainer2.Size = new System.Drawing.Size(429, 242);
+            this.splitContainer2.Size = new System.Drawing.Size(573, 305);
             this.splitContainer2.SplitterDistance = 69;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 9;
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(53, 42);
+            this.label61.Location = new System.Drawing.Point(71, 52);
+            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(35, 12);
+            this.label61.Size = new System.Drawing.Size(45, 15);
             this.label61.TabIndex = 8;
             this.label61.Text = "备注:";
             // 
             // txt_ResultFileCommon_AlternativeQWLT
             // 
-            this.txt_ResultFileCommon_AlternativeQWLT.Location = new System.Drawing.Point(88, 39);
+            this.txt_ResultFileCommon_AlternativeQWLT.Location = new System.Drawing.Point(117, 49);
+            this.txt_ResultFileCommon_AlternativeQWLT.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ResultFileCommon_AlternativeQWLT.Name = "txt_ResultFileCommon_AlternativeQWLT";
-            this.txt_ResultFileCommon_AlternativeQWLT.Size = new System.Drawing.Size(220, 21);
+            this.txt_ResultFileCommon_AlternativeQWLT.Size = new System.Drawing.Size(292, 25);
             this.txt_ResultFileCommon_AlternativeQWLT.TabIndex = 7;
             this.txt_ResultFileCommon_AlternativeQWLT.Text = "合并AlternativeQWLT数据";
             // 
             // btn_AnalyzeFileData_AlternativeQWLT
             // 
-            this.btn_AnalyzeFileData_AlternativeQWLT.Location = new System.Drawing.Point(149, 10);
+            this.btn_AnalyzeFileData_AlternativeQWLT.Location = new System.Drawing.Point(199, 12);
+            this.btn_AnalyzeFileData_AlternativeQWLT.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AnalyzeFileData_AlternativeQWLT.Name = "btn_AnalyzeFileData_AlternativeQWLT";
-            this.btn_AnalyzeFileData_AlternativeQWLT.Size = new System.Drawing.Size(159, 23);
+            this.btn_AnalyzeFileData_AlternativeQWLT.Size = new System.Drawing.Size(212, 29);
             this.btn_AnalyzeFileData_AlternativeQWLT.TabIndex = 0;
             this.btn_AnalyzeFileData_AlternativeQWLT.Text = "选择文件并合并导出";
             this.btn_AnalyzeFileData_AlternativeQWLT.UseVisualStyleBackColor = true;
@@ -2951,20 +3209,23 @@ namespace TestPlugin_Demo
             // 
             this.txt_SelectedFileList_AlternativeQWLT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_SelectedFileList_AlternativeQWLT.Location = new System.Drawing.Point(0, 0);
+            this.txt_SelectedFileList_AlternativeQWLT.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SelectedFileList_AlternativeQWLT.Multiline = true;
             this.txt_SelectedFileList_AlternativeQWLT.Name = "txt_SelectedFileList_AlternativeQWLT";
             this.txt_SelectedFileList_AlternativeQWLT.ReadOnly = true;
             this.txt_SelectedFileList_AlternativeQWLT.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_SelectedFileList_AlternativeQWLT.Size = new System.Drawing.Size(429, 169);
+            this.txt_SelectedFileList_AlternativeQWLT.Size = new System.Drawing.Size(573, 231);
             this.txt_SelectedFileList_AlternativeQWLT.TabIndex = 1;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.splitContainer1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(3, 3);
+            this.groupBox4.Location = new System.Drawing.Point(4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(435, 262);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(581, 331);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "合并(Deviations)文件抽选数据";
@@ -2973,7 +3234,8 @@ namespace TestPlugin_Demo
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 17);
+            this.splitContainer1.Location = new System.Drawing.Point(4, 22);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -2988,41 +3250,46 @@ namespace TestPlugin_Demo
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.txt_SelectedFileList_Deviations);
-            this.splitContainer1.Size = new System.Drawing.Size(429, 242);
+            this.splitContainer1.Size = new System.Drawing.Size(573, 305);
             this.splitContainer1.SplitterDistance = 69;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 9;
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(53, 42);
+            this.label60.Location = new System.Drawing.Point(71, 52);
+            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(35, 12);
+            this.label60.Size = new System.Drawing.Size(45, 15);
             this.label60.TabIndex = 8;
             this.label60.Text = "备注:";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(17, 15);
+            this.label59.Location = new System.Drawing.Point(23, 19);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(71, 12);
+            this.label59.Size = new System.Drawing.Size(90, 15);
             this.label59.TabIndex = 2;
             this.label59.Text = "目标通道号:";
             // 
             // txt_ResultFileCommon_Deviations
             // 
-            this.txt_ResultFileCommon_Deviations.Location = new System.Drawing.Point(88, 39);
+            this.txt_ResultFileCommon_Deviations.Location = new System.Drawing.Point(117, 49);
+            this.txt_ResultFileCommon_Deviations.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ResultFileCommon_Deviations.Name = "txt_ResultFileCommon_Deviations";
-            this.txt_ResultFileCommon_Deviations.Size = new System.Drawing.Size(220, 21);
+            this.txt_ResultFileCommon_Deviations.Size = new System.Drawing.Size(292, 25);
             this.txt_ResultFileCommon_Deviations.TabIndex = 7;
             this.txt_ResultFileCommon_Deviations.Text = "合并Deviations数据";
             // 
             // btn_AnalyzeFileData_Deviations
             // 
-            this.btn_AnalyzeFileData_Deviations.Location = new System.Drawing.Point(149, 10);
+            this.btn_AnalyzeFileData_Deviations.Location = new System.Drawing.Point(199, 12);
+            this.btn_AnalyzeFileData_Deviations.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AnalyzeFileData_Deviations.Name = "btn_AnalyzeFileData_Deviations";
-            this.btn_AnalyzeFileData_Deviations.Size = new System.Drawing.Size(159, 23);
+            this.btn_AnalyzeFileData_Deviations.Size = new System.Drawing.Size(212, 29);
             this.btn_AnalyzeFileData_Deviations.TabIndex = 0;
             this.btn_AnalyzeFileData_Deviations.Text = "选择文件并合并导出";
             this.btn_AnalyzeFileData_Deviations.UseVisualStyleBackColor = true;
@@ -3030,9 +3297,10 @@ namespace TestPlugin_Demo
             // 
             // txt_SelectedChannel_Deviations
             // 
-            this.txt_SelectedChannel_Deviations.Location = new System.Drawing.Point(88, 10);
+            this.txt_SelectedChannel_Deviations.Location = new System.Drawing.Point(117, 12);
+            this.txt_SelectedChannel_Deviations.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SelectedChannel_Deviations.Name = "txt_SelectedChannel_Deviations";
-            this.txt_SelectedChannel_Deviations.Size = new System.Drawing.Size(45, 21);
+            this.txt_SelectedChannel_Deviations.Size = new System.Drawing.Size(59, 25);
             this.txt_SelectedChannel_Deviations.TabIndex = 1;
             this.txt_SelectedChannel_Deviations.Text = "51";
             // 
@@ -3040,31 +3308,124 @@ namespace TestPlugin_Demo
             // 
             this.txt_SelectedFileList_Deviations.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txt_SelectedFileList_Deviations.Location = new System.Drawing.Point(0, 0);
+            this.txt_SelectedFileList_Deviations.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SelectedFileList_Deviations.Multiline = true;
             this.txt_SelectedFileList_Deviations.Name = "txt_SelectedFileList_Deviations";
             this.txt_SelectedFileList_Deviations.ReadOnly = true;
             this.txt_SelectedFileList_Deviations.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_SelectedFileList_Deviations.Size = new System.Drawing.Size(429, 169);
+            this.txt_SelectedFileList_Deviations.Size = new System.Drawing.Size(573, 231);
             this.txt_SelectedFileList_Deviations.TabIndex = 1;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnCTDSelect);
+            this.tabPage2.Controls.Add(this.txtCTD_Path);
+            this.tabPage2.Controls.Add(this.label65);
+            this.tabPage2.Controls.Add(this.btnCTMSelect);
+            this.tabPage2.Controls.Add(this.txtCTM_Path);
+            this.tabPage2.Controls.Add(this.label64);
+            this.tabPage2.Controls.Add(this.btnMMSelect);
+            this.tabPage2.Controls.Add(this.txtMM_Path);
+            this.tabPage2.Controls.Add(this.lb1);
             this.tabPage2.Controls.Add(this.btnConnectAllInstruments);
             this.tabPage2.Controls.Add(this.btnRunOESTest);
             this.tabPage2.Controls.Add(this.btnDisConnectAllInstruments);
             this.tabPage2.Location = new System.Drawing.Point(4, 42);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1331, 812);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1777, 1026);
             this.tabPage2.TabIndex = 22;
             this.tabPage2.Text = "OES Test";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnCTDSelect
+            // 
+            this.btnCTDSelect.Location = new System.Drawing.Point(1156, 381);
+            this.btnCTDSelect.Name = "btnCTDSelect";
+            this.btnCTDSelect.Size = new System.Drawing.Size(180, 48);
+            this.btnCTDSelect.TabIndex = 11;
+            this.btnCTDSelect.Text = "SelectFile3";
+            this.btnCTDSelect.UseVisualStyleBackColor = true;
+            this.btnCTDSelect.Click += new System.EventHandler(this.btnCTDSelect_Click);
+            // 
+            // txtCTD_Path
+            // 
+            this.txtCTD_Path.Location = new System.Drawing.Point(773, 381);
+            this.txtCTD_Path.Multiline = true;
+            this.txtCTD_Path.Name = "txtCTD_Path";
+            this.txtCTD_Path.Size = new System.Drawing.Size(367, 73);
+            this.txtCTD_Path.TabIndex = 10;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(512, 384);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(255, 15);
+            this.label65.TabIndex = 9;
+            this.label65.Text = "CoarseTuningDeviationsFileName:";
+            // 
+            // btnCTMSelect
+            // 
+            this.btnCTMSelect.Location = new System.Drawing.Point(1156, 244);
+            this.btnCTMSelect.Name = "btnCTMSelect";
+            this.btnCTMSelect.Size = new System.Drawing.Size(180, 48);
+            this.btnCTMSelect.TabIndex = 8;
+            this.btnCTMSelect.Text = "SelectFile2";
+            this.btnCTMSelect.UseVisualStyleBackColor = true;
+            this.btnCTMSelect.Click += new System.EventHandler(this.btnCTMSelect_Click);
+            // 
+            // txtCTM_Path
+            // 
+            this.txtCTM_Path.Location = new System.Drawing.Point(773, 244);
+            this.txtCTM_Path.Multiline = true;
+            this.txtCTM_Path.Name = "txtCTM_Path";
+            this.txtCTM_Path.Size = new System.Drawing.Size(367, 73);
+            this.txtCTM_Path.TabIndex = 7;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(529, 247);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(238, 15);
+            this.label64.TabIndex = 6;
+            this.label64.Text = "CoarseTuningMidlineFileName：";
+            // 
+            // btnMMSelect
+            // 
+            this.btnMMSelect.Location = new System.Drawing.Point(1156, 108);
+            this.btnMMSelect.Name = "btnMMSelect";
+            this.btnMMSelect.Size = new System.Drawing.Size(180, 48);
+            this.btnMMSelect.TabIndex = 5;
+            this.btnMMSelect.Text = "SelectFile1";
+            this.btnMMSelect.UseVisualStyleBackColor = true;
+            this.btnMMSelect.Click += new System.EventHandler(this.btnMMSelect_Click);
+            // 
+            // txtMM_Path
+            // 
+            this.txtMM_Path.Location = new System.Drawing.Point(773, 108);
+            this.txtMM_Path.Multiline = true;
+            this.txtMM_Path.Name = "txtMM_Path";
+            this.txtMM_Path.Size = new System.Drawing.Size(367, 73);
+            this.txtMM_Path.TabIndex = 4;
+            // 
+            // lb1
+            // 
+            this.lb1.AutoSize = true;
+            this.lb1.Location = new System.Drawing.Point(593, 108);
+            this.lb1.Name = "lb1";
+            this.lb1.Size = new System.Drawing.Size(174, 15);
+            this.lb1.TabIndex = 3;
+            this.lb1.Text = "MirrorMapWlFileName：";
+            // 
             // btnConnectAllInstruments
             // 
-            this.btnConnectAllInstruments.Location = new System.Drawing.Point(133, 319);
+            this.btnConnectAllInstruments.Location = new System.Drawing.Point(177, 399);
+            this.btnConnectAllInstruments.Margin = new System.Windows.Forms.Padding(4);
             this.btnConnectAllInstruments.Name = "btnConnectAllInstruments";
-            this.btnConnectAllInstruments.Size = new System.Drawing.Size(172, 54);
+            this.btnConnectAllInstruments.Size = new System.Drawing.Size(229, 68);
             this.btnConnectAllInstruments.TabIndex = 2;
             this.btnConnectAllInstruments.Text = "ConnectAllInstruments";
             this.btnConnectAllInstruments.UseVisualStyleBackColor = true;
@@ -3072,9 +3433,10 @@ namespace TestPlugin_Demo
             // 
             // btnRunOESTest
             // 
-            this.btnRunOESTest.Location = new System.Drawing.Point(133, 206);
+            this.btnRunOESTest.Location = new System.Drawing.Point(177, 258);
+            this.btnRunOESTest.Margin = new System.Windows.Forms.Padding(4);
             this.btnRunOESTest.Name = "btnRunOESTest";
-            this.btnRunOESTest.Size = new System.Drawing.Size(172, 54);
+            this.btnRunOESTest.Size = new System.Drawing.Size(229, 68);
             this.btnRunOESTest.TabIndex = 1;
             this.btnRunOESTest.Text = "Run OES TestModule";
             this.btnRunOESTest.UseVisualStyleBackColor = true;
@@ -3082,9 +3444,10 @@ namespace TestPlugin_Demo
             // 
             // btnDisConnectAllInstruments
             // 
-            this.btnDisConnectAllInstruments.Location = new System.Drawing.Point(133, 86);
+            this.btnDisConnectAllInstruments.Location = new System.Drawing.Point(177, 108);
+            this.btnDisConnectAllInstruments.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisConnectAllInstruments.Name = "btnDisConnectAllInstruments";
-            this.btnDisConnectAllInstruments.Size = new System.Drawing.Size(172, 54);
+            this.btnDisConnectAllInstruments.Size = new System.Drawing.Size(229, 68);
             this.btnDisConnectAllInstruments.TabIndex = 0;
             this.btnDisConnectAllInstruments.Text = "DisConnectAllInstruments";
             this.btnDisConnectAllInstruments.UseVisualStyleBackColor = true;
@@ -3096,10 +3459,11 @@ namespace TestPlugin_Demo
             // 
             // Form_MainPage_CT3103
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1339, 858);
+            this.ClientSize = new System.Drawing.Size(1785, 1072);
             this.Controls.Add(this.tb_MainPage);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form_MainPage_CT3103";
             this.Text = "Form_MainPage_CT3103";
             this.Load += new System.EventHandler(this.Form_MainPage_CT3103_Load);
@@ -3153,6 +3517,7 @@ namespace TestPlugin_Demo
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3413,5 +3778,14 @@ namespace TestPlugin_Demo
         private Button btnDisConnectAllInstruments;
         private Button btnRunOESTest;
         private Button btnConnectAllInstruments;
+        private Label lb1;
+        private TextBox txtMM_Path;
+        private Button btnCTMSelect;
+        private TextBox txtCTM_Path;
+        private Label label64;
+        private Button btnMMSelect;
+        private Button btnCTDSelect;
+        private TextBox txtCTD_Path;
+        private Label label65;
     }
 }
