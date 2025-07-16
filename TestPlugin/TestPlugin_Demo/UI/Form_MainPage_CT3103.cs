@@ -2532,14 +2532,14 @@ namespace TestPlugin_Demo
             }
         }
          
-        private void btnRunOESTest_Click(object sender, EventArgs e)
+        private async void btnRunOESTest_Click(object sender, EventArgs e)
         {
             try
             {
                 DialogResult result = MessageBox.Show("Are you sure you want to run OES TestModule_OES?", "Tips", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
-                    this._plugin.ShowOESMainForm();
+                    await this._plugin.RunOESAutoTest();
                 }
             }
             catch (Exception ex)

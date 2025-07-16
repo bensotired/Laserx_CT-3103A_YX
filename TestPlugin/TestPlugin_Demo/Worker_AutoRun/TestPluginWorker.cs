@@ -860,10 +860,10 @@ namespace TestPlugin_Demo
             }
         }
 
-        private async void RunOESAutoTest()
+        public async Task RunOESAutoTest()
         {
             if (frmMain != null)
-            {
+            { 
                 bool testSuccess = await RunAutoTest();
                 this.Log_Global($"OES DLL 测试结果:{testSuccess}\r\n the OES TEST Result:{testSuccess}");
             }
@@ -873,7 +873,7 @@ namespace TestPlugin_Demo
         private async Task<bool> RunAutoTest()
         {
             bool autoTestResult = false;
-
+            InitOESMainForm();
             if (frmMain != null)
             {
                 frmMain.Show();
