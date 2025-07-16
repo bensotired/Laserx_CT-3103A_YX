@@ -36,9 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LaserXFineTuningDllTest, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="LaserXFineTuningDllTest, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>External_Dlls\LaserXFineTuningDllTest.dll</HintPath>
+      <HintPath>..\LaserX_TesterLibrary\LaserXFineTuningDllTest.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LX_2DChartControl, Version=2023.8.30.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -324,12 +325,6 @@
       <Name>SolveWare_Motion</Name>
       <Private>False</Private>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="External_Dlls\LaserXFineTuningDllTest.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
