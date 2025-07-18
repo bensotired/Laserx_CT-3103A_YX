@@ -27,6 +27,14 @@ namespace SolveWare_TestPackage
         //RawData_Curr RawData { get; set; }
         //RawDataMenu_Curr RawDataMenu { get; set; }
 
+        string MaskName { get; set; }
+        string WaferID { set; get; }
+        string SerialNumber { get; set; }
+        string OeskID { set; get; }
+
+        string MMFilePath = "";
+        string CTMFilePath = "";
+        string CTDFilePath = "";
 
         #region instance variables
         LaserXFineTuningDllTest.frmMain frmMain; //The OES dll main form
@@ -39,6 +47,14 @@ namespace SolveWare_TestPackage
         public override IRawDataBaseLite CreateRawData()
         {
             return new RawDataBaseLite();
+        } 
+
+        public override void GetReferenceFromDeviceStreamData(IDeviceStreamDataBase dutStreamData)
+        {
+            this.MaskName = dutStreamData.MaskName;
+            this.WaferID = dutStreamData.WaferName;
+            this.SerialNumber = dutStreamData.SerialNumber;
+            this.OeskID = dutStreamData.OeskID;
         }
 
         public override void Localization(ITestRecipe testRecipe)
@@ -133,10 +149,10 @@ namespace SolveWare_TestPackage
         {
             if (frmMain != null)
             {
-                frmMain.MaskID = ""; //SET FROM CURRENT COC INFO!!
-                frmMain.WaferID = ""; //SET FROM CURRENT COC INFO!!
-                frmMain.ChipID = ""; //SET FROM CURRENT COC INFO!!
-                frmMain.OeskID = ""; //SET FROM CURRENT COC INFO!!
+                frmMain.MaskID = this.MaskName; //SET FROM CURRENT COC INFO!!
+                frmMain.WaferID = this.WaferID; //SET FROM CURRENT COC INFO!!
+                frmMain.ChipID = this.SerialNumber; //SET FROM CURRENT COC INFO!!
+                frmMain.OeskID = this.OeskID; //SET FROM CURRENT COC INFO!!
             }
         }
         #endregion
@@ -152,9 +168,9 @@ namespace SolveWare_TestPackage
         {
             if (frmMain != null)
             {
-                frmMain.MirrorMapWlFileName = "";//Set this fileName to the mirror tuning file for this current CoC
-                frmMain.CoarseTuningMidlineFileName = ""; //Set this to the corresponding midline file for this current CoC
-                frmMain.CoarseTuningDeviationsFileName = ""; //Set this to the corresponding coarse tuning deviations file for this current CoC
+                frmMain.MirrorMapWlFileName = this.MMFilePath;//Set this fileName to the mirror tuning file for this current CoC
+                frmMain.CoarseTuningMidlineFileName = this.CTMFilePath; //Set this to the corresponding midline file for this current CoC
+                frmMain.CoarseTuningDeviationsFileName = this.CTDFilePath; //Set this to the corresponding coarse tuning deviations file for this current CoC
             }
         }
         #endregion

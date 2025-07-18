@@ -838,5 +838,45 @@ namespace TestPlugin_Demo
                 tb_OeskID.Text = oeskID;
             });
         }
+
+        private void btnMMSelect_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择文件";
+            openFileDialog.Filter = "所有文件|*.*|文本文件|*.txt|图片文件|*.jpg;*.png";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                this.txtMM_Path.Text = openFileDialog.FileName;
+            }
+            this._plugin.MMFilePath = this.txtMM_Path.Text;
+
+        }
+
+        private void btnCTMSelect_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择文件";
+            openFileDialog.Filter = "所有文件|*.*|文本文件|*.txt|图片文件|*.jpg;*.png";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                this.txtCTM_Path.Text = openFileDialog.FileName;
+            }
+            this._plugin.CTMFilePath = this.txtCTM_Path.Text;
+        }
+
+        private void btnCTDSelect_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择文件";
+            openFileDialog.Filter = "所有文件|*.*|文本文件|*.txt|图片文件|*.jpg;*.png";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                this.txtCTD_Path.Text = openFileDialog.FileName;
+            }
+            this._plugin.CTDFilePath = this.txtCTD_Path.Text;
+        }
     }
 }

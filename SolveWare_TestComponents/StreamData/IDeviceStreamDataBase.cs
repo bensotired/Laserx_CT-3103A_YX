@@ -29,6 +29,5 @@ namespace SolveWare_TestComponents.Data
         DateTime CurrentDateTime { get; set; }
         string CoarseTuningPath { get; set; }
 
-
     }
 }
