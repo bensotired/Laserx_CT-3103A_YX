@@ -111,6 +111,7 @@ namespace SolveWare_TestPackage
             {
                 frmMain.Show();
                 SetChipInformation();
+                SetFineTuningInputFileNames();
                 autoTestResult = await frmMain.ExecuteFineTuningTest();
                 frmMain.Hide(); //IMPORTANT, use hide() instead of close since calling Close() will dispose the form.
             }
@@ -119,29 +120,6 @@ namespace SolveWare_TestPackage
                 this.Log_Global($"OES测试窗体未初始化...\r\n The OES test form is not initialized...");
             }
             return autoTestResult;
-        }
-        #endregion
-
-        #region "Laser settings transfer functions"
-        /// <summary>
-        /// Sends the laser settings that were calculated from the quick wavelength form to the OES gui.
-        /// The settings are used if the mirror diagonal coarse tuning test runs
-        /// In this example, I am using arbitrary settings, but they should come from the QWLT test in the 
-        /// laserX GUI
-        /// </summary>
-        private void TransferQuickWavelngthSettings()
-        {
-            if (frmMain != null)
-            {
-                frmMain.MirrDiagGainCurrent = 130;
-                frmMain.MirrDiagLaserPhaseCurrent = 4;
-                frmMain.MirrDiagPhase1Current = 1;
-                frmMain.MirrDiagPhase2Current = 0;
-                frmMain.MirrDiagSoa1Current = 50;
-                frmMain.MirrDiagSoa2Current = 40;
-                frmMain.MirrDiagMZM1Voltage = -2.5M; //These are decimal data types, so using the 'M' handles the type casting
-                frmMain.MirrDiagMZM2Voltage = -2.5M;
-            }
         }
         #endregion
 
@@ -155,10 +133,28 @@ namespace SolveWare_TestPackage
         {
             if (frmMain != null)
             {
-                frmMain.MaskID = "DO987";
-                frmMain.WaferID = "TM678";
-                frmMain.ChipID = "T0123";
-                frmMain.OeskID = "Dll_demo";
+                frmMain.MaskID = ""; //SET FROM CURRENT COC INFO!!
+                frmMain.WaferID = ""; //SET FROM CURRENT COC INFO!!
+                frmMain.ChipID = ""; //SET FROM CURRENT COC INFO!!
+                frmMain.OeskID = ""; //SET FROM CURRENT COC INFO!!
+            }
+        }
+        #endregion
+
+
+        #region Mirror map and coarse tuning fileName input        
+        /// <summary>
+        /// Sets the filename which the fine tuning routine uses as its input
+        /// The file names for the mirror map wavelength, the coarse tuning midlines,
+        /// and coarse tuning deviations are set in this method
+        /// </summary>
+        private void SetFineTuningInputFileNames()
+        {
+            if (frmMain != null)
+            {
+                frmMain.MirrorMapWlFileName = "";//Set this fileName to the mirror tuning file for this current CoC
+                frmMain.CoarseTuningMidlineFileName = ""; //Set this to the corresponding midline file for this current CoC
+                frmMain.CoarseTuningDeviationsFileName = ""; //Set this to the corresponding coarse tuning deviations file for this current CoC
             }
         }
         #endregion
