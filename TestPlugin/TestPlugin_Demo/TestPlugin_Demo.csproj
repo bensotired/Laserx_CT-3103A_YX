@@ -44,6 +44,10 @@
       <HintPath>..\..\packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="General, Version=1.0.1.148, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LaserX_TesterLibrary\General.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.25.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
       <Private>False</Private>

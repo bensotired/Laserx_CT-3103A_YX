@@ -1,4 +1,5 @@
-﻿using LaserXFineTuningDllTest;
+﻿using General;
+using LaserXFineTuningDllTest;
 using SolveWare_BinSorter;
 using SolveWare_BurnInAppInterface;
 using SolveWare_BurnInCommon;
@@ -38,6 +39,7 @@ namespace TestPlugin_Demo
         public string MaskName { get; set; }
         public string WaferName { get; set; }
         public string ChipName { get; set; }
+        public string OeskID { get; set; }
         public string WorkOrder { get; set; }
         public TestPluginWorker_CT3103()
         {
@@ -51,9 +53,24 @@ namespace TestPlugin_Demo
         }
 
 
-        public string MMFilePath = "";
-        public string CTMFilePath = "";
-        public string CTDFilePath = "";
+        public string GetDeviationsPath()
+        {
+            return $"{modGlobals.PATH_TO_TEST_ANALYSIS}\\{modFolderAndFileAndImageNaming.COARSE_TUNING_CHANNEL_INFO_NAME}.csv";
+        }
+
+        public string GetTuningMidlinePath()
+        {
+            return $"{modGlobals.PATH_TO_TEST_ANALYSIS}\\{modFolderAndFileAndImageNaming.COARSE_TUNING_MIDLINE_INFO_NAME}.csv";
+        }
+
+        public string GetMirrorMapWlPath()
+        {
+            return $"{modGlobals.PATH_TO_TEST_ANALYSIS}\\{modFolderAndFileAndImageNaming.MIRROR_MAPPING_FOLDERNAME}.csv";
+        }
+
+        public string MirrorMapWlFileName { get; set; }
+        public string CoarseTuningMidlineFileName { get; set; } 
+        public string CoarseTuningDeviationsFileName { get; set; }
 
         public override void StartUp()
         {
@@ -862,9 +879,9 @@ namespace TestPlugin_Demo
 
         public async Task RunOESAutoTest()
         {
-           
-                bool testSuccess = await RunAutoTest();
-                this.Log_Global($"OES DLL 测试结果:{testSuccess}\r\n the OES TEST Result:{testSuccess}");
+
+            bool testSuccess = await RunAutoTest();
+            this.Log_Global($"OES DLL 测试结果:{testSuccess}\r\n the OES TEST Result:{testSuccess}");
         }
 
         #region "Auto test execution"
@@ -937,13 +954,13 @@ namespace TestPlugin_Demo
         /// The file names for the mirror map wavelength, the coarse tuning midlines,
         /// and coarse tuning deviations are set in this method
         /// </summary>
-       private void SetFineTuningInputFileNames()
+        private void SetFineTuningInputFileNames()
         {
             if (frmMain != null)
             {
-                frmMain.MirrorMapWlFileName = MMFilePath; //Set this fileName to the corresponding mirror tuning wavelength name
-                frmMain.CoarseTuningMidlineFileName = CTMFilePath; //Set this to the corresponding midline file name 
-                frmMain.CoarseTuningDeviationsFileName = CTDFilePath; //Set this to the corresponding coarse tuning deviations file name
+                frmMain.MirrorMapWlFileName = MirrorMapWlFileName; //Set this fileName to the corresponding mirror tuning wavelength name
+                frmMain.CoarseTuningMidlineFileName = CoarseTuningMidlineFileName; //Set this to the corresponding midline file name 
+                frmMain.CoarseTuningDeviationsFileName = CoarseTuningDeviationsFileName; //Set this to the corresponding coarse tuning deviations file name
             }
         }
         #endregion
