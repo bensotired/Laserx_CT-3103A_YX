@@ -76,6 +76,7 @@ namespace TestPlugin_CoarseTuning
             }
         }
 
+        //how are you getting "filename"? It is the same way you need to get it for the fine tuning
         public void ReadRawDataFromFile(string fileName)
         {
             List<double> xVals = new List<double>();

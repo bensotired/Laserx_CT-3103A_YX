@@ -84,6 +84,7 @@ namespace SolveWare_TestPackage
         }
 
         //This should run after coarse tuning!!!
+        //After finishing, integrate into auto test after coarse tuning
         public override async void Run(CancellationToken token)
         {
             try
