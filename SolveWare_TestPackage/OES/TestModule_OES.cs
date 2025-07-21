@@ -83,15 +83,20 @@ namespace SolveWare_TestPackage
 
         }
 
-        public override void Run(CancellationToken token)
+        public override async void Run(CancellationToken token)
         {
             try
             {
+                //1. Re-align the fiber, using stable laser settings (maybe from QWLT?). Is there a function that does this?
+
                 this.Log_Global($"关闭镭神测试平台所有仪器库连接...\r\nClose all instrument library connections of the LaserX test platform...");
-                this._core.TryDisConnectAllInstruments();
+                //2. Disconnect from the Ni SMU
+                this._core.TryDisConnectAllInstruments(); //right now, this only needs to disconnect from the NI SMU
 
                 this.Log_Global($"打开OES测试窗体...\r\nOpen the OES dll main form...");
-                RunOESAutoTest();
+
+                //This function runs on a separate thread, so we need to wait for RunOESAutoTest() to complete
+                RunOESAutoTest(); 
 
             }
             catch (Exception ex)
@@ -101,7 +106,7 @@ namespace SolveWare_TestPackage
             finally
             {
                 this.Log_Global($"打开镭神测试平台所有仪器库连接...\r\nReconnect all instrument library connections of the LaserX test platform...");
-                this._core.TryConnectAllInstruments();
+                this._core.TryConnectAllInstruments(); //Re-connect to all instruments disconncted from
             }
         }
 
@@ -153,6 +158,8 @@ namespace SolveWare_TestPackage
                 frmMain.WaferID = this.WaferID; //SET FROM CURRENT COC INFO!!
                 frmMain.ChipID = this.SerialNumber; //SET FROM CURRENT COC INFO!!
                 frmMain.OeskID = this.OeskID; //SET FROM CURRENT COC INFO!!
+
+                //Need to make sure this is set from the current CoC.
             }
         }
         #endregion
@@ -171,7 +178,16 @@ namespace SolveWare_TestPackage
                 frmMain.MirrorMapWlFileName = this.MMFilePath;//Set this fileName to the mirror tuning file for this current CoC
                 frmMain.CoarseTuningMidlineFileName = this.CTMFilePath; //Set this to the corresponding midline file for this current CoC
                 frmMain.CoarseTuningDeviationsFileName = this.CTDFilePath; //Set this to the corresponding coarse tuning deviations file for this current CoC
+
+                //These should be automatically set. The user should not have to manually set them.
+                //They should be chosen based on the mask, wafer, and Chip ID of the CoC being tested.
+
+                //When selecting the files, if there are multiple files matching the name criteria, then
+                //select the most recently saved file. This goes for all 3 files here. 
             }
+
+
+
         }
         #endregion
 
