@@ -32,9 +32,9 @@ namespace SolveWare_TestPackage
         string SerialNumber { get; set; }
         string OeskID { set; get; }
 
-        string MMFilePath = "";
-        string CTMFilePath = "";
-        string CTDFilePath = "";
+        string MirrorMapWlFileName { get; set; }
+        string CoarseTuningMidlineFileName { get; set; }
+        string CoarseTuningDeviationsFileName { get; set; }
 
         #region instance variables
         LaserXFineTuningDllTest.frmMain frmMain; //The OES dll main form
@@ -47,7 +47,7 @@ namespace SolveWare_TestPackage
         public override IRawDataBaseLite CreateRawData()
         {
             return new RawDataBaseLite();
-        } 
+        }
 
         public override void GetReferenceFromDeviceStreamData(IDeviceStreamDataBase dutStreamData)
         {
@@ -55,6 +55,10 @@ namespace SolveWare_TestPackage
             this.WaferID = dutStreamData.WaferName;
             this.SerialNumber = dutStreamData.SerialNumber;
             this.OeskID = dutStreamData.OeskID;
+
+            this.MirrorMapWlFileName = dutStreamData.MirrorMapWlPath;
+            this.CoarseTuningDeviationsFileName = dutStreamData.CoarseTuningDeviationsPath;
+            this.CoarseTuningMidlineFileName = dutStreamData.CoarseTuningMidlinePath;
         }
 
         public override void Localization(ITestRecipe testRecipe)
@@ -98,7 +102,7 @@ namespace SolveWare_TestPackage
                 this.Log_Global($"打开OES测试窗体...\r\nOpen the OES dll main form...");
 
                 //This function runs on a separate thread, so we need to wait for RunOESAutoTest() to complete
-                RunOESAutoTest(); 
+                bool testSuccess = await RunOESAutoTest();
 
             }
             catch (Exception ex)
@@ -114,13 +118,15 @@ namespace SolveWare_TestPackage
 
         #region Form control events 
 
-        private async void RunOESAutoTest()
+        private async Task<bool> RunOESAutoTest()
         {
+            bool testSuccess = false;
             if (frmMain != null)
             {
-                bool testSuccess = await RunAutoTest();
+                testSuccess = await RunAutoTest();
                 this.Log_Global($"OES DLL 测试结果:{testSuccess}\r\n the OES TEST Result:{testSuccess}");
             }
+            return testSuccess;
         }
 
         #endregion
@@ -177,9 +183,9 @@ namespace SolveWare_TestPackage
         {
             if (frmMain != null)
             {
-                frmMain.MirrorMapWlFileName = this.MMFilePath;//Set this fileName to the mirror tuning file for this current CoC
-                frmMain.CoarseTuningMidlineFileName = this.CTMFilePath; //Set this to the corresponding midline file for this current CoC
-                frmMain.CoarseTuningDeviationsFileName = this.CTDFilePath; //Set this to the corresponding coarse tuning deviations file for this current CoC
+                frmMain.MirrorMapWlFileName = this.MirrorMapWlFileName;//Set this fileName to the mirror tuning file for this current CoC
+                frmMain.CoarseTuningMidlineFileName = this.CoarseTuningMidlineFileName; //Set this to the corresponding midline file for this current CoC
+                frmMain.CoarseTuningDeviationsFileName = this.CoarseTuningDeviationsFileName; //Set this to the corresponding coarse tuning deviations file for this current CoC
 
                 //These should be automatically set. The user should not have to manually set them.
                 //They should be chosen based on the mask, wafer, and Chip ID of the CoC being tested.

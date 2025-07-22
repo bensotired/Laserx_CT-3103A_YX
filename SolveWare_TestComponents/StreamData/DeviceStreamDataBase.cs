@@ -80,7 +80,9 @@ namespace SolveWare_TestComponents.Data
         public string OeskID { get; set; }
         public double Tec1ActualTemp { get; set; }
         public DateTime CurrentDateTime { get; set; }
-        public string CoarseTuningPath { get; set; }
+        public string CoarseTuningDeviationsPath { get; set; }
+        public string CoarseTuningMidlinePath { get; set; }
+        public string MirrorMapWlPath { get; set; }
 
         public IEnumerator<RawDataBaseLite> GetEnumerator()
         {

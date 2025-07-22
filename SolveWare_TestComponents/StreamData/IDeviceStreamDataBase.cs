@@ -27,7 +27,12 @@ namespace SolveWare_TestComponents.Data
         string OeskID { get; set; }
         double Tec1ActualTemp { get; set; }
         DateTime CurrentDateTime { get; set; }
-        string CoarseTuningPath { get; set; }
+
+        string CoarseTuningDeviationsPath { get; set; }
+        string MirrorMapWlPath { get; set; } 
+        string CoarseTuningMidlinePath { get; set; }
+
+        
 
     }
 }

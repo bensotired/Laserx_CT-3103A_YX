@@ -2558,7 +2558,7 @@ namespace TestPlugin_Demo
             {
                 this.txtMM_Path.Text = openFileDialog.FileName;
             }
-            this._plugin.MMFilePath = this.txtMM_Path.Text;
+            this._plugin.MirrorMapWlFileName = this.txtMM_Path.Text;
 
         }
 
@@ -2572,7 +2572,7 @@ namespace TestPlugin_Demo
             {
                 this.txtCTM_Path.Text = openFileDialog.FileName;
             }
-            this._plugin.CTMFilePath = this.txtCTM_Path.Text;
+            this._plugin.CoarseTuningMidlineFileName = this.txtCTM_Path.Text;
         }
 
         private void btnCTDSelect_Click(object sender, EventArgs e)
@@ -2585,7 +2585,7 @@ namespace TestPlugin_Demo
             {
                 this.txtCTD_Path.Text = openFileDialog.FileName;
             }
-            this._plugin.CTDFilePath = this.txtCTD_Path.Text;
+            this._plugin.CoarseTuningDeviationsFileName = this.txtCTD_Path.Text;
         } 
     }
 

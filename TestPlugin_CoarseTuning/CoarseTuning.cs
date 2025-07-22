@@ -263,7 +263,7 @@ namespace TestPlugin_CoarseTuning
             }
             catch (Exception ex)
             {
-                
+
                 MessageBox.Show(ex.Message);
             }
 
@@ -552,7 +552,7 @@ namespace TestPlugin_CoarseTuning
 
             return DeviationsPath;
         }
-
+         
         public void SaveMidlineCsvFile_override()
         {
             try

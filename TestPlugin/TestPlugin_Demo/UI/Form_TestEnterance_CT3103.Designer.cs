@@ -42,15 +42,6 @@ namespace TestPlugin_Demo
             this.tabPage_load = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCTDSelect = new System.Windows.Forms.Button();
-            this.txtCTD_Path = new System.Windows.Forms.TextBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.btnCTMSelect = new System.Windows.Forms.Button();
-            this.txtCTM_Path = new System.Windows.Forms.TextBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.btnMMSelect = new System.Windows.Forms.Button();
-            this.txtMM_Path = new System.Windows.Forms.TextBox();
-            this.lb1 = new System.Windows.Forms.Label();
             this.tb_ChipName = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tb_CarrierID = new System.Windows.Forms.TextBox();
@@ -257,15 +248,6 @@ namespace TestPlugin_Demo
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnCTDSelect);
-            this.panel1.Controls.Add(this.txtCTD_Path);
-            this.panel1.Controls.Add(this.label65);
-            this.panel1.Controls.Add(this.btnCTMSelect);
-            this.panel1.Controls.Add(this.txtCTM_Path);
-            this.panel1.Controls.Add(this.label64);
-            this.panel1.Controls.Add(this.btnMMSelect);
-            this.panel1.Controls.Add(this.txtMM_Path);
-            this.panel1.Controls.Add(this.lb1);
             this.panel1.Controls.Add(this.tb_ChipName);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.tb_CarrierID);
@@ -310,84 +292,6 @@ namespace TestPlugin_Demo
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2257, 723);
             this.panel1.TabIndex = 0;
-            // 
-            // btnCTDSelect
-            // 
-            this.btnCTDSelect.Location = new System.Drawing.Point(1124, 527);
-            this.btnCTDSelect.Name = "btnCTDSelect";
-            this.btnCTDSelect.Size = new System.Drawing.Size(158, 33);
-            this.btnCTDSelect.TabIndex = 77;
-            this.btnCTDSelect.Text = "SelectFile3";
-            this.btnCTDSelect.UseVisualStyleBackColor = true;
-            this.btnCTDSelect.Click += new System.EventHandler(this.btnCTDSelect_Click);
-            // 
-            // txtCTD_Path
-            // 
-            this.txtCTD_Path.Location = new System.Drawing.Point(743, 528);
-            this.txtCTD_Path.Name = "txtCTD_Path";
-            this.txtCTD_Path.Size = new System.Drawing.Size(375, 25);
-            this.txtCTD_Path.TabIndex = 76;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(479, 527);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(255, 15);
-            this.label65.TabIndex = 75;
-            this.label65.Text = "CoarseTuningDeviationsFileName:";
-            // 
-            // btnCTMSelect
-            // 
-            this.btnCTMSelect.Location = new System.Drawing.Point(1124, 466);
-            this.btnCTMSelect.Name = "btnCTMSelect";
-            this.btnCTMSelect.Size = new System.Drawing.Size(158, 33);
-            this.btnCTMSelect.TabIndex = 74;
-            this.btnCTMSelect.Text = "SelectFile2";
-            this.btnCTMSelect.UseVisualStyleBackColor = true;
-            this.btnCTMSelect.Click += new System.EventHandler(this.btnCTMSelect_Click);
-            // 
-            // txtCTM_Path
-            // 
-            this.txtCTM_Path.Location = new System.Drawing.Point(743, 467);
-            this.txtCTM_Path.Name = "txtCTM_Path";
-            this.txtCTM_Path.Size = new System.Drawing.Size(375, 25);
-            this.txtCTM_Path.TabIndex = 73;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(479, 466);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(238, 15);
-            this.label64.TabIndex = 72;
-            this.label64.Text = "CoarseTuningMidlineFileName：";
-            // 
-            // btnMMSelect
-            // 
-            this.btnMMSelect.Location = new System.Drawing.Point(1124, 404);
-            this.btnMMSelect.Name = "btnMMSelect";
-            this.btnMMSelect.Size = new System.Drawing.Size(158, 33);
-            this.btnMMSelect.TabIndex = 71;
-            this.btnMMSelect.Text = "SelectFile1";
-            this.btnMMSelect.UseVisualStyleBackColor = true;
-            this.btnMMSelect.Click += new System.EventHandler(this.btnMMSelect_Click);
-            // 
-            // txtMM_Path
-            // 
-            this.txtMM_Path.Location = new System.Drawing.Point(743, 407);
-            this.txtMM_Path.Name = "txtMM_Path";
-            this.txtMM_Path.Size = new System.Drawing.Size(375, 25);
-            this.txtMM_Path.TabIndex = 70;
-            // 
-            // lb1
-            // 
-            this.lb1.AutoSize = true;
-            this.lb1.Location = new System.Drawing.Point(479, 410);
-            this.lb1.Name = "lb1";
-            this.lb1.Size = new System.Drawing.Size(174, 15);
-            this.lb1.TabIndex = 69;
-            this.lb1.Text = "MirrorMapWlFileName：";
             // 
             // tb_ChipName
             // 
@@ -1038,14 +942,5 @@ namespace TestPlugin_Demo
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox tb_ChipName;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button btnCTDSelect;
-        private System.Windows.Forms.TextBox txtCTD_Path;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Button btnCTMSelect;
-        private System.Windows.Forms.TextBox txtCTM_Path;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Button btnMMSelect;
-        private System.Windows.Forms.TextBox txtMM_Path;
-        private System.Windows.Forms.Label lb1;
     }
 }

@@ -1482,7 +1482,7 @@ namespace TestPlugin_Demo
                                         {
                                             //Task.Factory.StartNew(() =>
                                             //{
-                                            if (string.IsNullOrEmpty(deviceData.CoarseTuningPath))
+                                            if (string.IsNullOrEmpty(deviceData.CoarseTuningDeviationsPath))
                                             {
                                                 //    this.Invoke((EventHandler)delegate
                                                 //    {
@@ -1494,8 +1494,7 @@ namespace TestPlugin_Demo
                                                 coares.Show();
                                                 var CoarseTuningPath = coares.SaveCVS(deviceData.SerialNumber, deviceData.MaskName, deviceData.WaferName,
                                                     deviceData.ChipName, deviceData.OeskID, deviceData.Tec1ActualTemp, deviceData.CurrentDateTime);
-                                                deviceData.CoarseTuningPath = CoarseTuningPath;
-
+                                                 
                                                 panel_coarse.Controls.Clear();
                                                 //string CoarseTuningPath = @"D:\CT-3103\LaserX_TesterLibrary\Data\Coarse_tuning\DO123\TM346\T7891\(SW_EXAMPLE)\CoarseTuning\DO123_TM346_T7891_CoarseTuning#Deviations@55.00C_2024-04-11_14-50-22.csv";
                                                 Form_CoarseTuning form_Coarse = new Form_CoarseTuning(CoarseTuningPath);
@@ -1789,7 +1788,7 @@ namespace TestPlugin_Demo
 
                                             panel_coarse.Controls.Clear();
                                             //string CoarseTuningPath = @"D:\CT-3103\LaserX_TesterLibrary\Data\Coarse_tuning\DO123\TM346\T7891\(SW_EXAMPLE)\CoarseTuning\DO123_TM346_T7891_CoarseTuning#Deviations@55.00C_2024-04-11_14-50-22.csv";
-                                            Form_CoarseTuning form_Coarse = new Form_CoarseTuning(deviceData.CoarseTuningPath);
+                                            Form_CoarseTuning form_Coarse = new Form_CoarseTuning(deviceData.CoarseTuningDeviationsPath);
                                             form_Coarse.TopLevel = false;
                                             form_Coarse.FormBorderStyle = FormBorderStyle.None;
                                             form_Coarse.Dock = DockStyle.Fill;
