@@ -252,6 +252,8 @@ namespace TestPlugin_CoarseTuning
                 double[] interpolatedMirr2Currents = mirr2ItuData.Item1;
                 int[] midlinePointers = mirr1ItuData.Item4;
                 double[] targetChannelWavelengths = mirr1ItuData.Item2;
+                midlineAndItuFinder.Channel0Frequency=196.15;
+                midlineAndItuFinder.GridSpacingGHz=50;
 
                 //20241111 如果有异常, 不执行下面的代码
                 if (interpolatedMirr1Currents.Length > 0 && interpolatedMirr2Currents.Length > 0 && midlinePointers.Length > 0 && targetChannelWavelengths.Length > 0)
