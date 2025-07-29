@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestExecutorComboWithParams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>9_OES</Name>
+  <IncludingTypes>
+    <string>SolveWare_TestPackage.TestRecipe_OES</string>
+  </IncludingTypes>
+  <Combo>
+    <Name>TestExecutorCombo</Name>
+    <CreateTime>2024/03/26 14:00:01</CreateTime>
+    <LastModifyTime>2024/03/26 14:00:01</LastModifyTime>
+    <ProductType>NoUse</ProductType>
+    <Pre_ExecutorConfigCollection />
+    <Main_ExecutorConfigCollection>
+      <ExecutorConfigItem>
+        <TestExecutorName>OES</TestExecutorName>
+        <TestModuleClassName>TestModule_OES</TestModuleClassName>
+        <TestRecipeFileName>TestRecipe_OES</TestRecipeFileName>
+        <UserDefineInstrumentConfig>
+          <Book />
+        </UserDefineInstrumentConfig>
+        <UserDefineAxisConfig>
+          <Book />
+        </UserDefineAxisConfig>
+        <UserDefinePositionConfig>
+          <Book />
+        </UserDefinePositionConfig>
+        <CalculatorCollection>
+          <Book />
+        </CalculatorCollection>
+      </ExecutorConfigItem>
+    </Main_ExecutorConfigCollection>
+    <Post_ExecutorConfigCollection />
+  </Combo>
+  <ComboParams>
+    <IncludingTypes />
+    <Pre_TestParamsCollection />
+    <Main_TestParamsCollection>
+      <ExecutorConfigItem_TestParamsConfig>
+        <Name>OES</Name>
+        <IncludingTypes />
+        <TestRecipe xsi:type="TestRecipe_OES">
+          <ID>896821020</ID>
+          <SummaryData_PreFix />
+          <SummaryData_PostFix />
+          <ModuleName>OES</ModuleName>
+        </TestRecipe>
+        <CalcRecipeBook>
+          <Book />
+        </CalcRecipeBook>
+      </ExecutorConfigItem_TestParamsConfig>
+    </Main_TestParamsCollection>
+    <Post_TestParamsCollection />
+  </ComboParams>
+</TestExecutorComboWithParams>

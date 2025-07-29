@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestExecutorComboWithParams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>2_V_check</Name>
+  <IncludingTypes>
+    <string>SolveWare_TestPackage.TestRecipe_V_Check</string>
+  </IncludingTypes>
+  <Combo>
+    <Name>TestExecutorCombo</Name>
+    <CreateTime>2024/03/26 14:03:00</CreateTime>
+    <LastModifyTime>2024/03/26 14:03:00</LastModifyTime>
+    <ProductType>NoUse</ProductType>
+    <Pre_ExecutorConfigCollection>
+      <ExecutorConfigItem>
+        <TestExecutorName>V_check</TestExecutorName>
+        <TestModuleClassName>TestModule_V_Check</TestModuleClassName>
+        <TestRecipeFileName>TestRecipe_V_Check</TestRecipeFileName>
+        <UserDefineInstrumentConfig>
+          <Book>
+            <DataPairOfStringString>
+              <Key>PD</Key>
+              <Value>PD</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>BIAS2</Key>
+              <Value>BIAS2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>SOA1</Key>
+              <Value>SOA1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>SOA2</Key>
+              <Value>SOA2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MIRROR2</Key>
+              <Value>MIRROR2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>LP</Key>
+              <Value>LP</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MPD1</Key>
+              <Value>MPD1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MIRROR1</Key>
+              <Value>MIRROR1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>BIAS1</Key>
+              <Value>BIAS1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MPD2</Key>
+              <Value>MPD2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>PH2</Key>
+              <Value>PH2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>PH1</Key>
+              <Value>PH1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>GAIN</Key>
+              <Value>GAIN</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>6683H</Key>
+              <Value>6683H</Value>
+            </DataPairOfStringString>
+          </Book>
+        </UserDefineInstrumentConfig>
+        <UserDefineAxisConfig>
+          <Book />
+        </UserDefineAxisConfig>
+        <UserDefinePositionConfig>
+          <Book />
+        </UserDefinePositionConfig>
+        <CalculatorCollection>
+          <Book />
+        </CalculatorCollection>
+      </ExecutorConfigItem>
+    </Pre_ExecutorConfigCollection>
+    <Main_ExecutorConfigCollection />
+    <Post_ExecutorConfigCollection />
+  </Combo>
+  <ComboParams>
+    <IncludingTypes />
+    <Pre_TestParamsCollection>
+      <ExecutorConfigItem_TestParamsConfig>
+        <Name>V_check</Name>
+        <IncludingTypes />
+        <TestRecipe xsi:type="TestRecipe_V_Check">
+          <ID>753781303</ID>
+          <SummaryData_PreFix />
+          <SummaryData_PostFix />
+          <GAIN_Drive_Parameters>-2,0.1,1,20</GAIN_Drive_Parameters>
+          <SOA1_Drive_Parameters>-2,0.1,1,20</SOA1_Drive_Parameters>
+          <SOA2_Drive_Parameters>-2,0.1,1,20</SOA2_Drive_Parameters>
+          <MIRROR1_Drive_Parameters>-2,0.1,1,20</MIRROR1_Drive_Parameters>
+          <MIRROR2_Drive_Parameters>-2,0.1,1,20</MIRROR2_Drive_Parameters>
+          <PH1_Drive_Parameters>-2,0.1,1,20</PH1_Drive_Parameters>
+          <PH2_Drive_Parameters>-2,0.1,1,20</PH2_Drive_Parameters>
+          <LP_Drive_Parameters>-2,0.1,1,20</LP_Drive_Parameters>
+          <MPD1_Drive_Parameters>-5,0.1,1.5,20</MPD1_Drive_Parameters>
+          <MPD2_Drive_Parameters>-5,0.1,1.5,20</MPD2_Drive_Parameters>
+          <BIAS1_Drive_Parameters>-5,0.1,1.5,20</BIAS1_Drive_Parameters>
+          <BIAS2_Drive_Parameters>-5,0.1,1.5,20</BIAS2_Drive_Parameters>
+          <CurrentAutoRange>true</CurrentAutoRange>
+        </TestRecipe>
+        <CalcRecipeBook>
+          <Book />
+        </CalcRecipeBook>
+      </ExecutorConfigItem_TestParamsConfig>
+    </Pre_TestParamsCollection>
+    <Main_TestParamsCollection />
+    <Post_TestParamsCollection />
+  </ComboParams>
+</TestExecutorComboWithParams>

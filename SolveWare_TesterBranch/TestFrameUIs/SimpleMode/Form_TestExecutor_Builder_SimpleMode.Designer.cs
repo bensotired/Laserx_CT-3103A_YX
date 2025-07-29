@@ -83,14 +83,13 @@ namespace SolveWare_TesterCore
             this.tableLayoutPanel3.Controls.Add(this.listView_TestExecutorConfig, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.treeView_TestExecutorConfigItem, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 28);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1512, 743);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1134, 592);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // tableLayoutPanel5
@@ -112,22 +111,20 @@ namespace SolveWare_TesterCore
             this.tableLayoutPanel5.Controls.Add(this.btn_UpdateCalculatorName, 6, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel1, 3, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 672);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 535);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1504, 67);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1128, 54);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tv_CreateTestExecutorConfigTree
             // 
             this.tv_CreateTestExecutorConfigTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tv_CreateTestExecutorConfigTree.Font = new System.Drawing.Font("宋体", 12F);
-            this.tv_CreateTestExecutorConfigTree.Location = new System.Drawing.Point(4, 4);
-            this.tv_CreateTestExecutorConfigTree.Margin = new System.Windows.Forms.Padding(4);
+            this.tv_CreateTestExecutorConfigTree.Location = new System.Drawing.Point(3, 3);
             this.tv_CreateTestExecutorConfigTree.Name = "tv_CreateTestExecutorConfigTree";
-            this.tv_CreateTestExecutorConfigTree.Size = new System.Drawing.Size(180, 59);
+            this.tv_CreateTestExecutorConfigTree.Size = new System.Drawing.Size(135, 48);
             this.tv_CreateTestExecutorConfigTree.TabIndex = 1;
             this.tv_CreateTestExecutorConfigTree.Text = "新建测试项";
             this.tv_CreateTestExecutorConfigTree.UseVisualStyleBackColor = true;
@@ -137,10 +134,9 @@ namespace SolveWare_TesterCore
             // 
             this.btn_UpdateTestModule_To_TestExecutorConfigTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_UpdateTestModule_To_TestExecutorConfigTree.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_UpdateTestModule_To_TestExecutorConfigTree.Location = new System.Drawing.Point(192, 4);
-            this.btn_UpdateTestModule_To_TestExecutorConfigTree.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_UpdateTestModule_To_TestExecutorConfigTree.Location = new System.Drawing.Point(144, 3);
             this.btn_UpdateTestModule_To_TestExecutorConfigTree.Name = "btn_UpdateTestModule_To_TestExecutorConfigTree";
-            this.btn_UpdateTestModule_To_TestExecutorConfigTree.Size = new System.Drawing.Size(180, 59);
+            this.btn_UpdateTestModule_To_TestExecutorConfigTree.Size = new System.Drawing.Size(135, 48);
             this.btn_UpdateTestModule_To_TestExecutorConfigTree.TabIndex = 0;
             this.btn_UpdateTestModule_To_TestExecutorConfigTree.Text = "更新测试模块到测试项";
             this.btn_UpdateTestModule_To_TestExecutorConfigTree.UseVisualStyleBackColor = true;
@@ -150,10 +146,9 @@ namespace SolveWare_TesterCore
             // 
             this.btn_UpdateCalculator_To_TestExecutorConfigTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_UpdateCalculator_To_TestExecutorConfigTree.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_UpdateCalculator_To_TestExecutorConfigTree.Location = new System.Drawing.Point(380, 4);
-            this.btn_UpdateCalculator_To_TestExecutorConfigTree.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_UpdateCalculator_To_TestExecutorConfigTree.Location = new System.Drawing.Point(285, 3);
             this.btn_UpdateCalculator_To_TestExecutorConfigTree.Name = "btn_UpdateCalculator_To_TestExecutorConfigTree";
-            this.btn_UpdateCalculator_To_TestExecutorConfigTree.Size = new System.Drawing.Size(180, 59);
+            this.btn_UpdateCalculator_To_TestExecutorConfigTree.Size = new System.Drawing.Size(135, 48);
             this.btn_UpdateCalculator_To_TestExecutorConfigTree.TabIndex = 2;
             this.btn_UpdateCalculator_To_TestExecutorConfigTree.Text = "添加算子到测试项";
             this.btn_UpdateCalculator_To_TestExecutorConfigTree.UseVisualStyleBackColor = true;
@@ -163,10 +158,9 @@ namespace SolveWare_TesterCore
             // 
             this.btn_SaveTestExecutorConfigTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_SaveTestExecutorConfigTree.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_SaveTestExecutorConfigTree.Location = new System.Drawing.Point(1320, 4);
-            this.btn_SaveTestExecutorConfigTree.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_SaveTestExecutorConfigTree.Location = new System.Drawing.Point(990, 3);
             this.btn_SaveTestExecutorConfigTree.Name = "btn_SaveTestExecutorConfigTree";
-            this.btn_SaveTestExecutorConfigTree.Size = new System.Drawing.Size(180, 59);
+            this.btn_SaveTestExecutorConfigTree.Size = new System.Drawing.Size(135, 48);
             this.btn_SaveTestExecutorConfigTree.TabIndex = 3;
             this.btn_SaveTestExecutorConfigTree.Text = "保存测试项";
             this.btn_SaveTestExecutorConfigTree.UseVisualStyleBackColor = true;
@@ -176,10 +170,9 @@ namespace SolveWare_TesterCore
             // 
             this.btn_UpdateCalculatorName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_UpdateCalculatorName.Font = new System.Drawing.Font("宋体", 12F);
-            this.btn_UpdateCalculatorName.Location = new System.Drawing.Point(1132, 4);
-            this.btn_UpdateCalculatorName.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_UpdateCalculatorName.Location = new System.Drawing.Point(849, 3);
             this.btn_UpdateCalculatorName.Name = "btn_UpdateCalculatorName";
-            this.btn_UpdateCalculatorName.Size = new System.Drawing.Size(180, 59);
+            this.btn_UpdateCalculatorName.Size = new System.Drawing.Size(135, 48);
             this.btn_UpdateCalculatorName.TabIndex = 5;
             this.btn_UpdateCalculatorName.Text = "更新算子参数名称";
             this.btn_UpdateCalculatorName.UseVisualStyleBackColor = true;
@@ -190,10 +183,9 @@ namespace SolveWare_TesterCore
             this.tableLayoutPanel5.SetColumnSpan(this.panel1, 3);
             this.panel1.Controls.Add(this.tb_CalculatorParamNewName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(568, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(426, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(556, 59);
+            this.panel1.Size = new System.Drawing.Size(417, 48);
             this.panel1.TabIndex = 6;
             // 
             // tb_CalculatorParamNewName
@@ -201,9 +193,8 @@ namespace SolveWare_TesterCore
             this.tb_CalculatorParamNewName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_CalculatorParamNewName.Font = new System.Drawing.Font("宋体", 15F);
             this.tb_CalculatorParamNewName.Location = new System.Drawing.Point(0, 0);
-            this.tb_CalculatorParamNewName.Margin = new System.Windows.Forms.Padding(4);
             this.tb_CalculatorParamNewName.Name = "tb_CalculatorParamNewName";
-            this.tb_CalculatorParamNewName.Size = new System.Drawing.Size(556, 36);
+            this.tb_CalculatorParamNewName.Size = new System.Drawing.Size(417, 30);
             this.tb_CalculatorParamNewName.TabIndex = 4;
             this.tb_CalculatorParamNewName.Text = "新的算子参数名";
             // 
@@ -231,8 +222,7 @@ namespace SolveWare_TesterCore
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_ImportedTestModuleClass.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_ImportedTestModuleClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_ImportedTestModuleClass.Location = new System.Drawing.Point(4, 4);
-            this.dgv_ImportedTestModuleClass.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_ImportedTestModuleClass.Location = new System.Drawing.Point(3, 3);
             this.dgv_ImportedTestModuleClass.MultiSelect = false;
             this.dgv_ImportedTestModuleClass.Name = "dgv_ImportedTestModuleClass";
             this.dgv_ImportedTestModuleClass.ReadOnly = true;
@@ -248,7 +238,7 @@ namespace SolveWare_TesterCore
             this.dgv_ImportedTestModuleClass.RowHeadersWidth = 51;
             this.dgv_ImportedTestModuleClass.RowTemplate.Height = 23;
             this.dgv_ImportedTestModuleClass.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv_ImportedTestModuleClass.Size = new System.Drawing.Size(445, 326);
+            this.dgv_ImportedTestModuleClass.Size = new System.Drawing.Size(334, 260);
             this.dgv_ImportedTestModuleClass.TabIndex = 5;
             this.dgv_ImportedTestModuleClass.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ImportedTestModuleClass_CellMouseClick);
             // 
@@ -284,8 +274,7 @@ namespace SolveWare_TesterCore
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_supportedCalculatorClass.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_supportedCalculatorClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_supportedCalculatorClass.Location = new System.Drawing.Point(4, 338);
-            this.dgv_supportedCalculatorClass.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_supportedCalculatorClass.Location = new System.Drawing.Point(3, 269);
             this.dgv_supportedCalculatorClass.MultiSelect = false;
             this.dgv_supportedCalculatorClass.Name = "dgv_supportedCalculatorClass";
             this.dgv_supportedCalculatorClass.ReadOnly = true;
@@ -300,7 +289,7 @@ namespace SolveWare_TesterCore
             this.dgv_supportedCalculatorClass.RowHeadersVisible = false;
             this.dgv_supportedCalculatorClass.RowHeadersWidth = 51;
             this.dgv_supportedCalculatorClass.RowTemplate.Height = 23;
-            this.dgv_supportedCalculatorClass.Size = new System.Drawing.Size(445, 326);
+            this.dgv_supportedCalculatorClass.Size = new System.Drawing.Size(334, 260);
             this.dgv_supportedCalculatorClass.TabIndex = 7;
             // 
             // Column10
@@ -320,12 +309,11 @@ namespace SolveWare_TesterCore
             this.listView_TestExecutorConfig.GridLines = true;
             this.listView_TestExecutorConfig.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listView_TestExecutorConfig.HideSelection = false;
-            this.listView_TestExecutorConfig.Location = new System.Drawing.Point(1061, 4);
-            this.listView_TestExecutorConfig.Margin = new System.Windows.Forms.Padding(4);
+            this.listView_TestExecutorConfig.Location = new System.Drawing.Point(796, 3);
             this.listView_TestExecutorConfig.MultiSelect = false;
             this.listView_TestExecutorConfig.Name = "listView_TestExecutorConfig";
             this.tableLayoutPanel3.SetRowSpan(this.listView_TestExecutorConfig, 2);
-            this.listView_TestExecutorConfig.Size = new System.Drawing.Size(447, 660);
+            this.listView_TestExecutorConfig.Size = new System.Drawing.Size(335, 526);
             this.listView_TestExecutorConfig.TabIndex = 10;
             this.listView_TestExecutorConfig.UseCompatibleStateImageBehavior = false;
             this.listView_TestExecutorConfig.View = System.Windows.Forms.View.Details;
@@ -337,12 +325,12 @@ namespace SolveWare_TesterCore
             this.cms_listView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.cms_listView.Name = "cms_listView";
-            this.cms_listView.Size = new System.Drawing.Size(109, 28);
+            this.cms_listView.Size = new System.Drawing.Size(101, 26);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(108, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
             this.toolStripMenuItem1.Text = "删除";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -350,15 +338,14 @@ namespace SolveWare_TesterCore
             // 
             this.treeView_TestExecutorConfigItem.ContextMenuStrip = this.cms_ExecutorConfigItemTreeView;
             this.treeView_TestExecutorConfigItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView_TestExecutorConfigItem.Location = new System.Drawing.Point(457, 4);
-            this.treeView_TestExecutorConfigItem.Margin = new System.Windows.Forms.Padding(4);
+            this.treeView_TestExecutorConfigItem.Location = new System.Drawing.Point(343, 3);
             this.treeView_TestExecutorConfigItem.Name = "treeView_TestExecutorConfigItem";
             treeNode1.Name = "节点0";
             treeNode1.Text = "节点0";
             this.treeView_TestExecutorConfigItem.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1});
             this.tableLayoutPanel3.SetRowSpan(this.treeView_TestExecutorConfigItem, 2);
-            this.treeView_TestExecutorConfigItem.Size = new System.Drawing.Size(596, 660);
+            this.treeView_TestExecutorConfigItem.Size = new System.Drawing.Size(447, 526);
             this.treeView_TestExecutorConfigItem.TabIndex = 8;
             // 
             // cms_ExecutorConfigItemTreeView
@@ -367,12 +354,12 @@ namespace SolveWare_TesterCore
             this.cms_ExecutorConfigItemTreeView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.删除ToolStripMenuItem});
             this.cms_ExecutorConfigItemTreeView.Name = "contextMenuStrip1";
-            this.cms_ExecutorConfigItemTreeView.Size = new System.Drawing.Size(109, 28);
+            this.cms_ExecutorConfigItemTreeView.Size = new System.Drawing.Size(101, 26);
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
@@ -383,7 +370,8 @@ namespace SolveWare_TesterCore
             this.窗口设置ToolStripMenuItem});
             this.menu_windowSetting.Location = new System.Drawing.Point(0, 0);
             this.menu_windowSetting.Name = "menu_windowSetting";
-            this.menu_windowSetting.Size = new System.Drawing.Size(1512, 28);
+            this.menu_windowSetting.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menu_windowSetting.Size = new System.Drawing.Size(1134, 25);
             this.menu_windowSetting.TabIndex = 10;
             this.menu_windowSetting.Text = "menuStrip1";
             // 
@@ -393,31 +381,30 @@ namespace SolveWare_TesterCore
             this.浮动ToolStripMenuItem,
             this.还原ToolStripMenuItem});
             this.窗口设置ToolStripMenuItem.Name = "窗口设置ToolStripMenuItem";
-            this.窗口设置ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.窗口设置ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.窗口设置ToolStripMenuItem.Text = "窗口设置";
             // 
             // 浮动ToolStripMenuItem
             // 
             this.浮动ToolStripMenuItem.Name = "浮动ToolStripMenuItem";
-            this.浮动ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.浮动ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.浮动ToolStripMenuItem.Text = "浮动";
             // 
             // 还原ToolStripMenuItem
             // 
             this.还原ToolStripMenuItem.Name = "还原ToolStripMenuItem";
-            this.还原ToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.还原ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.还原ToolStripMenuItem.Text = "还原";
             // 
             // Form_TestExecutor_Builder_SimpleMode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1512, 771);
+            this.ClientSize = new System.Drawing.Size(1134, 617);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.menu_windowSetting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_TestExecutor_Builder_SimpleMode";
             this.Text = "Form_TestModule";
             this.Load += new System.EventHandler(this.Form_TestModule_Load);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by 1234 (1234) -->
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by A (A) -->
 <TestStationConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<StartupProductName>Demo</StartupProductName>
 	<AppPluginPackDlls>
@@ -19,49 +19,49 @@
 	<InstrumentChassisConfigs>
 		<InstrumentChassisConfigItem>
 			<Resource>PXI1Slot2</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>PXIe_NIDCPower_Chassis_Slot2_4143</Name>
 			<ChassisType>SolveWare_BurnInInstruments.PXIe_NIDCPower_Chassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
 			<Resource>PXI1Slot3</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>PXIe_NIDCPower_Chassis_Slot3_4143</Name>
 			<ChassisType>SolveWare_BurnInInstruments.PXIe_NIDCPower_Chassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
 			<Resource>PXI1Slot4</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>PXIe_NIDCPower_Chassis_Slot4_4143</Name>
 			<ChassisType>SolveWare_BurnInInstruments.PXIe_NIDCPower_Chassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
 			<Resource>PXI1Slot5</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>PXIe_NIDCPower_Chassis_Slot5_4139</Name>
 			<ChassisType>SolveWare_BurnInInstruments.PXIe_NIDCPower_Chassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
 			<Resource>PXI10::13::INSTR</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>PXIe_NIDCPower_Chassis_Slot6_6683</Name>
 			<ChassisType>SolveWare_BurnInInstruments.PXIe_PxiSession_Chassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
 			<Resource>ID:0</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>Chassis_LaserX_9078_0</Name>
 			<ChassisType>SolveWare_BurnInInstruments.MOC_Chassis_LaserX_9078</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
 			<Resource>ID:1</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>Chassis_LaserX_9078_1</Name>
 			<ChassisType>SolveWare_BurnInInstruments.MOC_Chassis_LaserX_9078</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
@@ -74,15 +74,15 @@
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
-			<Resource>USB0::0x1313::0x8048::M00307990::INSTR</Resource>
-			<IsOnline>false</IsOnline>
+			<Resource>USB0::0x1313::0x8048::M00260809::INSTR</Resource>
+			<IsOnline>true</IsOnline>
 			<Name>Chassis_TED4015</Name>
 			<ChassisType>SolveWare_BurnInInstruments.NiVisaChassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
 			<Resource>GPIB0::23::INSTR</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>Chassis_OSA_86142B</Name>
 			<ChassisType>SolveWare_BurnInInstruments.NiVisaChassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
@@ -96,28 +96,28 @@
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
 			<Resource>192.168.170.50:8807</Resource>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<Name>Chassis_FWM8612</Name>
 			<ChassisType>SolveWare_BurnInInstruments.EthernetChassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
-			<Resource>Com8,57600,8,None,1</Resource>
-			<IsOnline>false</IsOnline>
+			<Resource>Com9,57600,8,None,1</Resource>
+			<IsOnline>true</IsOnline>
 			<Name>Chassis_TC_1</Name>
 			<ChassisType>SolveWare_BurnInInstruments.SerialPortChassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
-			<Resource>Com9,57600,8,None,1</Resource>
-			<IsOnline>false</IsOnline>
+			<Resource>Com11,57600,8,None,1</Resource>
+			<IsOnline>true</IsOnline>
 			<Name>Chassis_TC_2</Name>
 			<ChassisType>SolveWare_BurnInInstruments.SerialPortChassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
 		</InstrumentChassisConfigItem>
 		<InstrumentChassisConfigItem>
-			<Resource>Com10,115200,8,None,1 </Resource>
-			<IsOnline>false</IsOnline>
+			<Resource>Com12,115200,8,None,1 </Resource>
+			<IsOnline>true</IsOnline>
 			<Name>Chassis_OSwitch</Name>
 			<ChassisType>SolveWare_BurnInInstruments.SerialPortChassis</ChassisType>
 			<InitTimeout_ms>60000</InitTimeout_ms>
@@ -128,119 +128,119 @@
 		<InstrumentConfigItem>
 			<Name>PD</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot2_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>BIAS2</Name>
 			<Address>1</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot2_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>SOA1</Name>
 			<Address>2</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot2_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>SOA2</Name>
 			<Address>3</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot2_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>MIRROR2</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot3_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>LP</Name>
 			<Address>1</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot3_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>MPD1</Name>
 			<Address>2</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot3_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>MIRROR1</Name>
 			<Address>3</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot3_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>BIAS1</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot4_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>MPD2</Name>
 			<Address>1</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot4_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>PH2</Name>
 			<Address>2</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot4_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>PH1</Name>
 			<Address>3</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot4_4143</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>GAIN</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot5_4139</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_4143</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>6683H</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>PXIe_NIDCPower_Chassis_Slot6_6683</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.PXISourceMeter_6683H</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>MotionController_LaserX_9078_0</Name>
 			<Address>1</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_LaserX_9078_0</ChassisName>
 			<InstrumentType>SolveWare_Motion.MOC_LaserX_9078</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>AnalogController_LaserX_9078_0</Name>
 			<Address>1</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_LaserX_9078_0</ChassisName>
 			<InstrumentType>SolveWare_Analog.AnalogC_LaserX_9078</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>IOController_LaserX_9078_0</Name>
 			<Address>1</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_LaserX_9078_0</ChassisName>
 			<InstrumentType>SolveWare_IO.IOC_LaserX_9078</InstrumentType>
 		</InstrumentConfigItem>
@@ -254,21 +254,21 @@
 		<InstrumentConfigItem>
 			<Name>TED4015</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_TED4015</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.TED4015</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>FWM8612</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_FWM8612</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.FWM8612</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>OSA</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_OSA_86142B</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.ScpiOsa</InstrumentType>
 		</InstrumentConfigItem>
@@ -282,21 +282,21 @@
 		<InstrumentConfigItem>
 			<Name>TC_1</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_TC_1</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.MeerstetterTECController_1089</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>TC_2</Name>
 			<Address>0</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_TC_2</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.MeerstetterTECController_1089</InstrumentType>
 		</InstrumentConfigItem>
 		<InstrumentConfigItem>
 			<Name>OSwitch</Name>
 			<Address>1</Address>
-			<IsOnline>false</IsOnline>
+			<IsOnline>true</IsOnline>
 			<ChassisName>Chassis_OSwitch</ChassisName>
 			<InstrumentType>SolveWare_BurnInInstruments.OpticalSwitch</InstrumentType>
 		</InstrumentConfigItem>
@@ -649,7 +649,7 @@
 			</DataPairOfStringString>
 			<DataPairOfStringString>
 				<Key>TESTER_NUMBER</Key>
-				<Value>CT3103</Value>
+				<Value>Test#2</Value>
 			</DataPairOfStringString>
 		</Book>
 	</SystemParams>

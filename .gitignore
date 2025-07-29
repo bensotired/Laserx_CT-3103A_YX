@@ -243,3 +243,8 @@ paket-files/
 
 .DS_Store
 /SolveWare_ProductManager
+/LaserX_TesterLibrary/Data
+/LaserX_TesterLibrary/Log
+/LaserX_TesterLibrary/ExceptionLog
+/LaserX_TesterLibrary/Log
+/LaserX_TesterLibrary/TestData

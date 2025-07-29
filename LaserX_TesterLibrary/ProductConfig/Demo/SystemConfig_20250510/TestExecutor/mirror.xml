@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExecutorConfigItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestExecutorName>mirror</TestExecutorName>
+  <TestModuleClassName>TestModule_MTuning</TestModuleClassName>
+  <UserDefineInstrumentConfig>
+    <Book />
+  </UserDefineInstrumentConfig>
+  <UserDefineAxisConfig>
+    <Book />
+  </UserDefineAxisConfig>
+  <UserDefinePositionConfig>
+    <Book />
+  </UserDefinePositionConfig>
+  <CalculatorCollection>
+    <Book />
+  </CalculatorCollection>
+</ExecutorConfigItem>

@@ -31,21 +31,21 @@
       <AxesPosition>
         <ItemCollection>
           <AxisPosition>
-            <ID>1081955240</ID>
+            <ID>742117228</ID>
             <Name>LX</Name>
             <CardNo>0</CardNo>
             <AxisNo>0</AxisNo>
-            <Position>107.035</Position>
+            <Position>105.97</Position>
           </AxisPosition>
           <AxisPosition>
-            <ID>1081907918</ID>
+            <ID>742121202</ID>
             <Name>LZ</Name>
             <CardNo>0</CardNo>
             <AxisNo>2</AxisNo>
-            <Position>2</Position>
+            <Position>6</Position>
           </AxisPosition>
         </ItemCollection>
-        <ID>1081912718</ID>
+        <ID>742073781</ID>
         <Name>LXZ_装卸</Name>
       </AxesPosition>
       <AxesPosition>
@@ -64,14 +64,14 @@
       <AxesPosition>
         <ItemCollection>
           <AxisPosition>
-            <ID>738183060</ID>
+            <ID>1039222176</ID>
             <Name>LY</Name>
             <CardNo>0</CardNo>
             <AxisNo>1</AxisNo>
-            <Position>0.5</Position>
+            <Position>0.67</Position>
           </AxisPosition>
         </ItemCollection>
-        <ID>738136703</ID>
+        <ID>1039251569</ID>
         <Name>LY_装卸</Name>
       </AxesPosition>
       <AxesPosition>
@@ -120,14 +120,14 @@
             <Name>RX</Name>
             <CardNo>0</CardNo>
             <AxisNo>3</AxisNo>
-            <Position>105.393</Position>
+            <Position>105.693</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>812651702</ID>
             <Name>RZ</Name>
             <CardNo>0</CardNo>
             <AxisNo>5</AxisNo>
-            <Position>3</Position>
+            <Position>6</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>812719540</ID>
@@ -153,7 +153,7 @@
             <Name>RY</Name>
             <CardNo>0</CardNo>
             <AxisNo>4</AxisNo>
-            <Position>0.012</Position>
+            <Position>0.8</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>813889627</ID>
@@ -179,7 +179,7 @@
             <Name>Y</Name>
             <CardNo>1</CardNo>
             <AxisNo>2</AxisNo>
-            <Position>1.5</Position>
+            <Position>1.2</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>847129914</ID>
@@ -192,7 +192,7 @@
             <Name>Y</Name>
             <CardNo>1</CardNo>
             <AxisNo>2</AxisNo>
-            <Position>46</Position>
+            <Position>45.7</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>839551693</ID>
@@ -201,14 +201,14 @@
       <AxesPosition>
         <ItemCollection>
           <AxisPosition>
-            <ID>1078154369</ID>
+            <ID>1053925349</ID>
             <Name>Y</Name>
             <CardNo>1</CardNo>
             <AxisNo>2</AxisNo>
-            <Position>212.315</Position>
+            <Position>212.825</Position>
           </AxisPosition>
         </ItemCollection>
-        <ID>1078167062</ID>
+        <ID>1053872848</ID>
         <Name>Y_装卸</Name>
       </AxesPosition>
       <AxesPosition>
@@ -244,14 +244,14 @@
             <Name>LX</Name>
             <CardNo>0</CardNo>
             <AxisNo>0</AxisNo>
-            <Position>127.164</Position>
+            <Position>126.594</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>931870245</ID>
             <Name>LY</Name>
             <CardNo>0</CardNo>
             <AxisNo>1</AxisNo>
-            <Position>150.11</Position>
+            <Position>151.109</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>931907554</ID>
@@ -264,14 +264,14 @@
             <Name>LX</Name>
             <CardNo>0</CardNo>
             <AxisNo>0</AxisNo>
-            <Position>111.164</Position>
+            <Position>110.594</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>497970162</ID>
             <Name>LY</Name>
             <CardNo>0</CardNo>
             <AxisNo>1</AxisNo>
-            <Position>150.11</Position>
+            <Position>151.109</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>498012354</ID>
@@ -284,14 +284,14 @@
             <Name>LX</Name>
             <CardNo>0</CardNo>
             <AxisNo>0</AxisNo>
-            <Position>95.134</Position>
+            <Position>94.594</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>499302410</ID>
             <Name>LY</Name>
             <CardNo>0</CardNo>
             <AxisNo>1</AxisNo>
-            <Position>150.11</Position>
+            <Position>151.109</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>499274413</ID>
@@ -304,14 +304,14 @@
             <Name>LX</Name>
             <CardNo>0</CardNo>
             <AxisNo>0</AxisNo>
-            <Position>79.164</Position>
+            <Position>78.594</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>932388959</ID>
             <Name>LY</Name>
             <CardNo>0</CardNo>
             <AxisNo>1</AxisNo>
-            <Position>150.11</Position>
+            <Position>151.109</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>932386469</ID>
@@ -376,14 +376,14 @@
             <Name>RX</Name>
             <CardNo>0</CardNo>
             <AxisNo>3</AxisNo>
-            <Position>85.34</Position>
+            <Position>85.202</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>531783011</ID>
             <Name>RY</Name>
             <CardNo>0</CardNo>
             <AxisNo>4</AxisNo>
-            <Position>149.825</Position>
+            <Position>150.699</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>531779812</ID>
@@ -396,14 +396,14 @@
             <Name>RX</Name>
             <CardNo>0</CardNo>
             <AxisNo>3</AxisNo>
-            <Position>85.34</Position>
+            <Position>101.232</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>936867574</ID>
             <Name>RY</Name>
             <CardNo>0</CardNo>
             <AxisNo>4</AxisNo>
-            <Position>149.825</Position>
+            <Position>150.699</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>936810403</ID>
@@ -416,14 +416,14 @@
             <Name>RX</Name>
             <CardNo>0</CardNo>
             <AxisNo>3</AxisNo>
-            <Position>85.34</Position>
+            <Position>117.262</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>936997168</ID>
             <Name>RY</Name>
             <CardNo>0</CardNo>
             <AxisNo>4</AxisNo>
-            <Position>149.825</Position>
+            <Position>150.699</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>936946652</ID>
@@ -436,14 +436,14 @@
             <Name>RX</Name>
             <CardNo>0</CardNo>
             <AxisNo>3</AxisNo>
-            <Position>85.34</Position>
+            <Position>133.292</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>937140980</ID>
             <Name>RY</Name>
             <CardNo>0</CardNo>
             <AxisNo>4</AxisNo>
-            <Position>149.825</Position>
+            <Position>150.699</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>937179545</ID>
@@ -521,7 +521,7 @@
             <Name>T_OUT_Z</Name>
             <CardNo>1</CardNo>
             <AxisNo>1</AxisNo>
-            <Position>118.65</Position>
+            <Position>122.65</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>844511727</ID>
@@ -530,55 +530,55 @@
       <AxesPosition>
         <ItemCollection>
           <AxisPosition>
-            <ID>759062993</ID>
+            <ID>491451567</ID>
             <Name>LNX</Name>
             <CardNo>1</CardNo>
             <AxisNo>3</AxisNo>
-            <Position>94.36</Position>
+            <Position>92.256</Position>
           </AxisPosition>
           <AxisPosition>
-            <ID>759090453</ID>
+            <ID>491533202</ID>
             <Name>LNZ</Name>
             <CardNo>1</CardNo>
             <AxisNo>5</AxisNo>
-            <Position>9.9</Position>
+            <Position>10.7395</Position>
           </AxisPosition>
           <AxisPosition>
-            <ID>759117342</ID>
+            <ID>491511405</ID>
             <Name>LNY</Name>
             <CardNo>1</CardNo>
             <AxisNo>4</AxisNo>
-            <Position>13.8</Position>
+            <Position>13.2</Position>
           </AxisPosition>
         </ItemCollection>
-        <ID>759118649</ID>
+        <ID>491495743</ID>
         <Name>LN_Integratingsphere</Name>
       </AxesPosition>
       <AxesPosition>
         <ItemCollection>
           <AxisPosition>
-            <ID>946787330</ID>
+            <ID>1050777940</ID>
             <Name>LNX</Name>
             <CardNo>1</CardNo>
             <AxisNo>3</AxisNo>
-            <Position>12.1786</Position>
+            <Position>8.7704</Position>
           </AxisPosition>
           <AxisPosition>
-            <ID>946712566</ID>
+            <ID>1050750619</ID>
             <Name>LNZ</Name>
             <CardNo>1</CardNo>
             <AxisNo>5</AxisNo>
-            <Position>9.934</Position>
+            <Position>10.2506</Position>
           </AxisPosition>
           <AxisPosition>
-            <ID>946738232</ID>
+            <ID>1050769445</ID>
             <Name>LNY</Name>
             <CardNo>1</CardNo>
             <AxisNo>4</AxisNo>
-            <Position>15.6758</Position>
+            <Position>14.3822</Position>
           </AxisPosition>
         </ItemCollection>
-        <ID>946775481</ID>
+        <ID>1050776229</ID>
         <Name>LN_Focuser</Name>
       </AxesPosition>
       <AxesPosition>
@@ -588,52 +588,25 @@
             <Name>LNX</Name>
             <CardNo>1</CardNo>
             <AxisNo>3</AxisNo>
-            <Position>10.52</Position>
+            <Position>6.812</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>947028292</ID>
             <Name>LNZ</Name>
             <CardNo>1</CardNo>
             <AxisNo>5</AxisNo>
-            <Position>10.2255</Position>
+            <Position>10.3339</Position>
           </AxisPosition>
           <AxisPosition>
             <ID>947064663</ID>
             <Name>LNY</Name>
             <CardNo>1</CardNo>
             <AxisNo>4</AxisNo>
-            <Position>15.4108</Position>
+            <Position>14.6083</Position>
           </AxisPosition>
         </ItemCollection>
         <ID>947046888</ID>
         <Name>LN_Focuser_Right</Name>
-      </AxesPosition>
-      <AxesPosition>
-        <ItemCollection>
-          <AxisPosition>
-            <ID>1066602546</ID>
-            <Name>LNX</Name>
-            <CardNo>1</CardNo>
-            <AxisNo>3</AxisNo>
-            <Position>12.1406</Position>
-          </AxisPosition>
-          <AxisPosition>
-            <ID>1066588710</ID>
-            <Name>LNY</Name>
-            <CardNo>1</CardNo>
-            <AxisNo>4</AxisNo>
-            <Position>15.6128</Position>
-          </AxisPosition>
-          <AxisPosition>
-            <ID>1066644290</ID>
-            <Name>LNZ</Name>
-            <CardNo>1</CardNo>
-            <AxisNo>5</AxisNo>
-            <Position>10.009</Position>
-          </AxisPosition>
-        </ItemCollection>
-        <ID>1066599353</ID>
-        <Name>TEMP</Name>
       </AxesPosition>
     </ItemCollection>
   </AxesPositionCollection>

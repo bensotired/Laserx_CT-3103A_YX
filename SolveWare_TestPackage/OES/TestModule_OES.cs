@@ -57,13 +57,11 @@ namespace SolveWare_TestPackage
             this.OeskID = dutStreamData.OeskID;
 
             this.MirrorMapWlFileName = dutStreamData.MirrorMapWlPath;
-            this.CoarseTuningDeviationsFileName = dutStreamData.CoarseTuningDeviationsPath;
+            this.CoarseTuningDeviationsFileName = dutStreamData.CoarseTuningPath;
             this.CoarseTuningMidlineFileName = dutStreamData.CoarseTuningMidlinePath;
         }
-
-        public override void Localization(ITestRecipe testRecipe)
+        public override void RunRreAction(CancellationToken token)
         {
-            TestRecipe = ConvertObjectTo<TestRecipe_OES>(testRecipe);
             try
             {
                 if (frmMain == null)
@@ -77,16 +75,32 @@ namespace SolveWare_TestPackage
                     frmMain.MirrDiagSoa2Current = 40;
                     frmMain.MirrDiagMZM1Voltage = -2.5M; //These are decimal data types, so using the 'M' handles the type casting
                     frmMain.MirrDiagMZM2Voltage = -2.5M;
-
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception($"Init OES MainForm Exception:{ ex.Message }");
             }
-
         }
-
+        public override void RunPostAction(CancellationToken token)
+        {
+            try
+            {
+                if (frmMain != null)
+                {
+                    frmMain.Close();
+                    frmMain.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Dispose OES MainForm Exception:{ ex.Message }");
+            }
+        }
+        public override void Localization(ITestRecipe testRecipe)
+        {
+            TestRecipe = ConvertObjectTo<TestRecipe_OES>(testRecipe);
+        }
         //This should run after coarse tuning!!!
         //After finishing, integrate into auto test after coarse tuning
         public override async void Run(CancellationToken token)

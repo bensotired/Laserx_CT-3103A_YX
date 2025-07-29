@@ -1013,6 +1013,291 @@
         </CalculatorCollection>
       </ExecutorConfigItem>
       <ExecutorConfigItem>
+        <TestExecutorName>liv_normal_1</TestExecutorName>
+        <TestModuleClassName>TestModule_LIV_Normal</TestModuleClassName>
+        <TestRecipeFileName>TestRecipe_LIV_Normal</TestRecipeFileName>
+        <UserDefineInstrumentConfig>
+          <Book>
+            <DataPairOfStringString>
+              <Key>PD</Key>
+              <Value>PD</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>SOA1</Key>
+              <Value>SOA1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>SOA2</Key>
+              <Value>SOA2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>LP</Key>
+              <Value>LP</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>PH1</Key>
+              <Value>PH1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>PH2</Key>
+              <Value>PH2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MIRROR1</Key>
+              <Value>MIRROR1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MIRROR2</Key>
+              <Value>MIRROR2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>BIAS1</Key>
+              <Value>BIAS1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>BIAS2</Key>
+              <Value>BIAS2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MPD1</Key>
+              <Value>MPD1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MPD2</Key>
+              <Value>MPD2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>GAIN</Key>
+              <Value>GAIN</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>6683H</Key>
+              <Value>6683H</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>FWM8612</Key>
+              <Value>FWM8612</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>OSwitch</Key>
+              <Value>OSwitch</Value>
+            </DataPairOfStringString>
+          </Book>
+        </UserDefineInstrumentConfig>
+        <UserDefineAxisConfig>
+          <Book />
+        </UserDefineAxisConfig>
+        <UserDefinePositionConfig>
+          <Book />
+        </UserDefinePositionConfig>
+        <CalculatorCollection>
+          <Book>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith3_MultiRawData</Key>
+              <Value>Ith3_2ndDer</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith2_MultiRawData</Key>
+              <Value>Ith2_2pointFit</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith1_MultiRawData</Key>
+              <Value>Ith1_halfSlopeFit</Value>
+            </DataPairOfStringString>
+          </Book>
+        </CalculatorCollection>
+      </ExecutorConfigItem>
+      <ExecutorConfigItem>
+        <TestExecutorName>liv_normal_2</TestExecutorName>
+        <TestModuleClassName>TestModule_LIV_Normal</TestModuleClassName>
+        <TestRecipeFileName>TestRecipe_LIV_Normal</TestRecipeFileName>
+        <UserDefineInstrumentConfig>
+          <Book>
+            <DataPairOfStringString>
+              <Key>PD</Key>
+              <Value>PD</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>SOA1</Key>
+              <Value>SOA1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>SOA2</Key>
+              <Value>SOA2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>LP</Key>
+              <Value>LP</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>PH1</Key>
+              <Value>PH1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>PH2</Key>
+              <Value>PH2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MIRROR1</Key>
+              <Value>MIRROR1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MIRROR2</Key>
+              <Value>MIRROR2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>BIAS1</Key>
+              <Value>BIAS1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>BIAS2</Key>
+              <Value>BIAS2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MPD1</Key>
+              <Value>MPD1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MPD2</Key>
+              <Value>MPD2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>GAIN</Key>
+              <Value>GAIN</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>6683H</Key>
+              <Value>6683H</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>FWM8612</Key>
+              <Value>FWM8612</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>OSwitch</Key>
+              <Value>OSwitch</Value>
+            </DataPairOfStringString>
+          </Book>
+        </UserDefineInstrumentConfig>
+        <UserDefineAxisConfig>
+          <Book />
+        </UserDefineAxisConfig>
+        <UserDefinePositionConfig>
+          <Book />
+        </UserDefinePositionConfig>
+        <CalculatorCollection>
+          <Book>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith3_MultiRawData</Key>
+              <Value>Ith3_2ndDer</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith2_MultiRawData</Key>
+              <Value>Ith2_2pointFit</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith1_MultiRawData</Key>
+              <Value>Ith1_halfSlopeFit</Value>
+            </DataPairOfStringString>
+          </Book>
+        </CalculatorCollection>
+      </ExecutorConfigItem>
+      <ExecutorConfigItem>
+        <TestExecutorName>liv_normal_3</TestExecutorName>
+        <TestModuleClassName>TestModule_LIV_Normal</TestModuleClassName>
+        <TestRecipeFileName>TestRecipe_LIV_Normal</TestRecipeFileName>
+        <UserDefineInstrumentConfig>
+          <Book>
+            <DataPairOfStringString>
+              <Key>PD</Key>
+              <Value>PD</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>SOA1</Key>
+              <Value>SOA1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>SOA2</Key>
+              <Value>SOA2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>LP</Key>
+              <Value>LP</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>PH1</Key>
+              <Value>PH1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>PH2</Key>
+              <Value>PH2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MIRROR1</Key>
+              <Value>MIRROR1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MIRROR2</Key>
+              <Value>MIRROR2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>BIAS1</Key>
+              <Value>BIAS1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>BIAS2</Key>
+              <Value>BIAS2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MPD1</Key>
+              <Value>MPD1</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>MPD2</Key>
+              <Value>MPD2</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>GAIN</Key>
+              <Value>GAIN</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>6683H</Key>
+              <Value>6683H</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>FWM8612</Key>
+              <Value>FWM8612</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>OSwitch</Key>
+              <Value>OSwitch</Value>
+            </DataPairOfStringString>
+          </Book>
+        </UserDefineInstrumentConfig>
+        <UserDefineAxisConfig>
+          <Book />
+        </UserDefineAxisConfig>
+        <UserDefinePositionConfig>
+          <Book />
+        </UserDefinePositionConfig>
+        <CalculatorCollection>
+          <Book>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith3_MultiRawData</Key>
+              <Value>Ith3_2ndDer</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith2_MultiRawData</Key>
+              <Value>Ith2_2pointFit</Value>
+            </DataPairOfStringString>
+            <DataPairOfStringString>
+              <Key>TestCalculator_LIV_Ith1_MultiRawData</Key>
+              <Value>Ith1_halfSlopeFit</Value>
+            </DataPairOfStringString>
+          </Book>
+        </CalculatorCollection>
+      </ExecutorConfigItem>
+      <ExecutorConfigItem>
         <TestExecutorName>ted_off</TestExecutorName>
         <TestModuleClassName>TestModule_TED</TestModuleClassName>
         <TestRecipeFileName>TestRecipe_TED</TestRecipeFileName>
@@ -1059,7 +1344,6 @@
           <OnOrOff>true</OnOrOff>
           <TemperatureSetpoint>55</TemperatureSetpoint>
           <TemperatureTolerance>0.05</TemperatureTolerance>
-          <Temperature_StabilizingTime_sec>15</Temperature_StabilizingTime_sec>
           <CurrentLimit_mA>5</CurrentLimit_mA>
           <PID>1.0,0.1,0.0,1</PID>
           <RTB>10000,25,3930</RTB>
@@ -1213,17 +1497,16 @@
           <InitialCurrentSense_mA>0.08</InitialCurrentSense_mA>
           <PowerThreshold_mA>0.0028</PowerThreshold_mA>
           <Rough_Trajspeed>2</Rough_Trajspeed>
-          <Fine_Trajspeed>0.02</Fine_Trajspeed>
+          <Fine_Trajspeed>0.04</Fine_Trajspeed>
           <DoubleSizeline_Trajspeed>0.1</DoubleSizeline_Trajspeed>
           <Rough_Radius>0.3</Rough_Radius>
           <Rough_Involute_Interval>0.006</Rough_Involute_Interval>
-          <Fine_Radius>0.015</Fine_Radius>
+          <Fine_Radius>0.01</Fine_Radius>
           <Fine_Involute_Interval>0.001</Fine_Involute_Interval>
           <Rough_Enable>true</Rough_Enable>
           <Layer_Step>0.005</Layer_Step>
-          <Creep_Step_um>0.1</Creep_Step_um>
+          <Creep_Step>0.0005</Creep_Step>
           <CreepDelay_ms>400</CreepDelay_ms>
-          <OutOfFocusDistance_um>2</OutOfFocusDistance_um>
           <CrossScanCount>2</CrossScanCount>
           <OpticalSwitchChannel>1</OpticalSwitchChannel>
         </TestRecipe>
@@ -1305,10 +1588,6 @@
           <PD_K>1.99</PD_K>
           <PD_B>0</PD_B>
           <LIVOpticalSwitchChannel>1</LIVOpticalSwitchChannel>
-          <CenterWavelength_nm>1550</CenterWavelength_nm>
-          <WavelengthSpan_nm>50</WavelengthSpan_nm>
-          <Resolution_nm>0.1</Resolution_nm>
-          <OsaTraceLength_string>1001</OsaTraceLength_string>
           <SPOpticalSwitchChannel>2</SPOpticalSwitchChannel>
         </TestRecipe>
         <CalcRecipeBook>
@@ -1384,11 +1663,9 @@
           <PowerThreshold_mA>0.01</PowerThreshold_mA>
           <ApertureTime_s>0.04</ApertureTime_s>
           <Fine_Trajspeed>0.05</Fine_Trajspeed>
-          <EnableAlignment>true</EnableAlignment>
           <Fine_Radius>0.01</Fine_Radius>
-          <Creep_Step_um>0.2</Creep_Step_um>
+          <Creep_Step>0.0005</Creep_Step>
           <CreepDelay_ms>400</CreepDelay_ms>
-          <OutOfFocusDistance_um>2</OutOfFocusDistance_um>
           <ITU_Channel>48</ITU_Channel>
           <SerachMode>带宽范围</SerachMode>
           <Bandwidth_range_Ghz>25</Bandwidth_range_Ghz>
@@ -1423,11 +1700,9 @@
           <PowerThreshold_mA>0.01</PowerThreshold_mA>
           <ApertureTime_s>0.04</ApertureTime_s>
           <Fine_Trajspeed>0.05</Fine_Trajspeed>
-          <EnableAlignment>false</EnableAlignment>
           <Fine_Radius>0.01</Fine_Radius>
-          <Creep_Step_um>0.2</Creep_Step_um>
+          <Creep_Step>0.0005</Creep_Step>
           <CreepDelay_ms>400</CreepDelay_ms>
-          <OutOfFocusDistance_um>2</OutOfFocusDistance_um>
           <ITU_Channel>51</ITU_Channel>
           <SerachMode>波长范围</SerachMode>
           <Bandwidth_range_Ghz>25</Bandwidth_range_Ghz>
@@ -1462,11 +1737,9 @@
           <PowerThreshold_mA>0.01</PowerThreshold_mA>
           <ApertureTime_s>0.04</ApertureTime_s>
           <Fine_Trajspeed>0.05</Fine_Trajspeed>
-          <EnableAlignment>false</EnableAlignment>
           <Fine_Radius>0.01</Fine_Radius>
-          <Creep_Step_um>0.2</Creep_Step_um>
+          <Creep_Step>0.0005</Creep_Step>
           <CreepDelay_ms>400</CreepDelay_ms>
-          <OutOfFocusDistance_um>2</OutOfFocusDistance_um>
           <ITU_Channel>51</ITU_Channel>
           <SerachMode>波长范围</SerachMode>
           <Bandwidth_range_Ghz>25</Bandwidth_range_Ghz>
@@ -1489,6 +1762,189 @@
         </CalcRecipeBook>
       </ExecutorConfigItem_TestParamsConfig>
       <ExecutorConfigItem_TestParamsConfig>
+        <Name>liv_normal_1</Name>
+        <IncludingTypes />
+        <TestRecipe xsi:type="TestRecipe_LIV_Normal">
+          <ID>710655196</ID>
+          <SummaryData_PreFix />
+          <SummaryData_PostFix />
+          <Inherit>true</Inherit>
+          <Gain_DrivingCurrent_Of_PhaseScan_mA>120</Gain_DrivingCurrent_Of_PhaseScan_mA>
+          <Phase_Start_mA>0</Phase_Start_mA>
+          <Phase_Stop_mA>15</Phase_Stop_mA>
+          <Phase_Step_mA>0.1</Phase_Step_mA>
+          <PhaseComplianceVoltage_V>2.5</PhaseComplianceVoltage_V>
+          <ApertureTime_s>0.04</ApertureTime_s>
+          <Gain_Start_mA>0</Gain_Start_mA>
+          <Gain_Stop_mA>150</Gain_Stop_mA>
+          <Gain_Step_mA>1</Gain_Step_mA>
+          <GainComplianceVoltage_V>2.5</GainComplianceVoltage_V>
+          <PDBiasVoltage_V>0</PDBiasVoltage_V>
+          <PDComplianceCurrent_mA>0.05</PDComplianceCurrent_mA>
+          <OpticalSwitchChannel>2</OpticalSwitchChannel>
+        </TestRecipe>
+        <CalcRecipeBook>
+          <Book>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith3_2ndDer</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith3_MultiRawData">
+                <ID>710617569</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith3_2ndDer</CalcData_Rename>
+                <ThresholdCurrentLowerLimit_mA>40</ThresholdCurrentLowerLimit_mA>
+                <ThresholdCurrentUpperLimit_mA>80</ThresholdCurrentUpperLimit_mA>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith2_2pointFit</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith2_MultiRawData">
+                <ID>710652665</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith2_2pointFit</CalcData_Rename>
+                <Ith2_StartP_mW>0.05</Ith2_StartP_mW>
+                <Ith2_StopP_mW>0.1</Ith2_StopP_mW>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith1_halfSlopeFit</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith1_MultiRawData">
+                <ID>710636647</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith1_halfSlopeFit</CalcData_Rename>
+                <IthLimitMax_mA>80</IthLimitMax_mA>
+                <Ith1_Cal_Left_Offset_mA>5</Ith1_Cal_Left_Offset_mA>
+                <Ith1_Cal_Right_Offset_mA>5</Ith1_Cal_Right_Offset_mA>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+          </Book>
+        </CalcRecipeBook>
+      </ExecutorConfigItem_TestParamsConfig>
+      <ExecutorConfigItem_TestParamsConfig>
+        <Name>liv_normal_2</Name>
+        <IncludingTypes />
+        <TestRecipe xsi:type="TestRecipe_LIV_Normal">
+          <ID>710655196</ID>
+          <SummaryData_PreFix />
+          <SummaryData_PostFix />
+          <Inherit>true</Inherit>
+          <Gain_DrivingCurrent_Of_PhaseScan_mA>120</Gain_DrivingCurrent_Of_PhaseScan_mA>
+          <Phase_Start_mA>0</Phase_Start_mA>
+          <Phase_Stop_mA>15</Phase_Stop_mA>
+          <Phase_Step_mA>0.1</Phase_Step_mA>
+          <PhaseComplianceVoltage_V>2.5</PhaseComplianceVoltage_V>
+          <ApertureTime_s>0.04</ApertureTime_s>
+          <Gain_Start_mA>0</Gain_Start_mA>
+          <Gain_Stop_mA>150</Gain_Stop_mA>
+          <Gain_Step_mA>1</Gain_Step_mA>
+          <GainComplianceVoltage_V>2.5</GainComplianceVoltage_V>
+          <PDBiasVoltage_V>0</PDBiasVoltage_V>
+          <PDComplianceCurrent_mA>0.05</PDComplianceCurrent_mA>
+          <OpticalSwitchChannel>2</OpticalSwitchChannel>
+        </TestRecipe>
+        <CalcRecipeBook>
+          <Book>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith3_2ndDer</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith3_MultiRawData">
+                <ID>710617569</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith3_2ndDer</CalcData_Rename>
+                <ThresholdCurrentLowerLimit_mA>40</ThresholdCurrentLowerLimit_mA>
+                <ThresholdCurrentUpperLimit_mA>80</ThresholdCurrentUpperLimit_mA>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith2_2pointFit</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith2_MultiRawData">
+                <ID>710652665</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith2_2pointFit</CalcData_Rename>
+                <Ith2_StartP_mW>0.05</Ith2_StartP_mW>
+                <Ith2_StopP_mW>0.1</Ith2_StopP_mW>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith1_halfSlopeFit</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith1_MultiRawData">
+                <ID>710636647</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith1_halfSlopeFit</CalcData_Rename>
+                <IthLimitMax_mA>80</IthLimitMax_mA>
+                <Ith1_Cal_Left_Offset_mA>5</Ith1_Cal_Left_Offset_mA>
+                <Ith1_Cal_Right_Offset_mA>5</Ith1_Cal_Right_Offset_mA>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+          </Book>
+        </CalcRecipeBook>
+      </ExecutorConfigItem_TestParamsConfig>
+      <ExecutorConfigItem_TestParamsConfig>
+        <Name>liv_normal_3</Name>
+        <IncludingTypes />
+        <TestRecipe xsi:type="TestRecipe_LIV_Normal">
+          <ID>710655196</ID>
+          <SummaryData_PreFix />
+          <SummaryData_PostFix />
+          <Inherit>true</Inherit>
+          <Gain_DrivingCurrent_Of_PhaseScan_mA>120</Gain_DrivingCurrent_Of_PhaseScan_mA>
+          <Phase_Start_mA>0</Phase_Start_mA>
+          <Phase_Stop_mA>15</Phase_Stop_mA>
+          <Phase_Step_mA>0.1</Phase_Step_mA>
+          <PhaseComplianceVoltage_V>2.5</PhaseComplianceVoltage_V>
+          <ApertureTime_s>0.04</ApertureTime_s>
+          <Gain_Start_mA>0</Gain_Start_mA>
+          <Gain_Stop_mA>150</Gain_Stop_mA>
+          <Gain_Step_mA>1</Gain_Step_mA>
+          <GainComplianceVoltage_V>2.5</GainComplianceVoltage_V>
+          <PDBiasVoltage_V>0</PDBiasVoltage_V>
+          <PDComplianceCurrent_mA>0.05</PDComplianceCurrent_mA>
+          <OpticalSwitchChannel>2</OpticalSwitchChannel>
+        </TestRecipe>
+        <CalcRecipeBook>
+          <Book>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith3_2ndDer</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith3_MultiRawData">
+                <ID>710617569</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith3_2ndDer</CalcData_Rename>
+                <ThresholdCurrentLowerLimit_mA>40</ThresholdCurrentLowerLimit_mA>
+                <ThresholdCurrentUpperLimit_mA>80</ThresholdCurrentUpperLimit_mA>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith2_2pointFit</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith2_MultiRawData">
+                <ID>710652665</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith2_2pointFit</CalcData_Rename>
+                <Ith2_StartP_mW>0.05</Ith2_StartP_mW>
+                <Ith2_StopP_mW>0.1</Ith2_StopP_mW>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+            <DataPairOfStringCalcRecipe>
+              <Key>Ith1_halfSlopeFit</Key>
+              <Value xsi:type="CalcRecipe_LIV_Ith1_MultiRawData">
+                <ID>710636647</ID>
+                <CalcData_PreFix />
+                <CalcData_PostFix />
+                <CalcData_Rename>Ith1_halfSlopeFit</CalcData_Rename>
+                <IthLimitMax_mA>80</IthLimitMax_mA>
+                <Ith1_Cal_Left_Offset_mA>5</Ith1_Cal_Left_Offset_mA>
+                <Ith1_Cal_Right_Offset_mA>5</Ith1_Cal_Right_Offset_mA>
+              </Value>
+            </DataPairOfStringCalcRecipe>
+          </Book>
+        </CalcRecipeBook>
+      </ExecutorConfigItem_TestParamsConfig>
+      <ExecutorConfigItem_TestParamsConfig>
         <Name>ted_off</Name>
         <IncludingTypes />
         <TestRecipe xsi:type="TestRecipe_TED">
@@ -1498,7 +1954,6 @@
           <OnOrOff>false</OnOrOff>
           <TemperatureSetpoint>25</TemperatureSetpoint>
           <TemperatureTolerance>0.03</TemperatureTolerance>
-          <Temperature_StabilizingTime_sec>15</Temperature_StabilizingTime_sec>
           <CurrentLimit_mA>5</CurrentLimit_mA>
           <PID>1.0,0.1,0.0,1</PID>
           <RTB>10000,25,3930</RTB>

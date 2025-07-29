@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExecutorConfigItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestExecutorName>liv_soa</TestExecutorName>
+  <TestModuleClassName>TestModule_LIV_SOA</TestModuleClassName>
+  <UserDefineInstrumentConfig>
+    <Book />
+  </UserDefineInstrumentConfig>
+  <UserDefineAxisConfig>
+    <Book />
+  </UserDefineAxisConfig>
+  <UserDefinePositionConfig>
+    <Book />
+  </UserDefinePositionConfig>
+  <CalculatorCollection>
+    <Book>
+      <DataPairOfStringString>
+        <Key>TestCalculator_LIV_SOA_Ith1_MultiRawData</Key>
+        <Value>ith1</Value>
+      </DataPairOfStringString>
+      <DataPairOfStringString>
+        <Key>TestCalculator_LIV_SOA_Ith2_MultiRawData</Key>
+        <Value>ith2</Value>
+      </DataPairOfStringString>
+      <DataPairOfStringString>
+        <Key>TestCalculator_LIV_SOA_Ith3_MultiRawData</Key>
+        <Value>ith3</Value>
+      </DataPairOfStringString>
+    </Book>
+  </CalculatorCollection>
+</ExecutorConfigItem>

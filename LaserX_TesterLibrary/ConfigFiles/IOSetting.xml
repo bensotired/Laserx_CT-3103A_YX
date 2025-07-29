@@ -1,448 +1,404 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by A (A) -->
-<IOManagerConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- edited with XML Spy v4.1 U (http://www.xmlspy.com) by 1234 (1234) -->
+<IOManagerConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Simulation>true</Simulation>
 	<IOGeneralSetting>
 		<ItemCollection>
 			<IOSetting>
-				<ID>11</ID>
+				<ID>0000000011</ID>
 				<Name>SEN_FLOW</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>0</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>12</ID>
+				<ID>0000000012</ID>
 				<Name>BTN_STR</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>1</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>13</ID>
+				<ID>0000000013</ID>
 				<Name>BTN_STP</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>2</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>14</ID>
+				<ID>0000000014</ID>
 				<Name>BTN_RST</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>3</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>15</ID>
+				<ID>0000000015</ID>
 				<Name>SEN_FRN_DOOR</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>4</Bit>
 				<ActiveLogic>1</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>16</ID>
+				<ID>0000000016</ID>
 				<Name>SEN_BK_L_DOOR</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>5</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>17</ID>
+				<ID>0000000017</ID>
 				<Name>SEN_BK_R_DOOR</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>6</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>18</ID>
+				<ID>0000000018</ID>
 				<Name>SEN_TRAY_IN_UP</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>7</Bit>
 				<ActiveLogic>1</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>19</ID>
+				<ID>0000000019</ID>
 				<Name>SEN_TRAY_OUT_UP</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>8</Bit>
 				<ActiveLogic>1</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>20</ID>
+				<ID>0000000020</ID>
 				<Name>SEN_STG_L_CARRIER_UP</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>9</Bit>
 				<ActiveLogic>1</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>21</ID>
+				<ID>0000000021</ID>
 				<Name>SEN_STG_L_CARRIER_DN</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>10</Bit>
 				<ActiveLogic>1</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>22</ID>
+				<ID>0000000022</ID>
 				<Name>SEN_STG_R_CARRIER_UP</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>11</Bit>
 				<ActiveLogic>1</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>23</ID>
+				<ID>0000000023</ID>
 				<Name>SEN_STG_R_CARRIER_DN</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>12</Bit>
 				<ActiveLogic>1</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>24</ID>
+				<ID>0000000024</ID>
 				<Name>SEN_STG_L_CARRIER_LOAD</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>13</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>25</ID>
+				<ID>0000000025</ID>
 				<Name>SEN_STG_R_CARRIER_LOAD</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>14</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>30</ID>
+				<ID>0000000030</ID>
 				<Name>SEN_Vacuum_L</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>0</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>31</ID>
+				<ID>0000000031</ID>
 				<Name>SEN_Vacuum_R</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>1</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>32</ID>
+				<ID>0000000032</ID>
 				<Name>SEN_PICKER_UP</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>6</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>33</ID>
+				<ID>0000000033</ID>
 				<Name>SEN_PICKER_DN</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>7</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>34</ID>
+				<ID>0000000034</ID>
 				<Name>SEN_PICKER_ROTATE_L</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>8</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>35</ID>
+				<ID>0000000035</ID>
 				<Name>SEN_PICKER_ROTATE_R</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>9</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>36</ID>
+				<ID>0000000036</ID>
 				<Name>SEN_PICKER_GRAB_ON</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>10</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>37</ID>
+				<ID>0000000037</ID>
 				<Name>SEN_Left_Back_Probe</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>12</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>38</ID>
+				<ID>0000000038</ID>
 				<Name>SEN_Left_Front_Probe</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>13</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>38</ID>
+				<ID>0000000038</ID>
 				<Name>SEN_Right_Front_Probe</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>14</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>37</ID>
+				<ID>0000000037</ID>
 				<Name>SEN_Right_Back_Probe</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>15</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>INPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>41</ID>
+				<ID>0000000041</ID>
 				<Name>LAMP_BTN_STR</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>1</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>42</ID>
+				<ID>0000000042</ID>
 				<Name>LAMP_BTN_STP</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>2</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>43</ID>
+				<ID>0000000043</ID>
 				<Name>LAMP_BTN_RST</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>3</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>44</ID>
+				<ID>0000000044</ID>
 				<Name>TWR_RED</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>4</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>45</ID>
+				<ID>0000000045</ID>
 				<Name>TWR_GRN</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>5</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>46</ID>
+				<ID>0000000046</ID>
 				<Name>TWR_YEL</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>6</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>47</ID>
+				<ID>0000000047</ID>
 				<Name>BEEP</Name>
 				<CardNo>0</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>7</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>52</ID>
+				<ID>0000000052</ID>
 				<Name>Pedestal_Vacuum_L</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>1</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>53</ID>
+				<ID>0000000053</ID>
 				<Name>Pedestal_Vacuum_R</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>2</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>54</ID>
+				<ID>0000000054</ID>
 				<Name>CYL_PICKER_UP</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>6</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>55</ID>
+				<ID>0000000055</ID>
 				<Name>CYL_PICKER_DN</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>7</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>56</ID>
+				<ID>0000000056</ID>
 				<Name>CYL_PICKER_ROTATE_L</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>8</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>57</ID>
+				<ID>0000000057</ID>
 				<Name>CYL_PICKER_ROTATE_R</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>9</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>58</ID>
+				<ID>0000000058</ID>
 				<Name>CYL_PICKER_GRAB_ON</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>10</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>59</ID>
+				<ID>0000000059</ID>
 				<Name>CYL_PICKER_GRAB_OFF</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>11</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>60</ID>
+				<ID>0000000060</ID>
 				<Name>TEC_Left</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>12</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>62</ID>
+				<ID>0000000062</ID>
 				<Name>TEC_Right</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>13</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 			<IOSetting>
-				<ID>62</ID>
+				<ID>0000000062</ID>
 				<Name>PD_3</Name>
 				<CardNo>1</CardNo>
 				<SlaveNo>0</SlaveNo>
 				<Bit>14</Bit>
 				<ActiveLogic>0</ActiveLogic>
 				<IOType>OUTPUT</IOType>
-				<IsExtendIO>false</IsExtendIO>
 			</IOSetting>
 		</ItemCollection>
 	</IOGeneralSetting>

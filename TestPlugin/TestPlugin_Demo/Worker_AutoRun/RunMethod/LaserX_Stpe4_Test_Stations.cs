@@ -384,7 +384,7 @@ namespace TestPlugin_Demo
                 data_demo.DeviceInfo.WorkOrder = this.WorkOrder;
                 data_demo.Tec1ActualTemp = this.parameter.TemperatureListLeft[0]; ;
 
-                data_demo.CoarseTuningDeviationsPath = this.GetDeviationsPath();
+                data_demo.CoarseTuningPath = this.GetDeviationsPath();
                 data_demo.CoarseTuningMidlinePath = this.GetTuningMidlinePath();
                 data_demo.MirrorMapWlPath = this.GetMirrorMapWlPath();
 
@@ -534,7 +534,7 @@ namespace TestPlugin_Demo
                 data_demo.DeviceInfo.WorkOrder = this.WorkOrder;
                 data_demo.Tec1ActualTemp = this.parameter.TemperatureListRight[0];
 
-                data_demo.CoarseTuningDeviationsPath = this.GetDeviationsPath();
+                data_demo.CoarseTuningPath = this.GetDeviationsPath();
                 data_demo.CoarseTuningMidlinePath = this.GetTuningMidlinePath();
                 data_demo.MirrorMapWlPath = this.GetMirrorMapWlPath();
 
@@ -933,11 +933,11 @@ namespace TestPlugin_Demo
 
                     //获取CoarseTuning后CSV文件地址，解析后得到CH：-2~97之间是否连续
 
-                    if (!string.IsNullOrEmpty(data.CoarseTuningDeviationsPath))
+                    if (!string.IsNullOrEmpty(data.CoarseTuningPath))
                     {
                         DataTable dataTable = new DataTable();
 
-                        using (StreamReader reader = new StreamReader(data.CoarseTuningDeviationsPath))
+                        using (StreamReader reader = new StreamReader(data.CoarseTuningPath))
                         {
                             string[] headers = reader.ReadLine().Split(','); // 读取第一行作为表头
 

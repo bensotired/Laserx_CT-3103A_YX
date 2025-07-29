@@ -154,14 +154,23 @@ namespace SolveWare_TestPackage
         {
             TestRecipe = ConvertObjectTo<TestRecipe_AlternativeQWLT>(testRecipe);
         }
-        
+
         public override void GetReferenceFromDeviceStreamData(IDeviceStreamDataBase dutStreamData)
         {
-            MaskName = dutStreamData.MaskName;
-            SerialNumber = dutStreamData.SerialNumber;
-            var dtype = dutStreamData.GetType();
-            var pProp = dtype.GetProperty("CoarseTuningPath");
-            this.CoarseTuningPath = pProp.GetValue(dutStreamData).ToString();
+            try
+            {
+                MaskName = dutStreamData.MaskName;
+                SerialNumber = dutStreamData.SerialNumber;
+                var dtype = dutStreamData.GetType();
+                var pProp = dtype.GetProperty("CoarseTuningPath");
+
+                //var pProp = dtype.GetProperty("CoarseTuningDeviationsPath");
+                this.CoarseTuningPath = pProp.GetValue(dutStreamData).ToString();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
         string MaskName { get; set; }
         string SerialNumber { get; set; }
@@ -189,6 +198,8 @@ namespace SolveWare_TestPackage
                     MaskName = "DO721";
                 }
 
+
+                //D:\CT-3103A_Codes\Laserx_CT-3103A_YX\LaserX_TesterLibrary\Data\12_8_8_Pre BI_20250729_114824\Coarse_tuning
                 int Ch = this.TestRecipe.ITU_Channel; //目标通道
 
                 List<string> strline = new List<string>();
@@ -196,8 +207,12 @@ namespace SolveWare_TestPackage
 
                 //string CurrentFile = @"D:\CT-3103\LaserX_TesterLibrary\Data\98_1_TEST_Pre BI_20240722_172307\Coarse_tuning\Deviations.csv";
                 string CurrentFile = this.CoarseTuningPath;
-
-                #region 读取文件处理文件
+                if (File.Exists(CurrentFile) == false)
+                {
+                    var modGlobals_PATH_TO_TEST_ANALYSIS = Application.StartupPath + $"\\Data\\{SerialNumber}\\Coarse_tuning";
+                    CurrentFile = $"{modGlobals_PATH_TO_TEST_ANALYSIS}\\{Deviations_csv}";
+                }
+                    #region 读取文件处理文件
                 if (File.Exists(CurrentFile))
                 {
                     for (int retry = 0; retry < 100; retry++)

@@ -28,7 +28,8 @@ namespace SolveWare_TestComponents.Data
         double Tec1ActualTemp { get; set; }
         DateTime CurrentDateTime { get; set; }
 
-        string CoarseTuningDeviationsPath { get; set; }
+        string CoarseTuningPath { get; set; }
+    
         string MirrorMapWlPath { get; set; } 
         string CoarseTuningMidlinePath { get; set; }
 

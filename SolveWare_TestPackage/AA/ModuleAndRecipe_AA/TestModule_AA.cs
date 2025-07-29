@@ -266,20 +266,24 @@ namespace SolveWare_TestPackage
                     path = Application.StartupPath + $@"\Data\{SerialNumber}\AA";
                 }
 
-                Log_Global($"开始AA测试.");
+                Log_Global($"开始[{this.Name}]测试.");
 
                 #region Init
+                string initialPoslog = string.Empty;
                 var LYPosition = LY.Get_CurUnitPos();
                 if (LYPosition > 100)
                 {
                     if (LN_Focuser.ItemCollection.Count == 3)//左载台耦合初始位
                     {
+
                         X2.MoveToV3(LN_Focuser.GetSingleItem(X2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                         X2.WaitMotionDone();
                         Z2.MoveToV3(LN_Focuser.GetSingleItem(Z2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                         Z2.WaitMotionDone();
                         Y2.MoveToV3(LN_Focuser.GetSingleItem(Y2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                         Y2.WaitMotionDone();
+
+                        initialPoslog = $"X = {LN_Focuser.GetSingleItem(X2.Name).Position}Y = {LN_Focuser.GetSingleItem(Y2.Name).Position} Z = {LN_Focuser.GetSingleItem(Z2.Name).Position}";
                     }
                 }
                 else
@@ -292,20 +296,29 @@ namespace SolveWare_TestPackage
                         Z2.WaitMotionDone();
                         Y2.MoveToV3(LN_Focuser_Right.GetSingleItem(Y2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                         Y2.WaitMotionDone();
+
+                        initialPoslog = $"X = {LN_Focuser_Right.GetSingleItem(X2.Name).Position}Y = {LN_Focuser_Right.GetSingleItem(Y2.Name).Position} Z = {LN_Focuser_Right.GetSingleItem(Z2.Name).Position}";
                     }
                 }
-
+                Log_Global($"AA initial position : {initialPoslog}.");
                 SwitchPD.TurnOn(false);
+
+                Log_Global($"   SwitchPD.TurnOn(false)");
                 Merged_PXIe_4143.Reset();
 
                 //OSwitch切换:
                 {
+              
                     var och = Convert.ToByte(this.TestRecipe.OpticalSwitchChannel);
                     if (OSwitch.SetCH(och) == false)
                     {
                         string msg = "光开关通道切换失败！";
                         this.Log_Global(msg);
                         throw new Exception(msg);
+                    }
+                    else
+                    {
+                        Log_Global($"   OSwitch.SetCH({och})");
                     }
                 }
 
@@ -571,17 +584,14 @@ namespace SolveWare_TestPackage
                     string name = "";
                     double curr = 0;
                     double volt = 0;
-
-                    foreach(var item in SourceMeterCheckDataList)
+                    this.Log_Global($"====AA drive condition=====");
+                    foreach (var item in SourceMeterCheckDataList)
                     {
                         name = item.Name.ToString();
                         curr = item.ReadCurrent_A() * 1000.0;
                         volt = item.ReadVoltage_V();
                         this.Log_Global($"{name}:Curr[{curr}mA] Volt[{volt}V]");
                     }
-
-
-
                 }
                 else
                 {

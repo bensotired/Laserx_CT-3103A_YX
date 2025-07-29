@@ -616,7 +616,7 @@
           <Home_Deceleration>5</Home_Deceleration>
           <Home_Jerk>1</Home_Jerk>
           <Auto_Start_Velocity>5</Auto_Start_Velocity>
-          <Auto_Max_Velocity>10</Auto_Max_Velocity>
+          <Auto_Max_Velocity>50</Auto_Max_Velocity>
           <Auto_Acceleration>80</Auto_Acceleration>
           <Auto_Deceleration>80</Auto_Deceleration>
           <Auto_SmoothingTime>0.5</Auto_SmoothingTime>
@@ -680,7 +680,7 @@
           <Home_Deceleration>5</Home_Deceleration>
           <Home_Jerk>1</Home_Jerk>
           <Auto_Start_Velocity>5</Auto_Start_Velocity>
-          <Auto_Max_Velocity>10</Auto_Max_Velocity>
+          <Auto_Max_Velocity>50</Auto_Max_Velocity>
           <Auto_Acceleration>80</Auto_Acceleration>
           <Auto_Deceleration>80</Auto_Deceleration>
           <Auto_SmoothingTime>0.5</Auto_SmoothingTime>
@@ -744,7 +744,7 @@
           <Home_Deceleration>5</Home_Deceleration>
           <Home_Jerk>1</Home_Jerk>
           <Auto_Start_Velocity>5</Auto_Start_Velocity>
-          <Auto_Max_Velocity>10</Auto_Max_Velocity>
+          <Auto_Max_Velocity>50</Auto_Max_Velocity>
           <Auto_Acceleration>80</Auto_Acceleration>
           <Auto_Deceleration>80</Auto_Deceleration>
           <Auto_SmoothingTime>0.5</Auto_SmoothingTime>
