@@ -116,7 +116,7 @@ namespace SolveWare_TestPackage
                 this.Log_Global($"打开OES测试窗体...\r\nOpen the OES dll main form...");
 
                 //This function runs on a separate thread, so we need to wait for RunOESAutoTest() to complete
-                bool testSuccess = RunOESAutoTest().GetAwaiter().GetResult();
+                RunOESAutoTest();
 
             }
             catch (Exception ex)
@@ -132,12 +132,12 @@ namespace SolveWare_TestPackage
 
         #region Form control events 
 
-        private async Task<bool> RunOESAutoTest()
+        private bool RunOESAutoTest()
         {
             bool testSuccess = false;
             if (frmMain != null)
             {
-                testSuccess = await RunAutoTest();
+                testSuccess = RunAutoTest();
                 this.Log_Global($"OES DLL 测试结果:{testSuccess}\r\n the OES TEST Result:{testSuccess}");
             }
             return testSuccess;
@@ -146,7 +146,7 @@ namespace SolveWare_TestPackage
         #endregion
 
         #region "Auto test execution"
-        private async Task<bool> RunAutoTest()
+        private bool RunAutoTest()
         {
             bool autoTestResult = false;
 
@@ -155,7 +155,7 @@ namespace SolveWare_TestPackage
                 frmMain.Show();
                 SetChipInformation();
                 SetFineTuningInputFileNames();
-                autoTestResult = await frmMain.ExecuteFineTuningTest();
+                autoTestResult = frmMain.ExecuteFineTuningTest();
                 frmMain.Hide(); //IMPORTANT, use hide() instead of close since calling Close() will dispose the form.
             }
             else

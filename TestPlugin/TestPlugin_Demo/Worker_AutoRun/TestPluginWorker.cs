@@ -877,15 +877,15 @@ namespace TestPlugin_Demo
             }
         }
 
-        public async Task RunOESAutoTest()
+        public void RunOESAutoTest()
         {
 
-            bool testSuccess = await RunAutoTest();
+            bool testSuccess =  RunAutoTest();
             this.Log_Global($"OES DLL 测试结果:{testSuccess}\r\n the OES TEST Result:{testSuccess}");
         }
 
         #region "Auto test execution"
-        private async Task<bool> RunAutoTest()
+        private bool RunAutoTest()
         {
             bool autoTestResult = false;
             InitOESMainForm();
@@ -895,7 +895,7 @@ namespace TestPlugin_Demo
                 SetFineTuningInputFileNames();
                 SetChipInformation();
                 TransferQuickWavelngthSettings();
-                autoTestResult = await frmMain.ExecuteFineTuningTest();
+                autoTestResult =  frmMain.ExecuteFineTuningTest();
                 frmMain.Hide(); //IMPORTANT, use hide() instead of close since calling Close() will dispose the form.
             }
             else
