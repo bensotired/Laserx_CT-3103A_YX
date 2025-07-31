@@ -103,7 +103,7 @@ namespace SolveWare_TestPackage
         }
         //This should run after coarse tuning!!!
         //After finishing, integrate into auto test after coarse tuning
-        public override async void Run(CancellationToken token)
+        public override void Run(CancellationToken token)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace SolveWare_TestPackage
                 this.Log_Global($"打开OES测试窗体...\r\nOpen the OES dll main form...");
 
                 //This function runs on a separate thread, so we need to wait for RunOESAutoTest() to complete
-                bool testSuccess = await RunOESAutoTest();
+                bool testSuccess = RunOESAutoTest().GetAwaiter().GetResult();
 
             }
             catch (Exception ex)
@@ -206,6 +206,9 @@ namespace SolveWare_TestPackage
 
                 //When selecting the files, if there are multiple files matching the name criteria, then
                 //select the most recently saved file. This goes for all 3 files here. 
+
+                //MirrorMapWlFilename needs to be the complete directory path of the file saved from the
+                //current device.
             }
 
 

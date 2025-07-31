@@ -1078,7 +1078,7 @@ namespace SolveWare_TestPackage
 
                     for (int fori = 0; fori <= countmax; fori++)
                     {
-                        this.Log_Global($"搜索第[{fori+1}]/[{countmax}]次");
+                        this.Log_Global($"搜索第[{fori+1}]/[{countmax}]次, M1 中值 =[{tM1central}]mA , M2 中值 =[{tM2central}]mA ");
 
                         if (fori >= countmax)
                         {
@@ -1091,6 +1091,10 @@ namespace SolveWare_TestPackage
                             this.Log_Global($"用户取消 AlternativeQWLT");
                             return;
                         }
+
+                      
+
+
                         //找出上述波长数组中最接近在此波长区间（1548.0~1548.4）内的(m1, m2)点 ，
 
                         // 扫描到的波长， 大于目标， m1+val  m2-val
@@ -1135,94 +1139,42 @@ namespace SolveWare_TestPackage
 
                         //5.按上述条件加给产品加电除mirror1,mirror2外， 对m1,m2进行对角线扫描并触发波长计，对对角线上每点对应的波长进行采集 得到(m1, m2)vs WL数组
                         int retest = 0; //20240718 波长计增加重测
-
+                        double m1_current_mA = 0.0;
+                        double m2_current_mA = 0.0;
+                        double luckyWavelength = 0.0;
                         if (true)
                         {
-                            //string mirror2_trigger_signal_name = "";
-                            //WavelengthAndPower waveandpower = new WavelengthAndPower();
-                            //for (retest = 0; retest <= retestcount; retest++)
-                            //{
-                            //    if (retest == retestcount)
-                            //    {
-                            //        throw new Exception($"波长计获取结果数量[{retestcount}]次重试, 均与需求目标数量不等.");
-                            //    }
-
-                            //    FWM8612.RST();
-                            //    FWM8612.SetTriggerSource(Source.EXTernal);
-                            //    MIRROR1.Reset();
-                            //    MIRROR2.Reset();
-
-
-                            //    mirror2_trigger_signal_name = MIRROR2.BuildTermialName();
-                            //    MIRROR2.SetDefaultTermialName(mirror2_trigger_signal_name);
-                            //    S_6683H.TrigTerminalsStart(mirror2_trigger_signal_name);
-
-                            //    MIRROR2.SetupMaster_Sequence_SourceCurrent_SenseVoltage_MTuning((float)M1start, (float)M1stop, M1CurrentArray,
-                            //      complianceVoltage_V, this.TestRecipe.ApertureTime_s, true);
-                            //    MIRROR1.SetupMaster_Sequence_SourceCurrent_SenseVoltage_MTuning((float)M2start, (float)M2stop, M2CurrentArray,
-                            //       complianceVoltage_V, this.TestRecipe.ApertureTime_s, true);
-
-
-                            //    MIRROR1.TriggerOutputOn = true;
-                            //    MIRROR2.TriggerOutputOn = true;
-
-
-                            //    Merged_PXIe_4143.ConfigureMultiChannelSynchronization(MIRROR2, new PXISourceMeter_4143[] { MIRROR1 });
-
-                            //    FWM8612.EXTernalStart2();
-
-                            //    //this.Log_Global($"开始Trigger扫描!");
-
-                            //    Merged_PXIe_4143.Trigger(MIRROR2, new PXISourceMeter_4143[] { MIRROR1 });
-
-
-                            //    if (FWM8612.FethEXTernalData(M1CurrentArray.Length, out waveandpower))//波长计
-                            //    {
-                            //        break;
-                            //    }
-                            //    else
-                            //    {
-                            //        this.Log_Global($"波长计获取结果数量[{waveandpower.Power.Count}]与需求目标数量[{M1CurrentArray.Length}]不等");
-                            //        FWM8612.EXTernalStop();
-                            //        S_6683H.TrigTerminalsStop(mirror2_trigger_signal_name);
-
-                            //    }
-
-                            //}
-
-                            //this.Log_Global($"波长数据取回完成!");
-                            //// var   result_mirroe1 = MIRROR1.Fetch_MeasureVals(Aggregate.Count, 100 * 1000.0);
-                            //// var   result_mirroe2 = MIRROR2.Fetch_MeasureVals(Aggregate.Count, 100 * 1000.0);
-
-                            //FWM8612.EXTernalStop();
-                            //S_6683H.TrigTerminalsStop(mirror2_trigger_signal_name);
-
-                            //MIRROR1.Reset();
-                            //MIRROR2.Reset();
-
-                            //for (int i = 0; i < waveandpower.Power.Count; i++)
-                            //{
-                            //    m1m2_wl_Array.Add(waveandpower.Wavelength[i]);
-                            //}
-
-                            MIRROR1.Reset();
-                            MIRROR2.Reset();
-                            FWM8612.RST();
-
-
-
-                            List<double> MPD_Curr_list = new List<double>();
-                            for (int i = 0; i < Math.Min(M1CurrentArray.Length, M2CurrentArray.Length); i++)
+                            try
                             {
-                                MIRROR1.SetupAndEnableSourceOutput_SinglePoint_Current_mA_For_Test(M1CurrentArray[i], complianceVoltage_V);
-                                //Thread.Sleep(1);
-                                MIRROR2.SetupAndEnableSourceOutput_SinglePoint_Current_mA_For_Test(M2CurrentArray[i], complianceVoltage_V);
-                                Thread.Sleep(1);
-                                var luckyWavelength = FWM8612.GetWavelenth();
-                                m1m2_wl_Array.Add(luckyWavelength);
+                                MIRROR1.Reset();
+                                MIRROR2.Reset();
+                                FWM8612.RST();
+                              
+                                List<double> MPD_Curr_list = new List<double>();
+                                for (int i = 0; i < Math.Min(M1CurrentArray.Length, M2CurrentArray.Length); i++)
+                                {
+                                    m1_current_mA = Math.Round(M1CurrentArray[i], 5);
+                                    m2_current_mA = Math.Round(M2CurrentArray[i], 5);
+                                    MIRROR1.SetupAndEnableSourceOutput_SinglePoint_Current_mA_For_Test(M1CurrentArray[i], complianceVoltage_V);
+                                    //Thread.Sleep(1);
+                                    MIRROR2.SetupAndEnableSourceOutput_SinglePoint_Current_mA_For_Test(M2CurrentArray[i], complianceVoltage_V);
+                                    Thread.Sleep(1);
+                                    luckyWavelength = FWM8612.GetWavelenth();
+
+                                    this.Log_Global($"AQWLT对角线扫描 M1 = [{m1_current_mA}]mA , M2  = [{m2_current_mA}]mA ,WL = [{luckyWavelength}]nm");
+
+                                    m1m2_wl_Array.Add(luckyWavelength);
+                                }
+                                MIRROR1.Reset();
+                                MIRROR2.Reset();
                             }
-                            MIRROR1.Reset();
-                            MIRROR2.Reset();
+                            catch (Exception ex)
+                            {
+                                this.Log_Global($"AQWLT - M1 M2 setting error M1 centVal = [{tM1central}]mA , M2 centVal = [{tM2central}]mA");
+                                this.Log_Global($"AQWLT - M1 M2 setting error M1 = [{m1_current_mA}]mA , M2  = [{m2_current_mA}]mA");
+                                this.Log_Global($"AQWLT - M1 M2 setting error :{ex.Message}{ex.StackTrace}");
+                                throw ex;
+                            }
                         }
                         //找出上述波长数组中最接近在此波长区间（1548.0~1548.4）内的(m1, m2)点 ，若没法找到此区间 则需调整 mirror center(16.9398, 8.4274) 一个Mirror_retry_step_mA后重复此步骤
 
@@ -1318,15 +1270,10 @@ namespace SolveWare_TestPackage
                             tM1central -= retry_step_mA * iC_M;
                             tM2central -= retry_step_mA * iC_M;
 
-
+                            this.Log_Global($"AQWLT neg dir modify M1 centVal = [{tM1central}]mA , M2 centVal = [{tM2central}]mA");
 
                             this.Log_Global($"负方向搜索[{iC_M}]倍,波长[{m1m2_wl_Array[findedindex]}]nm");
-                            //if (m1m2_wl_Array[findedindex]==-1)
-                            //    FailCount++;
-                            //if (FailCount>5)
-                            //{
-                            //    this.Log_Global($"负方向搜索,连续次为[-1nm],退出不再搜索");
-                            //}
+                         
 
                         }
                         //比范围小  // 扫描到的波长， 大于目标， m1+val  m2-val
@@ -1361,6 +1308,9 @@ namespace SolveWare_TestPackage
                             }
                             tM1central += retry_step_mA * iC_M;
                             tM2central += retry_step_mA * iC_M;
+
+
+                            this.Log_Global($"AQWLT pos dir modify M1 centVal = [{tM1central}]mA , M2 centVal = [{tM2central}]mA");
 
                             this.Log_Global($"正方向搜索[{iC_M}]倍,波长[{m1m2_wl_Array[findedindex]}]nm");
 

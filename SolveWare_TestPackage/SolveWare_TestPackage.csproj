@@ -106,6 +106,8 @@
     <Compile Include="AA\ModuleAndRecipe_AA\TestRecipe_AA.cs" />
     <Compile Include="AA\RawData\RawData_AA.cs" />
     <Compile Include="AA\RawData\RawDatumItem_AA.cs" />
+    <Compile Include="AA_FineTuning\TestModule_AA_FineTuning.cs" />
+    <Compile Include="AA_FineTuning\TestRecipe_AA_FineTuning.cs" />
     <Compile Include="AlterQWLT\RawDataMenu_AlternativeQWLT.cs" />
     <Compile Include="AlterQWLT\RawData_AlternativeQWLT.cs" />
     <Compile Include="AlterQWLT\RawDatumItem_AlternativeQWLT.cs" />

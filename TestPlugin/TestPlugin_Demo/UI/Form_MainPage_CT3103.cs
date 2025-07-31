@@ -2539,7 +2539,7 @@ namespace TestPlugin_Demo
                 DialogResult result = MessageBox.Show("Are you sure you want to run OES TestModule_OES?", "Tips", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
-                    this._plugin.ShowOESMainForm();
+                    this._plugin.RunOESAutoTest().GetAwaiter().GetResult();
                 }
             }
             catch (Exception ex)

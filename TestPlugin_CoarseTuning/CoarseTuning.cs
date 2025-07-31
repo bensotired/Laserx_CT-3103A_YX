@@ -254,6 +254,8 @@ namespace TestPlugin_CoarseTuning
                 double[] targetChannelWavelengths = mirr1ItuData.Item2;
                 midlineAndItuFinder.Channel0Frequency=196.15;
                 midlineAndItuFinder.GridSpacingGHz=50;
+                clsLabeledItuChannelPoint.Channel0Freq = 196.15;
+                clsLabeledItuChannelPoint.GridSpacingGHz = 50;
        
                 //20241111 如果有异常, 不执行下面的代码
                 if (interpolatedMirr1Currents.Length > 0 && interpolatedMirr2Currents.Length > 0 && midlinePointers.Length > 0 && targetChannelWavelengths.Length > 0)
@@ -535,14 +537,15 @@ namespace TestPlugin_CoarseTuning
             modGlobals.PATH_TO_TEST_ANALYSIS = Application.StartupPath + $"\\Data\\{SerialNumber}\\Coarse_tuning";
             //modGlobals.PATH_TO_TEST_ANALYSIS = $"D:\\Coarse_tuning\\";
         }
-        public void SaveToCsv(string SerialNumber, string MaskName, string WaferName, string ChipName, string OeskID, double temp, DateTime time)
+        public (string, string) SaveToCsv(string SerialNumber, string MaskName, string WaferName, string ChipName, string OeskID, double temp, DateTime time)
         {
             SetSavePath(SerialNumber, MaskName, WaferName, ChipName, OeskID, temp, time);
-            SaveMidlineCsvFile_override();
+            var midlineFilePath = SaveMidlineCsvFile_override();
             //SaveItuPointsCsvFile();
-            SaveItuPointsCsvFile_override();
-        }
+            var deviationFilePath = SaveItuPointsCsvFile_override();
 
+            return (deviationFilePath, midlineFilePath);
+        }
         public string GetPath()
         {
             //string path = $"{modGlobals.PATH_TO_TEST_ANALYSIS}{modGlobalTestParams.MaskName}\\{modGlobalTestParams.WaferName}" +
@@ -555,10 +558,13 @@ namespace TestPlugin_CoarseTuning
             return DeviationsPath;
         }
          
-        public void SaveMidlineCsvFile_override()
+        public string SaveMidlineCsvFile_override()
         {
             try
             {
+                string filePath = string.Empty;
+
+
                 clsMidlineCsvHandler midlineInfoWriter = new clsMidlineCsvHandler();
                 var csvRows = BuildMidlineCsvRows();
 
@@ -571,7 +577,7 @@ namespace TestPlugin_CoarseTuning
                     {
                         Directory.CreateDirectory(path);
                     }
-                    string filePath = $"{modGlobals.PATH_TO_TEST_ANALYSIS}\\{modFolderAndFileAndImageNaming.COARSE_TUNING_MIDLINE_INFO_NAME}.csv";
+                    filePath = $"{modGlobals.PATH_TO_TEST_ANALYSIS}\\{modFolderAndFileAndImageNaming.COARSE_TUNING_MIDLINE_INFO_NAME}.csv";
                     using (StreamWriter Writer = new StreamWriter(filePath))
                     {
                         try
@@ -596,9 +602,8 @@ namespace TestPlugin_CoarseTuning
                             throw;
                         }
                     }
-
-
                 }
+                return filePath;
             }
             catch (Exception ex)
             {
@@ -606,10 +611,13 @@ namespace TestPlugin_CoarseTuning
             }
         }
 
-        public void SaveItuPointsCsvFile_override()
+        public string SaveItuPointsCsvFile_override()
         {
             try
             {
+                var filePath = string.Empty;
+
+
                 clsItuChannelCsvHandler ituChannelWriter = new clsItuChannelCsvHandler();
                 ituChannelWriter.CoarseTuningMode = true; //set this to true so the proper column header is used in the csv file.
                 List<List<string>> rowsToWrite = BuildItuChannelCsvRows();
@@ -625,8 +633,8 @@ namespace TestPlugin_CoarseTuning
                     {
                         Directory.CreateDirectory(path);
                     }
-                    string filePath = $"{modGlobals.PATH_TO_TEST_ANALYSIS}\\{modFolderAndFileAndImageNaming.COARSE_TUNING_CHANNEL_INFO_NAME}.csv";
-                    DeviationsPath = filePath;
+                    filePath = $"{modGlobals.PATH_TO_TEST_ANALYSIS}\\{modFolderAndFileAndImageNaming.COARSE_TUNING_CHANNEL_INFO_NAME}.csv";
+
                     using (StreamWriter Writer = new StreamWriter(filePath, false, Encoding.GetEncoding("gb2312")))
                     {
                         Writer.WriteLine(headerRow);
@@ -643,6 +651,7 @@ namespace TestPlugin_CoarseTuning
                         }
                     }
                 }
+                return filePath;
             }
             catch (Exception ex)
             {

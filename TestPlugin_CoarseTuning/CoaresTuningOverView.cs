@@ -53,17 +53,17 @@ namespace TestPlugin_CoarseTuning
             //coarseTuning.PlotMidlines(ref this.Chart_Midlines);
             //coarseTuning.PlotLabeledItuChannels(ref this.Chart_LabeledPoints);
         }
-        public string SaveCVS(string SerialNumber, string MaskName, string WaferName, string ChipName, string OeskID, double temp, DateTime time)
+        public (string,string) SaveCVS(string SerialNumber, string MaskName, string WaferName, string ChipName, string OeskID, double temp, DateTime time)
         {
             try
             {
-                coarseTuning.SaveToCsv(SerialNumber, MaskName, WaferName, ChipName, OeskID, temp, time);
+             return   coarseTuning.SaveToCsv(SerialNumber, MaskName, WaferName, ChipName, OeskID, temp, time);
             }
             catch (Exception ex)
             {
                 throw new Exception($"CoarseTuning SaveCVS Eorr [{ex.Message}]");
             }
-            return coarseTuning.GetPath();
+            return (string.Empty, string.Empty);
         }
     }
 }

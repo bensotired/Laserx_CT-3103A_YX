@@ -825,8 +825,8 @@
 						</ExecutorConfigItem>
 						<ExecutorConfigItem>
 							<TestExecutorName>aa_fineTuning</TestExecutorName>
-							<TestModuleClassName>TestModule_AA</TestModuleClassName>
-							<TestRecipeFileName>TestRecipe_AA</TestRecipeFileName>
+							<TestModuleClassName>TestModule_AA_FineTuning</TestModuleClassName>
+							<TestRecipeFileName>TestRecipe_AA_FineTuning</TestRecipeFileName>
 							<UserDefineInstrumentConfig>
 								<Book>
 									<DataPairOfStringString>
@@ -884,6 +884,18 @@
 									<DataPairOfStringString>
 										<Key>6683H</Key>
 										<Value>6683H</Value>
+									</DataPairOfStringString>
+									<DataPairOfStringString>
+										<Key>FWM8612</Key>
+										<Value>FWM8612</Value>
+									</DataPairOfStringString>
+									<DataPairOfStringString>
+										<Key>OSA</Key>
+										<Value>OSA</Value>
+									</DataPairOfStringString>
+									<DataPairOfStringString>
+										<Key>OSA_6370</Key>
+										<Value>OSA_6370</Value>
 									</DataPairOfStringString>
 									<DataPairOfStringString>
 										<Key>OSwitch</Key>
@@ -1334,26 +1346,22 @@
 						<ExecutorConfigItem_TestParamsConfig>
 							<Name>aa_fineTuning</Name>
 							<IncludingTypes/>
-							<TestRecipe xsi:type="TestRecipe_AA">
-								<ID>710666666</ID>
+							<TestRecipe xsi:type="TestRecipe_AA_FineTuning">
+								<ID>9099999999</ID>
 								<SummaryData_PreFix/>
 								<SummaryData_PostFix/>
 								<Inherit>true</Inherit>
 								<Analog_CH>1</Analog_CH>
-								<InitialCurrentSense_mA>0.08</InitialCurrentSense_mA>
-								<PowerThreshold_mA>0.0028</PowerThreshold_mA>
-								<Rough_Trajspeed>2</Rough_Trajspeed>
-								<Rough_Radius>0.3</Rough_Radius>
-								<Rough_Involute_Interval>0.006</Rough_Involute_Interval>
-								<Layer_Step>0.005</Layer_Step>
+								<InitialCurrentSense_mA>0.1</InitialCurrentSense_mA>
+								<PowerThreshold_mA>0.01</PowerThreshold_mA>
 								<Fine_Trajspeed>0.1</Fine_Trajspeed>
 								<Fine_Radius>0.01</Fine_Radius>
-								<Fine_Involute_Interval>0.001</Fine_Involute_Interval>
+								<Fine_Involute_Interval>0.002</Fine_Involute_Interval>
 								<Creep_Step_um>0.2</Creep_Step_um>
 								<CreepDelay_ms>400</CreepDelay_ms>
 								<OutOfFocusDistance_um>2</OutOfFocusDistance_um>
-								<CrossScanCount>2</CrossScanCount>
-								<OpticalSwitchChannel>1</OpticalSwitchChannel>
+								<LIVOpticalSwitchChannel>1</LIVOpticalSwitchChannel>
+								<SPOpticalSwitchChannel>2</SPOpticalSwitchChannel>
 							</TestRecipe>
 							<CalcRecipeBook>
 								<Book/>
@@ -1421,6 +1429,7 @@
 		<string>SolveWare_TestPackage.TestRecipe_MTuning</string>
 		<string>SolveWare_TestPackage.TestRecipe_AlternativeQWLT</string>
 		<string>SolveWare_TestPackage.TestRecipe_OES</string>
+		<string>SolveWare_TestPackage.TestRecipe_AA_FineTuning</string>
 	</IncludingTypes>
 	<BinCollectionName/>
 	<UserDefinedCalibrationData_Loader>

@@ -1477,8 +1477,8 @@ namespace TestPlugin_Demo
                                     if (bowProps[0].Name == "Path")
                                     {
                                         var PathObject = bowProps[0].GetValue(rawData);//"D:\\CoarseTuning_demo_镭神机台\\WindowsForms_CoarseTuningDemo_dotNet\\bin\\Debug\\MirrorTuning_格式化后.csv";// 
-                                        string Path = PathObject.ToString();
-                                        if (!string.IsNullOrEmpty(Path))
+                                        string mirrorMapPath = PathObject.ToString();
+                                        if (!string.IsNullOrEmpty(mirrorMapPath))
                                         {
 
                                             //if (string.IsNullOrEmpty(deviceData.CoarseTuningPath))
@@ -1486,19 +1486,21 @@ namespace TestPlugin_Demo
                                                 //    this.Invoke((EventHandler)delegate
                                                 //    {
                                                 panel_coarsetuning.Controls.Clear();
-                                                CoaresTuningOverView coares = new CoaresTuningOverView(Path);
+                                                CoaresTuningOverView coares = new CoaresTuningOverView(mirrorMapPath);
                                                 coares.TopLevel = false;
                                                 coares.Dock = DockStyle.Fill;
                                                 panel_coarsetuning.Controls.Add(coares);
                                                 coares.Show();
-                                                var CoarseTuningPath = coares.SaveCVS(deviceData.SerialNumber, deviceData.MaskName, deviceData.WaferName,
+                                                var coarseTunningFilePaths = coares.SaveCVS(deviceData.SerialNumber, deviceData.MaskName, deviceData.WaferName,
                                                     deviceData.ChipName, deviceData.OeskID, deviceData.Tec1ActualTemp, deviceData.CurrentDateTime);
-                                                deviceData.CoarseTuningPath = CoarseTuningPath;
 
 
-                                                panel_coarse.Controls.Clear();
+                                                deviceData.MirrorMapWlPath = mirrorMapPath;
+                                                deviceData.CoarseTuningPath = coarseTunningFilePaths.Item1; 
+                                                deviceData.CoarseTuningMidlinePath = coarseTunningFilePaths.Item2;
+                                          panel_coarse.Controls.Clear();
                                                 //string CoarseTuningPath = @"D:\CT-3103\LaserX_TesterLibrary\Data\Coarse_tuning\DO123\TM346\T7891\(SW_EXAMPLE)\CoarseTuning\DO123_TM346_T7891_CoarseTuning#Deviations@55.00C_2024-04-11_14-50-22.csv";
-                                                Form_CoarseTuning form_Coarse = new Form_CoarseTuning(CoarseTuningPath);
+                                                Form_CoarseTuning form_Coarse = new Form_CoarseTuning(deviceData.CoarseTuningPath);
                                                 form_Coarse.TopLevel = false;
                                                 form_Coarse.FormBorderStyle = FormBorderStyle.None;
                                                 form_Coarse.Dock = DockStyle.Fill;
