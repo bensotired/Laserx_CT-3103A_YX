@@ -102,11 +102,13 @@ namespace SolveWare_TesterCore
             foreach (var comChas in this.InstrumentChassisDict.Values)
             {
                 this.Log_Global($"正在连接通信底层[{comChas.Name}][{comChas.Resource}]默认在线状态[{comChas.IsOnline}]...");
-                if (comChas.Name.Contains("9078")|| comChas.Name.Contains("TC")|| comChas.Name.Contains("OSwitch"))
+                if (comChas.Name.Contains("9078") || comChas.Name.Contains("TC") || comChas.Name.Contains("OSwitch"))
                 {
                 }
                 else
-                { 
+                {
+
+
                     comChas.Initialize(comChas.InitTimeout_ms);
                 }
             }
@@ -362,7 +364,7 @@ namespace SolveWare_TesterCore
                 catch (Exception ex)
                 {
 
-                    
+
                 }
             }
             Thread.Sleep(1000);
@@ -391,7 +393,7 @@ namespace SolveWare_TesterCore
             }
         }
 
-        public  override void CloseForOES()
+        public override void CloseForOES()
         {
             try
             {
@@ -401,11 +403,15 @@ namespace SolveWare_TesterCore
                     //20240711 不能因为某个不能关闭而后面的都关闭了
                     try
                     {
-                        if (chas.Name.Contains("9078") || chas.Name.Contains("TC") || chas.Name.Contains("OSwitch"))
+                        if (chas.Name.Contains("9078") ||
+                            chas.Name.Contains("TC") ||
+                            chas.Name.Contains("OSwitch"))
                         {
+
                         }
                         else
                         {
+                            this.Log_Global($"Disconnect chassis [{chas.Name}]");
                             chas.ClearConnection();
                         }
                     }
@@ -417,6 +423,59 @@ namespace SolveWare_TesterCore
             catch (Exception ex)
             {
                 this.Log_Global($"CloseForOES 释放资源错误:[{ex.Message}{ex.StackTrace}]!");
+            }
+        }
+
+        public void DisconnectAll_NI_Smus()
+        {
+            try
+            {
+                this.Log_Global($"Disconnecting all NI SMUs !");
+                foreach (var instInstance in this.InstrumentDict.Values)
+                {
+                    //20240711 不能因为某个不能关闭而后面的都关闭了
+                    try
+                    {
+                        if (instInstance is PXISourceMeter_4143)
+                        {
+                            (instInstance as PXISourceMeter_4143).Disconnect();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }
+                this.Log_Global($"NI SMUs are disconnected!");
+            }
+            catch (Exception ex)
+            {
+                this.Log_Global($"DisconnectAll_NI_Smus 释放资源错误:[{ex.Message}{ex.StackTrace}]!");
+            }
+        }
+        public void ConnectAll_NI_Smus()
+        {
+            try
+            {
+                this.Log_Global($"Connecting all NI SMUs !");
+                foreach (var instInstance in this.InstrumentDict.Values)
+                {
+                    //20240711 不能因为某个不能关闭而后面的都关闭了
+                    try
+                    {
+                        if (instInstance is PXISourceMeter_4143)
+                        {
+                            (instInstance as PXISourceMeter_4143).Initialize();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }
+                this.Log_Global($"NI SMUs are connected!");
+            }
+            catch (Exception ex)
+            {
+                this.Log_Global($"ConnectAll_NI_Smus 释放资源错误:[{ex.Message}{ex.StackTrace}]!");
             }
         }
     }

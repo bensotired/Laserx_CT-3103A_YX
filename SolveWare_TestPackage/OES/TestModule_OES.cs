@@ -4,6 +4,9 @@ using SolveWare_TestComponents.Model;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using SolveWare_BurnInInstruments;
+using SolveWare_IO;
+using SolveWare_BurnInCommon;
 
 namespace SolveWare_TestPackage
 {
@@ -11,7 +14,9 @@ namespace SolveWare_TestPackage
 
     #region  轴、位置、IO、仪器
 
-    //[ConfigurableInstrument("PXISourceMeter_4143", "PD", "PD")] 
+
+    [StaticResource(ResourceItemType.IO, "PD_3", "切换PD")]
+    [ConfigurableInstrument("OpticalSwitch", "OSwitch", "用于切换光路(1*4切换器)")]
     #endregion
     public class TestModule_OES : TestModuleBase
     {
@@ -36,6 +41,8 @@ namespace SolveWare_TestPackage
         string CoarseTuningMidlineFileName { get; set; }
         string CoarseTuningDeviationsFileName { get; set; }
 
+        private OpticalSwitch OSwitch { get { return (OpticalSwitch)this.ModuleResource["OSwitch"]; } }
+        private IOBase SwitchPD { get { return (IOBase)this.ModuleResource["PD_3"]; } }
         #region instance variables
         LaserXFineTuningDllTest.frmMain frmMain; //The OES dll main form
         #endregion
@@ -101,6 +108,9 @@ namespace SolveWare_TestPackage
         {
             TestRecipe = ConvertObjectTo<TestRecipe_OES>(testRecipe);
         }
+
+
+   
         //This should run after coarse tuning!!!
         //After finishing, integrate into auto test after coarse tuning
         public override void Run(CancellationToken token)
@@ -108,6 +118,11 @@ namespace SolveWare_TestPackage
             try
             {
                 //1. Re-align the fiber, using stable laser settings (maybe from QWLT?). Is there a function that does this?
+
+               
+                Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.SMU);
+                OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
+      
 
                 this.Log_Global($"关闭镭神测试平台所有仪器库连接...\r\nClose all instrument library connections of the LaserX test platform...");
                 //2. Disconnect from the Ni SMU

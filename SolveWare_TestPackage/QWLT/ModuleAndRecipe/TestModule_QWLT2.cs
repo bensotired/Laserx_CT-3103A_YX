@@ -159,13 +159,14 @@ namespace SolveWare_TestPackage
 
                 //OSwitch切换:
                 {
-                    var och = Convert.ToByte(this.TestRecipe.OpticalSwitchChannel);
-                    if (OSwitch.SetCH(och) == false)
-                    {
-                        string msg = "光开关通道切换失败！";
-                        this.Log_Global(msg);
-                        throw new Exception(msg);
-                    }
+                    OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
+                    //var och = Convert.ToByte(this.TestRecipe.OpticalSwitchChannel);
+                    //if (OSwitch.SetCH(och) == false)
+                    //{
+                    //    string msg = "光开关通道切换失败！";
+                    //    this.Log_Global(msg);
+                    //    throw new Exception(msg);
+                    //}
                 }
 
                 this.Log_Global($"开始测试!");

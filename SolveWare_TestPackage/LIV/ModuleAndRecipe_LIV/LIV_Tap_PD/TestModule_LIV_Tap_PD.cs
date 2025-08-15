@@ -135,16 +135,17 @@ namespace SolveWare_TestPackage
 
                 Merged_PXIe_4143.Reset();
 
-                SwitchPD.TurnOn(true);
+                Circuit_Controller.TapPD_ConnectTo(SwitchPD ,TapPD_Circuit.SMU);
                 //OSwitch切换:
                 {
-                    var och = Convert.ToByte(this.TestRecipe.LIVOpticalSwitchChannel);
-                    if (OSwitch.SetCH(och) == false)
-                    {
-                        string msg = "光开关通道切换失败！";
-                        this.Log_Global(msg);
-                        throw new Exception(msg);
-                    }
+                    OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
+                    //var och = Convert.ToByte(this.TestRecipe.LIVOpticalSwitchChannel);
+                    //if (OSwitch.SetCH(och) == false)
+                    //{
+                    //    string msg = "光开关通道切换失败！";
+                    //    this.Log_Global(msg);
+                    //    throw new Exception(msg);
+                    //}
                 }
 
                 //从QWLT拿到所需通道家电数值
@@ -435,13 +436,14 @@ namespace SolveWare_TestPackage
                 }
                 //OSwitch切换:
                 {
-                    var och = Convert.ToByte(this.TestRecipe.SPOpticalSwitchChannel);
-                    if (OSwitch.SetCH(och) == false)
-                    {
-                        string msg = "光开关通道切换失败！";
-                        this.Log_Global(msg);
-                        throw new Exception(msg);
-                    }
+                    OptialPath_Controller.SwitchTo(OSwitch, OptialPath.OSA_and_WLM);
+                    //var och = Convert.ToByte(this.TestRecipe.SPOpticalSwitchChannel);
+                    //if (OSwitch.SetCH(och) == false)
+                    //{
+                    //    string msg = "光开关通道切换失败！";
+                    //    this.Log_Global(msg);
+                    //    throw new Exception(msg);
+                    //}
                 }
 
                 Thread.Sleep(200); //防止加电失败
@@ -613,7 +615,7 @@ namespace SolveWare_TestPackage
             finally
             {
                 Merged_PXIe_4143.Reset();
-                SwitchPD.TurnOn(false);
+                Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
             }
         }
         string MaskName { get; set; }

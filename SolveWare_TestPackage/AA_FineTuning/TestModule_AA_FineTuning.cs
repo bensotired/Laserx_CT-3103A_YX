@@ -242,14 +242,16 @@ namespace SolveWare_TestPackage
 
                     this.Log_Global("开始加电.");
 
-                    var och = Convert.ToByte(this.TestRecipe.LIVOpticalSwitchChannel);
-                    if (OSwitch.SetCH(och) == false)
-                    {
-                        string msg = "光开关通道切换失败！";
-                        this.Log_Global(msg);
-                        throw new Exception(msg);
-                    }
- 
+                    OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
+
+                    //var och = Convert.ToByte(this.TestRecipe.LIVOpticalSwitchChannel);
+                    //if (OSwitch.SetCH(och) == false)
+                    //{
+                    //    string msg = "光开关通道切换失败！";
+                    //    this.Log_Global(msg);
+                    //    throw new Exception(msg);
+                    //}
+
                     if (this.TestRecipe.Inherit)
                     {
 
@@ -346,7 +348,7 @@ namespace SolveWare_TestPackage
                                     },
                                 }
                     };
- 
+
                     foreach (var axis in ThreeAxisList)
                     {
                         axis.WaitMotionDone();
@@ -388,7 +390,7 @@ namespace SolveWare_TestPackage
 
                     #region  先粗耦合一次
 
-                    SwitchPD.TurnOn(false); //使用耦合通道
+                    Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem); //使用耦合通道
                     Thread.Sleep(100);
 
                     TrajResultItem result;
@@ -484,7 +486,7 @@ namespace SolveWare_TestPackage
 
                         this.CheckCancellationRequested(token);
 
-                        while (!DataAnalyze(  t_Start_Pos, result, false, out retPoint))
+                        while (!DataAnalyze(t_Start_Pos, result, false, out retPoint))
                         {
                             this.CheckCancellationRequested(token);
 
@@ -517,7 +519,7 @@ namespace SolveWare_TestPackage
 
                     GAIN.AssignmentMode_Current(qWLT2_TestDta.GAIN, 2.5);
 
-                    SwitchPD.TurnOn(true); //使用源表
+                    Circuit_Controller.TapPD_ConnectTo(SwitchPD ,TapPD_Circuit.SMU); //使用源表
 
                     double pdSenseCurrentRange_mA = 10;// Math.Round(pd_Max * 5, 6);
 
@@ -678,6 +680,12 @@ namespace SolveWare_TestPackage
 
                     }
 
+                    pd_Max = PD.ReadCurrent_A() * 1000.0;
+                    Log_Global($"AAFT最终光电流为[{pd_Max}]mA ");
+                    var orgX = X2.Get_CurUnitPos();
+                    var orgY = Y2.Get_CurUnitPos();
+                    var orgZ = Z2.Get_CurUnitPos();
+                    this.Log_Global($"X_final = {orgX} Y_final = {orgY} Z_final = {orgZ} {Environment.NewLine}");
                 }
             }
             catch (Exception ex)
@@ -688,7 +696,7 @@ namespace SolveWare_TestPackage
             finally
             {
                 Merged_PXIe_4143.Reset();
-                SwitchPD.TurnOn(false);
+                //Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
                 this.Log_Global($"结束测试!");
             }
         }

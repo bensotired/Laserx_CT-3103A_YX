@@ -331,13 +331,14 @@ namespace SolveWare_TestPackage
 
                             //OSwitch切换:
                             {
-                                var och = Convert.ToByte(this.TestRecipe.LIVOpticalSwitchChannel);
-                                if (OSwitch.SetCH(och) == false)
-                                {
-                                    string msg = "光开关通道切换失败！";
-                                    this.Log_Global(msg);
-                                    throw new Exception(msg);
-                                }
+                                OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
+                                //var och = Convert.ToByte(this.TestRecipe.LIVOpticalSwitchChannel);
+                                //if (OSwitch.SetCH(och) == false)
+                                //{
+                                //    string msg = "光开关通道切换失败！";
+                                //    this.Log_Global(msg);
+                                //    throw new Exception(msg);
+                                //}
                             }
 
                             if (this.TestRecipe.Inherit)
@@ -601,7 +602,7 @@ namespace SolveWare_TestPackage
 
                             #region  先粗耦合一次
 
-                            SwitchPD.TurnOn(false); //使用耦合通道
+                            Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem); //使用耦合通道
                             Thread.Sleep(100);
 
                             TrajResultItem result;
@@ -772,7 +773,7 @@ namespace SolveWare_TestPackage
 
                             GAIN.AssignmentMode_Current(chitem["Gain[mA]"], 2.5);
 
-                            SwitchPD.TurnOn(true); //使用源表
+                            Circuit_Controller.TapPD_ConnectTo(SwitchPD ,TapPD_Circuit.SMU); //使用源表
 
                             double pdSenseCurrentRange_mA = 10;// Math.Round(pd_Max * 5, 6);
 
@@ -945,18 +946,19 @@ namespace SolveWare_TestPackage
 
                     this.Log_Global($"开始测试!");
 
-                    SwitchPD.TurnOn(false);
+                    Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
                     Merged_PXIe_4143.Reset();
 
                     //OSwitch切换:
                     {
-                        var och = Convert.ToByte(this.TestRecipe.SPOpticalSwitchChannel);
-                        if (OSwitch.SetCH(och) == false)
-                        {
-                            string msg = "光开关通道切换失败！";
-                            this.Log_Global(msg);
-                            throw new Exception(msg);
-                        }
+                        OptialPath_Controller.SwitchTo(OSwitch, OptialPath.OSA_and_WLM);
+                        //var och = Convert.ToByte(this.TestRecipe.SPOpticalSwitchChannel);
+                        //if (OSwitch.SetCH(och) == false)
+                        //{
+                        //    string msg = "光开关通道切换失败！";
+                        //    this.Log_Global(msg);
+                        //    throw new Exception(msg);
+                        //}
                     }
 
                     if (this.TestRecipe.Inherit)
@@ -1454,16 +1456,17 @@ namespace SolveWare_TestPackage
 
                         this.Log_Global($"-----PH_Max-----");
 
-                        SwitchPD.TurnOn(true);
+                        Circuit_Controller.TapPD_ConnectTo(SwitchPD ,TapPD_Circuit.SMU);
                         //OSwitch切换:
                         {
-                            var och = Convert.ToByte(this.TestRecipe.LIVOpticalSwitchChannel);
-                            if (OSwitch.SetCH(och) == false)
-                            {
-                                string msg = "光开关通道切换失败！";
-                                this.Log_Global(msg);
-                                throw new Exception(msg);
-                            }
+                            OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
+                            //var och = Convert.ToByte(this.TestRecipe.LIVOpticalSwitchChannel);
+                            //if (OSwitch.SetCH(och) == false)
+                            //{
+                            //    string msg = "光开关通道切换失败！";
+                            //    this.Log_Global(msg);
+                            //    throw new Exception(msg);
+                            //}
                         }
 
                         #region PH_Max
@@ -1618,13 +1621,14 @@ namespace SolveWare_TestPackage
 
                             //OSwitch切换:
                             {
-                                var och = Convert.ToByte(this.TestRecipe.SPOpticalSwitchChannel);
-                                if (OSwitch.SetCH(och) == false)
-                                {
-                                    string msg = "光开关通道切换失败！";
-                                    this.Log_Global(msg);
-                                    throw new Exception(msg);
-                                }
+                                OptialPath_Controller.SwitchTo(OSwitch, OptialPath.OSA_and_WLM);
+                                //var och = Convert.ToByte(this.TestRecipe.SPOpticalSwitchChannel);
+                                //if (OSwitch.SetCH(och) == false)
+                                //{
+                                //    string msg = "光开关通道切换失败！";
+                                //    this.Log_Global(msg);
+                                //    throw new Exception(msg);
+                                //}
                             }
 
                             this.RawDataMenu.Wavelength = FWM8612.GetWavelenth();
@@ -1735,7 +1739,7 @@ namespace SolveWare_TestPackage
             finally
             {
                 Merged_PXIe_4143.Reset();
-                SwitchPD.TurnOn(false);
+                Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
                 this.Log_Global($"结束测试!");
             }
         }

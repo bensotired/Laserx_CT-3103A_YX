@@ -1396,6 +1396,9 @@ namespace SolveWare_TesterCore
             try
             {
                 TestStationManager.Instance.CloseForOES();
+
+                TestStationManager.Instance.DisconnectAll_NI_Smus();
+
             }
             catch (Exception)
             {
@@ -1411,6 +1414,7 @@ namespace SolveWare_TesterCore
                 TestStationManager.Instance.InitializeInstrumentsChassisForOES();
                 TestStationManager.Instance.InitializeInstrumentsForOES();
                 TestStationManager.Instance.InitializeMonitors();
+                TestStationManager.Instance.ConnectAll_NI_Smus();
             }
             catch (Exception)
             {

@@ -127,6 +127,7 @@
     <Compile Include="LIV\CalculatorAndRecipe_LIV_SOA_MultiRawData\ITH3_MultiRawData_SOA\TestCalculator_LIV_SOA_Ith3_MultiRawData.cs" />
     <Compile Include="OES\TestModule_OES.cs" />
     <Compile Include="OES\TestRecipe_OES.cs" />
+    <Compile Include="OptialPath_Controller.cs" />
     <Compile Include="QWLT2_TestDta.cs" />
     <Compile Include="CalculatorProgram_Nodelet.cs" />
     <Compile Include="LIV\CalculatorAndRecipe_LIV\DSEOP\CalcRecipe_LIV_Dseop.cs" />

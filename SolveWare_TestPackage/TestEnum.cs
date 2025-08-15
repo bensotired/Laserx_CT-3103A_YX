@@ -54,4 +54,14 @@ namespace SolveWare_TestPackage
         MPD1,
         MPD2,
     }
+    public enum TapPD_Circuit
+    {
+        SMU,
+        AlignmentSystem,
+    }
+    public enum OptialPath :byte
+    {
+        TapPD =1,
+        OSA_and_WLM =2,
+    }
 }

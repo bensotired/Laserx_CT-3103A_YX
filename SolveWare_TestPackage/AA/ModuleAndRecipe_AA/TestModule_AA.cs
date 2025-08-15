@@ -275,6 +275,10 @@ namespace SolveWare_TestPackage
                 {
                     if (LN_Focuser.ItemCollection.Count == 3)//左载台耦合初始位
                     {
+                        var orgX = X2.Get_CurUnitPos();
+                        var orgY = Y2.Get_CurUnitPos();
+                        var orgZ = Z2.Get_CurUnitPos();
+                        initialPoslog = $"X_org = {orgX} Y_org = {orgY} Z_org = {orgZ} {Environment.NewLine}";
 
                         X2.MoveToV3(LN_Focuser.GetSingleItem(X2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                         X2.WaitMotionDone();
@@ -283,13 +287,19 @@ namespace SolveWare_TestPackage
                         Y2.MoveToV3(LN_Focuser.GetSingleItem(Y2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                         Y2.WaitMotionDone();
 
-                        initialPoslog = $"X = {LN_Focuser.GetSingleItem(X2.Name).Position}Y = {LN_Focuser.GetSingleItem(Y2.Name).Position} Z = {LN_Focuser.GetSingleItem(Z2.Name).Position}";
+                        initialPoslog += $"X_init = {LN_Focuser.GetSingleItem(X2.Name).Position} Y_init = {LN_Focuser.GetSingleItem(Y2.Name).Position} Z_init = {LN_Focuser.GetSingleItem(Z2.Name).Position}";
                     }
                 }
                 else
                 {
                     if (LN_Focuser_Right.ItemCollection.Count == 3)//右载台耦合初始位
                     {
+
+                        var orgX = X2.Get_CurUnitPos();
+                        var orgY = Y2.Get_CurUnitPos();
+                        var orgZ = Z2.Get_CurUnitPos();
+                        initialPoslog = $"X_org = {orgX} Y_org = {orgY} Z_org = {orgZ} {Environment.NewLine}";
+
                         X2.MoveToV3(LN_Focuser_Right.GetSingleItem(X2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                         X2.WaitMotionDone();
                         Z2.MoveToV3(LN_Focuser_Right.GetSingleItem(Z2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
@@ -297,29 +307,30 @@ namespace SolveWare_TestPackage
                         Y2.MoveToV3(LN_Focuser_Right.GetSingleItem(Y2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                         Y2.WaitMotionDone();
 
-                        initialPoslog = $"X = {LN_Focuser_Right.GetSingleItem(X2.Name).Position}Y = {LN_Focuser_Right.GetSingleItem(Y2.Name).Position} Z = {LN_Focuser_Right.GetSingleItem(Z2.Name).Position}";
+                        initialPoslog = $"X_init = {LN_Focuser_Right.GetSingleItem(X2.Name).Position} Y_init = {LN_Focuser_Right.GetSingleItem(Y2.Name).Position} Z_init = {LN_Focuser_Right.GetSingleItem(Z2.Name).Position}";
                     }
                 }
                 Log_Global($"AA initial position : {initialPoslog}.");
-                SwitchPD.TurnOn(false);
+                Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
 
                 Log_Global($"   SwitchPD.TurnOn(false)");
                 Merged_PXIe_4143.Reset();
 
                 //OSwitch切换:
                 {
-              
-                    var och = Convert.ToByte(this.TestRecipe.OpticalSwitchChannel);
-                    if (OSwitch.SetCH(och) == false)
-                    {
-                        string msg = "光开关通道切换失败！";
-                        this.Log_Global(msg);
-                        throw new Exception(msg);
-                    }
-                    else
-                    {
-                        Log_Global($"   OSwitch.SetCH({och})");
-                    }
+          
+                    OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
+                    //var och = Convert.ToByte(this.TestRecipe.OpticalSwitchChannel);
+                    //if (OSwitch.SetCH(och) == false)
+                    //{
+                    //    string msg = "光开关通道切换失败！";
+                    //    this.Log_Global(msg);
+                    //    throw new Exception(msg);
+                    //}
+                    //else
+                    //{
+                    //    Log_Global($"   OSwitch.SetCH({och})");
+                    //}
                 }
 
                 var UsedPlane = LaserX_9078_Utilities.PmTrajSelectPlane.XZ_CW;
@@ -1025,7 +1036,8 @@ namespace SolveWare_TestPackage
                     //用2612进行耦合电流
                     {
                         this.Log_Global($"恢复Gain电流,进行光电流耦合");
-                        SwitchPD.TurnOn(true);
+                      
+                        Circuit_Controller.TapPD_ConnectTo(SwitchPD ,TapPD_Circuit.SMU);
                         GAIN.AssignmentMode_Current(qWLT2_TestDta.GAIN, 2.5);
 
                         #region PD回读

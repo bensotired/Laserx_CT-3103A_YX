@@ -202,7 +202,7 @@ namespace SolveWare_TestPackage
                     Y.WaitMotionDone();
                 }
                 Merged_PXIe_4143.Reset();
-
+                OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
                 //OSwitch切换:
                 //{
                 //    var och = Convert.ToByte(this.TestRecipe.OpticalSwitchChannel);

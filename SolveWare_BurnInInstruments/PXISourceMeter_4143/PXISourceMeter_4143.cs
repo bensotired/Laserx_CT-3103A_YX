@@ -88,6 +88,14 @@ namespace SolveWare_BurnInInstruments
             }
 
         }
+        public void Disconnect()
+        {
+            if (this.IsOnline)
+            {
+                NIDCPower[] secondarySessions = new NIDCPower[] { };
+                SmuUtility.CloseSessions(CmdHandler, secondarySessions);
+            }
+        }
         public string GetDefaultTermialName()
         {
             string termial = string.Empty;
