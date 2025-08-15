@@ -909,14 +909,7 @@ namespace TestPlugin_Demo
         {
             if (frmMain != null)
             {
-                frmMain.MirrDiagGainCurrent = 130;
-                frmMain.MirrDiagLaserPhaseCurrent = 4;
-                frmMain.MirrDiagPhase1Current = 1;
-                frmMain.MirrDiagPhase2Current = 0;
-                frmMain.MirrDiagSoa1Current = 50;
-                frmMain.MirrDiagSoa2Current = 40;
-                frmMain.MirrDiagMZM1Voltage = -2.5M; //These are decimal data types, so using the 'M' handles the type casting
-                frmMain.MirrDiagMZM2Voltage = -2.5M;
+              
             }
         }
         #endregion
