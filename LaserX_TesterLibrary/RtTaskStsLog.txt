@@ -2852,3 +2852,27 @@ dev[0] RT task period, min: 139.6 us, max: 2122.2 us, mean: 1048.6 us
 
 [2025-8-15 15:12:30:135] in P9078_MotionDeinit:
 dev[1] RT task period, min: 94.2 us, max: 1988.1 us, mean: 1048.6 us
+
+
+[2025-8-22 8:5:58:895] in P9078_MotionDeinit:
+dev[0] RT task period, min: 774.3 us, max: 1277.1 us, mean: 1048.6 us
+
+
+[2025-8-22 8:5:58:972] in P9078_MotionDeinit:
+dev[1] RT task period, min: 761.1 us, max: 1283.3 us, mean: 1048.6 us
+
+
+[2025-8-22 12:0:26:657] in P9078_MotionDeinit:
+dev[0] RT task period, min: 89.6 us, max: 4013.5 us, mean: 1048.6 us
+
+
+[2025-8-22 12:0:26:749] in P9078_MotionDeinit:
+dev[1] RT task period, min: 102.5 us, max: 4182.0 us, mean: 1048.6 us
+
+
+[2025-8-22 12:8:29:852] in P9078_MotionDeinit:
+dev[0] RT task period, min: 1000.7 us, max: 1097.3 us, mean: 1048.6 us
+
+
+[2025-8-22 12:8:29:943] in P9078_MotionDeinit:
+dev[1] RT task period, min: 998.0 us, max: 1097.3 us, mean: 1048.6 us
