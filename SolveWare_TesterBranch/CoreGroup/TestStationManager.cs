@@ -443,6 +443,7 @@ namespace SolveWare_TesterCore
                     }
                     catch (Exception ex)
                     {
+                        this.Log_Global(ex.Message.ToString());
                     }
                 }
                 this.Log_Global($"NI SMUs are disconnected!");

@@ -223,18 +223,31 @@ namespace NationalInstruments.OptoelectronicComponentTest
         /// <param name="secondarySessions">Specifies the secondary DC power sessions in multi-channel synchronization mode.</param>
         public static void CloseSessions(NIDCPower primarySession, NIDCPower[] secondarySessions)
         {
-            //Quickly ensures all outputs are disabled and resets the device.
-            primarySession.Utility.Reset();
-            primarySession.Close();
-
-            int secondaryCount = secondarySessions.GetLength(0);
-            for (int i = 0; i < secondaryCount; i++)
+            // Close SECONDARY sessions first (reverse of open order).
+            if (secondarySessions != null)
             {
-                secondarySessions[i].Utility.Reset();
-                secondarySessions[i].Close();
+                for (int i = secondarySessions.Length - 1; i >= 0; i--)
+                {
+                    var s = secondarySessions[i];
+                    if (s == null) continue;
+                    s.Utility.Reset();   // optional reset
+                    s.Control.Abort();
+                    s.Close();
+
+                    secondarySessions[i] = null;
+                }
+            }
+
+            // Close PRIMARY last.
+            if (primarySession != null)
+            {
+               
+                primarySession.Utility.Reset();  // optional reset
+                primarySession.Control.Abort();
+                primarySession.Close();
+                // caller can set primarySession = null afterwards
             }
         }
-
         private static string BuildFullyQualifiedTerminalName(NIDCPower session, string localTerminalName)
         {
             string resource = session.DriverOperation.IOResourceDescriptor;
