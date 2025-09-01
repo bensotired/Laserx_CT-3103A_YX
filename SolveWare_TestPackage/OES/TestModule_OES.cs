@@ -75,6 +75,7 @@ namespace SolveWare_TestPackage
                 {
                     frmMain = new LaserXFineTuningDllTest.frmMain();
                 }
+                
             }
             catch (Exception ex)
             {
@@ -85,11 +86,11 @@ namespace SolveWare_TestPackage
         {
             try
             {
-                if (frmMain != null)
-                {
-                    frmMain.Close();
-                    frmMain.Dispose();
-                }
+                //if (frmMain != null)
+                //{
+                //    frmMain.Close();
+                //    frmMain.Dispose();
+                //}
             }
             catch (Exception ex)
             {
