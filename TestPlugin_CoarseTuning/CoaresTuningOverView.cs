@@ -53,6 +53,8 @@ namespace TestPlugin_CoarseTuning
             //coarseTuning.PlotMidlines(ref this.Chart_Midlines);
             //coarseTuning.PlotLabeledItuChannels(ref this.Chart_LabeledPoints);
         }
+
+        // the function to save csv
         public (string,string) SaveCVS(string SerialNumber, string MaskName, string WaferName, string ChipName, string OeskID, double temp, DateTime time)
         {
             try

@@ -26,7 +26,7 @@ namespace SolveWare_TestPackage
 
 
     #region  轴、位置、IO、仪器
-
+    [StaticResource(ResourceItemType.IO, "PD_3", "切换PD")]
     [StaticResource(ResourceItemType.AXIS, "LNX", "LNX")]
     [StaticResource(ResourceItemType.AXIS, "LNY", "LNY")]
     [StaticResource(ResourceItemType.AXIS, "LNZ", "LNZ")]
@@ -77,7 +77,7 @@ namespace SolveWare_TestPackage
 
         FWM8612 FWM8612 { get { return (FWM8612)this.ModuleResource["FWM8612"]; } }
         private OpticalSwitch OSwitch { get { return (OpticalSwitch)this.ModuleResource["OSwitch"]; } }
-
+        private IOBase SwitchPD { get { return (IOBase)this.ModuleResource["PD_3"]; } }
         #endregion
 
         TestRecipe_LIV_Normal TestRecipe { get; set; }
@@ -202,6 +202,9 @@ namespace SolveWare_TestPackage
                     Y.WaitMotionDone();
                 }
                 Merged_PXIe_4143.Reset();
+
+               
+                Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
                 OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
                 //OSwitch切换:
                 //{

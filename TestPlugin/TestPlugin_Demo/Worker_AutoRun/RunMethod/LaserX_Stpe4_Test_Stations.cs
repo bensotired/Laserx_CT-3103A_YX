@@ -379,10 +379,11 @@ namespace TestPlugin_Demo
                 data_demo.DeviceInfo.CarrierID = CarrierNumberLeft;
                 data_demo.MaskName = this.MaskName;
                 data_demo.WaferName = this.WaferName;
-                data_demo.ChipName = this.ChipName + $"{CarrierNumberLeft}_{LeftTestCount + 1}";
-                data_demo.OeskID = LeftChipNumberlist[LeftTestCount];// this.OeskID;
+                //data_demo.ChipName = this.ChipName + $"{CarrierNumberRight}_{RightTestCount + 1}";
+                data_demo.ChipName = string.Join("", LeftChipNumberlist[LeftTestCount].Split('-').Reverse().Take(3).Reverse());
+                data_demo.OeskID = LeftChipNumberlist[LeftTestCount];// this.OeskID; this is the "chipid" load from the csv file
                 data_demo.DeviceInfo.WorkOrder = this.WorkOrder;
-                data_demo.Tec1ActualTemp = this.parameter.TemperatureListLeft[0]; ;
+                data_demo.Tec1ActualTemp = this.parameter.TemperatureListLeft[0];
 
                 data_demo.CoarseTuningPath = this.GetDeviationsPath();
                 data_demo.CoarseTuningMidlinePath = this.GetTuningMidlinePath();
@@ -529,7 +530,8 @@ namespace TestPlugin_Demo
                 data_demo.DeviceInfo.CarrierID = CarrierNumberRight;
                 data_demo.MaskName = this.MaskName;
                 data_demo.WaferName = this.WaferName;
-                data_demo.ChipName = this.ChipName + $"{CarrierNumberRight}_{RightTestCount + 1}";
+                //data_demo.ChipName = this.ChipName + $"{CarrierNumberRight}_{RightTestCount + 1}";
+                data_demo.ChipName = string.Join("", RightChipNumberlist[RightTestCount].Split('-').Reverse().Take(3).Reverse());
                 data_demo.OeskID = RightChipNumberlist[RightTestCount];// this.OeskID;
                 data_demo.DeviceInfo.WorkOrder = this.WorkOrder;
                 data_demo.Tec1ActualTemp = this.parameter.TemperatureListRight[0];

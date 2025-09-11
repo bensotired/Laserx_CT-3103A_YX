@@ -60,7 +60,7 @@ namespace SolveWare_TestPackage
         {
             this.MaskName = dutStreamData.MaskName;
             this.WaferID = dutStreamData.WaferName;
-            this.SerialNumber = dutStreamData.SerialNumber;
+            this.SerialNumber = dutStreamData.SerialNumber; //This is what needs to be the name of the chip.
             this.OeskID = dutStreamData.OeskID;
 
             this.MirrorMapWlFileName = dutStreamData.MirrorMapWlPath;
@@ -186,7 +186,7 @@ namespace SolveWare_TestPackage
             {
                 frmMain.MaskID = this.MaskName; //SET FROM CURRENT COC INFO!!
                 frmMain.WaferID = this.WaferID; //SET FROM CURRENT COC INFO!!
-                frmMain.ChipID = this.SerialNumber; //SET FROM CURRENT COC INFO!!
+                frmMain.ChipID = this.SerialNumber; //This is the thing that needs the chip name, whatever we set this to is automatically included in the file name for fine tuning.
                 frmMain.OeskID = this.OeskID; //SET FROM CURRENT COC INFO!!
 
                 //Need to make sure this is set from the current CoC.
