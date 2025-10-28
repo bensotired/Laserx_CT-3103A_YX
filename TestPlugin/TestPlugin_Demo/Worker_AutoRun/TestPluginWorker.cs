@@ -883,6 +883,7 @@ namespace TestPlugin_Demo
             InitOESMainForm();
             if (frmMain != null)
             {
+               
                 frmMain.Show();
                 SetFineTuningInputFileNames();
                 SetChipInformation();

@@ -1487,6 +1487,19 @@ namespace TestPlugin_Demo
                                                 //    {
                                                 panel_coarsetuning.Controls.Clear();
                                                 CoaresTuningOverView coares = new CoaresTuningOverView(mirrorMapPath);
+
+                                                var tempData = QWLT2_TestData.GetQwlt2_Data(deviceData);
+                                                coares.Set_QWLT2_SettingData
+                                                (
+                                                    tempData.GAIN,
+                                                    tempData.SOA1,
+                                                    tempData.SOA2,
+                                                    tempData.LP,
+                                                    tempData.PH1,
+                                                    tempData.PH2,
+                                                    tempData.BIAS1,
+                                                    tempData.BIAS2 
+                                                );
                                                 coares.TopLevel = false;
                                                 coares.Dock = DockStyle.Fill;
                                                 panel_coarsetuning.Controls.Add(coares);
@@ -1494,7 +1507,7 @@ namespace TestPlugin_Demo
                                                 var coarseTunningFilePaths = coares.SaveCVS(deviceData.SerialNumber, deviceData.MaskName, deviceData.WaferName,
                                                     deviceData.ChipName, deviceData.OeskID, deviceData.Tec1ActualTemp, deviceData.CurrentDateTime);
 
-
+                                        
                                                 deviceData.MirrorMapWlPath = mirrorMapPath;
                                                 deviceData.CoarseTuningPath = coarseTunningFilePaths.Item1; 
                                                 deviceData.CoarseTuningMidlinePath = coarseTunningFilePaths.Item2;

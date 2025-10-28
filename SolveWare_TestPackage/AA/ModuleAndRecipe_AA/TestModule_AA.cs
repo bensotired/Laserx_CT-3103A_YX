@@ -1,16 +1,13 @@
 ﻿using LX_BurnInSolution.Charts;
 using LX_BurnInSolution.Utilities;
-using Newtonsoft.Json.Linq;
 using SolveWare_Analog;
 using SolveWare_BurnInCommon;
 using SolveWare_BurnInInstruments;
 using SolveWare_IO;
 using SolveWare_Motion;
-using SolveWare_TestComponents;
 using SolveWare_TestComponents.Attributes;
 using SolveWare_TestComponents.Data;
 using SolveWare_TestComponents.Model;
-using SolveWare_TestComponents.ResourceProvider;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -101,7 +98,7 @@ namespace SolveWare_TestPackage
 
         private TestRecipe_AA TestRecipe { get; set; }
         private RawData_AA RawData { get; set; }
-        QWLT2_TestDta qWLT2_TestDta { get; set; }
+        QWLT2_TestData qWLT2_TestDta { get; set; }
         public override IRawDataBaseLite CreateRawData()
         {
             RawData = new RawData_AA(); return RawData;
@@ -126,70 +123,10 @@ namespace SolveWare_TestPackage
             {
                 return;
             }
-            qWLT2_TestDta = new QWLT2_TestDta();
-            //var dataMenu = dutStreamData.RawDataCollection[2];
-            foreach (var dataMenu in dutStreamData.RawDataCollection)
-            {
-                if (dataMenu is IRawDataMenuCollection)
-                {
 
-                    var rawd = dataMenu as IRawDataMenuCollection;
-                    var type = rawd.GetType();
-                    if (type.Name == "RawDataMenu_QWLT2")
-                    {
-                        var props = rawd.GetType().GetProperties();
-                        var broEleProps = PropHelper.GetAttributeProps<RawDataBrowsableElementAttribute>(props);
-                        foreach (var bp in broEleProps)
-                        {
-                            if (bp.Name == "MIRROR1_mid_slope_val")
-                            {
-                                qWLT2_TestDta.MIRROR1 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "MIRROR2_mid_slope_val")
-                            {
-                                qWLT2_TestDta.MIRROR2 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "LP")
-                            {
-                                qWLT2_TestDta.LP = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "PH_Max_Sec_1")
-                            {
-                                qWLT2_TestDta.PH1 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "PH_Max_Sec_2")
-                            {
-                                qWLT2_TestDta.PH2 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "mPd1_V")
-                            {
-                                qWLT2_TestDta.MPD1 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "mPd2_V")
-                            {
-                                qWLT2_TestDta.MPD2 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "Bais1_V")
-                            {
-                                qWLT2_TestDta.BIAS1 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "Bais2_V")
-                            {
-                                qWLT2_TestDta.BIAS2 = (double)bp.GetValue(rawd);
-                            }
-
-
-                        }
-                        //qWLT2_TestDta.MIRROR1 = (double)broEleProps[2].GetValue(rawd);
-                        //qWLT2_TestDta.MIRROR2 = (double)broEleProps[3].GetValue(rawd);
-                        //qWLT2_TestDta.LP = (double)broEleProps[4].GetValue(rawd);
-                        //qWLT2_TestDta.PH1 = (double)broEleProps[7].GetValue(rawd);
-                        //qWLT2_TestDta.PH2 = (double)broEleProps[8].GetValue(rawd);
-                    }
-                }
-            }
-
+            this.qWLT2_TestDta = QWLT2_TestData.GetQwlt2_Data(dutStreamData);
         }
+
 
         //public override bool SetupResources(DataBook<string, string> userDefineInstrumentConfig, DataBook<string, string> userDefineAxisConfig, DataBook<string, string> userDefinePositionConfig, ITestPluginResourceProvider resourceProvider)
         //{
@@ -269,47 +206,23 @@ namespace SolveWare_TestPackage
                 Log_Global($"开始[{this.Name}]测试.");
 
                 #region Init
+
                 string initialPoslog = string.Empty;
-                var LYPosition = LY.Get_CurUnitPos();
-                if (LYPosition > 100)
+                if (this.TestRecipe.UseCurrentPositionAsStart == false)
                 {
-                    if (LN_Focuser.ItemCollection.Count == 3)//左载台耦合初始位
-                    {
-                        var orgX = X2.Get_CurUnitPos();
-                        var orgY = Y2.Get_CurUnitPos();
-                        var orgZ = Z2.Get_CurUnitPos();
-                        initialPoslog = $"X_org = {orgX} Y_org = {orgY} Z_org = {orgZ} {Environment.NewLine}";
-
-                        X2.MoveToV3(LN_Focuser.GetSingleItem(X2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
-                        X2.WaitMotionDone();
-                        Z2.MoveToV3(LN_Focuser.GetSingleItem(Z2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
-                        Z2.WaitMotionDone();
-                        Y2.MoveToV3(LN_Focuser.GetSingleItem(Y2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
-                        Y2.WaitMotionDone();
-
-                        initialPoslog += $"X_init = {LN_Focuser.GetSingleItem(X2.Name).Position} Y_init = {LN_Focuser.GetSingleItem(Y2.Name).Position} Z_init = {LN_Focuser.GetSingleItem(Z2.Name).Position}";
-                    }
+                    Log_Global($"使用[教学]位置作为初始耦合位置.");
+                    initialPoslog = MoveToInitialTeachedPosition();
                 }
                 else
                 {
-                    if (LN_Focuser_Right.ItemCollection.Count == 3)//右载台耦合初始位
-                    {
-
-                        var orgX = X2.Get_CurUnitPos();
-                        var orgY = Y2.Get_CurUnitPos();
-                        var orgZ = Z2.Get_CurUnitPos();
-                        initialPoslog = $"X_org = {orgX} Y_org = {orgY} Z_org = {orgZ} {Environment.NewLine}";
-
-                        X2.MoveToV3(LN_Focuser_Right.GetSingleItem(X2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
-                        X2.WaitMotionDone();
-                        Z2.MoveToV3(LN_Focuser_Right.GetSingleItem(Z2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
-                        Z2.WaitMotionDone();
-                        Y2.MoveToV3(LN_Focuser_Right.GetSingleItem(Y2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
-                        Y2.WaitMotionDone();
-
-                        initialPoslog = $"X_init = {LN_Focuser_Right.GetSingleItem(X2.Name).Position} Y_init = {LN_Focuser_Right.GetSingleItem(Y2.Name).Position} Z_init = {LN_Focuser_Right.GetSingleItem(Z2.Name).Position}";
-                    }
+                    Log_Global($"使用[当前]位置作为初始耦合位置.");
+                    var orgX = X2.Get_CurUnitPos();
+                    var orgY = Y2.Get_CurUnitPos();
+                    var orgZ = Z2.Get_CurUnitPos();
+                    initialPoslog = $"X_org = {orgX} Y_org = {orgY} Z_org = {orgZ} {Environment.NewLine}";
+                    initialPoslog += $"X_init = {orgX} Y_init = {orgY} Z_init = {orgZ}";
                 }
+
                 Log_Global($"AA initial position : {initialPoslog}.");
                 Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
 
@@ -318,19 +231,7 @@ namespace SolveWare_TestPackage
 
                 //OSwitch切换:
                 {
-          
                     OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
-                    //var och = Convert.ToByte(this.TestRecipe.OpticalSwitchChannel);
-                    //if (OSwitch.SetCH(och) == false)
-                    //{
-                    //    string msg = "光开关通道切换失败！";
-                    //    this.Log_Global(msg);
-                    //    throw new Exception(msg);
-                    //}
-                    //else
-                    //{
-                    //    Log_Global($"   OSwitch.SetCH({och})");
-                    //}
                 }
 
                 var UsedPlane = LaserX_9078_Utilities.PmTrajSelectPlane.XZ_CW;
@@ -548,9 +449,9 @@ namespace SolveWare_TestPackage
 
                 this.Log_Global("开始加电.");
 
-                if(qWLT2_TestDta==null)
+                if (qWLT2_TestDta == null)
                 {
-                    qWLT2_TestDta = new QWLT2_TestDta();
+                    qWLT2_TestDta = new QWLT2_TestData();
                 }
 
                 //上电  上电条件从LIV移植过来
@@ -585,12 +486,7 @@ namespace SolveWare_TestPackage
 
                         PH1,
                         PH2,
-                        //MPD1,
-                        //MPD2,
-                        //BIAS1,
-                        //BIAS2,
                     };
-
 
                     string name = "";
                     double curr = 0;
@@ -616,23 +512,16 @@ namespace SolveWare_TestPackage
                     //PH2.AssignmentMode_Current(0, 2.5);
                     SOA1.AssignmentMode_Current(50, 2.5);
                     SOA2.AssignmentMode_Current(40, 2.5);
-
-
+ 
                     MPD1.AssignmentMode_Voltage(-2, 20);
                     MPD2.AssignmentMode_Voltage(-2, 20);
                     BIAS1.AssignmentMode_Voltage(-3, 20);
                     BIAS2.AssignmentMode_Voltage(-3, 20);
-
-
                 }
-
-
 
                 Thread.Sleep(200);
 
                 #region AA流程
-
-
                 {
 
                     //此处为画10字扫描方法
@@ -642,8 +531,8 @@ namespace SolveWare_TestPackage
 
                     this.CheckCancellationRequested(token);
 
-                    var t=Analog_LaserX_9078.SetSenseCurrentRange_mA(X2 as Motor_LaserX_9078, ch, Math.Max(this.TestRecipe.InitialCurrentSense_mA, TestRecipe.PowerThreshold_mA));
-                    if(t!= (int)errcodevalue.Finish)
+                    var t = Analog_LaserX_9078.SetSenseCurrentRange_mA(X2 as Motor_LaserX_9078, ch, Math.Max(this.TestRecipe.InitialCurrentSense_mA, TestRecipe.PowerThreshold_mA));
+                    if (t != (int)errcodevalue.Finish)
                     {
                         Log_Global($"调档位失败");
                     }
@@ -689,7 +578,7 @@ namespace SolveWare_TestPackage
                         {
                             this.CheckCancellationRequested(token);
 
-                            Log_Global($"开始第{i+1}次粗耦合[{id}]");
+                            Log_Global($"开始第{i + 1}次粗耦合[{id}]");
 
                             result_Big = Run_Involute(eRunSize_Table.Rough, P1, Big_UsedPlane, thresholdStop, token);
 
@@ -726,7 +615,7 @@ namespace SolveWare_TestPackage
                                 break;
 
                             //给3次机会
-                            if (i>=20)
+                            if (i >= 20)
                             {
                                 Log_Global($"{this.Name} 扫描范围内无光");
                                 string str = $"{this.Name} 扫描范围内无光...";
@@ -740,12 +629,12 @@ namespace SolveWare_TestPackage
                                 //{ Thread.Sleep(100); }
                                 Log_Global($"{this.Name} 扫描范围内无光， 推进到[{PlaneJump}]步进平面");
                                 //推进一个平面
-                                P1.ItemCollection.FirstOrDefault(axis => axis.Name == "LNY").Position = 
-                                    StartPos.ItemCollection.FirstOrDefault(axis => axis.Name == "LNY").Position +  PlaneJump * TestRecipe.Layer_Step;
+                                P1.ItemCollection.FirstOrDefault(axis => axis.Name == "LNY").Position =
+                                    StartPos.ItemCollection.FirstOrDefault(axis => axis.Name == "LNY").Position + PlaneJump * TestRecipe.Layer_Step;
 
                                 //Jump逻辑
                                 {
-                                    if (PlaneJump>0)
+                                    if (PlaneJump > 0)
                                     {
                                         PlaneJump *= -1;
                                     }
@@ -768,30 +657,7 @@ namespace SolveWare_TestPackage
 
                         this.CheckCancellationRequested(token);
 
-                        ////double精扫
-                        //id++;
-                        //Log_Global($"开始DoubleSize粗耦合[{id}]");
-                        //result_Small = Run_Involute(eRunSize_Table.Fine_Double_line, P1, UsedPlane, thresholdStop, token);
 
-                        //this.CheckCancellationRequested(token);
-
-                        //while (!DataAnalyze(result_Small, false, out retPoint))
-                        //{
-                        //    this.CheckCancellationRequested(token);
-
-                        //    LogDataMsg = Alignmentpath + $@"\{ModuleName}_{id}_{DateTime.Now:yyyyMMdd_HHmmss}_DoubleSize精耦合超量程.csv";
-                        //    this.WriteCSCVFile(LogDataMsg, out strb, out sw, result_Small);
-
-                        //    result_Small = Run_Involute(eRunSize_Table.Fine_Double_line, P1, UsedPlane, thresholdStop, token);
-
-                        //    this.CheckCancellationRequested(token);
-                        //}
-                        //LogDataMsg = Alignmentpath + $@"\{ModuleName}_{id}_{DateTime.Now:yyyyMMdd_HHmmss}_DoubleSize精耦合.csv";
-                        //this.WriteCSCVFile(LogDataMsg, out strb, out sw, result_Small);
-
-                        ////this.JudgeThreshold_mW(retPoint);
-                        ////如果新值更大就替换maxPoint键值
-                        //P1 = MaxListAdd(ThreeAxisList, maxList, id, retPoint, false);
                     }
 
                     //精扫
@@ -812,11 +678,11 @@ namespace SolveWare_TestPackage
                     //此处需要运行到外部初始位置
                     for (int i = 0; i < this.TestRecipe.CrossScanCount; i++)
                     {
-                        P1 = HorizontalLine(Alignmentpath, i, id, size*3,
+                        P1 = HorizontalLine(Alignmentpath, i, id, size * 3,
                                           ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine,
                                           out sw, out strb, out LogDataMsg, out result, out retPoint, token);
 
-                        P1 = VerticalLine(Alignmentpath, i, id, size*3,
+                        P1 = VerticalLine(Alignmentpath, i, id, size * 3,
                                           ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine,
                                           out sw, out strb, out LogDataMsg, out result, out retPoint, token);
                     }
@@ -842,7 +708,7 @@ namespace SolveWare_TestPackage
                     LastP.ItemCollection.FirstOrDefault(item => item.Name == "LNZ").Position = LastLNZ;
 
                     //三维扫
-                    Log_Global($"开始三维搜索[{id+1}]");
+                    Log_Global($"开始三维搜索[{id + 1}]");
 
                     double pd_Max = 0;
 
@@ -882,7 +748,7 @@ namespace SolveWare_TestPackage
                         else
                         {
                             //距离远了扫3D
-                            P1 = Depth_3DLine(out LogDataMsg, Alignmentpath, out strb, ThreeAxisList, P1,LastP, t1, t2, StartPos, eRunSize_Table.Fine_Half, out sw, out result, id, out retPoint, TestRecipe.Layer_Step * 4, iSerach, token);
+                            P1 = Depth_3DLine(out LogDataMsg, Alignmentpath, out strb, ThreeAxisList, P1, LastP, t1, t2, StartPos, eRunSize_Table.Fine_Half, out sw, out result, id, out retPoint, TestRecipe.Layer_Step * 4, iSerach, token);
 
                         }
 
@@ -920,7 +786,7 @@ namespace SolveWare_TestPackage
                         distance = Math.Sqrt(Math.Pow(LastLNX - tLNX, 2) + Math.Pow(LastLNY - tLNY, 2) + Math.Pow(LastLNZ - tLNZ, 2));
 
                         //至少迭代5次
-                        if (iSerach >=2 && distance < 0.004) //4um以内
+                        if (iSerach >= 2 && distance < 0.004) //4um以内
                         {
                             break;
                         }
@@ -928,9 +794,6 @@ namespace SolveWare_TestPackage
                         LastLNX = tLNX;
                         LastLNY = tLNY;
                         LastLNZ = tLNZ;
-
-
-
                     }
 
                     {
@@ -999,23 +862,7 @@ namespace SolveWare_TestPackage
                             ctr.SavePictrue(imagePath);
 
                             //==========================================
-
-
-                            //tData = new List<str2DCouplingData>();
-                            //tData.Add(d2);
-                            //tData.Add(d3);
-                            //tData.Add(d4);
-
-                            //ctr.SetData("Small and Cross", tData.ToArray());
-
-                            //imagePath = Path.Combine(path, $@"..\AA_2_{SerialNumber}_{DateTime.Now:yyyyMMdd_HHmmss}.png");
-                            //imagePath = Path.GetFullPath(imagePath);
-
-                            //ctr.SavePictrue(imagePath);
-
                         }
-
-
                     }
 
                     {
@@ -1036,8 +883,8 @@ namespace SolveWare_TestPackage
                     //用2612进行耦合电流
                     {
                         this.Log_Global($"恢复Gain电流,进行光电流耦合");
-                      
-                        Circuit_Controller.TapPD_ConnectTo(SwitchPD ,TapPD_Circuit.SMU);
+
+                        Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.SMU);
                         GAIN.AssignmentMode_Current(qWLT2_TestDta.GAIN, 2.5);
 
                         #region PD回读
@@ -1055,8 +902,6 @@ namespace SolveWare_TestPackage
 
 
                         Log_Global($"源表读取当前光电流为[{pd_Max}]mA");
-
-
                     }
 
 
@@ -1088,9 +933,6 @@ namespace SolveWare_TestPackage
                         int GetdataDelay_ms = (int)TestRecipe.CreepDelay_ms;
 
                         double axisspeed = TestRecipe.Rough_Trajspeed * 0.5;
-
-
-
 
                         int serachPointMax = 1;//需要2个点进行判断是否找到最大
                         int serachPointCount = 0;//当前搜索失败点
@@ -1152,7 +994,7 @@ namespace SolveWare_TestPackage
                             {
                                 serachPointMax = 1;
 
-                                if(ln_axis == actlny)
+                                if (ln_axis == actlny)
                                 {
                                     continue;
                                 }
@@ -1247,20 +1089,9 @@ namespace SolveWare_TestPackage
                             #endregion
 
                         }
-
-
-
-
-                        //Log_Global($"蠕动最大位置[{id}] 当前光电流为[{pd_Max}_mA]");
-
-                        //需要退后离开最大位置
-                        //actlny.MoveToV3(actlny.Get_CurUnitPos() - 0.001, axisspeed);
-                        //actlny.WaitMotionDone();
-
                     }
 
 
-                   
                     this.Log_Global("耦合完成加电状态:");
                     PXISourceMeter_4143[] SourceMeterCheckDataList = new PXISourceMeter_4143[]
                     {
@@ -1296,133 +1127,8 @@ namespace SolveWare_TestPackage
                     pd_Max = CreepGetPDCurrent_mA(actlnx, ch);
 
                     Log_Global($"耦合到的最大光电流（模拟量值）为[{pd_Max}_mA]");
-
-
-
-#if false
-                    if (maxList.Count > 1)
-                    {
-                        var lastMaxPoint = maxList.OrderByDescending(item => item.Value.Power).First();
-                        if (maxList.Max(n => n.Value.Power) != lastMaxPoint.Value.Power)
-                        {
-                            string str = $"{this.Name} 记录最大值点与储存最大值点不符.";
-                            throw new Exception(str);
-                        }
-                        else
-                        {
-                        }
-
-                        P1.ItemCollection = lastMaxPoint.Value.Position.ItemCollection;
-
-                        //三维扫
-                        for (int i = 0; i < 2; i++)
-                        {
-
-                            //扫Y
-                            Thread.Sleep(100);
-                            P1 = DepthLine(out LogDataMsg, path, out strb, ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine_Half, out sw, out result, id, out retPoint, TestRecipe.Layer_Step*2, i, token);
-
-                            for (int j = 0; j < CrossScanCount; j++)
-                            {
-                                Thread.Sleep(100);
-                                P1 = HorizontalLine(out LogDataMsg, path, out strb, ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine_Half, out sw, out result, id, out retPoint, size, i, token);
-
-                                Thread.Sleep(100);
-                                P1 = VerticalLine(path, i, id, size,
-                                                  ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine_Half,
-                                                  out sw, out strb, out LogDataMsg, out result, out retPoint, token);
-
-                            }
-                        }
-
-                        MaxListAdd(maxList, 100, retPoint, true);
-                        this.MoveToAxesPosition(ThreeAxisList, P1, token);
-
-                        while(true)
-                        {
-                            Thread.Sleep(100);
-                            double curr_mA2 = Analog_LaserX_9078.GetCurrent_mA(X2 as Motor_LaserX_9078, 0);
-                        }
-#region 渐开线最大位置耦合
-                        //RawData.LastScanSlot = lastMaxPoint.Key;
-                        Log_Global($"开始渐开线最大值耦合");
-                        var finalresult = Run_Involute(eRunSize_Table.Fine_Involute_line, P1, UsedPlane, token);
-
-                        this.CheckCancellationRequested(token);
-                        Dictionary<AxesPosition, double> finalPoint = new Dictionary<AxesPosition, double>();
-
-                        DataAnalyze(finalresult, false, out finalPoint);
-
-                        LogDataMsg = path + $@"\渐开线最大值耦合_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
-                        this.WriteCSCVFile(LogDataMsg, out strb, out sw, finalresult);
-
-                        P1.ItemCollection = finalPoint.OrderByDescending(item => item.Value).First().Key.ItemCollection;
-                        Pd_Max = Math.Round(finalPoint.Max((kvp => kvp.Value)), 6);
-                        //P1 = finalPoint.OrderByDescending(item => item.Value).First().Key.ToDictionary(item => item.Key, item => item.Value);
-                        //double Pd_Max = Math.Round(lastMaxPoint.Value.Power, 6);
-                        RawData.Pmax_mA = Pd_Max;
-                        Log_Global($"耦合到的最大光电流（模拟量值）为[{Pd_Max}_mA]");
-                        this.CheckCancellationRequested(token);
-
-#endregion 渐开线最大位置耦合
-
-
-                        double Pd_tMax = 0;
-                        //平面扫
-                        for (int i = 0; i < 2; i++)
-                        {
-
-                            Thread.Sleep(100);
-                            P1 = HorizontalLine(out LogDataMsg, path, out strb, ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine_Half, out sw, out result, id, out retPoint, size, i, token);
-
-                            DataAnalyze(result, false, out finalPoint);
-
-                            LogDataMsg = path + $@"\渐开线后H精扫_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
-                            this.WriteCSCVFile(LogDataMsg, out strb, out sw, result);
-
-                            Pd_tMax = Math.Round(finalPoint.Max((kvp => kvp.Value)), 6);
-
-                            P1.ItemCollection = finalPoint.OrderByDescending(item => item.Value).First().Key.ItemCollection;
-
-                            if (Pd_tMax >= Pd_Max) break;
-
-                            Thread.Sleep(100);
-                            P1 = VerticalLine(path, i, id, size,
-                                              ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine_Half,
-                                              out sw, out strb, out LogDataMsg, out result, out retPoint, token);
-
-
-                            DataAnalyze(result, false, out finalPoint);
-
-                            LogDataMsg = path + $@"\渐开线后V精扫_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
-                            this.WriteCSCVFile(LogDataMsg, out strb, out sw, result);
-
-                            Pd_tMax = Math.Round(finalPoint.Max((kvp => kvp.Value)), 6);
-
-                            P1.ItemCollection = finalPoint.OrderByDescending(item => item.Value).First().Key.ItemCollection;
-
-                            if (Pd_tMax >= Pd_Max) break;
-
-                        }
-
-                        //运行到P1点
-                        this.MoveToAxesPosition(ThreeAxisList, P1, token);
-
-                        //得到当前电流
-                        double curr_mA = Analog_LaserX_9078.GetCurrent_mA(X2 as Motor_LaserX_9078, 0);
-
-
-
-                    }
-                    else
-                    {
-                        Log_Global($"仅有一个平面, 跳过渐开线最大值耦合步骤");
-                    }
-#endif
-
                 }
-
-#region  耦合面数据存储到文件
+                #region  耦合面数据存储到文件
                 string strmaxlist = "";
                 {
                     string pos = "";
@@ -1446,7 +1152,7 @@ namespace SolveWare_TestPackage
                 sw = new StreamWriter(LogDataMsg);
                 sw.Write(strmaxlist);
                 sw.Close();
-#endregion
+                #endregion
 
                 //运行到P1点
                 //this.MoveToAxesPosition(ThreeAxisList, P1, token);
@@ -1460,7 +1166,7 @@ namespace SolveWare_TestPackage
                     RawData.Y_Pos_Pmax_mm = Math.Round(Max_TempPara[2], 5);
                 }
 
-#endregion AA流程
+                #endregion AA流程
                 //this.Log_Global("耦合结果:");
                 //this.Log_Global(strmaxlist);
                 Log_Global($"AA测试完成.");
@@ -1491,6 +1197,53 @@ namespace SolveWare_TestPackage
             {
                 Merged_PXIe_4143.Reset();
             }
+        }
+
+        private string MoveToInitialTeachedPosition()
+        {
+            string initialPoslog = string.Empty;
+            var LYPosition = LY.Get_CurUnitPos();
+            if (LYPosition > 100)
+            {
+                if (LN_Focuser.ItemCollection.Count == 3)//左载台耦合初始位
+                {
+                    var orgX = X2.Get_CurUnitPos();
+                    var orgY = Y2.Get_CurUnitPos();
+                    var orgZ = Z2.Get_CurUnitPos();
+                    initialPoslog = $"X_org = {orgX} Y_org = {orgY} Z_org = {orgZ} {Environment.NewLine}";
+
+                    X2.MoveToV3(LN_Focuser.GetSingleItem(X2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
+                    X2.WaitMotionDone();
+                    Z2.MoveToV3(LN_Focuser.GetSingleItem(Z2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
+                    Z2.WaitMotionDone();
+                    Y2.MoveToV3(LN_Focuser.GetSingleItem(Y2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
+                    Y2.WaitMotionDone();
+
+                    initialPoslog += $"X_init = {LN_Focuser.GetSingleItem(X2.Name).Position} Y_init = {LN_Focuser.GetSingleItem(Y2.Name).Position} Z_init = {LN_Focuser.GetSingleItem(Z2.Name).Position}";
+                }
+            }
+            else
+            {
+                if (LN_Focuser_Right.ItemCollection.Count == 3)//右载台耦合初始位
+                {
+
+                    var orgX = X2.Get_CurUnitPos();
+                    var orgY = Y2.Get_CurUnitPos();
+                    var orgZ = Z2.Get_CurUnitPos();
+                    initialPoslog = $"X_org = {orgX} Y_org = {orgY} Z_org = {orgZ} {Environment.NewLine}";
+
+                    X2.MoveToV3(LN_Focuser_Right.GetSingleItem(X2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
+                    X2.WaitMotionDone();
+                    Z2.MoveToV3(LN_Focuser_Right.GetSingleItem(Z2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
+                    Z2.WaitMotionDone();
+                    Y2.MoveToV3(LN_Focuser_Right.GetSingleItem(Y2.Name).Position, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
+                    Y2.WaitMotionDone();
+
+                    initialPoslog = $"X_init = {LN_Focuser_Right.GetSingleItem(X2.Name).Position} Y_init = {LN_Focuser_Right.GetSingleItem(Y2.Name).Position} Z_init = {LN_Focuser_Right.GetSingleItem(Z2.Name).Position}";
+                }
+            }
+
+            return initialPoslog;
         }
 
         #region Tools

@@ -170,19 +170,32 @@ namespace SolveWare_TestPackage
                 }
 
                 this.Log_Global($"开始测试!");
-                GAIN.AssignmentMode_Current(120, 2.5);
-                LP.AssignmentMode_Current(4, 2.5);
-                MIRROR1.AssignmentMode_Current(10, 2.5);
-                MIRROR2.AssignmentMode_Current(10, 2.5);
-                PH1.AssignmentMode_Current(1, 2.5);
-                PH2.AssignmentMode_Current(0, 2.5);
-                SOA1.AssignmentMode_Current(50, 2.5);
-                SOA2.AssignmentMode_Current(40, 2.5);
+                //GAIN.AssignmentMode_Current(120, 2.5);
+                //LP.AssignmentMode_Current(4, 2.5);
+                //MIRROR1.AssignmentMode_Current(10, 2.5);
+                //MIRROR2.AssignmentMode_Current(10, 2.5);
+                //PH1.AssignmentMode_Current(1, 2.5);
+                //PH2.AssignmentMode_Current(0, 2.5);
+                //SOA1.AssignmentMode_Current(50, 2.5);
+                //SOA2.AssignmentMode_Current(40, 2.5);
 
+                GAIN.AssignmentMode_Current(this.TestRecipe.DefaultSettingValue_GAIN_mA, 2.5);
+                LP.AssignmentMode_Current(this.TestRecipe.DefaultSettingValue_LP_mA, 2.5);
+                MIRROR1.AssignmentMode_Current(this.TestRecipe.DefaultSettingValue_MIRROR1_mA, 2.5);
+                MIRROR2.AssignmentMode_Current(this.TestRecipe.DefaultSettingValue_MIRROR2_mA, 2.5);
+                PH1.AssignmentMode_Current(this.TestRecipe.DefaultSettingValue_PH1_mA, 2.5);
+                PH2.AssignmentMode_Current(this.TestRecipe.DefaultSettingValue_PH2_mA, 2.5);
+                SOA1.AssignmentMode_Current(this.TestRecipe.DefaultSettingValue_SOA1_mA, 2.5);
+                SOA2.AssignmentMode_Current(this.TestRecipe.DefaultSettingValue_SOA2_mA, 2.5);
+ 
                 double mpd1 = this.TestRecipe.mPd1_V;//-2.5;
                 double mpd2 = this.TestRecipe.mPd2_V;//-2.5;
                 double bias1 = this.TestRecipe.Bais1_V;//-2;
                 double bias2 = this.TestRecipe.Bais2_V;// -2;
+ 
+                this.RawDataMenu.Gain_mA = this.TestRecipe.DefaultSettingValue_GAIN_mA;
+                this.RawDataMenu.SOA1_mA = this.TestRecipe.DefaultSettingValue_SOA1_mA;
+                this.RawDataMenu.SOA2_mA = this.TestRecipe.DefaultSettingValue_SOA2_mA;
 
                 this.RawDataMenu.mPd1_V = mpd1;
                 this.RawDataMenu.mPd2_V = mpd2;
@@ -1051,14 +1064,14 @@ namespace SolveWare_TestPackage
                     sw.WriteLine($"{MaskName}");//"DO721");
                     sw.WriteLine($"CH51 SMSR[dB]=****");
                     sw.WriteLine();
-                    sw.WriteLine($"Gain[mA]= 120 mA");
+                    sw.WriteLine($"Gain[mA]= {this.TestRecipe.DefaultSettingValue_GAIN_mA} mA");
                     sw.WriteLine($"LasPhase[mA]= {LP_value }mA");
                     sw.WriteLine($"Mirror1[mA]= {m1_mid_slope_val}mA");
                     sw.WriteLine($"Mirror2[mA]= {m2_mid_slope_val}mA");
                     sw.WriteLine($"Phase1[mA]= {this.RawDataMenu.PH_Max_Sec_1}mA");
                     sw.WriteLine($"Phase2[mA]= {this.RawDataMenu.PH_Max_Sec_2}mA");
-                    sw.WriteLine($"SOA1[mA]= 50 mA");
-                    sw.WriteLine($"SOA2[mA]= 40 mA");
+                    sw.WriteLine($"SOA1[mA]= {this.TestRecipe.DefaultSettingValue_SOA1_mA} mA");
+                    sw.WriteLine($"SOA2[mA]= {this.TestRecipe.DefaultSettingValue_SOA2_mA} mA");
                     sw.WriteLine($"MZM1 Bias[V]= {bias1} V");
                     sw.WriteLine($"MZM2 Bias[V]= {bias2} V");
                     sw.WriteLine($"MPD1 Bias[V]= {mpd1} V");

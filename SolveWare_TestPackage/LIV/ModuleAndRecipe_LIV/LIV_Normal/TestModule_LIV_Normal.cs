@@ -83,7 +83,7 @@ namespace SolveWare_TestPackage
         TestRecipe_LIV_Normal TestRecipe { get; set; }
         RawData_LIV_Normal RawData { get; set; }
         RawDataMenu_Normal RawDataMenu { get; set; }
-        QWLT2_TestDta qWLT2_TestDta { get; set; }
+        QWLT2_TestData qWLT2_TestDta { get; set; }
         public override Type GetTestRecipeType()
         {
             return typeof(TestRecipe_LIV_Normal);
@@ -106,69 +106,7 @@ namespace SolveWare_TestPackage
             {
                 return;
             }
-            qWLT2_TestDta = new QWLT2_TestDta();
-            //var dataMenu = dutStreamData.RawDataCollection[2];
-            foreach (var dataMenu in dutStreamData.RawDataCollection)
-            {
-                if (dataMenu is IRawDataMenuCollection)
-                {
-
-                    var rawd = dataMenu as IRawDataMenuCollection;
-                    var type = rawd.GetType();
-                    if (type.Name == "RawDataMenu_QWLT2")
-                    {
-                        var props = rawd.GetType().GetProperties();
-                        var broEleProps = PropHelper.GetAttributeProps<RawDataBrowsableElementAttribute>(props);
-
-                        foreach (var bp in broEleProps)
-                        {
-                            if (bp.Name== "MIRROR1_mid_slope_val")
-                            {
-                                qWLT2_TestDta.MIRROR1 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name== "MIRROR2_mid_slope_val")
-                            {
-                                qWLT2_TestDta.MIRROR2 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "LP")
-                            {
-                                qWLT2_TestDta.LP = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "PH_Max_Sec_1")
-                            {
-                                qWLT2_TestDta.PH1 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "PH_Max_Sec_2")
-                            {
-                                qWLT2_TestDta.PH2 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "mPd1_V")
-                            {
-                                qWLT2_TestDta.MPD1 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "mPd2_V")
-                            {
-                                qWLT2_TestDta.MPD2 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "Bais1_V")
-                            {
-                                qWLT2_TestDta.BIAS1 = (double)bp.GetValue(rawd);
-                            }
-                            if (bp.Name == "Bais2_V")
-                            {
-                                qWLT2_TestDta.BIAS2 = (double)bp.GetValue(rawd);
-                            }
-
-
-                        }
-                        //qWLT2_TestDta.MIRROR1 = (double)broEleProps[2].GetValue(rawd);
-                        //qWLT2_TestDta.MIRROR2 = (double)broEleProps[3].GetValue(rawd);
-                        //qWLT2_TestDta.LP = (double)broEleProps[4].GetValue(rawd);
-                        //qWLT2_TestDta.PH1 = (double)broEleProps[7].GetValue(rawd);
-                        //qWLT2_TestDta.PH2 = (double)broEleProps[8].GetValue(rawd);
-                    }
-                }
-            }
+            this.qWLT2_TestDta = QWLT2_TestData.GetQwlt2_Data(dutStreamData);
         }
         string SerialNumber { get; set; }
         string MaskName { get; set; }

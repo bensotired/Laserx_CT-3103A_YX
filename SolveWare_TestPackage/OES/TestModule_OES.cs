@@ -154,6 +154,9 @@ namespace SolveWare_TestPackage
         #endregion
 
         #region "Auto test execution"
+        private void SetSavePath() { 
+            General.modGlobals.PATH_TO_TEST_ANALYSIS = System.Windows.Forms.Application.StartupPath + $"\\Data\\{this.SerialNumber}\\Fine_tuning\\";
+        }
         private bool RunAutoTest()
         {
             bool autoTestResult = false;
@@ -163,6 +166,7 @@ namespace SolveWare_TestPackage
                 frmMain.Show();
                 SetChipInformation();
                 SetFineTuningInputFileNames();
+                SetSavePath();
                 autoTestResult = frmMain.ExecuteFineTuningTest();
                 frmMain.Hide(); //IMPORTANT, use hide() instead of close since calling Close() will dispose the form.
             }

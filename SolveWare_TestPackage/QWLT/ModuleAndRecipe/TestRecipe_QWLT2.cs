@@ -11,6 +11,20 @@ namespace SolveWare_TestPackage
     {
         public TestRecipe_QWLT2()
         {
+
+
+
+
+            DefaultSettingValue_GAIN_mA = 120;
+            DefaultSettingValue_LP_mA = 4;
+            DefaultSettingValue_MIRROR1_mA = 10;
+            DefaultSettingValue_MIRROR2_mA = 10;
+            DefaultSettingValue_PH1_mA = 1;
+            DefaultSettingValue_PH2_mA = 0;
+            DefaultSettingValue_SOA1_mA = 50;
+            DefaultSettingValue_SOA2_mA = 40;
+
+
             this.PH_MPD = PH_MPD.MPD2;
             this.P1_P2_mA = "0,0.5,10";
             this.PCVoltage_V = 2.5F;
@@ -27,7 +41,6 @@ namespace SolveWare_TestPackage
 
             OpticalSwitchChannel = 2;
         }
-
 
         [DisplayName("扫描Section")]
         [Description("Section")]
@@ -62,6 +75,47 @@ namespace SolveWare_TestPackage
         [Description("LP_mA")]
         [PropEditable(true)]
         public string LP_mA { get; set; }
+
+        [DisplayName("DefaultSettingValue_GAIN_mA")]
+        [Description("DefaultSettingValue_GAIN_mA")]
+        [PropEditable(true)]
+        public double DefaultSettingValue_GAIN_mA { get; set; }
+
+        [DisplayName("DefaultSettingValue_LP_mA")]
+        [Description("DefaultSettingValue_LP_mA")]
+        [PropEditable(true)]
+        public double DefaultSettingValue_LP_mA { get; set; }
+
+        [DisplayName("DefaultSettingValue_MIRROR1_mA")]
+        [Description("DefaultSettingValue_MIRROR1_mA")]
+        [PropEditable(true)]
+        public double DefaultSettingValue_MIRROR1_mA { get; set; }
+
+        [DisplayName("DefaultSettingValue_MIRROR2_mA")]
+        [Description("DefaultSettingValue_MIRROR2_mA")]
+        [PropEditable(true)]
+        public double DefaultSettingValue_MIRROR2_mA { get; set; }
+
+        [DisplayName("DefaultSettingValue_PH1_mA")]
+        [Description("DefaultSettingValue_PH1_mA")]
+        [PropEditable(true)]
+        public double DefaultSettingValue_PH1_mA { get; set; }
+
+        [DisplayName("DefaultSettingValue_PH2_mA")]
+        [Description("DefaultSettingValue_PH2_mA")]
+        [PropEditable(true)]
+        public double DefaultSettingValue_PH2_mA { get; set; }
+
+        [DisplayName("DefaultSettingValue_SOA1_mA")]
+        [Description("DefaultSettingValue_SOA1_mA")]
+        [PropEditable(true)]
+        public double DefaultSettingValue_SOA1_mA { get; set; }
+
+        [DisplayName("DefaultSettingValue_SOA2_mA")]
+        [Description("DefaultSettingValue_SOA2_mA")]
+        [PropEditable(true)]
+        public double DefaultSettingValue_SOA2_mA { get; set; }
+
 
         [DisplayName("Bais1_V")]
         [Description("Bais1_V")]

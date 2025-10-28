@@ -14,6 +14,10 @@ namespace SolveWare_TestPackage
     {
         public TestRecipe_AA()
         {
+
+            this.UseCurrentPositionAsStart = false;
+
+
             this.Inherit = true;
             this.Analog_CH = 1;
             this.InitialCurrentSense_mA = 0.1;
@@ -57,6 +61,11 @@ namespace SolveWare_TestPackage
             OpticalSwitchChannel = 1;
 
         }
+        [DisplayName("使用当前位置作为耦合初始位置")]
+        [Description("UseCurrentPositionAsStart")]
+        [PropEditable(true)]
+        public bool UseCurrentPositionAsStart { get; set; }
+
         [DisplayName("从QWLT2获取数值")]
         [Description("Inherit")]
         [PropEditable(true)]

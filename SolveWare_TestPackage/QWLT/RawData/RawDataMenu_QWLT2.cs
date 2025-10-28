@@ -12,6 +12,13 @@ namespace SolveWare_TestComponents.Data
         {
         }
         [RawDataBrowsableElement]
+        public double Gain_mA { get; set; }
+        [RawDataBrowsableElement]
+        public double SOA2_mA { get; set; }
+        [RawDataBrowsableElement]
+        public double SOA1_mA { get; set; }
+
+        [RawDataBrowsableElement]
         public double PH_Halfway_1 { get; set; }//0
         [RawDataBrowsableElement]
         public double PH_Halfway_2 { get; set; }//1
@@ -38,5 +45,10 @@ namespace SolveWare_TestComponents.Data
         public double Bais1_V { get; set; }
         [RawDataBrowsableElement]
         public double Bais2_V { get; set; }
+
+
+
+
+
     }
 }

@@ -148,6 +148,7 @@
     </Compile>
     <Compile Include="RawData\RawDataMenuCollection\IRawDataMenuCollection.cs" />
     <Compile Include="RawData\RawDataMenuCollection\RawDataMenuCollection.cs" />
+    <Compile Include="StreamData\QWLT2_TestData.cs" />
     <Compile Include="StreamData\DeviceStreamDataLite.cs" />
     <Compile Include="StreamData\IMinorStreamData.cs" />
     <Compile Include="StreamData\IMajorStreamData.cs" />

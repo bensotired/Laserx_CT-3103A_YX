@@ -711,9 +711,13 @@ namespace TestPlugin_Demo
                 string Wafer = data.WaferName;
                 string PIC = data.OeskID;
 
-                double Gain = 120;
-                double SOA1 = 50;
-                double SOA2 = 40;
+                //double Gain = 120;
+                //double SOA1 = 50;
+                //double SOA2 = 40;
+
+                double Gain = double.NaN;
+                double SOA1 = double.NaN;
+                double SOA2 = double.NaN;
                 double MIRROR1 = double.NaN;
                 double MIRROR2 = double.NaN;
                 double LP = double.NaN;
@@ -782,14 +786,7 @@ namespace TestPlugin_Demo
                                     {
                                         PH2 = Convert.ToDouble(bp.GetValue(rawd).ToString());
                                     }
-                                    //if (bp.Name == "mPd1_V")
-                                    //{
-                                    //    MPD1 = Convert.ToDouble(bp.GetValue(rawd).ToString());
-                                    //}
-                                    //if (bp.Name == "mPd2_V")
-                                    //{
-                                    //    MPD2 = Convert.ToDouble(bp.GetValue(rawd).ToString());
-                                    //}
+
                                     if (bp.Name == "Bais1_V")
                                     {
                                         Bias1 = Convert.ToDouble(bp.GetValue(rawd).ToString());
@@ -798,8 +795,18 @@ namespace TestPlugin_Demo
                                     {
                                         Bias2 = Convert.ToDouble(bp.GetValue(rawd).ToString());
                                     }
-
-
+                                    if (bp.Name == "Gain_mA")
+                                    {
+                                        Gain = (double)bp.GetValue(rawd);
+                                    }
+                                    if (bp.Name == "SOA1_mA")
+                                    {
+                                        SOA1 = (double)bp.GetValue(rawd);
+                                    }
+                                    if (bp.Name == "SOA2_mA")
+                                    {
+                                        SOA2 = (double)bp.GetValue(rawd);
+                                    }
                                 }
                             }
                         }
