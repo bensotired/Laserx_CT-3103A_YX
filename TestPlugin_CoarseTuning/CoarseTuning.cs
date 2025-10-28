@@ -14,8 +14,20 @@ using System.Windows.Forms;
 
 namespace TestPlugin_CoarseTuning
 {
+    public class QWLT2_SettingData
+    {
+        public double GainCurrent = 120;
+        public double Soa1Current = 50;
+        public double Soa2Current = 50;
+        public double LaserPhaseCurrent = 3;
+        public double Phase1Current = 0;
+        public double Phase2Current = 0;
+        public double Mzm1VBias = -2.5;
+        public double Mzm2VBias = -2.5;
+    }
     public class CoarseTuning
     {
+        public QWLT2_SettingData myQWLT2_SettingData = new QWLT2_SettingData();
         //instance variables
         private double[] mirr1Vals;
         private double[] mirr2Vals;
@@ -450,14 +462,14 @@ namespace TestPlugin_CoarseTuning
                 {
                     //populate all current source electrodes except the mirrors with the currents that were used during the test
                     //these are just examples
-                    channel.GainCurrent = 120;
-                    channel.Soa1Current = 50;
-                    channel.Soa2Current = 50;
-                    channel.LaserPhaseCurrent = 3;
-                    channel.Phase1Current = 0;
-                    channel.Phase2Current = 0;
-                    channel.Mzm1VBias = -2.5;
-                    channel.Mzm1VBias = -2.5;
+                    channel.GainCurrent = myQWLT2_SettingData.GainCurrent; 
+                    channel.Soa1Current = myQWLT2_SettingData.Soa1Current;
+                    channel.Soa2Current = myQWLT2_SettingData.Soa2Current;
+                    channel.LaserPhaseCurrent = myQWLT2_SettingData.LaserPhaseCurrent;
+                    channel.Phase1Current = myQWLT2_SettingData.Phase1Current;
+                    channel.Phase2Current = myQWLT2_SettingData.Phase2Current;
+                    channel.Mzm1VBias = myQWLT2_SettingData.Mzm1VBias;
+                    channel.Mzm2VBias = myQWLT2_SettingData.Mzm2VBias;
                     channel.CoarseTuningMode = true;
                     csvRows.Add(channel.GetItuPointDataAsCsvRow());
                 }
