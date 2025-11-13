@@ -26,10 +26,6 @@ bld/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
-#Ignore all subfolders under the test library folder.
-LaserX_TesterLibrary/*/
-!LaserX_TesterLibrary/*
-
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
@@ -252,3 +248,4 @@ paket-files/
 /LaserX_TesterLibrary/ExceptionLog
 /LaserX_TesterLibrary/Log
 /LaserX_TesterLibrary/TestData
+/LaserX_TesterLibrary/ProductConfig
