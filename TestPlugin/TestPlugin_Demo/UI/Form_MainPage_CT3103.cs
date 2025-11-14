@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TestPlugin_Demo
 {
     using LX_Utilities;
@@ -2586,7 +2587,29 @@ namespace TestPlugin_Demo
                 this.txtCTD_Path.Text = openFileDialog.FileName;
             }
             this._plugin.CoarseTuningDeviationsFileName = this.txtCTD_Path.Text;
-        } 
+        }
+
+        private void btnPerformInputPowerMeterSelect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var switchPD = this._plugin.LocalResource.IOs[IONameEnum_CT3103.PD_3];
+
+                if (rbSelectAlignmentSystem.Checked)
+                {
+                    switchPD.TurnOn(false);
+                }
+                else
+                {
+                    //default to the tap PD
+                    switchPD.TurnOn(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"[{ex.Message}]-[{ex.StackTrace}]");
+            }
+        }
     }
 
 

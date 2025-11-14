@@ -5,6 +5,7 @@ using SolveWare_BurnInAppInterface;
 using SolveWare_BurnInCommon;
 using SolveWare_TestComponents.Data;
 using SolveWare_TestPlugin;
+using SolveWare_TestPackage;
 using System;
 using System.Linq;
 using System.Threading;
@@ -849,6 +850,7 @@ namespace TestPlugin_Demo
 
         public void ShowOESMainForm()
         {
+           
             this.InitOESMainForm();
             frmMain.ShowDialog();
         }
@@ -883,7 +885,6 @@ namespace TestPlugin_Demo
             InitOESMainForm();
             if (frmMain != null)
             {
-               
                 frmMain.Show();
                 SetFineTuningInputFileNames();
                 SetChipInformation();
