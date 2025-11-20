@@ -1,4 +1,5 @@
 ﻿using LX_BurnInSolution.Utilities;
+using SolveWare_Motion;
 using SolveWare_TestPlugin;
 using System;
 using System.Collections.Generic;
@@ -458,6 +459,11 @@ namespace TestPlugin_Demo
         }
 
         private void bt_home_Click(object sender, EventArgs e)
+        {
+            PerformHomeSation();
+        }
+
+        private void PerformHomeSation()
         {
             if (MessageBox.Show("确认是否进行整机台复位", "复位确认", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -2514,5 +2520,190 @@ namespace TestPlugin_Demo
         }
         #endregion
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MoveGrabberDown();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void MoveGrabberDown()
+        {
+            this._plugin.CheckIO_Tongs_Dn(new System.Threading.CancellationTokenSource());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MoveGrabberUp();
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void MoveGrabberUp()
+        {
+            this._plugin.CheckIO_Tongs_Up(new System.Threading.CancellationTokenSource());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // input end
+                MoveGrabberToInputEnd();
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void MoveGrabberToInputEnd()
+        {
+            this._plugin.Sequence_MoveToAxesPositionByOrder(AxesPositionEnum_CT3103.Y_进料, SequenceOrder.Normal);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // output end
+                MoveGrabberToOutputEnd();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void MoveGrabberToOutputEnd()
+        {
+            this._plugin.Sequence_MoveToAxesPositionByOrder(AxesPositionEnum_CT3103.Y_出料, SequenceOrder.Normal);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MoveOutputPistonUp();
+        }
+
+        private void MoveOutputPistonUp()
+        {
+            try
+            {
+                // output end
+                //T_OUT_Z轴下降预定高度
+
+                //calc the z axis of "output end" target pos which for receiving the carrier   "T_OUT_Z"
+                const int carrierCount = 1;
+
+                var topPosOfZAxis = this._plugin.LocalResource.Positions[AxesPositionEnum_CT3103.T_OUT_Z_最高位].ItemCollection[0].Position;
+                //int number = this.parameter.CarrierNumber;
+                var targetPos = topPosOfZAxis - (carrierCount - 1) * 14.5;
+
+                // move the z axis of "output end" 
+
+                this._plugin.LocalResource.AxesMotionAction[AxisNameEnum_CT3103.T_OUT_Z].SingleAxisMotion(this._plugin.LocalResource.Axes[AxisNameEnum_CT3103.T_OUT_Z], targetPos);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MoveInputPistonUp();
+        }
+
+        private void MoveInputPistonUp()
+        {
+            try
+            {
+                // output end
+                //T_OUT_Z轴下降预定高度
+
+                //calc the z axis of "input end" target pos which for receiving the carrier   "T_IN_Z"
+                const int carrierCount = 1;
+
+                var topPosOfZAxis = this._plugin.LocalResource.Positions[AxesPositionEnum_CT3103.T_IN_Z_最高位].ItemCollection[0].Position;
+                //int number = this.parameter.CarrierNumber;
+                var targetPos = topPosOfZAxis - (carrierCount - 1) * 14.5;
+
+                // move the z axis of "input end" 
+
+                this._plugin.LocalResource.AxesMotionAction[AxisNameEnum_CT3103.T_IN_Z].SingleAxisMotion(this._plugin.LocalResource.Axes[AxisNameEnum_CT3103.T_IN_Z], targetPos);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnLoosenTongs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoosenGrabber();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void LoosenGrabber()
+        {
+            this._plugin.CheckIO_Tongs_Loosen(new System.Threading.CancellationTokenSource());
+        }
+
+        private void btnTightenTongs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TightenGrabber();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void TightenGrabber()
+        {
+            this._plugin.CheckIO_Tongs_Tighten(new System.Threading.CancellationTokenSource());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            LoosenGrabber();
+            MoveGrabberUp();
+
+            MoveOutputPistonUp();
+            MoveInputPistonUp();
+
+            MoveGrabberToOutputEnd();
+            MoveGrabberDown();
+            TightenGrabber();
+            MoveGrabberUp();
+
+            MoveGrabberToInputEnd();
+            MoveGrabberDown();
+            LoosenGrabber();
+            MoveGrabberUp();
+            PerformHomeSation();
+
+
+        }
     }
 }
