@@ -66,6 +66,22 @@ namespace SolveWare_BurnInInstruments
             }
 
         }
+
+        /// <summary>
+        /// Configutres the optimal exposure time for the WLM assuming adaptive exposure mode is turned off.
+        /// </summary>
+        /// <returns></returns>
+        public int ConfigureOptimalExposureTime()
+        {
+            if (this.IsOnline)
+            {
+                SetFilterNumber(1);
+                SetAutomaticExposure(Auto.Off);
+                this._chassis.TryWrite(":CONF:EXP:AUTO\r\n");
+                return GetExposureTime(Channel.ch_1);
+            }
+            return -1;
+        }
         /// <summary>
         /// 获取曝光值
         /// </summary>
