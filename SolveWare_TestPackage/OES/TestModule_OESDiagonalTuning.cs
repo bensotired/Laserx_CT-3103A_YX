@@ -7,6 +7,7 @@ using SolveWare_BurnInInstruments;
 using SolveWare_IO;
 using SolveWare_BurnInCommon;
 using General.Storage;
+using System.Windows.Forms;
 
 namespace SolveWare_TestPackage
 {
@@ -28,7 +29,8 @@ namespace SolveWare_TestPackage
             if (frmMain != null)
             {
                 frmMain.Show();
-
+                Application.DoEvents();
+                Thread.Sleep(1000);
                 SetChipInformation();
                 SetSavePath();
                 PopulateConstantSettings();
