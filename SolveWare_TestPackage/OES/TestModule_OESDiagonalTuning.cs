@@ -1,11 +1,5 @@
-﻿using SolveWare_TestComponents.Attributes;
-using SolveWare_TestComponents.Data;
-using SolveWare_TestComponents.Model;
-using System;
-using System.Threading;
-using SolveWare_BurnInInstruments;
-using SolveWare_IO;
-using SolveWare_BurnInCommon;
+﻿using SolveWare_BurnInCommon;
+using SolveWare_TestComponents.Attributes;
 
 namespace SolveWare_TestPackage
 {
@@ -15,6 +9,7 @@ namespace SolveWare_TestPackage
     [ConfigurableInstrument("OpticalSwitch", "OSwitch", "用于切换光路(1*4切换器)")]
     public class TestModule_OESDiagonalTuning : TestModule_OESBase
     {
+       
         public TestModule_OESDiagonalTuning() : base() { }
 
         protected override bool RunAutoTestCore()

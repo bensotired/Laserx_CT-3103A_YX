@@ -9,6 +9,9 @@ using SolveWare_BurnInCommon;
 
 namespace SolveWare_TestPackage
 {
+    // You may want to change the calculator name to something unique if needed.
+    [SupportedCalculator("TestModule_OES")]
+   
     /// <summary>
     /// Common base for OES-related test modules.
     /// Handles recipe type, raw data, stream-data mapping, form lifecycle,
@@ -16,6 +19,7 @@ namespace SolveWare_TestPackage
     /// </summary>
     public abstract class TestModule_OESBase : TestModuleBase
     {
+        
         protected TestModule_OESBase() : base() { }
 
         #region Resource access
