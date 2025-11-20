@@ -1,4 +1,5 @@
-﻿using SolveWare_TestComponents.Attributes;
+﻿using SolveWare_BurnInCommon;
+using SolveWare_TestComponents.Attributes;
 using SolveWare_TestComponents.Data;
 using SolveWare_TestComponents.Model;
 using System;

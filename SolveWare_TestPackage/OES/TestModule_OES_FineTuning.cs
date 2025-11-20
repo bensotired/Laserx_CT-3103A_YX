@@ -9,12 +9,11 @@ using SolveWare_BurnInCommon;
 
 namespace SolveWare_TestPackage
 {
-    [SupportedCalculator("TestModule_OES")]
-    [StaticResource(ResourceItemType.IO, "PD_3", "切换PD")]
-    [ConfigurableInstrument("OpticalSwitch", "OSwitch", "用于切换光路(1*4切换器)")]
     public class TestModule_OES_FineTuning : TestModule_OESBase
     {
+
         public TestModule_OES_FineTuning() : base() { }
+
 
         string MirrorMapWlFileName { get; set; }
         string CoarseTuningMidlineFileName { get; set; }
