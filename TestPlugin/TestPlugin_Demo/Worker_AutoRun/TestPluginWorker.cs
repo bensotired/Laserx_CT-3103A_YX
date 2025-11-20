@@ -99,6 +99,15 @@ namespace TestPlugin_Demo
                 this.CreateMainUI();
                 //(this._MainPageUI as Form_MainPage_CT3103).AllocateBizManager(ref bizManager_CT3103);
                 (this._MainPageUI as ITesterAppUI).RefreshOnce();
+
+
+                PauseSignalManager.Instance.Initialize();
+
+                this.Bridges_WithPauseFunc = new TestFlowAutoResetEvents_WithPauseFunc_CT3103();
+                this.Bridges_WithPauseFunc.PauseFunc = () => { return TestPauseFunc; };
+                this.Bridges_WithPauseFunc.Initialize();
+
+
             }
             catch (Exception ex)
             {
