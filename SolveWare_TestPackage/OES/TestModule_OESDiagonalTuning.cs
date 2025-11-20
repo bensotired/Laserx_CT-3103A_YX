@@ -120,7 +120,7 @@ namespace SolveWare_TestPackage
                 SetChipInformation();
                 SetSavePath();
                 PopulateConstantSettings();
-                OptimizeWlmExposureTime();
+                //OptimizeWlmExposureTime();
                 autoTestResult = frmMain.ExecuteMirrorDiagonalCoarseTuning();
                 frmMain.Hide(); // IMPORTANT: use Hide() to avoid disposing the form.
             }
