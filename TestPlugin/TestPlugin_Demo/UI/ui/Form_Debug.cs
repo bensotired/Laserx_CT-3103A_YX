@@ -2689,11 +2689,8 @@ namespace TestPlugin_Demo
             LoosenGrabber();
             MoveGrabberUp();
 
-            Parallel.Invoke(() =>
-           {
-               MoveOutputPistonUp();
-               MoveInputPistonUp();
-           });
+            Parallel.Invoke(() => MoveInputPistonUp(),
+                () => MoveOutputPistonUp());
             
 
             MoveGrabberToOutputEnd();
