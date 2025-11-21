@@ -460,13 +460,16 @@ namespace TestPlugin_Demo
 
         private void bt_home_Click(object sender, EventArgs e)
         {
-            PerformHomeSation();
+            if (MessageBox.Show("确认是否进行整机台复位", "复位确认", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                PerformHomeSation();
+            }
         }
 
         private void PerformHomeSation()
         {
-            if (MessageBox.Show("确认是否进行整机台复位", "复位确认", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
+            
+            
                 Frm_ResetPlatform frm = new Frm_ResetPlatform();
                 this._plugin.Reset_HomeStation();
                 frm.ConnectToAppInteration(this._plugin);
@@ -475,7 +478,7 @@ namespace TestPlugin_Demo
                 frm.CancelHome += new Frm_ResetPlatform.CancelHomeStation(this._plugin.Cancel_HomeStation);
                 frm.LocalResource = this._plugin.LocalResource;
                 frm.ShowDialog();
-            }
+            
         }
 
         private void btn_CancelHomeStation_Click(object sender, EventArgs e)
@@ -2704,7 +2707,7 @@ namespace TestPlugin_Demo
             MoveGrabberUp();
             PerformHomeSation();
 
-
+            MessageBox.Show("Casette moved back to the input stage");
         }
     }
 }
