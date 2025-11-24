@@ -26,9 +26,6 @@ namespace SolveWare_TestPackage
 
         #region Resource access
 
-        protected OpticalSwitch OSwitch
-            => (OpticalSwitch)this.ModuleResource["OSwitch"];
-
         protected IOBase SwitchPD
             => (IOBase)this.ModuleResource["PD_3"];
 
@@ -135,7 +132,6 @@ namespace SolveWare_TestPackage
             {
                 // 1. Route to SMU tap PD
                 Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.SMU);
-                OptialPath_Controller.SwitchTo(OSwitch, OptialPath.TapPD);
 
                 this.Log_Global("关闭镭神测试平台所有仪器库连接...\r\nClose all instrument library connections of the LaserX test platform...");
                 // 2. Disconnect from instruments (currently NI SMU)

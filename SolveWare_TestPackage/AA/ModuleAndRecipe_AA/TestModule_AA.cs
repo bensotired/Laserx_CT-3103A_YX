@@ -561,7 +561,7 @@ namespace SolveWare_TestPackage
                         //阈值停止
                         TrajThresholdStop thresholdStop = new TrajThresholdStop()
                         {
-                            En = true,
+                            En = false,
                             ThCurrent_mA = new Dictionary<int, double>(),
                             ThVoltage_mV = new Dictionary<int, double>()
                         };
