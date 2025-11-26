@@ -36,6 +36,7 @@ namespace SolveWare_TestPackage
     {
         #region instance vars
         QWLT2_TestData QwltSettings { get; set; }
+        int optExposureTime;
 
         //instrument drivers
         PXISourceMeter_4143 SOA1 { get { return (PXISourceMeter_4143)this.ModuleResource["SOA1"]; } }
@@ -98,7 +99,7 @@ namespace SolveWare_TestPackage
             if (ConnectToWlm())
             {
                 TurnOnLaser();
-                int optExposureTime = FWM8612.ConfigureOptimalExposureTime();
+                optExposureTime = FWM8612.ConfigureOptimalExposureTime();
                 TurnOffLaser();
                 this.Log_Global($"Optimal WLM exposure time: {optExposureTime} usec");
             }
@@ -135,6 +136,10 @@ namespace SolveWare_TestPackage
         public override void Run(CancellationToken token)
         {
             OptimizeWlmExposureTime();
+            if (optExposureTime > 500)
+            {
+                return;
+            }
             base.Run(token);
         }
 

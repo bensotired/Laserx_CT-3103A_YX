@@ -215,6 +215,7 @@ namespace SolveWare_TestPackage
                 }
                 else
                 {
+                    //0.41404
                     Log_Global($"使用[当前]位置作为初始耦合位置.");
                     var orgX = X2.Get_CurUnitPos();
                     var orgY = Y2.Get_CurUnitPos();
@@ -561,7 +562,7 @@ namespace SolveWare_TestPackage
                         //阈值停止
                         TrajThresholdStop thresholdStop = new TrajThresholdStop()
                         {
-                            En = false,
+                            En = !TestRecipe.RunFullSpiralScan,
                             ThCurrent_mA = new Dictionary<int, double>(),
                             ThVoltage_mV = new Dictionary<int, double>()
                         };
@@ -678,11 +679,11 @@ namespace SolveWare_TestPackage
                     //此处需要运行到外部初始位置
                     for (int i = 0; i < this.TestRecipe.CrossScanCount; i++)
                     {
-                        P1 = HorizontalLine(Alignmentpath, i, id, size * 3,
+                        P1 = HorizontalLine(Alignmentpath, i, id, size * 5,
                                           ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine,
                                           out sw, out strb, out LogDataMsg, out result, out retPoint, token);
 
-                        P1 = VerticalLine(Alignmentpath, i, id, size * 3,
+                        P1 = VerticalLine(Alignmentpath, i, id, size * 5,
                                           ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine,
                                           out sw, out strb, out LogDataMsg, out result, out retPoint, token);
                     }
@@ -708,6 +709,7 @@ namespace SolveWare_TestPackage
                     LastP.ItemCollection.FirstOrDefault(item => item.Name == "LNZ").Position = LastLNZ;
 
                     //三维扫
+                    //三维扫
                     Log_Global($"开始三维搜索[{id + 1}]");
 
                     double pd_Max = 0;
@@ -715,9 +717,13 @@ namespace SolveWare_TestPackage
                     //最大层
                     int maxStep = 40;
 
-                    //持续记录最后的2组数据
+                    // 持续记录最后的2组数据
                     TrajResultItem result_H = new TrajResultItem();
                     TrajResultItem result_V = new TrajResultItem();
+
+                    // === 新增：用于功率收敛判断 ===
+                    double lastBestPower_mA = double.NaN;                  // 上一轮全局最大功率
+                    const double FinePowerDeltaThreshold_mA = 0.001;       // 调参：功率变化阈值 (mA)
                     for (int iSerach = 0; iSerach <= maxStep; iSerach++)
                     {
 
@@ -741,6 +747,7 @@ namespace SolveWare_TestPackage
 
                         if (true)//distance < 0.004)
                         {
+                           
                             Thread.Sleep(100);
                             //距离很近扫Y
                             P1 = DepthLine(out LogDataMsg, Alignmentpath, out strb, ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine_Half, out sw, out result, id, out retPoint, TestRecipe.Layer_Step * 4, iSerach, token);
@@ -776,24 +783,55 @@ namespace SolveWare_TestPackage
                         }
 
                         //增加点
+                        // 增加点
                         P1 = MaxListAdd(ThreeAxisList, maxList, id, retPoint, true);
 
-                        //判定搜索位置
+                        // （可选）这里也可以顺便把 P1 设为当前全局最好点：
+                        // var bestPos = maxList.OrderByDescending(item => item.Value.Power).First().Value;
+                        // P1.ItemCollection = bestPos.Position.ItemCollection;
+
+                        // 判定搜索位置
                         tLNX = P1.ItemCollection.FirstOrDefault(item => item.Name == "LNX").Position;
                         tLNY = P1.ItemCollection.FirstOrDefault(item => item.Name == "LNY").Position;
                         tLNZ = P1.ItemCollection.FirstOrDefault(item => item.Name == "LNZ").Position;
 
-                        distance = Math.Sqrt(Math.Pow(LastLNX - tLNX, 2) + Math.Pow(LastLNY - tLNY, 2) + Math.Pow(LastLNZ - tLNZ, 2));
+                        distance = Math.Sqrt(
+                            Math.Pow(LastLNX - tLNX, 2) +
+                            Math.Pow(LastLNY - tLNY, 2) +
+                            Math.Pow(LastLNZ - tLNZ, 2));
 
-                        //至少迭代5次
-                        if (iSerach >= 2 && distance < 0.004) //4um以内
+                        // === 新增：功率收敛判断 ===
+                        // 当前为止全局最大功率（mA）
+                        double currentBestPower_mA = maxList
+                            .OrderByDescending(item => item.Value.Power)
+                            .First().Value.Power;
+
+                        // 与上一轮的功率变化
+                        double powerDelta_mA = double.IsNaN(lastBestPower_mA)
+                            ? double.MaxValue
+                            : currentBestPower_mA - lastBestPower_mA;
+
+                        this.Log_Global(
+                            $"Fine3D 收敛检查: iSerach={iSerach}, distance={distance:F6}mm, " +
+                            $"currentBestPower={currentBestPower_mA:F6}mA, powerDelta={powerDelta_mA:F6}mA");
+
+                        // 至少迭代 2 次后，再检查：
+                        // 1) 位置变化很小 (distance < 4 µm)
+                        // 2) 功率几乎不再提升 (|ΔPower| < 阈值)
+                        if (iSerach >= 2 &&
+                            distance < 0.004 &&                         // 4 µm 以内
+                            Math.Abs(powerDelta_mA) < FinePowerDeltaThreshold_mA)
                         {
+                            this.Log_Global("Fine3D 收敛：位置变化和功率变化均已很小，提前结束迭代。");
                             break;
                         }
+
+                        lastBestPower_mA = currentBestPower_mA;
 
                         LastLNX = tLNX;
                         LastLNY = tLNY;
                         LastLNZ = tLNZ;
+
                     }
 
                     {
@@ -1165,6 +1203,14 @@ namespace SolveWare_TestPackage
                     RawData.X_Pos_Pmax_mm = Math.Round(Max_TempPara[1], 5);
                     RawData.Y_Pos_Pmax_mm = Math.Round(Max_TempPara[2], 5);
                 }
+
+                //运动到目标位置
+                var Max_id = maxList.OrderByDescending(item => item.Value.Power).First().Value.ID;
+                P1.ItemCollection = maxList[Max_id].Position.ItemCollection;
+
+                //运行到P1点
+                this.MoveToAxesPosition(ThreeAxisList, P1, token);
+                Thread.Sleep(300);
 
                 #endregion AA流程
                 //this.Log_Global("耦合结果:");

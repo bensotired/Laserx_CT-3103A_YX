@@ -17,7 +17,7 @@ namespace SolveWare_TestPackage
 
             this.UseCurrentPositionAsStart = false;
 
-
+            this.RunFullSpiralScan = false;
             this.Inherit = true;
             this.Analog_CH = 1;
             this.InitialCurrentSense_mA = 0.1;
@@ -65,6 +65,11 @@ namespace SolveWare_TestPackage
         [Description("UseCurrentPositionAsStart")]
         [PropEditable(true)]
         public bool UseCurrentPositionAsStart { get; set; }
+
+        [DisplayName("RunFullSpiralScan")]
+        [Description("RunFullSpiralScan")]
+        [PropEditable(true)]
+        public bool RunFullSpiralScan { get; set; }
 
         [DisplayName("从QWLT2获取数值")]
         [Description("Inherit")]
