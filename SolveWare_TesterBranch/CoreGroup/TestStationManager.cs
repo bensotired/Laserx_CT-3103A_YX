@@ -102,7 +102,7 @@ namespace SolveWare_TesterCore
             foreach (var comChas in this.InstrumentChassisDict.Values)
             {
                 this.Log_Global($"正在连接通信底层[{comChas.Name}][{comChas.Resource}]默认在线状态[{comChas.IsOnline}]...");
-                if (comChas.Name.Contains("9078") || comChas.Name.Contains("TC") || comChas.Name.Contains("OSwitch"))
+                if (comChas.Name.Contains("9078") || comChas.Name.Contains("TC") || comChas.Name.Contains("OSwitch") || comChas.Name.Contains("TED"))
                 {
                 }
                 else
@@ -144,7 +144,7 @@ namespace SolveWare_TesterCore
             foreach (var inst in this.InstrumentDict.Values)
             {
                 this.Log_Global($"正在分配通信底层到辅助仪器[{inst.Name}]ID[{inst.Address}]...");
-                if (inst.Name.Contains("9078") || inst.Name.Contains("TC") || inst.Name.Contains("OSwitch"))
+                if (inst.Name.Contains("9078") || inst.Name.Contains("TC") || inst.Name.Contains("OSwitch") || inst.Name.Contains("TED"))
                 {
                 }
                 else
