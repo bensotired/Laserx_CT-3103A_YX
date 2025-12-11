@@ -136,7 +136,7 @@ namespace SolveWare_TestPackage
         public override void Run(CancellationToken token)
         {
             OptimizeWlmExposureTime();
-            if (optExposureTime > 500)
+            if (optExposureTime > 1000)
             {
                 return;
             }

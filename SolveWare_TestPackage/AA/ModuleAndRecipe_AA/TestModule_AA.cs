@@ -51,9 +51,16 @@ namespace SolveWare_TestPackage
     public class TestModule_AA : TestModuleBase
     {
         string ModuleName = "AA";
+        double prevOptXPos;
+        double prevOptYPos;
+        double prevOptZPos;
+
 
         public TestModule_AA() : base()
         {
+            prevOptXPos = Double.MinValue;
+            prevOptYPos = Double.MinValue;
+            prevOptZPos = Double.MinValue;
         }
 
         public class PointResult
@@ -679,11 +686,11 @@ namespace SolveWare_TestPackage
                     //此处需要运行到外部初始位置
                     for (int i = 0; i < this.TestRecipe.CrossScanCount; i++)
                     {
-                        P1 = HorizontalLine(Alignmentpath, i, id, size * 5,
+                        P1 = HorizontalLine(Alignmentpath, i, id, size * 10,
                                           ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine,
                                           out sw, out strb, out LogDataMsg, out result, out retPoint, token);
 
-                        P1 = VerticalLine(Alignmentpath, i, id, size * 5,
+                        P1 = VerticalLine(Alignmentpath, i, id, size * 10,
                                           ThreeAxisList, P1, t1, t2, StartPos, eRunSize_Table.Fine,
                                           out sw, out strb, out LogDataMsg, out result, out retPoint, token);
                     }
@@ -989,7 +996,7 @@ namespace SolveWare_TestPackage
                                     if (iSerach == maxStep - 1) //只离焦一次
                                     {
                                         //远离焦点0.003mm
-                                        double fd_um = this.TestRecipe.OutOfFocusDistance_um;
+                                        double fd_um = 2;// this.TestRecipe.OutOfFocusDistance_um;
                                         if (fd_um < 0) fd_um = 0;
                                         if (fd_um > 1000) fd_um = 1000;
                                         Log_Global($"离焦[{fd_um}]um");
@@ -1204,13 +1211,13 @@ namespace SolveWare_TestPackage
                     RawData.Y_Pos_Pmax_mm = Math.Round(Max_TempPara[2], 5);
                 }
 
-                //运动到目标位置
-                var Max_id = maxList.OrderByDescending(item => item.Value.Power).First().Value.ID;
-                P1.ItemCollection = maxList[Max_id].Position.ItemCollection;
+                ////运动到目标位置
+                //var Max_id = maxList.OrderByDescending(item => item.Value.Power).First().Value.ID;
+                //P1.ItemCollection = maxList[Max_id].Position.ItemCollection;
 
-                //运行到P1点
-                this.MoveToAxesPosition(ThreeAxisList, P1, token);
-                Thread.Sleep(300);
+                ////运行到P1点
+                //this.MoveToAxesPosition(ThreeAxisList, P1, token);
+                //Thread.Sleep(300);
 
                 #endregion AA流程
                 //this.Log_Global("耦合结果:");
@@ -2277,11 +2284,17 @@ namespace SolveWare_TestPackage
                 }
 
                 //20230224 面积中心做返回值
+                //20230224 面积中心做返回值 + 2025 blended centroid / peak
                 {
+                    // Weight toward centroid vs peak:
+                    //   - Rough: keep more centroid (0.9)
+                    //   - Fine: pull closer to true peak (0.65)
+                    double alpha = isRough ? 0.9 : 0.65;
+
                     var pmax = pList.Max();
                     var pmin = pList.Min();
 
-                    //使用黄金分割高度
+                    // 使用黄金分割高度
                     var threshold_power = (pmax - pmin) * Power_Threshold + pmin;
 
                     tpList = new List<double>();
@@ -2289,11 +2302,12 @@ namespace SolveWare_TestPackage
                     tyList = new List<double>();
                     tzList = new List<double>();
 
-                    tpSum = 0;   //求和
-                    txSum = 0;   //加权求和
+                    tpSum = 0;   // 求和
+                    txSum = 0;   // 加权求和
                     tySum = 0;
                     tzSum = 0;
 
+                    // Build high-power region around the lobe
                     for (int i = 0; i < pList.Count; i++)
                     {
                         if (pList[i] >= threshold_power)
@@ -2310,41 +2324,76 @@ namespace SolveWare_TestPackage
                         }
                     }
 
+                    // Index of best sample using your existing peak logic
+                    int maxIndex = isRough ? GetMax_Rough(pList) : GetMax(pList);
+
+                    double peakX = xList[maxIndex];
+                    double peakY = yList[maxIndex];
+                    double peakZ = zList[maxIndex];
+
+                    // Centroid of high-power region
+                    double centroidX;
+                    double centroidY;
+                    double centroidZ;
+
+                    if (tpSum > 0)
+                    {
+                        centroidX = txSum / tpSum;
+                        centroidY = tySum / tpSum;
+                        centroidZ = tzSum / tpSum;
+                    }
+                    else
+                    {
+                        // Fallback: no points above threshold, use peak only
+                        centroidX = peakX;
+                        centroidY = peakY;
+                        centroidZ = peakZ;
+                    }
+
+                    // Blend centroid with peak
+                    double blendedX = alpha * centroidX + (1.0 - alpha) * peakX;
+                    double blendedY = alpha * centroidY + (1.0 - alpha) * peakY;
+                    double blendedZ = alpha * centroidZ + (1.0 - alpha) * peakZ;
+
                     var tPmax = new AxesPosition();
                     foreach (var axisPos in t_Start_Pos)
                     {
                         var axis = actList.FirstOrDefault(item => item.AxisNo.ToString() == axisPos.AxisNo);
-                        // 填入XYZ轴对应位置
+                        double pos;
+
+                        switch (axis.Name)
+                        {
+                            case "LNX":
+                                pos = blendedX;
+                                break;
+                            case "LNY":
+                                pos = blendedY;
+                                break;
+                            case "LNZ":
+                                pos = blendedZ;
+                                break;
+                            default:
+                                pos = axisPos.Position;
+                                break;
+                        }
+
                         tPmax.ItemCollection.Add(new AxisPosition()
                         {
                             Name = axis.Name,
                             CardNo = axis.CardNo.ToString(),
                             AxisNo = axis.AxisNo.ToString(),
-                            Position = axis.Name == "LNX" ? txSum / tpSum :  //txList.Average() :
-                                       axis.Name == "LNY" ? tySum / tpSum :  //tyList.Average() :
-                                       axis.Name == "LNZ" ? tzSum / tpSum :  //tzList.Average() :
-                                       axisPos.Position
+                            Position = pos
                         });
                     }
 
-                    var maxIndex = 0;
-                    if (isRough)
-                    {
-                        maxIndex = GetMax_Rough(pList);
-                    }
-                    else
-                    {
-                        maxIndex = GetMax(pList);
-                    }
-
                     Dictionary<AxesPosition, double> tmaxPoint = new Dictionary<AxesPosition, double>();
-                    //PD电流
+                    // PD 电流 = 真正的峰值样本
                     tmaxPoint.Add(tPmax, pList[maxIndex]);
 
                     AnalyzeResult = tmaxPoint;
-
                     return true;
                 }
+
             }
             catch (Exception ex)
             {
