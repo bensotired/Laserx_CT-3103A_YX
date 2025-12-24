@@ -72,6 +72,7 @@ namespace SolveWare_Motion
             }
             else
             {
+                var path = Path.GetFullPath(configFile);
                var obj  = XmlHelper.DeserializeFile<MotionManagerConfig>(configFile);
                 this.AxesCount = obj.AxesCount;
                 this.MasterDriver = obj.MasterDriver;

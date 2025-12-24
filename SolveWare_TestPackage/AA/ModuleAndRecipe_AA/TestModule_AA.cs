@@ -232,6 +232,7 @@ namespace SolveWare_TestPackage
                     initialPoslog += $"X_init = {orgX} Y_init = {orgY} Z_init = {orgZ}";
                 }
 
+                
                 Log_Global($"AA initial position : {initialPoslog}.");
                 Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
                 Log_Global($"   SwitchPD.TurnOn(false)");
@@ -546,6 +547,12 @@ namespace SolveWare_TestPackage
 
 
                 {
+                    if (!this.TestRecipe.UseCurrentPositionAsStart)
+                    {
+                        RunBoxSearch();
+                        Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.AlignmentSystem);
+                    }
+                   
 
                     //此处为画10字扫描方法
                     Log_Global($"start Cross Scan");
@@ -653,7 +660,7 @@ namespace SolveWare_TestPackage
                                 Log_Global($"{this.Name} 扫描范围内无光， 推进到[{PlaneJump}]步进平面");
                                 //推进一个平面
                                 P1.ItemCollection.FirstOrDefault(axis => axis.Name == "LNY").Position =
-                                    StartPos.ItemCollection.FirstOrDefault(axis => axis.Name == "LNY").Position + PlaneJump * TestRecipe.Layer_Step;
+                                    StartPos.ItemCollection.FirstOrDefault(axis => axis.Name == "LNY").Position + PlaneJump*this.TestRecipe.Layer_Step;
 
                                 //Jump逻辑
                                 {
@@ -832,7 +839,7 @@ namespace SolveWare_TestPackage
                         distance = Math.Sqrt(Math.Pow(LastLNX - tLNX, 2) + Math.Pow(LastLNY - tLNY, 2) + Math.Pow(LastLNZ - tLNZ, 2));
 
                         //至少迭代5次
-                        if (iSerach >= 2 && distance < 0.004) //4um以内
+                        if (iSerach >= 2 && distance < 0.004 ) //4um以内
                         {
                             break;
                         }
@@ -1024,7 +1031,7 @@ namespace SolveWare_TestPackage
                                         if (fd_um < 0) fd_um = 0;
                                         if (fd_um > 1000) fd_um = 1000;
                                         Log_Global($"离焦[{fd_um}]um");
-                                        actlny.MoveToV3(actlny.Get_CurUnitPos() - fd_um / 1000.0, axisspeed);  // 离焦
+                                       actlny.MoveToV3(actlny.Get_CurUnitPos() - fd_um / 1000.0, axisspeed);  // 离焦
                                         actlny.WaitMotionDone();
                                         Thread.Sleep(GetdataDelay_ms);
                                     }
@@ -1410,6 +1417,148 @@ namespace SolveWare_TestPackage
             }
         }
 
+        // Reusable helpers (paste inside the same class as RunBoxSearch)
+
+        private double ReadPd_mA()
+        {
+            double pd_mA = PD.ReadCurrent_A() * 1000.0;
+            Log_Global($"CurrentPD: {pd_mA}");
+            return pd_mA;
+        }
+
+        private void MoveAndWait(Motor_LaserX_9078 motor, double pos, double speed, int roundDigits)
+        {
+            motor.MoveToV3(Math.Round(pos, roundDigits), speed);
+            motor.WaitMotionDone();
+        }
+
+        private double ScanAxisForBestPd(
+            Motor_LaserX_9078 motor,
+            double centerPos,
+            double halfWindow,
+            double step,
+            double speed,
+            int roundDigits)
+        {
+            double startPos = centerPos - halfWindow;
+            double endPos = centerPos + halfWindow;
+
+            double bestPos = centerPos;
+            double bestPd = double.MinValue;
+
+            for (double pos = startPos; pos <= endPos; pos += step)
+            {
+                MoveAndWait(motor, pos, speed, roundDigits);
+
+                double pd = ReadPd_mA();
+                if (pd > bestPd)
+                {
+                    bestPd = pd;
+                    bestPos = pos;
+                }
+            }
+
+            return bestPos;
+        }
+
+        private void RunBoxSearch()
+        {
+            // ---- constants (tune here) ----
+            const double pdSenseCurrentRange_mA = 10;
+
+            const double xHalfWindow = 0.2;
+            const double xStep = 0.002;
+
+            const double zHalfWindow = 0.05;
+            const double zStep = 0.001;
+
+            const double yHalfWindow = 0.005;
+            const double yStep = 0.005;
+
+            const int posRoundDigits = 4;
+            int zStepDirection = 1;
+            int numCrossScansRun = 0;
+            int currentPDFromCross = -1;
+            var zMotor = Z2 as Motor_LaserX_9078;
+            double initialZPos = zMotor.Get_CurUnitPos();
+            int zStepMag = 0;
+
+            // ---- setup ----
+            PD.SetupAndEnableSourceOutput_SinglePoint_Voltage_V(0, pdSenseCurrentRange_mA);
+            Circuit_Controller.TapPD_ConnectTo(SwitchPD, TapPD_Circuit.SMU);
+
+            double axisSpeed = this.TestRecipe.Rough_Trajspeed * 0.5;
+
+            for(int i = 0; i < 20; i++)
+            {
+                RunCross(xHalfWindow, xStep, zHalfWindow, zStep, axisSpeed, posRoundDigits);
+
+                if(ReadPd_mA() > 0)
+                {
+                    break;
+                }
+                if(i %2 == 0)
+                {
+                    zStepMag += 1;
+                }
+                Y2.MoveToV3(Y2.Get_CurUnitPos() + yStep, SolveWare_Motion.SpeedType.Auto, SpeedLevel.Normal);
+                Y2.WaitMotionDone();
+                zMotor.WaitMotionDone();
+                zStepDirection *= -1;
+            }
+            // ---- Cross (X then Z) ----
+
+            // ---- Depth (Y) ----
+            RunDepth(yHalfWindow, yStep, axisSpeed, posRoundDigits);
+        }
+
+        /// <summary>
+        /// Optimizes X, then Z, using a 1D scan on each axis.
+        /// </summary>
+        private void RunCross(
+            double xHalfWindow,
+            double xStep,
+            double zHalfWindow,
+            double zStep,
+            double axisSpeed,
+            int posRoundDigits)
+        {
+            var xMotor = X2 as Motor_LaserX_9078;
+            var zMotor = Z2 as Motor_LaserX_9078;
+            var trainedXPos = LN_Focuser.GetSingleItem(X2.Name).Position;
+            var trainedZPos = LN_Focuser.GetSingleItem(Z2.Name).Position;
+
+            if (xMotor == null) throw new InvalidOperationException("X2 is not a Motor_LaserX_9078.");
+            if (zMotor == null) throw new InvalidOperationException("Z2 is not a Motor_LaserX_9078.");
+
+            MoveAndWait(zMotor, trainedZPos, axisSpeed, 4);
+            double currentXPos = Math.Round(trainedXPos, posRoundDigits);
+            double bestXPos = ScanAxisForBestPd(xMotor, currentXPos, xHalfWindow, xStep, axisSpeed, posRoundDigits);
+            MoveAndWait(xMotor, bestXPos, axisSpeed, posRoundDigits);
+
+            double currentZPos = Math.Round(trainedZPos, posRoundDigits);
+            double bestZPos = ScanAxisForBestPd(zMotor, currentZPos, zHalfWindow, zStep, axisSpeed, posRoundDigits);
+            MoveAndWait(zMotor, bestZPos, axisSpeed, posRoundDigits);
+        }
+
+        /// <summaryLN_Focuser.GetSingleItem(X2.Name).Position
+        /// Optimizes Y using a 1D scan (depth).
+        /// </summary>
+        private void RunDepth(
+            double yHalfWindow,
+            double yStep,
+            double axisSpeed,
+            int posRoundDigits)
+        {
+            var yMotor = Y2 as Motor_LaserX_9078;
+            if (yMotor == null) throw new InvalidOperationException("Y2 is not a Motor_LaserX_9078.");
+
+            double currentYPos = Math.Round(Y2.Get_CurUnitPos(), posRoundDigits);
+            double bestYPos = ScanAxisForBestPd(yMotor, currentYPos, yHalfWindow, yStep, axisSpeed, posRoundDigits);
+            MoveAndWait(yMotor, bestYPos, axisSpeed, posRoundDigits);
+        }
+
+
         private string MoveToInitialTeachedPosition()
         {
             string initialPoslog = string.Empty;
@@ -1425,19 +1574,21 @@ namespace SolveWare_TestPackage
                     var orgY = Y2.Get_CurUnitPos();
                     var orgZ = Z2.Get_CurUnitPos();
                     initialPoslog = $"X_org = {orgX} Y_org = {orgY} Z_org = {orgZ} {Environment.NewLine}";
-                   if(prevOptYPos > Double.MinValue && prevOptXPos > Double.MinValue && prevOptZPos > Double.MinValue)
+
+                    if (prevOptYPos > Double.MinValue && prevOptXPos > Double.MinValue && prevOptZPos > Double.MinValue)
                     {
-                        xPosToMoveTo = prevOptXPos;
-                        yPosToMoveTo = prevOptYPos;
-                        zPosToMoveTo = prevOptZPos;
+                      
+                        xPosToMoveTo = LN_Focuser.GetSingleItem(X2.Name).Position;
+                        yPosToMoveTo = LN_Focuser.GetSingleItem(Y2.Name).Position;
+                        zPosToMoveTo = LN_Focuser.GetSingleItem(Z2.Name).Position;
                     }
-                   else
+                    else
                     {
                         xPosToMoveTo = LN_Focuser.GetSingleItem(X2.Name).Position;
                         yPosToMoveTo = LN_Focuser.GetSingleItem(Y2.Name).Position;
                         zPosToMoveTo = LN_Focuser.GetSingleItem(Z2.Name).Position;
                     }
-                        X2.MoveToV3(xPosToMoveTo, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
+                    X2.MoveToV3(xPosToMoveTo, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                     X2.WaitMotionDone();
                     Z2.MoveToV3(zPosToMoveTo, SolveWare_Motion.SpeedType.Auto, SolveWare_Motion.SpeedLevel.Normal);
                     Z2.WaitMotionDone();
@@ -1460,8 +1611,11 @@ namespace SolveWare_TestPackage
                     if (prevOptYPos > Double.MinValue && prevOptXPos > Double.MinValue && prevOptZPos > Double.MinValue)
                     {
                         xPosToMoveTo = prevOptXPos;
-                        yPosToMoveTo = prevOptYPos;
+                        //yPosToMoveTo = prevOptYPos;
                         zPosToMoveTo = prevOptZPos;
+                        //xPosToMoveTo = LN_Focuser_Right.GetSingleItem(X2.Name).Position;
+                        yPosToMoveTo = LN_Focuser_Right.GetSingleItem(Y2.Name).Position;
+                        //zPosToMoveTo = LN_Focuser_Right.GetSingleItem(Z2.Name).Position;
                     }
                     else
                     {
@@ -1490,7 +1644,7 @@ namespace SolveWare_TestPackage
             List<Double> curr = new List<double>();
             for (int i = 0; i < 5; i++)
             {
-                Thread.Sleep(50);
+                Thread.Sleep(1);
                 var val = PD.ReadCurrent_A();
                 val *= 1000;
                 curr.Add(val);
@@ -2254,13 +2408,13 @@ namespace SolveWare_TestPackage
         //门限检查不抛出异常
         private bool CheckThreshold_mW(Dictionary<AxesPosition, double> retPoint)
         {
-            if (retPoint.First().Value <= TestRecipe.PowerThreshold_mA)
+            if (retPoint.First().Value <= this.TestRecipe.PowerThreshold_mA)
             {
                 //while(true)
                 //{
                 //    Thread.Sleep(100);
                 //}
-                Log_Global($"{this.Name} 扫描范围内无光]");
+                Log_Global($"{retPoint.First().Value}");
                 return false;
             }
             return true;
@@ -2473,7 +2627,7 @@ namespace SolveWare_TestPackage
                     // Weight toward centroid vs peak:
                     //   - Rough: keep more centroid (0.9)
                     //   - Fine: pull closer to true peak (0.65)
-                    double alpha = isRough ? 0.9 : 0.65;
+                    double alpha = isRough ? 0.9 : 0;
 
                     var pmax = pList.Max();
                     var pmin = pList.Min();
